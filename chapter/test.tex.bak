@@ -1,0 +1,33 @@
+\begin{center}
+\centering
+\caption{IRºòÑ¡×·×ÙÏßË÷ÅÅÐò±í}
+\label{IRCandidateList}
+\begin{tabular}{|l|l|l|l|}
+\toprule
+   \hline
+   class                   &    req     &   score   &    isTrace  \\
+   \hline
+   UpdateCodesListAction   &    UC15    &   0.3524  &       X     \\
+   \hline
+   UpdateNDCodesListAction &    UC15    &   0.3124  &       X     \\
+   \hline
+   DrugCodesDAO            &    UC15    &   0.2418  &       X     \\
+   \hline
+   editDrugCodes\_jsp       &    UC15    &   0.2112  &       X     \\
+   \hline
+   editNDCInteractions\_jsp &    UC15    &   0.1816  &             \\
+   \hline
+   editNDCodes\_jsp         &    UC15    &   0.1238  &       X     \\
+   \hline
+   DCBeanValidator         &    UC15    &   0.1045  &       X     \\
+   \hline
+   DrugInteractionAction   &    UC15    &   0.0953  &             \\
+   \hline
+   AuthDAO                 &    UC15    &   0.0682  &             \\
+   \hline
+   NDCodesDAO              &    UC15    &   0.0487  &       X     \\
+   \hline
+   viewResult\_jsp          &    UC15    &   0.0031  &       \\
+   \hline
+ \end{tabular}
+\end{center}

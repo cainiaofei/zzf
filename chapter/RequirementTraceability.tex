@@ -1,0 +1,505 @@
+\chapter{结合代码紧密度分析和用户反馈的软件可追踪生成方法}
+
+\section{引言}
+
+在软件开发的过程中，会生成很多软件制品，这些软件制品之间的追踪线索是一项宝贵的资源。例如需求制品和源代码制品之间的追踪线索能够提供高层软件实体需求和底层软件实体源代码之间的追踪关系，进而帮助维护人员理解程序，并作为讨论功能更改的基础。然而人工的获取软件制品之间的追踪线索需要耗费大量时间和精力并且容易出错。软件工程师需要阅读并理解不同的软件制品，才能判断不同的软件实体之间是否存在追踪关系。为了解决这个问题领域内出现了一些半自动化的方法生成软件可追踪数据。
+
+目前，领域内需求到代码元素追踪线索生成的主流方法是信息检索方法~\cite{Yates1999IR}，该方法通过计算需求制品和代码制品之间的文本相似度并按照相似度值自大到小排序，进而生成需求到代码元素的候选追踪列表，用户自上而下扫描候选追踪列表并判断候选追踪线索的有效性。由于不同软件制品之间有可能采用不同的词库，此种情况下会出现大量单词失配（Vocabulary Mismatch）问题严重影响生成候选追踪列表的精度。为了解决这个问题，一方面研究人员从不同的角度成功地提出了增强策略，比如更先进的词法分析
+~\cite{cleland2005utilizing,Malcom2011orthogonal} 和代码依赖性分析~\cite{mcmillan2009combining,Kuang2017closeness};另一方面，研究者认为用户对候选链接的反馈结果可以被用来提高候选列表精度。最近几年有大量的工作
+~\cite{hayes2006advancing,Lucia2006Incremental,panichella2013and} 使用用户反馈信息来提高信息索引方法的精度。
+~\cite{hayes2006advancing}要求用户迭代式判断候选线索有效性，并根据用户反馈修改查询语句中单词的权重。后续工作
+~\cite{Lucia2006Incremental}证明该方法对信息检索方法提升的精度很有限。~\cite{panichella2013and}提出结合代码依赖和用户反馈信息提高基于信息检索方法（IR）的精度，但是，要实现此方法的最佳性能，用户必须验证所有候选链接。这在实践中是不可行的。
+
+为了解决上述问题，我们在信息检索方法的基础上，结合了代码依赖紧密度分析和用户反馈信息。紧密度是对类之间的直接（方法调用，类使用和继承）和间接（类之间的数据共享）代码依赖紧密程度的量化。通过设定紧密度阈值我们可以将功能相关的类划分到同一个代码域中，即每个代码域代表系统功能的一个方面。然后，我们的方法使用IR技术来生成需求和源代码（类）之间的候选追踪线索排序表，然后根据代码域和用户反馈对候选追踪线索排序表分两步进行优化：（1）我们要求用户只验证每个代码域中与给定需求相似度值最大的类对应候选线索有效性。（2）我们根据用户对候选追踪线索的验证结果调整该链接中代码元素所在域的其它类对应候选线索相似度值，以及相关域外类对应候选线索相似度值。最终所有候选线索都会根据信息检索技术、代码依赖紧密度分析和用户反馈进行重排序。
+
+本章中，我们提出一种结合用户反馈和代码依赖的软件可追踪生成方法，用户只需判断少量候选线索的有效性，明显提高了候选追踪线索列表的精度。
+
+\section{背景}
+在本节，我们将说明本工作的研究问题以及研究动机，并给出我们的问题定义。
+\subsection{研究问题}
+%在软件开发过程中，软件制品之间的追踪线索是一项宝贵的资源。然而研究表明，获得软件制品之间的追踪线索并不是一件容易的事情。%一方面，人工获取软件实体之间的追踪关系，需要软件工程师阅读并理解不同的软件制品。这个过程会花费大量精力并且容易出错；另一%方面，当前基于信息检索的方法半自动化获取软件实体之间的追踪线索普遍存在精度低的问题。综上所述，当前没有完善的方法获取软件%可追踪数据。
+
+如图~\ref{F:softwareDevFlow}，在软件开发过程中会衍生出大量的软件制品，例如需求文档、设计文档、测试集合和代码等。不同软件制品之间的追踪关系有利于软件后期的维护和演化。其中需求到代码的可追踪性是其中最具有代表性也最具有挑战性的一类软件追踪性。其原因在于以下两点：（1）需求是软件系统中唯一记录了人对于完整系统功能的理解与期望的软件制品
+~\cite{Cleland-Huang2013Requirements}，而代码则是当前软件系统运行时行为的唯一真实反映，因此两者之间的关联关系是软件开发与维护人员最关注的；（2）需求到代码之间需要经过漫长的开发流程以完成语义上的转换。因此相对于任意其它两类软件制品之间的关联关系，需求和代码之间存在的语义偏差是最严重的。
+
+\begin{figure}[thb]
+    \centering
+    \includegraphics[width=1.0\textwidth]{./figures/RequirementTraceability/softwareDevFlow.pdf}
+    \caption{软件开发流程}
+    \label{F:softwareDevFlow}  %%关键词不变色有时是因为拼写有问题
+\end{figure}
+
+需求到代码可追踪性建立的最大困难在于，当需求和代码元素比较多时，人工的建立可追踪性会耗费大量的时间和精力，当前基于信息检索的自动化技术存在精度低的问题。我们需要研究如下两个问题：
+\begin{enumerate}
+  \item 如何尽可能减少用户参与。
+  \item 如何提高生成追踪线索的精度，当生成追踪线索精度比较低时，往往会使用户对工具失去信息。影响自动化工具可用性。
+\end{enumerate}
+
+
+\subsection{研究现状}
+
+目前，领域内主要关注于需求到代码可追踪性生成问题，主流方法基于信息检索以计算代码文本和需求文本的相似度，我们将在本小节对已有工作做简要阐述。
+
+当前领域内最流行的需求到代码可追踪生成方法是信息检索方法，该方法通过计算需求和代码之间的文本相似度生成一个候选追踪线索排序表。该方法认为相似度越大的追踪线索越可能表明两者描述同一概念，即两者存在实现关系。需求文本和代码文本的规范化处理与相似度计算，是全自动的（候选追踪线索的确认依然需要人工参与），所以信息检索方法具有人工参与少、自动化程度高、易于实现并使用等特点。然而
+“词汇表失配”（vocabulary mismatch）问题~\cite{Malcom2011orthogonal}极大影响了信息检索方法的准确性，这是因为不同的软件制品可能采用不同的术语表，进而可能出现不同的关键词（例：way与road都表示”道路“）表示同一个概念,或用同一个关键词表示不同的概念（例：time既指”时间“又指“次数”）的现象。针对这个问题，当前主流的研究思路是从文本预处理~\cite{Cleland2012Traceability}、信息检索模型~\cite{marcus2003recovering}等词法分析的角度出发来优化信息检索方法。同时近年来有大量工作
+~\cite{hayes2006advancing,Lucia2006Incremental,panichella2013and} 利用用户对候选追踪线索的判断信息对候选列表进行优化。Panichella et al. 提出一种结合用户反馈和代码依赖的可追踪生成方法，但是为了达到该方法的最佳效果需要用户自顶向下判断整个候选列表。
+
+\subsection{研究动机}
+
+在本小节，我们以医疗管理系统iTrust为例，阐述我们的研究动机。
+
+\subsubsection{结合代码依赖紧密度分析和用户反馈的软件可追踪生成方法示例}
+iTrust是一个医疗管理系统，采用java语言。该系统包括需求和代码等制品。如前所述，鉴于需求到代码可追踪数据的重要意义。
+我们需要建立需求与实现需求之间的追踪关系。如表\ref{T:ReqToCode}所示为需求与实现该需求源代码之间的关联关系。以UC15为例，内容如图~\ref{F:UC15}：
+\begin{table}
+\centering
+\caption{需求和类追踪关系}
+\label{T:ReqToCode}
+\begin{tabular}{|l|l|l|}
+\toprule
+   \hline
+   class                   &    req      \\
+   \hline
+   UpdateCodesListAction   &    UC15      \\
+   \hline
+   UpdateNDCodesListAction &    UC15       \\
+   \hline
+   DrugCodesDAO            &    UC15       \\
+   \hline
+   editDrugCodes\_jsp       &    UC15       \\
+   \hline
+   editNDCodes\_jsp         &    UC15        \\
+   \hline
+   DCBeanValidator         &    UC15     \\
+   \hline
+   NDCodesDAO              &    UC15     \\
+   \hline
+ \end{tabular}
+\end{table}
+
+\begin{figure}[thb]
+    \centering
+    \includegraphics[width=0.8\textwidth]{./figures/RequirementTraceability/uc15.pdf}
+    \caption{需求文本UC15的内容}
+    \label{F:UC15}
+\end{figure}
+
+表~\ref{T:IRCandidateList}为基于IR方法得到的UC15和代码元素对应追踪线索列表的子表，
+该表按照相似度值递减的顺序排序，~\emph{Is Trace}项的‘x’表示两者存在追踪关系，观察排序表的结果知有些有效的追踪线索（例如UC15 和NDCodesDAO）文本相似度值并不高，这是NDCodesDAO是一个与数据库操作相关类，用于维护数据库中的~\emph{national drug code}(美国使用的药品标识符),以~\emph{DAO}结尾的类往往与数据库操作有关，但是该单词并未出现在UC15文本中，这就导致两者文本相似度不高。实际上NDC是~\emph{national drug code}的缩写，NDCodesDAO和UC15有追踪关系。图~\ref{F:codeDependencyGraph}为表中涉及几个类对应的代码依赖图，带箭头的直线为直接依赖，虚线为数据依赖。从图中可以看出类
+\begin{figure}[thb]
+    \centering
+    \includegraphics[width=0.8\textwidth]{./figures/RequirementTraceability/codeDependencyGraph.pdf}
+    \caption{代码依赖图}
+    \label{F:codeDependencyGraph}
+\end{figure}
+
+类NDCodesDAO和类UpdateCodesListAction存在数据依赖和调用依赖，与editNDCodes\_jsp存在调用依赖。在我们的方法中用户判断完这两个类与UC15相关性之后会提升NDCodesDAO与UC15的相似度值从而弥补单词失配带来的消极影响。
+
+\begin{table}
+\centering
+\caption{IR候选追踪线索排序表}
+\label{T:IRCandidateList}
+\begin{tabular}{|l|l|l|l|}
+\toprule
+   \hline
+   class                   &    req     &   score   &    isTrace  \\
+   \hline
+   UpdateCodesListAction   &    UC15    &   0.3524  &       X     \\
+   \hline
+   UpdateNDCodesListAction &    UC15    &   0.3124  &       X     \\
+   \hline
+   DrugCodesDAO            &    UC15    &   0.2418  &       X     \\
+   \hline
+   editDrugCodes\_jsp       &    UC15    &   0.2112  &       X     \\
+   \hline
+   editNDCInteractions\_jsp &    UC15    &   0.1816  &             \\
+   \hline
+   editNDCodes\_jsp         &    UC15    &   0.1238  &       X     \\
+   \hline
+   DCBeanValidator         &    UC15    &   0.1045  &       X     \\
+   \hline
+   DrugInteractionAction   &    UC15    &   0.0953  &             \\
+   \hline
+   AuthDAO                 &    UC15    &   0.0682  &             \\
+   \hline
+   NDCodesDAO              &    UC15    &   0.0487  &       X     \\
+   \hline
+   viewResult\_jsp          &    UC15    &   0.0031  &       \\
+   \hline
+ \end{tabular}
+\end{table}
+
+
+\subsection{问题定义}
+
+\textbf{~\emph{问题定义.}} ~\emph{给定一个需求集合~\emph{R}~，该需求集合包含~d~个需求文本，同时给定代码集合（按粒度可分为包、类、函数，后两者为可追踪性中常用的代码粒度）~\emph{C}~，则需求到代码的可追踪性就是在R*C上判定任意两个r和c之间是否存在功能上相互关联。对于一个给定的需求r和给定的代码元素c，我们用布尔函数isTrace(r,c)来表示两者之间的关联关系，若c在代码中实现了（部分）r的功能，则isTrace(r,c)='trace'(相关)。否则isTrace='no-trace'(不相关)。由r、c、isTrace(r,c)三者组成的一个三元组t就代表了r和c之间的一条追踪线索。则R到C的可追踪性就是生成和维护两者之间的追踪线索集合$T=\{t=\{r,c,isTrace(r,c)\|r\in R
+\cap c \in C\}$。
+}
+问题是：
+
+相对于传统方法，结合代码依赖紧密度分析和用户反馈生成的需求到代码的追踪数据精度是否有明显提升？
+
+\section{方法概述}
+
+在本节，我们将介绍结合用户反馈和代码依赖紧密度分析的软件可追踪生成方法。我们把软件开发过程中产生的需求制品和代码制品作为方法的输入，将候选追踪线索排序表作为方法的输出。方法包含四个步骤（1）获得目标软件存在的代码依赖；（2）计算代码依赖紧密度，设置紧密度阈值生成候选代码依赖域；（3）基于信息检索方法，产生需求到代码的初始候选列表。（4）根据用户反馈和代码依赖域优化调整初始候选列表。
+
+\begin{figure}[thb]
+    \centering
+    \includegraphics[width=0.8\textwidth]{./figures/RequirementTraceability/algorithmFlow.pdf}
+    \caption{基于用户反馈和代码依赖紧密度分析的软件可追踪生成方法流程}
+    \label{F:ApproachOverview}
+\end{figure}
+
+如图~\ref{F:ApproachOverview}~所示，在步骤一中，基于jvmti构造代码依赖捕获工具，运行目标系统并插桩代码依赖捕获工具得到运行时刻目标系统的函数调用和数据访问等数据，并由此建立方法之间的调用依赖和数据依赖关系。将方法之间的调用依赖和数据依赖转换成类之间的调用依赖和数据依赖；在步骤二中，计算调用依赖和数据依赖紧密度，设置紧密度阈值，当两个类之间代码依赖紧密度大于阈值时两者在同一个代码域中，同一个域中的类功能比较紧密；在步骤三中，基于信息检索方法，计算代码文本和需求文本之间的相似度，并按照文本相似度从大到小的顺序生成候选追踪线索排序表；在步骤四中，对未判断的代码域，根据个域内类与需求相似度最大值，对未判断代码域按照相似度值自大到小的顺序重排序。对于排名第一的代码域，取其域内域需求相似度最大的类交由用户判断。如果该类与需求具备相关性，则调整域内类和相关域外类与需求的相似度值。
+
+\section{代码依赖关系捕获}
+\subsection{类之间的代码依赖关系}
+我们考虑类之间的四种依赖关系，类的调用依赖、类继承、类使用和类的数据依赖。${C_{a}}$到${C_{b}}$存在调用依赖说明至少存在一个
+${C_{a}}$ 的方法调用了${C_{b}}$的方法。${C_{a}}$使用${C_{b}}$表名，${C_{b}}$是${C_{a}}$的一个成员变量。两个类存在数据依赖表明两个类中存在访问同一个数据的方法，本文只关注在内存中的数据。与前三种代码依赖相比类之间的数据依赖捕获难度更大。然而
+~\cite{Kuang2017closeness,kuang2015can}表明对于可追踪性数据生成任务，数据依赖与前三种代码依赖互补，相辅相成共同提高软件可追踪生成方法的精度。
+
+\subsection{获取代码依赖}
+我们使用代码依赖捕获工具~\cite{kuang2015can}来捕获上述提到的代码依赖。该工具基于jvmti接口在运行时刻获得目标系统中的函数调用和数据访问信息。我们基于如下原因选取该工具
+\begin{enumerate}
+  \item 虽然能够捕获函数调用的动态分析工具很多（例如著名的The Eclipse Test \& Performance Tools Platform，TPTP；或Java Plug-in Framework，JPF），但是这些工具都不能捕获函数之间的数据共享。
+  \item 基于java虚拟机的运行时检测，这个工具可以捕获实际执行的代码依赖关系并正确处理多态。由于该工具是在系统运行时刻对系统实际行为的观察与记录，因此不会产生非正确的代码依赖关系。
+  \item 该工具可以在一次系统运行中同时获得以上四种代码依赖，由于所执行测试集合的不完备性，动态分析无法保证捕获的代码依赖关系的完整性，虽然这一问题无法避免，但是我们认为部分确实的代码依赖关系在其缺失程度大致相同的情况下，并不会影响最终的实验结果，其原因在于我们用一个整合的工具在运行相同测试集合的时候同时捕获函数调用和数据依赖。
+\end{enumerate}
+
+根据捕获的方法级代码依赖，我们可以得出对应的四种类级别代码依赖
+\begin{enumerate}
+  \item 类之间调用依赖关系从方法调用依赖关系中抽象出来，调用边的权值为发生不同方法调用的次数。
+  \item 类之间数据依赖关系从方法数据依赖关系中抽象出来，数据依赖边的权值为两个类之间共享数据类型的个数。
+  \item 类之间使用关系从方法之间数据依赖关系中抽象出来。
+  \item 类之间继承关系从方法调用中得到，子类在调用自己的构造方法之前会去调用其父类的构造方法。
+\end{enumerate}
+
+\subsection{组织代码依赖关系}
+参考典型的基于信息检索使用代码依赖的方法~\cite{Kuang2017closeness,panichella2013and}，我们把类之间的调用、继承和使用合并为一种类型的代码依赖即直接代码依赖，把类之间的数据共享看作另外一种代码依赖即数据依赖。前三种代码依赖归为同一种类型是因为它们结构类型，有明显的方向性，类之间的数据依赖与之不同，表示两个类共享某种或某几种数据类型，没有方向的概念。同时，类的调用依赖、类之间的继承和使用在很大程度上是重叠的。我们采用两种不同的方法计算这两种代码依赖（直接代码依赖和间接代码依赖）的紧密度。
+如图~\ref{F:codeDependencyGraph}，数据依赖由没有箭头的虚线表示，虚线上的值为虚线连接的两个类之间共享数据类型的数量；带有箭头的直线为直接代码依赖，箭头的方向代表调用发生的方向，直线上的值代表两个类之间发生的调用次数。例如：UpdateCodesListAction 和DrugCodesDAO 之间存在直接代码依赖，它包括两个方法调用和两个类使用。DrugCodesDAO 和DCBeanValidator 存在数据依赖，在运行UpdateCodesListAction的构造函数期间，DrugCodesDAO生成一个DrugCodesBean对象，并将其传递给
+DCValidator的~\emph{validate}方法。因为以上三个类共享数据类型DrugCodesBean。
+
+\section{计算代码依赖紧密度并生成代码依赖域}
+在本步骤中，我们将按照~\cite{Kuang2017closeness}中的方法计算直接代码依赖和间接代码依赖的紧密度。
+\subsection{计算直接代码依赖紧密度}
+对于类source和类sink之间的直接代码依赖，直觉上，如果两个类发生的方法调用或类使用次数比较多，则这两个类的关系比较紧密。另一个需要考虑的因素是source调用了多少个类，sink被多少个类调用过即source的出度（out-degree）和sink的入度（in-degree）。sink的入度较小意味着类sink更专注于为类source提供服务，而类source的出度较小意味着类source 更加依赖于类sink所提供的服务。直接代码依赖计算公式如下：
+\begin{align}
+    Closeness_{e}=\frac {2N} {WeightOutDegree_{e.source}+WeightInDegree_{e.target}}
+\end{align}
+其中~\emph{N}代表不同的函数调用与类引用的数量。在统计~\emph{source}的出度和~\emph{sink}的入度时，我们将每条直接调用依赖关系上的函数调用与类引用的数量作为出入度的权值。${WeightOutDegree_{e.source}}$和${WeightInDegree_{e.sink}}$ 分别表示两个加权的度量。${Closeness_{DC}}$的取值范围是0到1的闭区间。例如如图~\ref{F:codeDependencyGraph}，editDrugCodes\_jsp与UpdateCodesListAction之间的直接代码依赖紧密度为 2*4/ （（1+4+2）+4）=0.62，而editDrugCodes\_jsp和AuthDAO之间的直接代码依赖紧密度为
+2*1/（（1+4+2）+（1+1+1+1））=0.18，这表明与AuthDAO相比，editDrugCodes\_jsp与UpdateCodesListAction 关系更紧密。
+\subsection{计算数据依赖紧密度}
+当两个类访问同一个对象时意味着这两个类存在数据依赖，如表~\ref{T:sharedDataType}，展示了图~\ref{F:codeDependencyGraph} 中的共享数据类型，其中“Occurrences”列代表一个数据类型在iTrust系统的所有类数据依赖关系中出现的次数。
+\begin{table}
+\centering
+\caption{共享数据类型}
+\label{T:sharedDataType}
+\begin{tabular}{|l|l|l|}
+\toprule
+   \hline
+   Data Type       &   Occurrences  &  idtf Value         \\
+   \hline
+   DrugCodesBean   &   12           &  2.6013             \\
+   \hline
+   NDCodesDAO      &   143          &  1.5252             \\
+   \hline
+   Java.lang.String &  1118         &  0.6321             \\
+   \hline
+ \end{tabular}
+\end{table}
+
+
+观察表~\ref{T:sharedDataType}可知，String类型的出现次数远大于NDCode 和
+DrugCodesBean。由于~\emph{String}类型普遍存在于各代码依赖中，所以当两个类共享数据类型\emph{String}时，不能说明这两个类关系比较密切。因此在计算类之间数据依赖紧密度时要考虑所共享数据类型的重要程度。我们引入逆向数据类型频率（idtf）对数据类型重要性进行量化，公式如下：
+\begin{align}
+    idtf=log\frac {N}{n_{dt}}
+\end{align}
+其中\emph{N}代表所有类数据依赖的总数，而${n_{dt}}$代表一个给定数据类型在所有数据依赖关系中出现的次数。表中三个数据类型的idtf值也同样显示在该表中（iTrust系统中\emph{N}的值为4792）。
+
+根据\emph{idtf}值，我们设定\emph{idtf}的阈值${Threshold_{idtf}}$来过滤\emph{idtf}值小于阈值的数据类型。如果两个类之间共享数据类型的\emph{idtf}值均小于阈值，则忽略两者存在的数据依赖。对这些数据类型以及相应的数据依赖关系的忽略是必要的，否则，即使这些数据依赖关系的紧密度值较小，但由于其能够将大量无关的类关联起来，因此这些数据依赖仍然会对我们的算法产生不利的影响
+~\cite{Kuang2017closeness}。如果将$Threshold_{idtf}$设置为1.4.则图中\emph{editNDCodes\_jsp}和\emph{DrugInteractionAction}之间的数据依赖（仅基于
+\emph{String}） 就会被忽略。
+
+与信息检索技术中的idf概念~\cite{Yates1999IR}类似，idtf值实际上反映的是一个数据类型在整个代码的全局范围内被共享的程度。idtf 值越高意味着该数据类型被两个类所独占的可能性就越大，也就意味着两个类之间更加紧密的交互。此外，对于类${C_{i}}$和${C_{j}}$ 之间的一条数据依赖，这条数据依赖中所有数据类型的数量与${C_{i}}$和${C_{j}}$所共享的全部数据类型的数量（各自通过其它数据依赖）之间的比值也能够反映这两个类在“本地”的数据共享程度，这个比值越高意味着交互越紧密。
+
+由此，我们为类数据依赖定义紧密度${Closeness_{CD}}$如下：
+
+\begin{align} %%%在begin end里面貌似不能用$$符号
+    Closeness_{CD}=\frac {\sum _{x \in \{DT_{i}\cap DT_{j}\}}idtf(x)} {\sum _{y \in \{DT_{i}\cup
+DT_{j}\}}idtf(y)}
+\end{align}
+
+
+其中，$idtf(x)$表示数据类型$x$的\emph{idtf}值，$DT_{i}$与$DT_{j}$分别表示两个类所有数据依赖边的数据类型。$Closeness_{CD}$ 的取值范围是0到1之间。如图~\ref{F:codeDependencyGraph}的类UpdateCodeListAction和类DrugCodesDAO共享数据类型DrugCodesBean，其紧密度为2.60/ （2.60+1.53）=0.63，而类UpdateCodeListAction和类NDCodesDAO共享数据类型NDCode，两者之间紧密度为
+1.53/（1.53+2.60）=0.37。结果显示相比于类NDCodesDAO，类UpdateCodeListAction与类DrugCodesDAO的关系更紧密。
+图~\ref{F:codeDependencyClosenessRegion}为图~\ref{F:codeDependencyGraph}对应的代码依赖紧密度图。
+\begin{figure}[thb]
+    \centering
+    \includegraphics[width=0.8\textwidth]{./figures/RequirementTraceability/codeDependencyClosenessRegion.pdf}
+    \caption{代码依赖紧密度图}
+    \label{F:codeDependencyClosenessRegion}
+\end{figure}
+
+
+
+\subsection{建立CDCGraph}
+我们定义图\emph{CDCGraph}为一个有序对$G = <V,E>$，其中$V$是代码中类的集合，并以其类名来标识。进一步的，\emph{CDCGraph} 的顶点之间有两种类型的边。在两个顶点之间，$E_{CD}$代表一条直接调用边而$E_{DC}$代表一条数据依赖边。\emph{CDCGraph}同时在每条代码依赖关系上标注其计算得到的紧密度值。从图建立的CDCGraph如图~\ref{F:codeDependencyGraph}所示。
+
+\section{基于信息检索方法生成候选追踪线索列表}
+我们利用信息检索技术在需求和类之间生成候选线索列表，这部分共包含四个步骤：
+\begin{enumerate}
+  \item 创建文档库：对于代码中的每个类，我们抽取一个包含了这个类的注释、类名、方法名以及类成员名的文档。对于需求制品中的每条需求，我们抽取一个包含了其题目与内容的文档（对于有结构的需求用例我们抽取其前置条件、主要流程以及分支流程，对于无结构的需求我们直接引入所有文本信息）。
+
+  \item 标准化文档库：所有类和需求的文档都以信息检索领域内通用的标准化手段进行预处理，包括标识符拆分、骆驼分词、停用词过滤、词形还原和词根获取。
+
+  \item 索引文档库与文本相似度计算：我们使用tf-idf~\cite{Yates1999IR}对文档库中的每个关键词进行索引，并使用三个主流的信息检索模型来计算文档之间的相似度，即空间向量模型（VSM）~\cite{antoniol2002recovering}，隐式语义检索（LSI）~\cite{marcus2003recovering}，以及基于概率的Jensen-Shannon模型（JS）~\cite{abadi2008traceability}。
+
+  \item 建立候选线索列表：在生成的候选追踪线索列表中，我们按照每条候选追踪线索相似度值自大到小顺序排序。
+  \end{enumerate}
+表~\ref{IRCandidateList}展示了一部分在iTrust系统上生成的候选追踪线索列表。该列表通过VSM模型和需求UC15（标题为
+~\emph{Maintain standards lists}）与图中十一个类建立了候选追踪线索，
+该列表由相似度值降序排列。”Is Trace“列中的”X“表示该类与UC15 之间确实存在功能上的关联关系。
+
+\section{结合紧密度分析和用户反馈对候选列表重排序}
+接下来对于信息检索方法产生的候选追踪线索排序表，我们通过结合用户反馈信息和代码依赖紧密度分析来优化排序。
+~\cite{burgstaller2010understanding}表明一个给定需求一般在代码的某块联通域内被实现，而不是随机散步在代码各处，这也是我们
+前面设置代码依赖紧密度阈值生成代码域的依据。我们提出一个包含四个步骤的候选追踪线索重排序算法。第一，对于未代码域，根据各域内类与需求相似度最大值，对未判断代码域按照相似度值自大到小排序。对于排名第一的代码域，取其域内与需求相似度最大的类交由用户判断，如果该类与需求具备相关性则执行步骤二，否则直接跳至步骤四。第二，调整域内类对应候选线索相似度值。第三，调整域外类对应候选线索相似度值。第四，按照相似度值从大到小的顺序对所有候选线索重排序。由用户决定是否需要继续判断候选代码域，如果用户继续判断则重复步骤一，否则算法流程结束。
+
+\section{结合紧密度分析和用户反馈对候选列表重排序}
+我们的增强策略受到以下三个发现的启发，（1）候选列表中相似度最大的候选线索往往是有效的~\cite{cleland2005utilizing}。一个给定需求一般在代码的某块联通域内被实现，而不是随机散步在代码各处，这也是我们
+前面设置代码依赖紧密度阈值生成代码域的依据~\cite{burgstaller2010understanding}。（3）通过事先验证候选追踪线索得到的用户反馈和代码紧密度分析可以改善基于信息检索的软件可追踪生成方法的精度~\cite{panichella2013and}。因此，首先我们通过设置代码依赖紧密度阈值，在代码依赖图中去掉紧密度值小于紧密度阈值的边，形成一些联通子图，我们称这些联通子图为候选代码域。基于这些代码域我们提出了一种包含三个步骤的迭代式候选列表重排序算法。第一，对于未代码域，根据各域内类与需求相似度最大值，对未判断代码域按照相似度值自大到小排序。对于排名第一的代码域，取其域内与需求相似度最大的类交由用户判断，如果该类与需求具备相关性则执行步骤二，否则直接跳至步骤四。第二，调整域内类对应候选线索相似度值。第三，在同一轮迭代中调整域外类对应候选线索相似度值。当用户停止判断未判断域与需求相关性时，整个算法结束。
+
+
+\subsection{建立候选代码域}
+前文已经提到我们的方法涉及两种代码，直接代码依赖（由方法调用、类继承和类使用组成）、数据依赖。我们为两种代码依赖分别设定阈值$Threshold_{DC}$和$Threshold_{CD}$来对代码依赖图\emph{CDCGraph}进行裁剪。去掉小于紧密度阈值的边形成一些联通子图即代码依赖域。我们认为每个代码域中的各个类相互紧密协作完成同一个需求。对于任意一个给定需求，我们取每个代码域中与需求相似度值最大的类作为该域的代表类。对于这些代表类按照相似度值从大到小排序，用户自上而下判断其中一些代表类与需求相关性。用户通过判断代表类与需求的相关性得出其所在代码域与需求的相关性。如图~\ref{F:codeRegion}，我们假设 $Threshold_{DC}$ 值为0.6，$Threshold_{CD}$值为0.6，我们会得到两个代码域： 代码域1：
+\emph{UpdateCodesListction}、~\emph{DrugCodesDAO}、~\emph{editDrugCodes\_jsp} 和~\emph{DCBeanValidator}；代码域2：
+\emph{editNDCodes\_jsp}和~\emph{UpdateNDCodesListAction}。根据候选代码域的排序，用户将先验证Region1的代表类然后验证Region2的代表类。
+\begin{figure}[thb]
+    \centering
+    \includegraphics[width=0.8\textwidth]{./figures/RequirementTraceability/codeRegion.pdf}
+    \caption{候选代码域}
+    \label{F:codeRegion}
+\end{figure}
+
+\subsection{调整域内类对应候选线索相似度值}
+我们考虑两个因素给予域内非代表类对应候选追踪线索相似度奖励。（1）代码域的大小，即代码域包含类的个数。我们认为代码域中类的个数越少，类之间的关系越紧密。（2）域内其它类与代表类$C_{req}$的交互紧密度程度。
+针对两种不同的代码依赖我们采用两种方式来量化两个类之间的交互程度
+\begin{enumerate}
+  \item 直接代码依赖，我们在代码依赖图中寻找域内类$C_{in}$ 到代表类$C_{req}$的路径，该路径需要满足一直调用或者一直被调用的关系。
+  \item 数据依赖 只考虑两个类之间的直接数据依赖，不考虑传递性。
+\end{enumerate}
+域内类对应候选线索相似度根据以上两种依赖关系可以拿到两次奖励，公式如下：
+\begin{align} Bonus_{DC}=\prod _{x \in PATH} Closeness_{DC}(x) \end{align}
+公式解释：域内其它类（$C_{in}$）到域代表类（$C_{req}$）可能存在多条代码依赖路径， \emph{PATH}为紧密度乘积最大的一条。$Closeness_{DC}(x)$ 为直接代码依赖\emph{x}的紧密度值。
+综合考虑域大小和域内类与代表类交互程度，域内类对应候选追踪线索相似度值更新公式为：
+\begin{align} IR_{in}=(IR_{current}+\frac{IR_{top}}{RegionSize})(1+Bonus_{DC}+Closeness_{CD}(x))\end{align}
+公式解释：$IR_{current}$是域内类$C_{in}$对应候选追踪线索当前的相似度值，$IR_{top}$为域内类对应候选追踪线索相似度最大值，即域内代表类（represent class）对应候选追踪线索相似度值。\emph{RegionSize}为被判断代码域的大小，即代码域域内类的个数。
+
+\subsection{调整域外类对应候选线索相似度值}
+接下来我们对代码域域外的类对应候选追踪线索相似度值给予奖励，奖励的标准是这些类与域内代表类（$C_{rep}$）的交互程度。与前一步骤类似，我们针对不同的代码依赖关系采用不同的奖励方法。
+从直接代码依赖的角度出发，从一个代码域外的类$C_{out}$出发我们尝试找到一个通往被判断域内代表类$C_{rep}$的路径。与域内类到域内代表类之间的路径一样，域外类到域内代表类的一个合法路劲应该满足要求：这一路径是单向的，即$C_{out}$传递性到$C_{rep}$ 或者$C_{rep}$传递性到$C_{out}$；域外类对应候选追踪线索相似度值更新公式为：
+\begin{align}IR_{out}=IR_{current}+IR_{top}(Bonus_{DC}+Closeness_{CD}(x))\end{align}
+其中$IR_{current}$为域外类$C_{out}$对应候选追踪线索当前的相似度值，$IR_{top}$所有类与给定需求相似度的最大值。在这一步骤中有可能所有域外类对应候选线索相似度都能得到奖励。我们希望给予与域代表类交互紧密的域外类更多的奖励以提升它们在列表中的排序。
+
+\begin{algorithm}[!htbp]  %%%这里面的分数貌似要全部用$$包起来 并且只用一堆$$就够了
+\caption{recovery requirement traceability through user feedback and code dependency closeness analyse}
+\label{alg:reRankCandidate}
+\KwIn{$req$,$List$,$Threshold_{DC}$,$Threshold_{CD}$}
+\KwOut{$List$}
+$irValue_{top}$ $\leftarrow$ getTopRankedIRValue(List,req);\\
+regions $\leftarrow$ CDCGraph.prune($Threshold_{DC}$,$Threshold_{CD}$);\\
+\While {($not stopping criterion$)} %%注意 {}匹配
+{
+    $Region_{top}$ $\leftarrow$ regions.getTopRegion(list,req);\\
+    $class_{req}$ $\leftarrow$ topRegion.getRepresentativeClass(req);\\
+    The user verifies the link(req,$class_{rep}$) \\
+    \If {(req,$class_{rep}$ is a relevant trace)}
+    {
+        \ForEach {link in List}
+        {
+            $bonus_{DC}$ $\leftarrow$ getMaxBonusByDC(link.class,$class_{rep}$);\\
+            $bonus_{CD}$ $\leftarrow$ getBonusByCD(link.class,$class_{rep}$);\\
+            \If {$Region_{top}$ contains link.class}
+            {
+               link.value $\leftarrow$  (link.value+$\frac{irValue_{top}}{Region_{top}.size()}$)
+               (1+$bonus_{DC}$+$bonus_{CD}$);\\
+            }
+            \Else
+            {
+                link.value $\leftarrow$ link.value+$irValue_{top}$*($bonus_{DC}$+$bonus_{CD}$);\\
+            }
+            link.value $\leftarrow$ min(link.value,$irValue_{top}$);\\
+        }
+    }
+    Hide $Region_{top}$ from regions \\
+    Hide verified links and reorder List \\
+}
+\end{algorithm}
+
+
+
+\subsection{结束判断代码域与需求相关性}
+当用户没有意愿继续候选代码域与需求相关性，或者已经没有未被判断的候选代码域时，此时算法流程结束，否则进入下一轮迭代。在每一轮迭代中，有些候选追踪线索的相似度值会被更新，候选追踪列表排序会发生变化。然而，为了避免给不相关类对应追踪线索相似度太大的奖励，我们要求追踪线索相似度更新之后的值不超过候选线索相似度最大值。并且我们保证我们的算法是稳定排序。算法1.描述了我们的算法。
+
+\section{案例分析}
+本小节以实验系统iTrust为例，详细阐述本文方法的执行过程。
+\subsection{实验系统介绍}
+iTrust是一个医疗管理软件，采用java语言编写。该系统包括uc和src目录，其中uc目录里面是一组用于描述需求的文本文件，src目录为该项目的代码文件，iTrust系统具体信息如下表所示：
+\begin{center}
+ \begin{tabular}{|l|l|}
+   \hline
+   \#   &  iTrust \\
+   \hline
+   Version & 13.0 \\
+   \hline
+   Programming Language & Java \\
+   \hline
+   KLoC                 & 43   \\
+   \hline
+   Executed classes     & 138  \\
+   \hline
+   Evaluted requirements & 34  \\
+   \hline
+   Average number of classes implementing a requirement & 8 (1-17) \\
+   \hline
+   Direct code dependencies  &  274  \\
+   \hline
+   Class data dependencies   &  4792 \\
+   \hline
+   Relevant Traces in RTM & 255       \\
+   \hline
+ \end{tabular}
+\end{center}
+
+\subsection{为iTrust系统建立可追踪性过程}
+接下来结合iTrust系统，详细阐述我们算法的每一个步骤。
+\subsubsection{获得代码依赖}
+使用标准JDK提供的JVMTI接口，如图所示构造代码依赖捕获工具。运行iTrust系统，通过-agentpath参数将图2所示代码依赖捕获工具插桩到运行iTrust的虚拟机中。代码依赖捕获工具监控虚拟机中发生的函数进入、退出，域变量访问、修改等事件，当事件被触发时在对应回调函数中将数据访问记录保存到本地数据库中。最后通过对数据库进行分析得到函数之间的代码依赖，进而得到类之间的代码依赖。iTrust代码依赖详情见下表：
+\begin{center}
+ \begin{tabular}{|l|l|}
+   \hline
+   Call Relation Size & 274 \\
+   \hline
+   Data Relation Size & 4792 \\
+   \hline
+   Usage Relation Size & 119 \\
+   \hline
+   Direct Relation Size & 274 \\
+   \hline
+   Call \& Data Relation Overlap & 140 \\
+   \hline
+   Usage \& Data Relation Overlap & 119 \\
+   \hline
+   Direct \& Data Relation Overlap & 140 \\
+   \hline
+ \end{tabular}
+\end{center}
+
+下表为本例子中涉及到的数据依赖
+\begin{center}
+ \begin{tabular}{|l|l|l|}
+   \hline
+   Source                &  Data Type & Target                \\
+   \hline
+   NDCodesDAO            &  NDCode    & UpdateCodesListAction \\
+   \hline
+   UpdateCodesListAction &  LOINCBean & DrugCodesBeanValidator \\
+   \hline
+   UpdateCodesListAction &  LOINCBean & DrugCodesDAO           \\
+   \hline
+   DrugCodesBeanValidator & LOINCBean & DrugCodesDAO           \\
+   \hline
+ \end{tabular}
+\end{center}
+
+
+\subsubsection{计算代码依赖紧密度}
+如上方法所述，计算类之间数据依赖之前需要先计算各数据类型的\emph{idtf}值，用例中涉及数据类型的\emph{idtf}值如下表：
+N=4844
+\begin{center}
+ \begin{tabular}{|l|l|l|l|}
+   \hline
+   \# & Data Type     &  occurrences   &   Idtf Value \\
+   \hline
+   1 & LOINCBean     &  9             &   2.7310     \\
+   \hline
+   2 & NDCode        &  147           &   1.5179     \\
+   \hline
+   3 & Java.lang.String & 1118        &   0.6368     \\
+   \hline
+ \end{tabular}
+\end{center}
+根据上述方法中的紧密度公式，计算类之间的代码依赖紧密度，代码依赖紧密度图如图所示，设置直接代码依赖阈值0.6，设置数据依赖紧密度阈值0.6，紧密度高于阈值的类之间会形成代码域。如图，虚线框表示代码域，图中有两个代码域。
+
+\subsubsection{基于信息检索方法计算需求和代码之间的文本相似度}
+对需求uc和代码src中的文本，进行文本预处理。处理过程包括移除停用词，词形还原和词干提取等操作。特别的，对于从代码中抽出的文本首先需要根据骆驼命名法等变量规则进行分词。例如函数名initializeDrugCodes，首先根据驼峰规则划分为initialize、drug 和codes，然后根据进行词形还原和词干提取，分别得到init、drug 和code。对于预处理后的需求文本和代码文本，利用空间向量模型计算文本之间的相似度，下表为计算后的文本相似度从大到小排序表。最后一列isTrace表示该代码元素和需求之间是否具有相关性。X表示两者之间存在相关性。
+
+\begin{center}
+ \begin{tabular}{|l|l|l|l|}
+   \hline
+   class                   &    req     &   score   &    isTrace  \\
+   \hline
+   UpdateCodesListAction   &    UC15    &   0.3524  &       X     \\
+   \hline
+   UpdateNDCodesListAction &    UC15    &   0.3124  &       X     \\
+   \hline
+   DrugCodesDAO            &    UC15    &   0.2418  &       X     \\
+   \hline
+   editDrugCodes\_jsp       &    UC15    &   0.2112  &       X     \\
+   \hline
+   editNDCInteractions\_jsp &    UC15    &   0.1816  &             \\
+   \hline
+   editNDCodes\_jsp         &    UC15    &   0.1238  &       X     \\
+   \hline
+   DCBeanValidator         &    UC15    &   0.1045  &       X     \\
+   \hline
+   DrugInteractionAction   &    UC15    &   0.0953  &             \\
+   \hline
+   AuthDAO                 &    UC15    &   0.0682  &             \\
+   \hline
+   NDCodesDAO              &    UC15    &   0.0487  &       X     \\
+   \hline
+   viewResult\_jsp          &    UC15    &   0.0031  &       \\
+   \hline
+ \end{tabular}
+\end{center}
+
+\subsubsection{对代码域进行重排序}
+对代码域进行排序，如图代码域，根据前一步得到的相似度值，按照每个域中的最大值自大到小进行排序。先将第一个域交由用户判断即判断UpdateCodesListAction与UC15的相关性。由表知，两者具备相关性（实际运用中由用户判断代表类和UC15相关性）。对于UpdateCodesListAction 所在的域，根据上述算法需要调整其它域内类对应候选追踪线索的相似度值。对于域外相关类，根据代码依赖图知，只有类NDCodesDAO与域内代表类UpdateCodesListAction存在代码依赖，并且是同时存在数据依赖和直接代码依赖，因此需要对这个类对应候选追踪线索相似度值更新。同理，如果用户愿意继续判断，对由类editNDCodes\_jsp和UpdateNDCodesListAction组成的代码域进行判断，并根据用户判断结果调整相关追踪线索相似度值。
+在例子中使用我们的算法，用户判断完两个类之后，根据判断结果都候选追踪线索重排序的结果如下表：
+
+\begin{center}
+ \begin{tabular}{|l|l|l|l|}
+   \hline
+   class                    &   req    &     score     &   isTrace  \\
+   \hline
+   UpdateCodesListAction    &   UC15   &     0.3524    &      X     \\
+   \hline
+   editDrugCodes\_jsp        &   UC15   &     0.3524    &      X     \\
+   \hline
+   DCBeanValidator          &   UC15   &     0.3524    &      X     \\
+   \hline
+   DrugCodesDAO             &   UC15   &     0.3524    &      X     \\
+   \hline
+   editNDCodes\_jsp          &   UC15   &     0.3524    &      X     \\
+   \hline
+   UpdateNDCodesListAction  &   UC15   &     0.3124    &      X     \\
+   \hline
+   NDCodesDAO               &   UC15   &     0.2954    &      X     \\
+   \hline
+   editNDCInteractions\_jsp  &   UC15   &     0.2468    &            \\
+   \hline
+   DrugInteractionAction    &   UC15   &     0.1845    &            \\
+   \hline
+   AuthDAO                  &   UC15   &     0.1816    &            \\
+   \hline
+   viewResult               &   UC15   &     0.0031    &            \\
+   \hline
+ \end{tabular}
+\end{center}
+
+由表中可以看出，我们把与给定需求相关的类提高了排序表的前面。
+
+\section{本章小结}
+
+在本章中，我们提出一种基于代码依赖关系的过时需求自动检测与更新推荐方法，提高了过时需求检测时的精度，并推荐与过时需求更新相关的变更代码元素，以辅助维护人员完成对需求的更新。

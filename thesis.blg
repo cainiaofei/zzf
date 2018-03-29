@@ -1,0 +1,91 @@
+This is BibTeX, Version 0.99dThe top-level auxiliary file: thesis.aux
+The style file: unsrt.bst
+Database file #1: reference.bib
+Repeated entry---line 236 of file reference.bib
+ : @inproceedings{gotel1994analysis
+ :                                 ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 245 of file reference.bib
+ : @inproceedings{gotel1994analysis
+ :                                 ,
+I'm skipping whatever remains of this entry
+A bad cross reference---entry "mader2012assessing"
+refers to entry "DBLP:conf/icsm/2012", which doesn't exist
+A bad cross reference---entry "Panichella2015Adaptive"
+refers to entry "DBLP:conf/icse/2015sst", which doesn't exist
+A bad cross reference---entry "Penta2002RAD"
+refers to entry "DBLP:conf/iwpc/2002", which doesn't exist
+A bad cross reference---entry "Chen2013Robust"
+refers to entry "DBLP:conf/aswec/2013", which doesn't exist
+A bad cross reference---entry "Shi2017linguistic"
+refers to entry "DBLP:conf/kbse/2017", which doesn't exist
+Warning--I didn't find a database entry for "Huang2005Utilizing"
+Warning--I didn't find a database entry for "19"
+Warning--I didn't find a database entry for "DBLP:conf/icsm/2012"
+Warning--I didn't find a database entry for "DBLP:conf/iwpc/2002"
+Warning--I didn't find a database entry for "DBLP:conf/icse/2015sst"
+Warning--I didn't find a database entry for "DBLP:conf/aswec/2013"
+Warning--I didn't find a database entry for "DBLP:conf/kbse/2017"
+Name 1 in "G. Antoniol, G. Casazza, and A. Cimitile" has a comma at the end for entry Antoniol2000Modelling
+while executing---line 944 of file unsrt.bst
+Warning--empty journal in Antoniol2000Modelling
+Warning--empty year in Antoniol2000Modelling
+Too many commas in name 1 of "Giuliano Antoniol,Jane Cleland{-}Huang,Jane Huffman Hayes,Michael Vierhauser" for entry Antoniol2017Ten
+while executing---line 944 of file unsrt.bst
+Too many commas in name 1 of "Hongyu Kuang, Jia Nie,Hao Hu,Patrick Rempel,Jian Lu,Alexander Egyed, Patrick M{\"{a}}der" for entry Kuang2017closeness
+while executing---line 944 of file unsrt.bst
+Too many commas in name 1 of "Hongyu Kuang, Jia Nie,Hao Hu,Patrick Rempel,Jian Lu,Alexander Egyed, Patrick M{\"{a}}der" for entry Kuang2017closeness
+while executing---line 944 of file unsrt.bst
+Too many commas in name 1 of "Hongyu Kuang, Jia Nie,Hao Hu,Patrick Rempel,Jian Lu,Alexander Egyed, Patrick M{\"{a}}der" for entry Kuang2017closeness
+while executing---line 944 of file unsrt.bst
+Too many commas in name 1 of "Hongyu Kuang, Jia Nie,Hao Hu,Patrick Rempel,Jian Lu,Alexander Egyed, Patrick M{\"{a}}der" for entry Kuang2017closeness
+while executing---line 944 of file unsrt.bst
+Too many commas in name 1 of "Malcom Gethers,Rocco Oliveto,Denys Poshyvanyk,Andrea De Lucia" for entry Malcom2011orthogonal
+while executing---line 944 of file unsrt.bst
+Warning--empty journal in salton1986introduction
+Too many commas in name 1 of "Scott C. Deerwester,Susan T. Dumais,Thomas K. Landauer,George W. Furnas,Richard A. Harshman" for entry Scott1990LSI
+while executing---line 944 of file unsrt.bst
+Too many commas in name 1 of "Scott C. Deerwester,Susan T. Dumais,Thomas K. Landauer,George W. Furnas,Richard A. Harshman" for entry Scott1990LSI
+while executing---line 944 of file unsrt.bst
+Too many commas in name 1 of "Lingjun Kong,Juan Li,Yin Li,Ye Yang,Qing Wang" for entry Lingjun2009Refinement
+while executing---line 944 of file unsrt.bst
+Too many commas in name 1 of "Lingjun Kong,Juan Li,Yin Li,Ye Yang,Qing Wang" for entry Lingjun2009Refinement
+while executing---line 944 of file unsrt.bst
+Too many commas in name 1 of "Wentao Wang,Arushi Gupta,Nan Niu,Li Da Xu,Jing{-}Ru C. Cheng,Zhendong Niu" for entry Wang2018Term
+while executing---line 944 of file unsrt.bst
+Too many commas in name 1 of "Wentao Wang,Arushi Gupta,Nan Niu,Li Da Xu,Jing{-}Ru C. Cheng,Zhendong Niu" for entry Wang2018Term
+while executing---line 944 of file unsrt.bst
+Too many commas in name 1 of "Wentao Wang,Arushi Gupta,Nan Niu,Li Da Xu,Jing{-}Ru C. Cheng,Zhendong Niu" for entry Wang2018Term
+while executing---line 944 of file unsrt.bst
+Too many commas in name 1 of "Jane Cleland{-}Huang,Adam Czauderna,Alex Dekhtyar,Olly Gotel,Jane Huffman Hayes,Ed Keenan,Greg Leach and Jonathan I. Maletic,Denys Poshyvanyk,Yonghee Shin,Andrea Zisman,Giuliano Antoniol,Brian Berenbach and Alexander Egyed and Patrick M{\"{a}}der" for entry Cleland-Huang2011challenges
+while executing---line 944 of file unsrt.bst
+Too many commas in name 1 of "Jane Cleland{-}Huang,Adam Czauderna,Alex Dekhtyar,Olly Gotel,Jane Huffman Hayes,Ed Keenan,Greg Leach and Jonathan I. Maletic,Denys Poshyvanyk,Yonghee Shin,Andrea Zisman,Giuliano Antoniol,Brian Berenbach and Alexander Egyed and Patrick M{\"{a}}der" for entry Cleland-Huang2011challenges
+while executing---line 944 of file unsrt.bst
+Too many commas in name 1 of "Jane Cleland{-}Huang,Adam Czauderna,Alex Dekhtyar,Olly Gotel,Jane Huffman Hayes,Ed Keenan,Greg Leach and Jonathan I. Maletic,Denys Poshyvanyk,Yonghee Shin,Andrea Zisman,Giuliano Antoniol,Brian Berenbach and Alexander Egyed and Patrick M{\"{a}}der" for entry Cleland-Huang2011challenges
+while executing---line 944 of file unsrt.bst
+Too many commas in name 1 of "Jane Cleland{-}Huang,Adam Czauderna,Alex Dekhtyar,Olly Gotel,Jane Huffman Hayes,Ed Keenan,Greg Leach and Jonathan I. Maletic,Denys Poshyvanyk,Yonghee Shin,Andrea Zisman,Giuliano Antoniol,Brian Berenbach and Alexander Egyed and Patrick M{\"{a}}der" for entry Cleland-Huang2011challenges
+while executing---line 944 of file unsrt.bst
+Too many commas in name 2 of "Jane Cleland{-}Huang,Adam Czauderna,Alex Dekhtyar,Olly Gotel,Jane Huffman Hayes,Ed Keenan,Greg Leach and Jonathan I. Maletic,Denys Poshyvanyk,Yonghee Shin,Andrea Zisman,Giuliano Antoniol,Brian Berenbach and Alexander Egyed and Patrick M{\"{a}}der" for entry Cleland-Huang2011challenges
+while executing---line 944 of file unsrt.bst
+Too many commas in name 2 of "Jane Cleland{-}Huang,Adam Czauderna,Alex Dekhtyar,Olly Gotel,Jane Huffman Hayes,Ed Keenan,Greg Leach and Jonathan I. Maletic,Denys Poshyvanyk,Yonghee Shin,Andrea Zisman,Giuliano Antoniol,Brian Berenbach and Alexander Egyed and Patrick M{\"{a}}der" for entry Cleland-Huang2011challenges
+while executing---line 944 of file unsrt.bst
+Too many commas in name 2 of "Jane Cleland{-}Huang,Adam Czauderna,Alex Dekhtyar,Olly Gotel,Jane Huffman Hayes,Ed Keenan,Greg Leach and Jonathan I. Maletic,Denys Poshyvanyk,Yonghee Shin,Andrea Zisman,Giuliano Antoniol,Brian Berenbach and Alexander Egyed and Patrick M{\"{a}}der" for entry Cleland-Huang2011challenges
+while executing---line 944 of file unsrt.bst
+Warning--empty booktitle in Cleland-Huang2011challenges
+Too many commas in name 1 of "Eya Ben Charrada,David Caspar,C{\'{e}}dric Jeanneret,Martin Glinz" for entry Charrada2011Benchmark
+while executing---line 944 of file unsrt.bst
+Too many commas in name 1 of "Xiaofan Chen,John G. Hosking,John Grundy,Robert Amor" for entry Chen2013Robust
+while executing---line 944 of file unsrt.bst
+Too many commas in name 1 of "Lin Shi,Celia Chen,Qing Wang,Shoubin Li,Barry W. Boehm" for entry Shi2017linguistic
+while executing---line 944 of file unsrt.bst
+Too many commas in name 1 of "Lin Shi,Celia Chen,Qing Wang,Shoubin Li,Barry W. Boehm" for entry Shi2017linguistic
+while executing---line 944 of file unsrt.bst
+Too many commas in name 1 of "Fabio Palomba,Pasquale Salza,Adelina Ciurumelea,Sebastiano Panichella,Harald C. Gall,Filomena Ferrucci,Andrea De Lucia" for entry Palomba2017Recommending
+while executing---line 944 of file unsrt.bst
+Too many commas in name 1 of "Fabio Palomba,Pasquale Salza,Adelina Ciurumelea,Sebastiano Panichella,Harald C. Gall,Filomena Ferrucci,Andrea De Lucia" for entry Palomba2017Recommending
+while executing---line 944 of file unsrt.bst
+Too many commas in name 1 of "Fabio Palomba,Pasquale Salza,Adelina Ciurumelea,Sebastiano Panichella,Harald C. Gall,Filomena Ferrucci,Andrea De Lucia" for entry Palomba2017Recommending
+while executing---line 944 of file unsrt.bst
+Too many commas in name 1 of "Fabio Palomba,Pasquale Salza,Adelina Ciurumelea,Sebastiano Panichella,Harald C. Gall,Filomena Ferrucci,Andrea De Lucia" for entry Palomba2017Recommending
+while executing---line 944 of file unsrt.bst
+(There were 36 error messages)

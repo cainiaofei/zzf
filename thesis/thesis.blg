@@ -1,0 +1,15 @@
+This is BibTeX, Version 0.99dThe top-level auxiliary file: thesis.aux
+The style file: unsrt.bst
+I found no \citation commands---while reading file thesis.aux
+Database file #1: thesis.bib
+You're missing a field name---line 281 of file thesis.bib
+ : 
+ : %  title={Skyline 查询处理},
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+You're missing a field name---line 290 of file thesis.bib
+ : 
+ : %  title={Skyline 计算研究综述},
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+(There were 3 error messages)

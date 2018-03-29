@@ -1,0 +1,32 @@
+\BOOKMARK [0][-]{chapter*.1}{目 \040录}{}% 1
+\BOOKMARK [0][-]{chapter.1}{第一章 \040绪言}{}% 2
+\BOOKMARK [1][-]{section.1.1}{1.1 研究背景}{chapter.1}% 3
+\BOOKMARK [1][-]{section.1.2}{1.2 本文组织}{chapter.1}% 4
+\BOOKMARK [0][-]{chapter.2}{第二章 \040相关工作}{}% 5
+\BOOKMARK [1][-]{section.2.1}{2.1 研究背景}{chapter.2}% 6
+\BOOKMARK [1][-]{section.2.2}{2.2 本文组织}{chapter.2}% 7
+\BOOKMARK [0][-]{chapter.3}{第三章 \040基于代码依赖关系的需求可追踪性生成方法基于代码依赖关系的需求可追踪性生成方法}{}% 8
+\BOOKMARK [1][-]{section.3.1}{3.1 引言}{chapter.3}% 9
+\BOOKMARK [1][-]{section.3.2}{3.2 本章小结}{chapter.3}% 10
+\BOOKMARK [0][-]{chapter.4}{第四章 \040基于代码依赖关系的过时需求自动检测 与更新推荐方法}{}% 11
+\BOOKMARK [1][-]{section.4.1}{4.1 引言}{chapter.4}% 12
+\BOOKMARK [1][-]{section.4.2}{4.2 背景}{chapter.4}% 13
+\BOOKMARK [2][-]{subsection.4.2.1}{4.2.1 研究动机}{section.4.2}% 14
+\BOOKMARK [2][-]{subsection.4.2.2}{4.2.2 问题定义}{section.4.2}% 15
+\BOOKMARK [1][-]{section.4.3}{4.3 方法概述}{chapter.4}% 16
+\BOOKMARK [1][-]{section.4.4}{4.4 代码依赖关系构成的代码变更组识别技术}{chapter.4}% 17
+\BOOKMARK [2][-]{subsection.4.4.1}{4.4.1 比较代码元素的差异}{section.4.4}% 18
+\BOOKMARK [2][-]{subsection.4.4.2}{4.4.2 构造变更组}{section.4.4}% 19
+\BOOKMARK [1][-]{section.4.5}{4.5 基于变更组文本与需求文本相似性的过时需求自动检测方法}{chapter.4}% 20
+\BOOKMARK [2][-]{subsection.4.5.1}{4.5.1 抽取关键词以构造变更组的描述文本}{section.4.5}% 21
+\BOOKMARK [2][-]{subsection.4.5.2}{4.5.2 基于信息检索技术生成近似候选过时需求的排序}{section.4.5}% 22
+\BOOKMARK [1][-]{section.4.6}{4.6 实验与分析}{chapter.4}% 23
+\BOOKMARK [2][-]{subsection.4.6.1}{4.6.1 实验目标与评价指标}{section.4.6}% 24
+\BOOKMARK [2][-]{subsection.4.6.2}{4.6.2 研究案例与实验设置}{section.4.6}% 25
+\BOOKMARK [2][-]{subsection.4.6.3}{4.6.3 实验结果与结果分析}{section.4.6}% 26
+\BOOKMARK [1][-]{section.4.7}{4.7 本章小结}{chapter.4}% 27
+\BOOKMARK [0][-]{chapter.5}{第五章 \040总结与展望}{}% 28
+\BOOKMARK [1][-]{section.5.1}{5.1 工作总结}{chapter.5}% 29
+\BOOKMARK [1][-]{section.5.2}{5.2 研究展望}{chapter.5}% 30
+\BOOKMARK [0][-]{chapter*.3}{简历与科研成果}{}% 31
+\BOOKMARK [0][-]{chapter*.4}{参考文献}{}% 32

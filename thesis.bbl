@@ -1,0 +1,336 @@
+\begin{thebibliography}{10}
+
+\bibitem{coest}
+Coest: Center of excellence for software traceability.
+\newblock \url{http://www.CoEST.org/}.
+
+\bibitem{Chen2011combining}
+Xiaofan Chen and John~C. Grundy.
+\newblock Improving automated documentation to code traceability by combining
+  retrieval techniques.
+\newblock In {\em 26th {IEEE/ACM} International Conference on Automated
+  Software Engineering {(ASE} 2011), Lawrence, KS, USA, November 6-10, 2011},
+  pages 223--232, 2011.
+
+\bibitem{antoniol2002recovering}
+Giuliano Antoniol, Gerardo Canfora, Gerardo Casazza, Andrea De~Lucia, and
+  Ettore Merlo.
+\newblock Recovering traceability links between code and documentation.
+\newblock {\em IEEE Transactions on Software Engineering}, 28(10):970--983,
+  2002.
+
+\bibitem{Antoniol2000Modelling}
+G.~Casazza G.~Antoniol and A.~Cimitile.
+\newblock Traceability recovery by modelling programmer behaviour.
+
+\bibitem{Rempel2017Defects}
+Patrick~M{\"{a}}der Patrick~Rempel.
+\newblock Preventing defects: The impact of requirements traceability
+  completeness on software quality.
+\newblock {\em {IEEE} Trans. Software Eng.}, 43(8):777--797, 2017.
+
+\bibitem{mader2012assessing}
+Patrick M{\"{a}}der and Alexander Egyed.
+\newblock Assessing the effect of requirements traceability for software
+  maintenance.
+\newblock In {\em 28th {IEEE} International Conference on Software Maintenance,
+  {ICSM} 2012, Trento, Italy, September 23-28, 2012}, pages 171--180, 2012.
+
+\bibitem{Huang2014Software}
+Jane Cleland{-}Huang, Orlena Gotel, Jane~Huffman Hayes, Patrick M{\"{a}}der,
+  and Andrea Zisman.
+\newblock Software traceability: trends and future directions.
+\newblock In {\em Proceedings of the on Future of Software Engineering, {FOSE}
+  2014, Hyderabad, India, May 31 - June 7, 2014}, pages 55--69, 2014.
+
+\bibitem{Antoniol2017Ten}
+Jane Huffman Hayes Michael~Vierhauser Giuliano~Antoniol, Jane~Cleland{-}Huang.
+\newblock Grand challenges of traceability: The next ten years.
+\newblock {\em CoRR}, abs/1710.03129, 2017.
+
+\bibitem{ramesh2001toward}
+Balasubramaniam Ramesh and Matthias Jarke.
+\newblock Toward reference models for requirements traceability.
+\newblock {\em IEEE Transactions on Software Engineering}, 27(1):58--93, 2001.
+
+\bibitem{gotel1994analysis}
+Orlena~CZ Gotel and Anthony~CW Finkelstein.
+\newblock The study of methods for language model based positive and negative
+  relevance feedback in information retrieval.
+\newblock In {\em Proceedings of the First International Conference on
+  Requirements Engineering}, pages 94--101. IEEE, 1994.
+
+\bibitem{mcmillan2009combining}
+Collin McMillan, Denys Poshyvanyk, and Meghan Revelle.
+\newblock Combining textual and structural analysis of software artifacts for
+  traceability link recovery.
+\newblock In {\em ICSE Workshop on Traceability in Emerging Forms of Software
+  Engineering (TEFSE)}, pages 41--48. IEEE, 2009.
+
+\bibitem{Kuang2017closeness}
+Hao Hu Patrick Rempel Jian Lu Alexander Egyed Patrick~M{\"{a}}der Hongyu~Kuang,
+  Jia~Nie.
+\newblock Analyzing closeness of code dependencies for improving ir-based
+  traceability recovery.
+\newblock In {\em {IEEE} 24th International Conference on Software Analysis,
+  Evolution and Reengineering, {SANER} 2017, Klagenfurt, Austria, February
+  20-24, 2017}, pages 68--78, 2017.
+
+\bibitem{hayes2006advancing}
+Jane~Huffman Hayes, Alex Dekhtyar, and Senthil~Karthikeyan Sundaram.
+\newblock Advancing candidate link generation for requirements tracing: The
+  study of methods.
+\newblock {\em IEEE Transactions on Software Engineering}, 32(1):4--19, 2006.
+
+\bibitem{Lucia2006Incremental}
+Paola~Sgueglia Andrea De~Lucia, Rocco~Oliveto.
+\newblock Incremental approach and user feedbacks: a silver bullet for
+  traceability recovery.
+\newblock In {\em 22nd {IEEE} International Conference on Software Maintenance
+  {(ICSM}2006), 24-27 September 2006, Philadelphia, Pennsylvania, {USA}}, pages
+  299--309, 2006.
+
+\bibitem{panichella2013and}
+Annibale Panichella, Collin McMillan, Evan Moritz, Davide Palmieri, Rocco
+  Oliveto, Denys Poshyvanyk, and Andrea De~Lucia.
+\newblock When and how using structural information to improve ir-based
+  traceability recovery.
+\newblock In {\em 17th European Conference on Software Maintenance and
+  Reengineering (CSMR)}, pages 199--208. IEEE, 2013.
+
+\bibitem{cleland2003event}
+Jane Cleland-Huang, Carl~K Chang, and Mark Christensen.
+\newblock Event-based traceability for managing evolutionary change.
+\newblock {\em IEEE Transactions on Software Engineering}, 29(9):796--810,
+  2003.
+
+\bibitem{mader2012towards}
+Patrick M{\"a}der and Orlena Gotel.
+\newblock Towards automated traceability maintenance.
+\newblock {\em Journal of Systems and Software}, 85(10):2205--2227, 2012.
+
+\bibitem{hayes2007requirements}
+Jane~Huffman Hayes, Alex Dekhtyar, Senthil~Karthikeyan Sundaram, E~Ashlee
+  Holbrook, Sravanthi Vadlamudi, and Alain April.
+\newblock Requirements tracing on target (retro): improving software
+  maintenance through traceability recovery.
+\newblock {\em Innovations in Systems and Software Engineering}, 3(3):193--202,
+  2007.
+
+\bibitem{marcus2003recovering}
+Andrian Marcus and Jonathan~I Maletic.
+\newblock Recovering documentation-to-source-code traceability links using
+  latent semantic indexing.
+\newblock In {\em Proceedings of the 25th International Conference on Software
+  Engineering}, pages 125--135. IEEE, 2003.
+
+\bibitem{cleland2005utilizing}
+Jane Cleland-Huang, Raffaella Settimi, Chuan Duan, and Xuchang Zou.
+\newblock Utilizing supporting evidence to improve dynamic requirements
+  traceability.
+\newblock In {\em Proceedings of the 13th IEEE International Conference on
+  Requirements Engineering}, pages 135--144. IEEE, 2005.
+
+\bibitem{Malcom2011orthogonal}
+Denys Poshyvanyk Andrea De~Lucia Malcom~Gethers, Rocco~Oliveto.
+\newblock On integrating orthogonal information retrieval methods to improve
+  traceability recovery.
+\newblock In {\em {IEEE} 27th International Conference on Software Maintenance,
+  {ICSM} 2011, Williamsburg, VA, USA, September 25-30, 2011}, pages 133--142,
+  2011.
+
+\bibitem{cleland2010machine}
+Jane Cleland-Huang, Adam Czauderna, Marek Gibiec, and John Emenecker.
+\newblock A machine learning approach for tracing regulatory codes to product
+  specific requirements.
+\newblock In {\em Proceedings of the 32nd ACM/IEEE International Conference on
+  Software Engineering-Volume 1}, pages 155--164. ACM, 2010.
+
+\bibitem{eaddy2008cerberus}
+Marc Eaddy, Alfred~V Aho, Giuliano Antoniol, and Yann-Ga{\"e}l
+  Gu{\'e}h{\'e}neuc.
+\newblock Cerberus: Tracing requirements to source code using information
+  retrieval, dynamic analysis, and program analysis.
+\newblock In {\em The 16th IEEE International Conference on Program
+  Comprehension (ICPC)}, pages 53--62. IEEE, 2008.
+
+\bibitem{abadi2008traceability}
+Aharon Abadi, Mordechai Nisenson, and Yahalomit Simionovici.
+\newblock A traceability technique for specifications.
+\newblock In {\em The 16th IEEE International Conference on Program
+  Comprehension}, pages 103--112. IEEE, 2008.
+
+\bibitem{deerwester1990indexing}
+Scott Deerwester, Susan~T Dumais, George~W Furnas, Thomas~K Landauer, and
+  Richard Harshman.
+\newblock Indexing by latent semantic analysis.
+\newblock {\em Journal of the American society for information science},
+  41(6):391, 1990.
+
+\bibitem{dumais1991improving}
+Susan~T Dumais.
+\newblock Improving the retrieval of information from external sources.
+\newblock {\em Behavior Research Methods, Instruments, \& Computers},
+  23(2):229--236, 1991.
+
+\bibitem{salton1986introduction}
+Gerard Salton and Michael~J McGill.
+\newblock Introduction to modern information retrieval.
+\newblock 1986.
+
+\bibitem{Scott1990LSI}
+Thomas K. Landauer George W. Furnas Richard A.~Harshman Scott C.~Deerwester,
+  Susan T.~Dumais.
+\newblock Indexing by latent semantic analysis.
+\newblock {\em {JASIS}}, 41(6):391--407, 1990.
+
+\bibitem{Panichella2015Adaptive}
+Andy~Zaidman Annibale~Panichella, Andrea De~Lucia.
+\newblock Adaptive user feedback for ir-based traceability recovery.
+\newblock In {\em 8th {IEEE/ACM} International Symposium on Software and
+  Systems Traceability, {SST} 2015, Florence, Italy, May 17, 2015}, pages
+  15--21, 2015.
+
+\bibitem{Zhang2012The}
+Wenjing Zhang and Junyi Wang.
+\newblock The study of methods for language model based positive and negative
+  relevance feedback in information retrieval.
+\newblock In {\em Fourth International Symposium on Information Science and
+  Engineering}, pages 39--43, 2012.
+
+\bibitem{Yates1999IR}
+Berthier A.~Ribeiro{-}Neto Ricardo A.~Baeza{-}Yates.
+\newblock {\em Modern Information Retrieval}.
+\newblock {ACM} Press / Addison-Wesley, 1999.
+
+\bibitem{Lingjun2009Refinement}
+Yin Li Ye Yang Qing~Wang Lingjun~Kong, Juan~Li.
+\newblock A requirement traceability refinement method based on relevance
+  feedback.
+\newblock In {\em Proceedings of the 21st International Conference on Software
+  Engineering {\&} Knowledge Engineering (SEKE'2009), Boston, Massachusetts,
+  USA, July 1-3, 2009}, pages 37--42, 2009.
+
+\bibitem{Manning2008Introduction}
+Christopher~D Manning, Prabhakar Raghavan, and Hinrich Schütze.
+\newblock Introduction to information retrieval.
+\newblock {\em Journal of the American Society for Information Science \&
+  Technology}, 43(3):824--825, 2008.
+
+\bibitem{Lawrie2010Normalizing}
+Christopher~Morrell Dawn J.~Lawrie, David W.~Binkley.
+\newblock Normalizing source code vocabulary.
+\newblock In {\em 17th Working Conference on Reverse Engineering, {WCRE} 2010,
+  13-16 October 2010, Beverly, MA, {USA}}, pages 3--12, 2010.
+
+\bibitem{Lawrie2011identifiers}
+David W.~Binkley Dawn J.~Lawrie.
+\newblock Expanding identifiers to normalize source code vocabulary.
+\newblock In {\em {IEEE} 27th International Conference on Software Maintenance,
+  {ICSM} 2011, Williamsburg, VA, USA, September 25-30, 2011}, pages 113--122,
+  2011.
+
+\bibitem{Wang2018Term}
+Nan Niu Li Da Xu Jing{-}Ru C. Cheng Zhendong~Niu Wentao~Wang, Arushi~Gupta.
+\newblock Automatically tracing dependability requirements via term-based
+  relevance feedback.
+\newblock {\em {IEEE} Trans. Industrial Informatics}, 14(1):342--349, 2018.
+
+\bibitem{Penta2002RAD}
+Giuliano~Antoniol Massimiliano Di~Penta, Sara~Gradara.
+\newblock Traceability recovery in {RAD} software systems.
+\newblock In {\em 10th International Workshop on Program Comprehension {(IWPC}
+  2002), 27-29 June 2002, Paris, France}, pages 207--216, 2002.
+
+\bibitem{Guo2017deep}
+Jin Guo, Jinghui Cheng, and Jane Cleland{-}Huang.
+\newblock Semantically enhanced software traceability using deep learning
+  techniques.
+\newblock In {\em Proceedings of the 39th International Conference on Software
+  Engineering, {ICSE} 2017, Buenos Aires, Argentina, May 20-28, 2017}, pages
+  3--14, 2017.
+
+\bibitem{kuang2015can}
+Hongyu Kuang, Patrick M{\"a}der, Hao Hu, Achraf Ghabi, LiGuo Huang, Jian
+  L{\"u}, and Alexander Egyed.
+\newblock Can method data dependencies support the assessment of traceability
+  between requirements and source code?
+\newblock {\em Journal of Software: Evolution and Process}, 27(11):838--866,
+  2015.
+
+\bibitem{Cleland-Huang2011challenges}
+Alex Dekhtyar Olly Gotel Jane Huffman Hayes Ed Keenan Greg~Leach
+  Jane~Cleland{-}Huang, Adam~Czauderna, Yonghee Shin Andrea Zisman Giuliano
+  Antoniol Brian~Berenbach Jonathan I.~Maletic, Denys~Poshyvanyk, Alexander
+  Egyed, and Patrick M{\"{a}}der.
+\newblock Grand challenges, benchmarks, and tracelab: developing infrastructure
+  for the software traceability research community.
+\newblock pages 17--23, 2011.
+
+\bibitem{Charrada2011Benchmark}
+C{\'{e}}dric Jeanneret Martin~Glinz Eya Ben~Charrada, David~Caspar.
+\newblock Towards a benchmark for traceability.
+\newblock In {\em Proceedings of the 12th International Workshop on Principles
+  of Software Evolution and the 7th annual {ERCIM} Workshop on Software
+  Evolution, {EVOL/IWPSE} 2011, Szeged, Hungary, September 5-6, 2011.}, pages
+  21--30, 2011.
+
+\bibitem{Chen2013Robust}
+John Grundy Robert~Amor Xiaofan~Chen, John G.~Hosking.
+\newblock Development of robust traceability benchmarks.
+\newblock In {\em 22nd Australian Conference on Software Engineering {(ASWEC}
+  2013), 4-7 June 2013, Melbourne, Victoria, Australia}, pages 145--154, 2013.
+
+\bibitem{Shi2017linguistic}
+Qing Wang Shoubin Li Barry W.~Boehm Lin~Shi, Celia~Chen.
+\newblock Understanding feature requests by leveraging fuzzy method and
+  linguistic analysis.
+\newblock In {\em Proceedings of the 32nd {IEEE/ACM} International Conference
+  on Automated Software Engineering, {ASE} 2017, Urbana, IL, USA, October 30 -
+  November 03, 2017}, pages 440--450, 2017.
+
+\bibitem{Cleland-Huang2013Requirements}
+Jane Cleland{-}Huang.
+\newblock Are requirements alive and kicking?
+\newblock {\em {IEEE} Software}, 30(3):13--15, 2013.
+
+\bibitem{Cleland2012Traceability}
+Andrea~Zisman Jane~Cleland{-}Huang, Olly~Gotel, editor.
+\newblock {\em Software and Systems Traceability}.
+\newblock Springer, 2012.
+
+\bibitem{burgstaller2010understanding}
+Benedikt Burgstaller and Alexander Egyed.
+\newblock Understanding where requirements are implemented.
+\newblock In {\em IEEE International Conference on Software Maintenance
+  (ICSM)}, pages 1--5. IEEE, 2010.
+
+\bibitem{Rath2017IlmSeven}
+Patrick~M{\"{a}}der Michael~Rath, Patrick~Rempel.
+\newblock The ilmseven dataset.
+\newblock In {\em 25th {IEEE} International Requirements Engineering
+  Conference, {RE} 2017, Lisbon, Portugal, September 4-8, 2017}, pages
+  516--519, 2017.
+
+\bibitem{Ali2015entities}
+Nasir Ali, Zohreh Sharafi, Yann{-}Ga{\"{e}}l Gu{\'{e}}h{\'{e}}neuc, and
+  Giuliano Antoniol.
+\newblock An empirical study on the importance of source code entities for
+  requirements traceability.
+\newblock {\em Empirical Software Engineering}, 20(2):442--478, 2015.
+
+\bibitem{Grogge2000Statistics}
+David~J. Groggel.
+\newblock Practical nonparametric statistics.
+\newblock {\em Technometrics}, 42(3):317--318, 2000.
+
+\bibitem{Palomba2017Recommending}
+Adelina Ciurumelea Sebastiano Panichella Harald C. Gall Filomena Ferrucci
+  Andrea De~Lucia Fabio~Palomba, Pasquale~Salza.
+\newblock Recommending and localizing change requests for mobile apps based on
+  user reviews.
+\newblock In {\em Proceedings of the 39th International Conference on Software
+  Engineering, {ICSE} 2017, Buenos Aires, Argentina, May 20-28, 2017}, pages
+  106--117, 2017.
+
+\end{thebibliography}

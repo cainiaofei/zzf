@@ -1,0 +1,470 @@
+@inproceedings{gotel1994analysis,
+  title={An analysis of the requirements traceability problem},
+  author={Gotel, Orlena CZ and Finkelstein, Anthony CW},
+  booktitle={Proceedings of the First International Conference on Requirements Engineering},
+  pages={94--101},
+  year={1994},
+  organization={IEEE}
+}
+
+@inproceedings{mader2012assessing,
+  title={Assessing the effect of requirements traceability for software maintenance},
+  author={Mader, Patrick and Egyed, Alexander},
+  booktitle={28th IEEE International Conference on Software Maintenance (ICSM)},
+  pages={171--180},
+  year={2012},
+  organization={IEEE}
+}
+
+@inproceedings{ramesh1995implementing,
+  title={Implementing requirements traceability: a case study},
+  author={Ramesh, Balasubramaniam and Powers, Timothy and Stubbs, Curtis and Edwards, Michael},
+  booktitle={Proceedings of the Second IEEE International Symposium on Requirements Engineering},
+  pages={89--95},
+  year={1995},
+  organization={IEEE}
+}
+
+@article{antoniol2002recovering,
+  title={Recovering traceability links between code and documentation},
+  author={Antoniol, Giuliano and Canfora, Gerardo and Casazza, Gerardo and De Lucia, Andrea and Merlo, Ettore},
+  journal={IEEE Transactions on Software Engineering},
+  volume={28},
+  number={10},
+  pages={970--983},
+  year={2002},
+  publisher={IEEE}
+}
+
+@inproceedings{marcus2003recovering,
+  title={Recovering documentation-to-source-code traceability links using latent semantic indexing},
+  author={Marcus, Andrian and Maletic, Jonathan I},
+  booktitle={Proceedings of the 25th International Conference on Software Engineering},
+  pages={125--135},
+  year={2003},
+  organization={IEEE}
+}
+
+@inproceedings{cleland2005utilizing,
+  title={Utilizing supporting evidence to improve dynamic requirements traceability},
+  author={Cleland-Huang, Jane and Settimi, Raffaella and Duan, Chuan and Zou, Xuchang},
+  booktitle={Proceedings of the 13th IEEE International Conference on Requirements Engineering},
+  pages={135--144},
+  year={2005},
+  organization={IEEE}
+}
+
+@inproceedings{abadi2008traceability,
+  title={A traceability technique for specifications},
+  author={Abadi, Aharon and Nisenson, Mordechai and Simionovici, Yahalomit},
+  booktitle={The 16th IEEE International Conference on Program Comprehension},
+  pages={103--112},
+  year={2008},
+  organization={IEEE}
+}
+
+@inproceedings{eaddy2008cerberus,
+  title={Cerberus: Tracing requirements to source code using information retrieval, dynamic analysis, and program analysis},
+  author={Eaddy, Marc and Aho, Alfred V and Antoniol, Giuliano and Gu{\'e}h{\'e}neuc, Yann-Ga{\"e}l},
+  booktitle={The 16th IEEE International Conference on Program Comprehension (ICPC)},
+  pages={53--62},
+  year={2008},
+  organization={IEEE}
+}
+
+@inproceedings{dasgupta2013enhancing,
+  title={Enhancing software traceability by automatically expanding corpora with relevant documentation},
+  author={Dasgupta, Tathagata and Grechanik, Mark and Moritz, Evan and Dit, Bogdan and Poshyvanyk, Denys},
+  booktitle={IEEE International Conference on Software Maintenance},
+  pages={320--329},
+  year={2013},
+  organization={IEEE}
+}
+
+@inproceedings{ali2012empirical,
+  title={An empirical study on requirements traceability using eye-tracking},
+  author={Ali, Nawazish and Sharafl, Zohreh and Gueheneuc, Y and Antoniol, Giuliano},
+  booktitle={28th IEEE International Conference on Software Maintenance (ICSM)},
+  pages={191--200},
+  year={2012},
+  organization={IEEE}
+}
+
+@inproceedings{mahmoud2013supporting,
+  title={Supporting requirements traceability through refactoring},
+  author={Mahmoud, Ali and Niu, Nan},
+  booktitle={IEEE International Conference on Requirements Engineering (RE)},
+  pages={32--41},
+  year={2013},
+  organization={IEEE}
+}
+
+@article{ali2013trustrace,
+  title={Trustrace: Mining software repositories to improve the accuracy of requirement traceability links},
+  author={Ali, Nawazish and Gueneuc, Yann-Gael and Antoniol, Giuliano},
+  journal={IEEE Transactions on Software Engineering},
+  volume={39},
+  number={5},
+  pages={725--741},
+  year={2013},
+  publisher={IEEE}
+}
+
+@article{capobianco2013improving,
+  title={Improving IR-based traceability recovery via noun-based indexing of software artifacts},
+  author={Capobianco, Giovanni and Lucia, Andrea De and Oliveto, Rocco and Panichella, Annibale and Panichella, Sebastiano},
+  journal={Journal of Software: Evolution and Process},
+  volume={25},
+  number={7},
+  pages={743--762},
+  year={2013},
+  publisher={Wiley Online Library}
+}
+
+@inproceedings{diaz2013using,
+  title={Using code ownership to improve ir-based traceability link recovery},
+  author={Diaz, David and Bavota, Gabriele and Marcus, Andrian and Oliveto, Rocco and Takahashi, Satoshi and De Lucia, Andrea},
+  booktitle={21st IEEE International Conference on Program Comprehension (ICPC)},
+  pages={123--132},
+  year={2013},
+  organization={IEEE}
+}
+
+@inproceedings{panichella2013and,
+  title={When and how using structural information to improve ir-based traceability recovery},
+  author={Panichella, Annibale and McMillan, Collin and Moritz, Evan and Palmieri, Davide and Oliveto, Rocco and Poshyvanyk, Denys and De Lucia, Andrea},
+  booktitle={17th European Conference on Software Maintenance and Reengineering (CSMR)},
+  pages={199--208},
+  year={2013},
+  organization={IEEE}
+}
+
+@inproceedings{mcmillan2009combining,
+  title={Combining textual and structural analysis of software artifacts for traceability link recovery},
+  author={McMillan, Collin and Poshyvanyk, Denys and Revelle, Meghan},
+  booktitle={ICSE Workshop on Traceability in Emerging Forms of Software Engineering (TEFSE)},
+  pages={41--48},
+  year={2009},
+  organization={IEEE}
+}
+
+@book{cover2012elements,
+  title={Elements of information theory},
+  author={Cover, Thomas M and Thomas, Joy A},
+  year={2012},
+  publisher={John Wiley \& Sons}
+}
+
+@article{deerwester1990indexing,
+  title={Indexing by latent semantic analysis},
+  author={Deerwester, Scott and Dumais, Susan T and Furnas, George W and Landauer, Thomas K and Harshman, Richard},
+  journal={Journal of the American society for information science},
+  volume={41},
+  number={6},
+  pages={391},
+  year={1990},
+  publisher={American Documentation Institute}
+}
+
+@article{dumais1991improving,
+  title={Improving the retrieval of information from external sources},
+  author={Dumais, Susan T},
+  journal={Behavior Research Methods, Instruments, \& Computers},
+  volume={23},
+  number={2},
+  pages={229--236},
+  year={1991},
+  publisher={Springer}
+}
+
+@article{berry1992large,
+  title={Large-scale sparse singular value computations},
+  author={Berry, Michael W},
+  journal={International Journal of Supercomputer Applications},
+  volume={6},
+  number={1},
+  pages={13--49},
+  year={1992},
+  publisher={Citeseer}
+}
+
+@article{landauer1997solution,
+  title={A solution to Plato's problem: The latent semantic analysis theory of acquisition, induction, and representation of knowledge.},
+  author={Landauer, Thomas K and Dumais, Susan T},
+  journal={Psychological review},
+  volume={104},
+  number={2},
+  pages={211},
+  year={1997},
+  publisher={American Psychological Association}
+}
+
+@article{salton1986introduction,
+  title={Introduction to modern information retrieval},
+  author={Salton, Gerard and McGill, Michael J},
+  year={1986},
+  publisher={McGraw-Hill, Inc.}
+}
+
+@article{dumais1994latent,
+  title={Latent semantic indexing (LSI) and TREC-2},
+  author={Dumais, Susan T and others},
+  journal={NIST SPECIAL PUBLICATION SP},
+  pages={105--105},
+  year={1994},
+  publisher={NATIONAL INSTIUTE OF STANDARDS \& TECHNOLOGY}
+}
+
+@inproceedings{anquetil1998assessing,
+  title={Assessing the relevance of identifier names in a legacy software system},
+  author={Anquetil, Nicolas and Lethbridge, Timothy},
+  booktitle={Proceedings of the 1998 conference of the Centre for Advanced Studies on Collaborative Research},
+  pages={4},
+  year={1998},
+  organization={IBM Press}
+}
+
+@article{scanniello2015link,
+  title={Link analysis algorithms for static concept location: an empirical assessment},
+  author={Scanniello, Giuseppe and Marcus, Andrian and Pascale, Daniele},
+  journal={Empirical Software Engineering},
+  volume={20},
+  number={6},
+  pages={1666--1720},
+  year={2015},
+  publisher={Springer}
+}
+
+@inproceedings{bennett2000software,
+  title={Software maintenance and evolution: a roadmap},
+  author={Bennett, Keith H and Rajlich, V{\'a}clav T},
+  booktitle={Proceedings of the Conference on the Future of Software Engineering},
+  pages={73--87},
+  year={2000},
+  organization={ACM}
+}
+
+@article{lethbridge2003software,
+  title={How software engineers use documentation: The state of the practice},
+  author={Lethbridge, Timothy C and Singer, Janice and Forward, Andrew},
+  journal={IEEE Software},
+  volume={20},
+  number={6},
+  pages={35--39},
+  year={2003},
+  publisher={IEEE}
+}
+
+@article{ben2015supporting,
+  title={Supporting requirements update during software evolution},
+  author={Ben Charrada, Eya and Koziolek, Anne and Glinz, Martin},
+  journal={Journal of Software: Evolution and Process},
+  volume={27},
+  number={3},
+  pages={166--194},
+  year={2015},
+  publisher={Wiley Online Library}
+}
+
+@inproceedings{levenshtein1966binary,
+  title={Binary codes capable of correcting deletions, insertions, and reversals},
+  author={Levenshtein, Vladimir I},
+  booktitle={Soviet physics doklady},
+  volume={10},
+  number={8},
+  pages={707--710},
+  year={1966}
+}
+
+@inproceedings{glinz2007non,
+  title={On non-functional requirements},
+  author={Glinz, Martin},
+  booktitle={15th IEEE International Conference on Requirements Engineering (RE)},
+  pages={21--26},
+  year={2007},
+  organization={IEEE}
+}
+
+@inproceedings{burgstaller2010understanding,
+  title={Understanding where requirements are implemented},
+  author={Burgstaller, Benedikt and Egyed, Alexander},
+  booktitle={IEEE International Conference on Software Maintenance (ICSM)},
+  pages={1--5},
+  year={2010},
+  organization={IEEE}
+}
+
+@article{zhao2006sniafl,
+  title={SNIAFL: Towards a static noninteractive approach to feature location},
+  author={Zhao, Wei and Zhang, Lu and Liu, Yin and Sun, Jiasu and Yang, Fuqing},
+  journal={ACM Transactions on Software Engineering and Methodology (TOSEM)},
+  volume={15},
+  number={2},
+  pages={195--226},
+  year={2006},
+  publisher={ACM}
+}
+
+@article{bavota2014automating,
+  title={Automating extract class refactoring: an improved method and its evaluation},
+  author={Bavota, Gabriele and De Lucia, Andrea and Marcus, Andrian and Oliveto, Rocco},
+  journal={Empirical Software Engineering},
+  volume={19},
+  number={6},
+  pages={1617--1664},
+  year={2014},
+  publisher={Springer}
+}
+
+@article{kuang2015can,
+  title={Can method data dependencies support the assessment of traceability between requirements and source code?},
+  author={Kuang, Hongyu and M{\"a}der, Patrick and Hu, Hao and Ghabi, Achraf and Huang, LiGuo and L{\"u}, Jian and Egyed, Alexander},
+  journal={Journal of Software: Evolution and Process},
+  volume={27},
+  number={11},
+  pages={838--866},
+  year={2015},
+  publisher={Wiley Online Library}
+}
+
+@inproceedings{bennett2000software,
+  title={Software maintenance and evolution: a roadmap},
+  author={Bennett, Keith H and Rajlich, V{\'a}clav T},
+  booktitle={Proceedings of the Conference on the Future of Software Engineering},
+  pages={73--87},
+  year={2000},
+  organization={ACM}
+}
+
+@inproceedings{mens2005challenges,
+  title={Challenges in software evolution},
+  author={Mens, Tom and Wermelinger, Michel and Ducasse, St{\'e}phane and Demeyer, Serge and Hirschfeld, Robert and Jazayeri, Mehdi},
+  booktitle={Eighth International Workshop on Principles of Software Evolution},
+  pages={13--22},
+  year={2005},
+  organization={IEEE}
+}
+
+@article{ramesh2001toward,
+  title={Toward reference models for requirements traceability},
+  author={Ramesh, Balasubramaniam and Jarke, Matthias},
+  journal={IEEE Transactions on Software Engineering},
+  volume={27},
+  number={1},
+  pages={58--93},
+  year={2001},
+  publisher={IEEE}
+}
+
+@article{mader2012towards,
+  title={Towards automated traceability maintenance},
+  author={M{\"a}der, Patrick and Gotel, Orlena},
+  journal={Journal of Systems and Software},
+  volume={85},
+  number={10},
+  pages={2205--2227},
+  year={2012},
+  publisher={Elsevier}
+}
+
+@article{hayes2007requirements,
+  title={REquirements TRacing On target (RETRO): improving software maintenance through traceability recovery},
+  author={Hayes, Jane Huffman and Dekhtyar, Alex and Sundaram, Senthil Karthikeyan and Holbrook, E Ashlee and Vadlamudi, Sravanthi and April, Alain},
+  journal={Innovations in Systems and Software Engineering},
+  volume={3},
+  number={3},
+  pages={193--202},
+  year={2007},
+  publisher={Springer}
+}
+
+@article{cleland2003event,
+  title={Event-based traceability for managing evolutionary change},
+  author={Cleland-Huang, Jane and Chang, Carl K and Christensen, Mark},
+  journal={IEEE Transactions on Software Engineering},
+  volume={29},
+  number={9},
+  pages={796--810},
+  year={2003},
+  publisher={IEEE}
+}
+
+@article{hayes2006advancing,
+  title={Advancing candidate link generation for requirements tracing: The study of methods},
+  author={Hayes, Jane Huffman and Dekhtyar, Alex and Sundaram, Senthil Karthikeyan},
+  journal={IEEE Transactions on Software Engineering},
+  volume={32},
+  number={1},
+  pages={4--19},
+  year={2006},
+  publisher={IEEE}
+}
+
+@inproceedings{cleland2010machine,
+  title={A machine learning approach for tracing regulatory codes to product specific requirements},
+  author={Cleland-Huang, Jane and Czauderna, Adam and Gibiec, Marek and Emenecker, John},
+  booktitle={Proceedings of the 32nd ACM/IEEE International Conference on Software Engineering-Volume 1},
+  pages={155--164},
+  year={2010},
+  organization={ACM}
+}
+
+@inproceedings{ben2012identifying,
+  title={Identifying outdated requirements based on source code changes},
+  author={Ben Charrada, Eya and Koziolek, Anne and Glinz, Martin},
+  booktitle={20th IEEE International Conference on Requirements Engineering (RE)},
+  pages={61--70},
+  year={2012},
+  organization={IEEE}
+}
+
+@inproceedings{ben2010automated,
+  title={An automated hint generation approach for supporting the evolution of requirements specifications},
+  author={Ben Charrada, Eya and Glinz, Martin},
+  booktitle={Proceedings of the Joint ERCIM Workshop on Software Evolution (EVOL) and International Workshop on Principles of Software Evolution (IWPSE)},
+  pages={58--62},
+  year={2010},
+  organization={ACM}
+}
+
+@article{conover1980practical,
+  title={Practical nonparametric statistics},
+  author={Conover, William Jay and Conover, WJ},
+  year={1980},
+  publisher={Wiley New York}
+}
+
+@book{fox2006introduction,
+  title={Introduction to Software Engineering Design: Processes, Principles and Patterns with UML2},
+  author={Fox, Christopher},
+  year={2006},
+  publisher={Addison-Wesley Longman Publishing Co., Inc.}
+}
+
+@article{kampenes2007systematic,
+  title={A systematic review of effect size in software engineering experiments},
+  author={Kampenes, Vigdis By and Dyb{\aa}, Tore and Hannay, Jo E and Sj{\o}berg, Dag IK},
+  journal={Information and Software Technology},
+  volume={49},
+  number={11},
+  pages={1073--1086},
+  year={2007},
+  publisher={Elsevier}
+}
+
+@inproceedings{DBLP:conf/icse/0004CC17,
+  author    = {Jin Guo and
+               Jinghui Cheng and
+               Jane Cleland{-}Huang},
+  title     = {Semantically enhanced software traceability using deep learning techniques},
+  booktitle = {Proceedings of the 39th International Conference on Software Engineering,
+               {ICSE} 2017, Buenos Aires, Argentina, May 20-28, 2017},
+  pages     = {3--14},
+  year      = {2017},
+  crossref  = {DBLP:conf/icse/2017},
+  url       = {https://doi.org/10.1109/ICSE.2017.9},
+  doi       = {10.1109/ICSE.2017.9},
+  timestamp = {Mon, 31 Jul 2017 09:06:24 +0200},
+  biburl    = {http://dblp.org/rec/bib/conf/icse/0004CC17},
+  bibsource = {dblp computer science bibliography, http://dblp.org}
+}

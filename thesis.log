@@ -1,7 +1,7 @@
-This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9) (preloaded format=pdflatex 2018.2.7)  28 MAR 2018 22:12
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9) (preloaded format=pdflatex 2018.2.7)  13 APR 2018 15:39
 entering extended mode
-**D:/ËÅÇ‰Ω≥ËÆ∫Êñá/thesis_zhang/thesis.tex
-(D:/ËÅÇ‰Ω≥ËÆ∫Êñá/thesis_zhang/thesis.tex
+**thesis.tex
+(D:\ËÅÇ‰Ω≥ËÆ∫Êñá\thesis_zhang\thesis.tex
 LaTeX2e <2011/06/27>
 Babel <v3.8m> and hyphenation patterns for loaded.
 (D:\ËÅÇ‰Ω≥ËÆ∫Êñá\thesis_zhang\NJUthesis.cls
@@ -941,114 +941,111 @@ Writing nomenclature file thesis.nlo
 \c@property=\count305
 \c@example=\count306
 \c@myrule=\count307
-(D:\ËÅÇ‰Ω≥ËÆ∫Êñá\thesis_zhang\thesis.aux
+(D:\ËÅÇ‰Ω≥ËÆ∫Êñá\thesis_zhang\thesis.aux)
+LaTeX Font Info:    Checking defaults for OML/txmi/m/it on input line 75.
+LaTeX Font Info:    Try loading font information for OML+txmi on input line 75.
 
-LaTeX Warning: Label `expirement_system_information' multiply defined.
 
-)
-LaTeX Font Info:    Checking defaults for OML/txmi/m/it on input line 83.
-LaTeX Font Info:    Try loading font information for OML+txmi on input line 83.
-
- (d:\CTEX\MiKTeX\tex\latex\txfonts\omltxmi.fd
+(d:\CTEX\MiKTeX\tex\latex\txfonts\omltxmi.fd
 File: omltxmi.fd 2000/12/15 v3.1
 )
-LaTeX Font Info:    ... okay on input line 83.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 83.
-LaTeX Font Info:    ... okay on input line 83.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 83.
-LaTeX Font Info:    ... okay on input line 83.
-LaTeX Font Info:    Checking defaults for OMS/txsy/m/n on input line 83.
-LaTeX Font Info:    Try loading font information for OMS+txsy on input line 83.
+LaTeX Font Info:    ... okay on input line 75.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 75.
+LaTeX Font Info:    ... okay on input line 75.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 75.
+LaTeX Font Info:    ... okay on input line 75.
+LaTeX Font Info:    Checking defaults for OMS/txsy/m/n on input line 75.
+LaTeX Font Info:    Try loading font information for OMS+txsy on input line 75.
 
 
 (d:\CTEX\MiKTeX\tex\latex\txfonts\omstxsy.fd
 File: omstxsy.fd 2000/12/15 v3.1
 )
-LaTeX Font Info:    ... okay on input line 83.
-LaTeX Font Info:    Checking defaults for OMX/txex/m/n on input line 83.
-LaTeX Font Info:    Try loading font information for OMX+txex on input line 83.
+LaTeX Font Info:    ... okay on input line 75.
+LaTeX Font Info:    Checking defaults for OMX/txex/m/n on input line 75.
+LaTeX Font Info:    Try loading font information for OMX+txex on input line 75.
 
 
 (d:\CTEX\MiKTeX\tex\latex\txfonts\omxtxex.fd
 File: omxtxex.fd 2000/12/15 v3.1
 )
-LaTeX Font Info:    ... okay on input line 83.
-LaTeX Font Info:    Checking defaults for U/txexa/m/n on input line 83.
-LaTeX Font Info:    Try loading font information for U+txexa on input line 83.
+LaTeX Font Info:    ... okay on input line 75.
+LaTeX Font Info:    Checking defaults for U/txexa/m/n on input line 75.
+LaTeX Font Info:    Try loading font information for U+txexa on input line 75.
 
 (d:\CTEX\MiKTeX\tex\latex\txfonts\utxexa.fd
 File: utxexa.fd 2000/12/15 v3.1
 )
-LaTeX Font Info:    ... okay on input line 83.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 83.
-LaTeX Font Info:    ... okay on input line 83.
-LaTeX Font Info:    Checking defaults for C00/song/m/n on input line 83.
-LaTeX Font Info:    ... okay on input line 83.
-LaTeX Font Info:    Checking defaults for C05/song/m/n on input line 83.
-LaTeX Font Info:    ... okay on input line 83.
-LaTeX Font Info:    Checking defaults for C09/song/m/n on input line 83.
-LaTeX Font Info:    ... okay on input line 83.
-LaTeX Font Info:    Checking defaults for C10/song/m/n on input line 83.
-LaTeX Font Info:    ... okay on input line 83.
-LaTeX Font Info:    Checking defaults for C20/song/m/n on input line 83.
-LaTeX Font Info:    ... okay on input line 83.
-LaTeX Font Info:    Checking defaults for C19/song/m/n on input line 83.
-LaTeX Font Info:    ... okay on input line 83.
-LaTeX Font Info:    Checking defaults for C40/song/m/n on input line 83.
-LaTeX Font Info:    ... okay on input line 83.
-LaTeX Font Info:    Checking defaults for C42/song/m/n on input line 83.
-LaTeX Font Info:    ... okay on input line 83.
-LaTeX Font Info:    Checking defaults for C43/song/m/n on input line 83.
-LaTeX Font Info:    ... okay on input line 83.
-LaTeX Font Info:    Checking defaults for C50/song/m/n on input line 83.
-LaTeX Font Info:    ... okay on input line 83.
-LaTeX Font Info:    Checking defaults for C52/song/m/n on input line 83.
-LaTeX Font Info:    ... okay on input line 83.
-LaTeX Font Info:    Checking defaults for C49/song/m/n on input line 83.
-LaTeX Font Info:    ... okay on input line 83.
-LaTeX Font Info:    Checking defaults for C60/mj/m/n on input line 83.
-LaTeX Font Info:    ... okay on input line 83.
-LaTeX Font Info:    Checking defaults for C61/mj/m/n on input line 83.
-LaTeX Font Info:    ... okay on input line 83.
-LaTeX Font Info:    Checking defaults for C63/mj/m/n on input line 83.
-LaTeX Font Info:    ... okay on input line 83.
-LaTeX Font Info:    Checking defaults for C64/mj/m/n on input line 83.
-LaTeX Font Info:    ... okay on input line 83.
-LaTeX Font Info:    Checking defaults for C65/mj/m/n on input line 83.
-LaTeX Font Info:    ... okay on input line 83.
-LaTeX Font Info:    Checking defaults for C70/song/m/n on input line 83.
-LaTeX Font Info:    ... okay on input line 83.
-LaTeX Font Info:    Checking defaults for C31/song/m/n on input line 83.
-LaTeX Font Info:    ... okay on input line 83.
-LaTeX Font Info:    Checking defaults for C32/song/m/n on input line 83.
-LaTeX Font Info:    ... okay on input line 83.
-LaTeX Font Info:    Checking defaults for C33/song/m/n on input line 83.
-LaTeX Font Info:    ... okay on input line 83.
-LaTeX Font Info:    Checking defaults for C34/song/m/n on input line 83.
-LaTeX Font Info:    ... okay on input line 83.
-LaTeX Font Info:    Checking defaults for C35/song/m/n on input line 83.
-LaTeX Font Info:    ... okay on input line 83.
-LaTeX Font Info:    Checking defaults for C36/song/m/n on input line 83.
-LaTeX Font Info:    ... okay on input line 83.
-LaTeX Font Info:    Checking defaults for C37/song/m/n on input line 83.
-LaTeX Font Info:    ... okay on input line 83.
-LaTeX Font Info:    Checking defaults for C80/song/m/n on input line 83.
-LaTeX Font Info:    ... okay on input line 83.
-LaTeX Font Info:    Checking defaults for C81/song/m/n on input line 83.
-LaTeX Font Info:    ... okay on input line 83.
-LaTeX Font Info:    Checking defaults for C01/song/m/n on input line 83.
-LaTeX Font Info:    ... okay on input line 83.
-LaTeX Font Info:    Checking defaults for C11/song/m/n on input line 83.
-LaTeX Font Info:    ... okay on input line 83.
-LaTeX Font Info:    Checking defaults for C21/song/m/n on input line 83.
-LaTeX Font Info:    ... okay on input line 83.
-LaTeX Font Info:    Checking defaults for C41/song/m/n on input line 83.
-LaTeX Font Info:    ... okay on input line 83.
-LaTeX Font Info:    Checking defaults for C62/song/m/n on input line 83.
-LaTeX Font Info:    ... okay on input line 83.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 83.
-LaTeX Font Info:    ... okay on input line 83.
-LaTeX Font Info:    Try loading font information for OT1+txr on input line 83.
+LaTeX Font Info:    ... okay on input line 75.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 75.
+LaTeX Font Info:    ... okay on input line 75.
+LaTeX Font Info:    Checking defaults for C00/song/m/n on input line 75.
+LaTeX Font Info:    ... okay on input line 75.
+LaTeX Font Info:    Checking defaults for C05/song/m/n on input line 75.
+LaTeX Font Info:    ... okay on input line 75.
+LaTeX Font Info:    Checking defaults for C09/song/m/n on input line 75.
+LaTeX Font Info:    ... okay on input line 75.
+LaTeX Font Info:    Checking defaults for C10/song/m/n on input line 75.
+LaTeX Font Info:    ... okay on input line 75.
+LaTeX Font Info:    Checking defaults for C20/song/m/n on input line 75.
+LaTeX Font Info:    ... okay on input line 75.
+LaTeX Font Info:    Checking defaults for C19/song/m/n on input line 75.
+LaTeX Font Info:    ... okay on input line 75.
+LaTeX Font Info:    Checking defaults for C40/song/m/n on input line 75.
+LaTeX Font Info:    ... okay on input line 75.
+LaTeX Font Info:    Checking defaults for C42/song/m/n on input line 75.
+LaTeX Font Info:    ... okay on input line 75.
+LaTeX Font Info:    Checking defaults for C43/song/m/n on input line 75.
+LaTeX Font Info:    ... okay on input line 75.
+LaTeX Font Info:    Checking defaults for C50/song/m/n on input line 75.
+LaTeX Font Info:    ... okay on input line 75.
+LaTeX Font Info:    Checking defaults for C52/song/m/n on input line 75.
+LaTeX Font Info:    ... okay on input line 75.
+LaTeX Font Info:    Checking defaults for C49/song/m/n on input line 75.
+LaTeX Font Info:    ... okay on input line 75.
+LaTeX Font Info:    Checking defaults for C60/mj/m/n on input line 75.
+LaTeX Font Info:    ... okay on input line 75.
+LaTeX Font Info:    Checking defaults for C61/mj/m/n on input line 75.
+LaTeX Font Info:    ... okay on input line 75.
+LaTeX Font Info:    Checking defaults for C63/mj/m/n on input line 75.
+LaTeX Font Info:    ... okay on input line 75.
+LaTeX Font Info:    Checking defaults for C64/mj/m/n on input line 75.
+LaTeX Font Info:    ... okay on input line 75.
+LaTeX Font Info:    Checking defaults for C65/mj/m/n on input line 75.
+LaTeX Font Info:    ... okay on input line 75.
+LaTeX Font Info:    Checking defaults for C70/song/m/n on input line 75.
+LaTeX Font Info:    ... okay on input line 75.
+LaTeX Font Info:    Checking defaults for C31/song/m/n on input line 75.
+LaTeX Font Info:    ... okay on input line 75.
+LaTeX Font Info:    Checking defaults for C32/song/m/n on input line 75.
+LaTeX Font Info:    ... okay on input line 75.
+LaTeX Font Info:    Checking defaults for C33/song/m/n on input line 75.
+LaTeX Font Info:    ... okay on input line 75.
+LaTeX Font Info:    Checking defaults for C34/song/m/n on input line 75.
+LaTeX Font Info:    ... okay on input line 75.
+LaTeX Font Info:    Checking defaults for C35/song/m/n on input line 75.
+LaTeX Font Info:    ... okay on input line 75.
+LaTeX Font Info:    Checking defaults for C36/song/m/n on input line 75.
+LaTeX Font Info:    ... okay on input line 75.
+LaTeX Font Info:    Checking defaults for C37/song/m/n on input line 75.
+LaTeX Font Info:    ... okay on input line 75.
+LaTeX Font Info:    Checking defaults for C80/song/m/n on input line 75.
+LaTeX Font Info:    ... okay on input line 75.
+LaTeX Font Info:    Checking defaults for C81/song/m/n on input line 75.
+LaTeX Font Info:    ... okay on input line 75.
+LaTeX Font Info:    Checking defaults for C01/song/m/n on input line 75.
+LaTeX Font Info:    ... okay on input line 75.
+LaTeX Font Info:    Checking defaults for C11/song/m/n on input line 75.
+LaTeX Font Info:    ... okay on input line 75.
+LaTeX Font Info:    Checking defaults for C21/song/m/n on input line 75.
+LaTeX Font Info:    ... okay on input line 75.
+LaTeX Font Info:    Checking defaults for C41/song/m/n on input line 75.
+LaTeX Font Info:    ... okay on input line 75.
+LaTeX Font Info:    Checking defaults for C62/song/m/n on input line 75.
+LaTeX Font Info:    ... okay on input line 75.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 75.
+LaTeX Font Info:    ... okay on input line 75.
+LaTeX Font Info:    Try loading font information for OT1+txr on input line 75.
 
 (d:\CTEX\MiKTeX\tex\latex\txfonts\ot1txr.fd
 File: ot1txr.fd 2000/12/15 v3.1
@@ -1068,7 +1065,7 @@ File: ot1txr.fd 2000/12/15 v3.1
 \everyMPtoPDFconversion=\toks35
 )
 \AtBeginShipoutBox=\box57
-Package hyperref Info: Link coloring ON on input line 83.
+Package hyperref Info: Link coloring ON on input line 75.
  (d:\CTEX\MiKTeX\tex\latex\hyperref\nameref.sty
 Package: nameref 2010/04/30 v2.40 Cross-referencing by name of section
 
@@ -1077,9 +1074,9 @@ Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 )
 \c@section@level=\count314
 )
-LaTeX Info: Redefining \ref on input line 83.
-LaTeX Info: Redefining \pageref on input line 83.
-LaTeX Info: Redefining \nameref on input line 83.
+LaTeX Info: Redefining \ref on input line 75.
+LaTeX Info: Redefining \pageref on input line 75.
+LaTeX Info: Redefining \nameref on input line 75.
 
 (D:\ËÅÇ‰Ω≥ËÆ∫Êñá\thesis_zhang\thesis.out)
 (D:\ËÅÇ‰Ω≥ËÆ∫Êñá\thesis_zhang\thesis.out)
@@ -1128,64 +1125,64 @@ File: extended.enc 2008/12/29 4.8.2
 (d:\CTEX\MiKTeX\tex\latex\cjk\extended.chr
 File: extended.chr 2008/12/29 4.8.2
 )
-<FIGs/njulogo.pdf, id=288, 402.75468pt x 505.89pt>
+<FIGs/njulogo.pdf, id=208, 402.75468pt x 505.89pt>
 File: FIGs/njulogo.pdf Graphic file (type pdf)
  <use FIGs/njulogo.pdf>
-Package pdftex.def Info: FIGs/njulogo.pdf used on input line 130.
+Package pdftex.def Info: FIGs/njulogo.pdf used on input line 122.
 (pdftex.def)             Requested size: 55.76758pt x 70.04446pt.
 
-<FIGs/njuname.pdf, id=289, 456.70625pt x 149.55875pt>
+<FIGs/njuname.pdf, id=209, 456.70625pt x 149.55875pt>
 File: FIGs/njuname.pdf Graphic file (type pdf)
  <use FIGs/njuname.pdf>
-Package pdftex.def Info: FIGs/njuname.pdf used on input line 130.
+Package pdftex.def Info: FIGs/njuname.pdf used on input line 122.
 (pdftex.def)             Requested size: 173.77316pt x 56.9055pt.
-LaTeX Font Info:    Try loading font information for C19+zhkai on input line 13
-0.
+LaTeX Font Info:    Try loading font information for C19+zhkai on input line 12
+2.
 
 (d:\CTEX\MiKTeX\tex\latex\zhmetrics\c19zhkai.fd
 File: c19zhkai.fd 2009/09/23 4.8.2
 )<<c1960.cmap>><<c1946.cmap>><<c1955.cmap>><<c1937.cmap>><<c1961.cmap>><<c1949.
 cmap>><<c1958.cmap>><<c1926.cmap>>
 Package CJKpunct Info: punctuation spaces for family 'zhkai' do not exist. Use 
-family 'def' instead. on input line 130.
+family 'def' instead. on input line 122.
 <<c1953.cmap>><<c1956.cmap>><<c1965.cmap>><<oml.cmap>><<oms.cmap>><<omx.cmap>>
-LaTeX Font Info:    Try loading font information for U+txsya on input line 130.
+LaTeX Font Info:    Try loading font information for U+txsya on input line 122.
 
  (d:\CTEX\MiKTeX\tex\latex\txfonts\utxsya.fd
 File: utxsya.fd 2000/12/15 v3.1
 )
 
-LaTeX Warning: File u.cmap not found on input line 130.
+LaTeX Warning: File u.cmap not found on input line 122.
 
-LaTeX Font Info:    Try loading font information for U+txsyb on input line 130.
+LaTeX Font Info:    Try loading font information for U+txsyb on input line 122.
 
 (d:\CTEX\MiKTeX\tex\latex\txfonts\utxsyb.fd
 File: utxsyb.fd 2000/12/15 v3.1
 )
-LaTeX Font Info:    Try loading font information for U+txmia on input line 130.
+LaTeX Font Info:    Try loading font information for U+txmia on input line 122.
 
 
 (d:\CTEX\MiKTeX\tex\latex\txfonts\utxmia.fd
 File: utxmia.fd 2000/12/15 v3.1
 )
-LaTeX Font Info:    Try loading font information for U+txsyc on input line 130.
+LaTeX Font Info:    Try loading font information for U+txsyc on input line 122.
 
 
 (d:\CTEX\MiKTeX\tex\latex\txfonts\utxsyc.fd
 File: utxsyc.fd 2000/12/15 v3.1
 )
 
-LaTeX Warning: File ts1.cmap not found on input line 130.
+LaTeX Warning: File ts1.cmap not found on input line 122.
 
 <<c1925.cmap>><<c1957.cmap>><<c1951.cmap>><<c1964.cmap>><<c1943.cmap>><<c1939.c
 map>><<c1948.cmap>><<c1962.cmap>><<c1944.cmap>><<c1941.cmap>><<c1940.cmap>><<c1
 954.cmap>><<c1945.cmap>><<c1947.cmap>><<c1938.cmap>>
-Overfull \hbox (3.9752pt too wide) detected at line 130
+Overfull \hbox (3.9752pt too wide) detected at line 122
  [] 
  []
 
 <<c1963.cmap>><<c1950.cmap>><<c1959.cmap>><<c1979.cmap>><<c1942.cmap>>
-Overfull \hbox (14.38182pt too wide) in paragraph at lines 130--130
+Overfull \hbox (14.38182pt too wide) in paragraph at lines 122--122
  [][] 
  []
 
@@ -1198,7 +1195,7 @@ FIGs/njuname.pdf>]<<c1952.cmap>> [2
 ]
 File: FIGs/njulogo.pdf Graphic file (type pdf)
  <use FIGs/njulogo.pdf>
-Package pdftex.def Info: FIGs/njulogo.pdf used on input line 135.
+Package pdftex.def Info: FIGs/njulogo.pdf used on input line 127.
 (pdftex.def)             Requested size: 55.76758pt x 70.04446pt.
  [3
 
@@ -1206,7 +1203,7 @@ Package pdftex.def Info: FIGs/njulogo.pdf used on input line 135.
 
 
 ]
-Overfull \hbox (7.15007pt too wide) detected at line 143
+Overfull \hbox (7.15007pt too wide) detected at line 135
  \C19/zhkai/m/n/14.05/61 ò  \C19/zhkai/m/n/14.05/64 ´  \C19/zhkai/m/n/14.05/46 
 (  \C19/zhkai/m/n/14.05/43 ‹  \C19/zhkai/m/n/14.05/39 ì  \C19/zhkai/m/n/14.05/4
 9 Ë  \C19/zhkai/m/n/14.05/61 ù  \C19/zhkai/m/n/14.05/48 6  \C19/zhkai/m/n/14.05
@@ -1217,45 +1214,50 @@ Overfull \hbox (7.15007pt too wide) detected at line 143
 i/m/n/14.05/41 ê  { 
  []
 
-LaTeX Font Info:    Try loading font information for C19+zhhei on input line 14
-3.
+LaTeX Font Info:    Try loading font information for C19+zhhei on input line 13
+5.
 (d:\CTEX\MiKTeX\tex\latex\zhmetrics\c19zhhei.fd
 File: c19zhhei.fd 2009/09/23 4.8.2
 )
 Package CJKpunct Info: punctuation spaces for family 'zhhei' do not exist. Use 
-family 'def' instead. on input line 143.
-LaTeX Font Info:    Try loading font information for C19+rm on input line 145.
+family 'def' instead. on input line 135.
+LaTeX Font Info:    Try loading font information for C19+rm on input line 137.
 
 (d:\CTEX\MiKTeX\tex\latex\ctex\fd\c19rm.fd
 File: c19rm.fd 2007/05/06 v0.8a ctex font definition file
 )
 Package CJKpunct Info: punctuation spaces for family 'zhsong' do not exist. Use
- family 'def' instead. on input line 145.
-<<c1974.cmap>><<c1936.cmap>>
-[1
+ family 'def' instead. on input line 137.
+<<c1936.cmap>> [1
 
-] [2] [3
+]<<c1974.cmap>>
+[2] [3
 
 ] [4]
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                \hskip 12.05pt
-(hyperref)                replaced by space on input line 182.
+(hyperref)                replaced by space on input line 185.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                \hskip 12.05pt
-(hyperref)                replaced by space on input line 182.
+(hyperref)                replaced by space on input line 185.
 
 (D:\ËÅÇ‰Ω≥ËÆ∫Êñá\thesis_zhang\thesis.toc [5
 
-] [6])
+])
 \tf@toc=\write6
- [7] [8
+ [6]
+(D:\ËÅÇ‰Ω≥ËÆ∫Êñá\thesis_zhang\thesis.lot)
+\tf@lot=\write7
+ [7
+
+] [8
 
 ]
 (D:\ËÅÇ‰Ω≥ËÆ∫Êñá\thesis_zhang\thesis.lof)
-\tf@lof=\write7
+\tf@lof=\write8
  [9] [10
 
 ]
@@ -1265,470 +1267,463 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.17 
+l.20 
       [1
 
-]
+]pdfTeX warning (ext4): destination with the same identifier (name{page.2}) has
+ been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.47 
+      [2]pdfTeX warning (ext4): destination with the same identifier (name{page
+.3}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.55 
+      [3]
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
-Package natbib Warning: Citation `Huang2005Utilizing' on page 2 undefined on in
-put line 21.
-
-pdfTeX warning (ext4): destination with the same identifier (name{page.2}) has 
+pdfTeX warning (ext4): destination with the same identifier (name{page.4}) has 
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.31 
-      [2]) (D:\ËÅÇ‰Ω≥ËÆ∫Êñá\thesis_zhang\chapter/test.tex)
-(D:\ËÅÇ‰Ω≥ËÆ∫Êñá\thesis_zhang\chapter/RelatedWork.texpdfTeX warning (ext4): des
-tination with the same identifier (name{page.3}) has been already used, duplica
-te ignored
-<to be read again> 
-                   \relax 
-l.1 \chapter
-            {œ‡πÿπ§◊˜} [3]pdfTeX warning (ext4): destination with the same iden
-tifier (name{page.4}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.1 \chapter
-            {œ‡πÿπ§◊˜} [4
+l.63   \item Ω
+              ·∫œ¥˙¬Î“¿¿µΩÙ√‹∂»∑÷Œˆ∫Õ”√ªß∑¥¿°µƒ»Ìº˛ø…◊∑◊Ÿ–‘…˙≥…∑Ω∑®°£Œ“√«Ã·≥...
+[4]
 
-]
+LaTeX Warning: File ot140.cmap not found on input line 77.
+
+[5]) (D:\ËÅÇ‰Ω≥ËÆ∫Êñá\thesis_zhang\chapter/test.tex)
+(D:\ËÅÇ‰Ω≥ËÆ∫Êñá\thesis_zhang\chapter/RelatedWork.tex [6]
 µ⁄∂˛’¬
 
-LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 8.
 
-[5]
+pdfTeX warning: pdflatex.exe (file D:/ËÅÇ‰Ω≥ËÆ∫Êñá/thesis_zhang/figures/related
+_work/requirement_traceability.pdf): PDF inclusion: found PDF version <1.7>, bu
+t at most version <1.5> allowed
 
-LaTeX Warning: File ot159.cmap not found on input line 53.
+<./figures/related_work/requirement_traceability.pdf, id=599, 179.16937pt x 264
+.48813pt>
+File: ./figures/related_work/requirement_traceability.pdf Graphic file (type pd
+f)
+ <use ./figures/related_work/requirement_traceability.pdf>
+Package pdftex.def Info: ./figures/related_work/requirement_traceability.pdf us
+ed on input line 9.
+(pdftex.def)             Requested size: 124.62439pt x 183.97408pt.
+ [7
 
-[6]<<c1978.cmap>> [7]
+ <D:/ËÅÇ‰Ω≥ËÆ∫Êñá/thesis_zhang/figures/related_work/requirement_traceability.pd
+f>]
+[8] [9]<<c1978.cmap>>
+Underfull \vbox (badness 1755) has occurred while \output is active []
 
-Package natbib Warning: Citation `19' on page 8 undefined on input line 79.
-
-<<c1981.cmap>> [8] [9]
-LaTeX Font Info:    Try loading font information for OMS+txr on input line 151.
-
- (d:\CTEX\MiKTeX\tex\latex\txfonts\omstxr.fd
-File: omstxr.fd 2000/12/15 v3.1
-)
-LaTeX Font Info:    Font shape `OMS/txr/m/n' in size <12.05> not available
-(Font)              Font shape `OMS/txsy/m/n' tried instead on input line 151.
- [10]
-Overfull \hbox (1.904pt too wide) in paragraph at lines 167--201
-\C19/rm/m/n/12.05/52 Ÿ \C19/rm/m/n/12.05/64 •$\OML/txmi/m/it/12.05 N$\C19/rm/m/
-n/12.05/37 L \C19/rm/m/n/12.05/55 ´ \C19/rm/m/n/12.05/48 a$\OML/txmi/m/it/12.05
- Sink$\C19/rm/m/n/12.05/43 ⁄$\OML/txmi/m/it/12.05 Source$\C19/rm/m/n/12.05/64 É
- \C19/rm/m/n/12.05/45 m \C19/rm/m/n/12.05/41 ê { \C19/rm/m/n/12.05/40 N \C19/rm
-/m/n/12.05/62 ^ \C19/rm/m/n/12.05/43 ⁄ \C19/rm/m/n/12.05/48 a \C19/rm/m/n/12.05
-/55 ¶ \C19/rm/m/n/12.05/62 ^ \C19/rm/m/n/12.05/40  \C19/rm/m/n/12.05/39 g \C19
-/rm/m/n/12.05/55 Í|\C19/rm/m/n/12.05/26 ß| $\OML/txmi/m/it/12.05 WeightInDegree
-[]$\C19/rm/m/n/12.05/37 L
- []
-
-[11]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [12]
-[13]
-<./figures/related_work/Open_Source_Structure.pdf, id=867, 525.46312pt x 259.46
-938pt>
-File: ./figures/related_work/Open_Source_Structure.pdf Graphic file (type pdf)
- <use ./figures/related_work/Open_Source_Structure.pdf>
-Package pdftex.def Info: ./figures/related_work/Open_Source_Structure.pdf used 
-on input line 270.
-(pdftex.def)             Requested size: 332.3296pt x 164.10796pt.
- [14])
-(D:\ËÅÇ‰Ω≥ËÆ∫Êñá\thesis_zhang\chapter/RequirementTraceability.tex [15 <D:/ËÅÇ‰Ω
-≥ËÆ∫Êñá/thesis_zhang/figures/related_work/Open_Source_Structure.pdf>] [16
+ [10]<<c1981.cmap>> [11] [12] [13] [14])
+(D:\ËÅÇ‰Ω≥ËÆ∫Êñá\thesis_zhang\chapter/RequirementTraceability.tex [15] [16
 
 ]
 µ⁄»˝’¬
-[17]
-<./figures/RequirementTraceability/softwareDevFlow.pdf, id=920, 476.27937pt x 4
-46.66875pt>
-File: ./figures/RequirementTraceability/softwareDevFlow.pdf Graphic file (type 
-pdf)
- <use ./figures/RequirementTraceability/softwareDevFlow.pdf>
-Package pdftex.def Info: ./figures/RequirementTraceability/softwareDevFlow.pdf 
-used on input line 27.
-(pdftex.def)             Requested size: 415.41043pt x 389.60056pt.
 
-[18]
-Underfull \vbox (badness 3312) has occurred while \output is active []
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [19 <D:/ËÅÇ‰Ω≥ËÆ∫Êñá/thesis_zhang/figures/RequirementTraceability/softwareDevF
-low.pdf>]
-<./figures/RequirementTraceability/uc15.pdf, id=956, 597.23125pt x 418.06187pt>
-File: ./figures/RequirementTraceability/uc15.pdf Graphic file (type pdf)
-<use ./figures/RequirementTraceability/uc15.pdf>
-Package pdftex.def Info: ./figures/RequirementTraceability/uc15.pdf used on inp
-ut line 82.
-(pdftex.def)             Requested size: 332.3296pt x 232.63309pt.
+ [17]
 
-<./figures/RequirementTraceability/codeDependencyGraph.pdf, id=959, 446.66875pt
- x 207.27437pt>
+pdfTeX warning: pdflatex.exe (file D:/ËÅÇ‰Ω≥ËÆ∫Êñá/thesis_zhang/figures/Require
+mentTraceability/UC15.pdf): PDF inclusion: found PDF version <1.7>, but at most
+ version <1.5> allowed
+
+<./figures/RequirementTraceability/UC15.pdf, id=765, 462.22687pt x 288.57813pt>
+File: ./figures/RequirementTraceability/UC15.pdf Graphic file (type pdf)
+<use ./figures/RequirementTraceability/UC15.pdf>
+Package pdftex.def Info: ./figures/RequirementTraceability/UC15.pdf used on inp
+ut line 49.
+(pdftex.def)             Requested size: 332.3296pt x 207.48105pt.
+ [18 <D:/ËÅÇ‰Ω≥ËÆ∫Êñá/thesis_zhang/figures/RequirementTraceability/UC15.pdf>]
+
+pdfTeX warning: pdflatex.exe (file D:/ËÅÇ‰Ω≥ËÆ∫Êñá/thesis_zhang/figures/Require
+mentTraceability/codeDependencyGraph.pdf): PDF inclusion: found PDF version <1.
+7>, but at most version <1.5> allowed
+
+<./figures/RequirementTraceability/codeDependencyGraph.pdf, id=780, 403.00563pt
+ x 164.11313pt>
 File: ./figures/RequirementTraceability/codeDependencyGraph.pdf Graphic file (t
 ype pdf)
 
 <use ./figures/RequirementTraceability/codeDependencyGraph.pdf>
 Package pdftex.def Info: ./figures/RequirementTraceability/codeDependencyGraph.
-pdf used on input line 91.
-(pdftex.def)             Requested size: 332.3296pt x 154.21875pt.
+pdf used on input line 67.
+(pdftex.def)             Requested size: 332.3296pt x 135.33238pt.
 
-Overfull \hbox (85.29095pt too wide) in paragraph at lines 96--97
-[]\C19/rm/m/n/12.05/48 a\OT1/txr/m/n/12.05 NDCodesDAO\C19/rm/m/n/12.05/43 ⁄ \C1
-9/rm/m/n/12.05/48 a\OT1/txr/m/n/12.05 UpdateCodesListAction\C19/rm/m/n/12.05/39
-  \C19/rm/m/n/12.05/63 3 \C19/rm/m/n/12.05/55 Í \C19/rm/m/n/12.05/46 ‚ \C19/rm
-/m/n/12.05/61 ù \C19/rm/m/n/12.05/48 6 \C19/rm/m/n/12.05/43 ⁄ \C19/rm/m/n/12.05
-/40 N \C19/rm/m/n/12.05/62 ^ \C19/rm/m/n/12.05/61 ù \C19/rm/m/n/12.05/48 6|\C19
-/rm/m/n/12.05/26 ß| \C19/rm/m/n/12.05/62 Ü\OT1/txr/m/n/12.05 editNDCodes[]jsp\C
-19/rm/m/n/12.05/39 
- []
 
-[20] [21 <D:/ËÅÇ‰Ω≥ËÆ∫Êñá/thesis_zhang/figures/RequirementTraceability/uc15.pdf
-> <D:/ËÅÇ‰Ω≥ËÆ∫Êñá/thesis_zhang/figures/RequirementTraceability/codeDependencyG
-raph.pdf>]
-<./figures/RequirementTraceability/algorithmFlow.pdf, id=988, 519.44063pt x 334
-.24875pt>
+pdfTeX warning: pdflatex.exe (file D:/ËÅÇ‰Ω≥ËÆ∫Êñá/thesis_zhang/figures/Require
+mentTraceability/algorithmFlow.pdf): PDF inclusion: found PDF version <1.7>, bu
+t at most version <1.5> allowed
+
+<./figures/RequirementTraceability/algorithmFlow.pdf, id=781, 462.22687pt x 277
+.035pt>
 File: ./figures/RequirementTraceability/algorithmFlow.pdf Graphic file (type pd
 f)
  <use ./figures/RequirementTraceability/algorithmFlow.pdf>
 Package pdftex.def Info: ./figures/RequirementTraceability/algorithmFlow.pdf us
-ed on input line 148.
-(pdftex.def)             Requested size: 332.3296pt x 213.84706pt.
- [22]
-[23 <D:/ËÅÇ‰Ω≥ËÆ∫Êñá/thesis_zhang/figures/RequirementTraceability/algorithmFlow
-.pdf>] [24]
-Overfull \hbox (110.40135pt too wide) in paragraph at lines 188--191
-$[]$\C19/rm/m/n/12.05/40  \C19/rm/m/n/12.05/54  \C19/rm/m/n/12.05/64 ä \C19/r
-m/m/n/12.05/41 â \C19/rm/m/n/12.05/58 å \C19/rm/m/n/12.05/55 ¥\OT1/txr/m/n/12.0
-5 0\C19/rm/m/n/12.05/40 \OT1/txr/m/n/12.05 1\C19/rm/m/n/12.05/40  \C19/rm/m/n
-/12.05/37 4 \C19/rm/m/n/12.05/53 ´ \C19/rm/m/n/12.05/45 m|\C19/rm/m/n/12.05/25 
-"| \C19/rm/m/n/12.05/48 ~ \C19/rm/m/n/12.05/54 X X \C19/rm/m/n/12.05/57 „ [][]\
-OT1/txr/m/n/12.05 3.3[][]|\C19/rm/m/n/12.05/26 ß| \OT1/txr/m/n/12.05 editDrugCo
-des[]jsp\C19/rm/m/n/12.05/62 Ü\OT1/txr/m/n/12.05 UpdateCodesListAction\C19/rm/m
-/n/12.05/64 É
+ed on input line 112.
+(pdftex.def)             Requested size: 332.3296pt x 199.18181pt.
+ [19 <D:/ËÅÇ‰Ω≥ËÆ∫Êñá/thesis_zhang/figures/RequirementTraceability/codeDependen
+cyGraph.pdf>]
+[20] [21 <D:/ËÅÇ‰Ω≥ËÆ∫Êñá/thesis_zhang/figures/RequirementTraceability/algorith
+mFlow.pdf>] [22] [23] [24] [25] [26]
+Overfull \hbox (6.72527pt too wide) in paragraph at lines 278--279
+[]\C19/rm/m/n/12.05/46  \C19/rm/m/n/12.05/59 e \C19/rm/m/n/12.05/48 5 \C19/rm/
+m/n/12.05/61 ±\OT1/txr/m/n/12.05 iTrust\C19/rm/m/n/12.05/59 X \C19/rm/m/n/12.05
+/57 ⁄ \C19/rm/m/n/12.05/40 \OT1/txr/m/n/12.05 UC15\C19/rm/m/n/12.05/60 I \C19/
+rm/m/n/12.05/53 ¶ \C19/rm/m/n/12.05/58 è \C19/rm/m/n/12.05/48 ~|\C19/rm/m/n/12.
+05/26 ß| \C19/rm/m/n/12.05/46 0 \C19/rm/m/n/12.05/55  \C19/rm/m/n/12.05/54 X \
+C19/rm/m/n/12.05/43 € \C19/rm/m/n/12.05/36 U \C19/rm/m/n/12.05/63 Ï \C19/rm/m/n
+/12.05/58 ∑ \C19/rm/m/n/12.05/50 Ç \C19/rm/m/n/12.05/40  \C19/rm/m/n/12.05/56 
+é \C19/rm/m/n/12.05/41 { \C19/rm/m/n/12.05/45 Ô \C19/rm/m/n/12.05/48 ·\OT1/txr/
+m/n/12.05 UC15\C19/rm/m/n/12.05/62 Ü
  []
 
 
-Overfull \hbox (54.65974pt too wide) in paragraph at lines 188--191
-\C19/rm/m/n/12.05/45 m \C19/rm/m/n/12.05/40  \C19/rm/m/n/12.05/64 Ü \C19/rm/m/
-n/12.05/46  \C19/rm/m/n/12.05/39 ì \C19/rm/m/n/12.05/49 Ë \C19/rm/m/n/12.05/61
- ù \C19/rm/m/n/12.05/48 6 \C19/rm/m/n/12.05/46 ; \C19/rm/m/n/12.05/50 ó \C19/rm
-/m/n/12.05/40 › \C19/rm/m/n/12.05/58 è\OT1/txr/m/n/12.05 2*4/  |\C19/rm/m/n/12.
-05/26 £||£|\OT1/txr/m/n/12.05 1+4+2|\C19/rm/m/n/12.05/26 §| \OT1/txr/m/n/12.05 
-+4|\C19/rm/m/n/12.05/26 §| \OT1/txr/m/n/12.05 =0.62|\C19/rm/m/n/12.05/26 ß| \C1
-9/rm/m/n/12.05/41 \OT1/txr/m/n/12.05 editDrugCodes[]jsp\C19/rm/m/n/12.05/43 ⁄\
-OT1/txr/m/n/12.05 AuthDAO\C19/rm/m/n/12.05/64 É
+Underfull \vbox (badness 3907) has occurred while \output is active []
+
+ [27]
+Overfull \hbox (4.2791pt too wide) in paragraph at lines 280--283
+[]\C19/rm/m/n/12.05/63 $ \C19/rm/m/n/12.05/60 1\OT1/txr/m/n/12.05 iTrust\C19/rm
+/m/n/12.05/59 X \C19/rm/m/n/12.05/57 ⁄|\C19/rm/m/n/12.05/26 ß| \C19/rm/m/n/12.0
+5/57 œ \C19/rm/m/n/12.05/43 L\OT1/txr/m/n/12.05 -agentpath\C19/rm/m/n/12.05/37 
+Î \C19/rm/m/n/12.05/55 Í \C19/rm/m/n/12.05/45 Ú \C19/rm/m/n/12.05/39 ì \C19/rm/
+m/n/12.05/49 Ë \C19/rm/m/n/12.05/61 ù \C19/rm/m/n/12.05/48 6 \C19/rm/m/n/12.05/
+37 ” \C19/rm/m/n/12.05/44 º \C19/rm/m/n/12.05/42 Û \C19/rm/m/n/12.05/46 ‰ \C19/
+rm/m/n/12.05/38  \C19/rm/m/n/12.05/65 A \C19/rm/m/n/12.05/40  \C19/rm/m/n/12.
+05/63 $ \C19/rm/m/n/12.05/60 1\OT1/txr/m/n/12.05 iTrust\C19/rm/m/n/12.05/40 
  []
 
-[25]
 
-LaTeX Warning: File ot162.cmap not found on input line 225.
-
-[26]
-<./figures/RequirementTraceability/codeDependencyClosenessRegion.pdf, id=1063, 
-447.6725pt x 206.7725pt>
-File: ./figures/RequirementTraceability/codeDependencyClosenessRegion.pdf Graph
-ic file (type pdf)
-
-<use ./figures/RequirementTraceability/codeDependencyClosenessRegion.pdf>
-Package pdftex.def Info: ./figures/RequirementTraceability/codeDependencyClosen
-essRegion.pdf used on input line 238.
-(pdftex.def)             Requested size: 332.3296pt x 153.50143pt.
-
-Overfull \hbox (3.04956pt too wide) in paragraph at lines 233--242
-\C19/rm/m/n/12.05/50 ó \C19/rm/m/n/12.05/40 › \C19/rm/m/n/12.05/58 è\OT1/txr/m/
-n/12.05 2.60/  |\C19/rm/m/n/12.05/26 £|\OT1/txr/m/n/12.05 2.60+1.53|\C19/rm/m/n
-/12.05/26 §| \OT1/txr/m/n/12.05 =0.63|\C19/rm/m/n/12.05/26 ß| \C19/rm/m/n/12.05
-/41  \C19/rm/m/n/12.05/48 a\OT1/txr/m/n/12.05 UpdateCodeListAction\C19/rm/m/n/
-12.05/43 ⁄ \C19/rm/m/n/12.05/48 a\OT1/txr/m/n/12.05 NDCodesDAO\C19/rm/m/n/12.05
-/43 
- []
-
-[27 <D:/ËÅÇ‰Ω≥ËÆ∫Êñá/thesis_zhang/figures/RequirementTraceability/codeDependenc
-yClosenessRegion.pdf>]
-
-LaTeX Warning: Reference `IRCandidateList' on page 28 undefined on input line 2
-59.
-
-
-Overfull \hbox (1.41106pt too wide) in paragraph at lines 259--262
-\C19/rm/m/n/12.05/37 L []\C19/rm/m/n/12.05/63 – \C19/rm/m/n/12.05/55 ´ \C19/rm/
-m/n/12.05/49 
- \C19/rm/m/n/12.05/61 ò \C19/rm/m/n/12.05/37 ‹ \C19/rm/m/n/12.05/41 © \C19/rm/m
-/n/12.05/63 3\OT1/txr/m/n/12.05 iTrust\C19/rm/m/n/12.05/59 X \C19/rm/m/n/12.05/
-57 ⁄ \C19/rm/m/n/12.05/54 ˛ \C19/rm/m/n/12.05/55 ) \C19/rm/m/n/12.05/38 § \C19/
-rm/m/n/12.05/40  \C19/rm/m/n/12.05/43 ˇ \C19/rm/m/n/12.05/60 ¿ \C19/rm/m/n/12.
-05/65 J l \C19/rm/m/n/12.05/59 Ç \C19/rm/m/n/12.05/56 ¢ \C19/rm/m/n/12.05/49  
-\C19/rm/m/n/12.05/37 L|\C19/rm/m/n/12.05/25 "| \C19/rm/m/n/12.05/42 T \C19/rm/m
-/n/12.05/49  \C19/rm/m/n/12.05/37 L \C19/rm/m/n/12.05/57 œ \C19/rm/m/n/12.05/4
-3 L\OT1/txr/m/n/12.05 VSM\C19/rm/m/n/12.05/51 
+Overfull \hbox (47.26112pt too wide) in paragraph at lines 301--311
+\OT1/txr/m/n/12.05 Drug-Codes[]jsp\C19/rm/m/n/12.05/43 ⁄ \OT1/txr/m/n/12.05 Au-
+th-DAO\C19/rm/m/n/12.05/64 É \C19/rm/m/n/12.05/45 m \C19/rm/m/n/12.05/40  \C19
+/rm/m/n/12.05/64 Ü \C19/rm/m/n/12.05/46  \C19/rm/m/n/12.05/39 ì \C19/rm/m/n/12
+.05/49 Ë \C19/rm/m/n/12.05/61 ù \C19/rm/m/n/12.05/48 6 \C19/rm/m/n/12.05/46 ; \
+C19/rm/m/n/12.05/50 ó \C19/rm/m/n/12.05/40 › \C19/rm/m/n/12.05/58 è \OT1/txr/m/
+n/12.05 2*1/((1+4+2)+(1+1+1+1))=0.18|\C19/rm/m/n/12.05/26 ß|
  []
 
 [28]
-<./figures/RequirementTraceability/codeRegion.pdf, id=1096, 458.71375pt x 210.2
-8563pt>
+
+pdfTeX warning: pdflatex.exe (file D:/ËÅÇ‰Ω≥ËÆ∫Êñá/thesis_zhang/figures/Require
+mentTraceability/codeDependencyClosenessGraph.pdf): PDF inclusion: found PDF ve
+rsion <1.7>, but at most version <1.5> allowed
+
+<./figures/RequirementTraceability/codeDependencyClosenessGraph.pdf, id=941, 40
+1.5pt x 160.6pt>
+File: ./figures/RequirementTraceability/codeDependencyClosenessGraph.pdf Graphi
+c file (type pdf)
+
+<use ./figures/RequirementTraceability/codeDependencyClosenessGraph.pdf>
+Package pdftex.def Info: ./figures/RequirementTraceability/codeDependencyClosen
+essGraph.pdf used on input line 330.
+(pdftex.def)             Requested size: 332.3296pt x 132.94017pt.
+
+[29 <D:/ËÅÇ‰Ω≥ËÆ∫Êñá/thesis_zhang/figures/RequirementTraceability/codeDependenc
+yClosenessGraph.pdf>]
+
+pdfTeX warning: pdflatex.exe (file D:/ËÅÇ‰Ω≥ËÆ∫Êñá/thesis_zhang/figures/Require
+mentTraceability/codeRegion.pdf): PDF inclusion: found PDF version <1.7>, but a
+t most version <1.5> allowed
+
+<./figures/RequirementTraceability/codeRegion.pdf, id=957, 416.05438pt x 177.66
+376pt>
 File: ./figures/RequirementTraceability/codeRegion.pdf Graphic file (type pdf)
  <use ./figures/RequirementTraceability/codeRegion.pdf>
 Package pdftex.def Info: ./figures/RequirementTraceability/codeRegion.pdf used 
-on input line 279.
-(pdftex.def)             Requested size: 332.3296pt x 152.3553pt.
- [29] [30 <D:/ËÅÇ‰Ω≥ËÆ∫Êñá/thesis_zhang/figures/RequirementTraceability/codeReg
-ion.pdf>]
-[31]
-Underfull \vbox (badness 10000) has occurred while \output is active []
+on input line 344.
+(pdftex.def)             Requested size: 332.3296pt x 141.91702pt.
 
- [32]
-Overfull \hbox (10.3041pt too wide) in paragraph at lines 377--378
-\C19/rm/m/n/12.05/60 1\OT1/txr/m/n/12.05 iTrust\C19/rm/m/n/12.05/59 X \C19/rm/m
-/n/12.05/57 ⁄|\C19/rm/m/n/12.05/26 ß| \C19/rm/m/n/12.05/57 œ \C19/rm/m/n/12.05/
-43 L\OT1/txr/m/n/12.05 -agentpath\C19/rm/m/n/12.05/37 Î \C19/rm/m/n/12.05/55 Í 
-\C19/rm/m/n/12.05/45 Ú \C19/rm/m/n/12.05/57 „\OT1/txr/m/n/12.05 2\C19/rm/m/n/12
-.05/56 § \C19/rm/m/n/12.05/55 ´ \C19/rm/m/n/12.05/39 ì \C19/rm/m/n/12.05/49 Ë \
-C19/rm/m/n/12.05/61 ù \C19/rm/m/n/12.05/48 6 \C19/rm/m/n/12.05/37 ” \C19/rm/m/n
-/12.05/44 º \C19/rm/m/n/12.05/42 Û \C19/rm/m/n/12.05/46 ‰ \C19/rm/m/n/12.05/38 
- \C19/rm/m/n/12.05/65 A \C19/rm/m/n/12.05/40  \C19/rm/m/n/12.05/63 $ \C19/rm/
-m/n/12.05/60 1\OT1/txr/m/n/12.05 iTrust\C19/rm/m/n/12.05/40 
+Overfull \hbox (25.18536pt too wide) in paragraph at lines 349--357
+\OT1/txr/m/n/12.05 EditDrugCodes[]jsp|\C19/rm/m/n/12.05/25 !| \OT1/txr/m/n/12.0
+5 DrugCodesBeanValidator|\C19/rm/m/n/12.05/26 ß| \C19/rm/m/n/12.05/61 ±\OT1/txr
+/m/n/12.05 EditDrugCodes[]jsp\C19/rm/m/n/12.05/58 è \C19/rm/m/n/12.05/48 ~|\C19
+/rm/m/n/12.05/26 ß| \C19/rm/m/n/12.05/42 ä \C19/rm/m/n/12.05/46 ‚  [][]\OT1/txr
+/m/n/12.05 3.3.4.2[][]
  []
 
-[33] [34]) (D:\ËÅÇ‰Ω≥ËÆ∫Êñá\thesis_zhang\chapter/Evaluation.tex [35] [36
+[30 <D:/ËÅÇ‰Ω≥ËÆ∫Êñá/thesis_zhang/figures/RequirementTraceability/codeRegion.pd
+f>]) (D:\ËÅÇ‰Ω≥ËÆ∫Êñá\thesis_zhang\chapter/Evaluation.tex [31] [32
 
 ]
 µ⁄Àƒ’¬
 
-Overfull \hbox (7.50851pt too wide) in paragraph at lines 13--14
-[]\C19/rm/m/n/12.05/54 X \C19/rm/m/n/12.05/53 c \C19/rm/m/n/12.05/58 © \C19/rm/
-m/n/12.05/56 § \C19/rm/m/n/12.05/55 „ \C19/rm/m/n/12.05/39 ì \C19/rm/m/n/12.05/
-49 Ë \C19/rm/m/n/12.05/61 ù \C19/rm/m/n/12.05/48 6 \C19/rm/m/n/12.05/37 ” \C19/
-rm/m/n/12.05/44 º \C19/rm/m/n/12.05/42 Û \C19/rm/m/n/12.05/46 ‰ ( \C19/rm/m/n/1
-2.05/43  \C19/rm/m/n/12.05/57 „ \C19/rm/m/n/12.05/54 X \C19/rm/m/n/12.05/57 „ 
-[][]\OT1/txr/m/n/12.05 4.1[][]|\C19/rm/m/n/12.05/26 ß| \C19/rm/m/n/12.05/55 ¶ \
-C19/rm/m/n/12.05/62 ^ \C19/rm/m/n/12.05/37 I \C19/rm/m/n/12.05/65 O\OT1/txr/m/n
-/12.05 JDK\C19/rm/m/n/12.05/57 J \C19/rm/m/n/12.05/42 ¯ \C19/rm/m/n/12.05/40 \
-OT1/txr/m/n/12.05 JVMTI\C19/rm/m/n/12.05/46 
+
+pdfTeX warning: pdflatex.exe (file D:/ËÅÇ‰Ω≥ËÆ∫Êñá/thesis_zhang/figures/evaluti
+on/code_dependency_capturer.pdf): PDF inclusion: found PDF version <1.7>, but a
+t most version <1.5> allowed
+
+<./figures/evalution/code_dependency_capturer.pdf, id=991, 705.13437pt x 432.11
+438pt>
+File: ./figures/evalution/code_dependency_capturer.pdf Graphic file (type pdf)
+ <use ./figures/evalution/code_dependency_capturer.pdf>
+Package pdftex.def Info: ./figures/evalution/code_dependency_capturer.pdf used 
+on input line 18.
+(pdftex.def)             Requested size: 373.86685pt x 229.11183pt.
+
+
+pdfTeX warning: pdflatex.exe (file D:/ËÅÇ‰Ω≥ËÆ∫Êñá/thesis_zhang/figures/evaluti
+on/captureCodeDepFromSubCodeDep.pdf): PDF inclusion: found PDF version <1.7>, b
+ut at most version <1.5> allowed
+
+<./figures/evalution/captureCodeDepFromSubCodeDep.pdf, id=994, 489.32813pt x 29
+1.58937pt>
+File: ./figures/evalution/captureCodeDepFromSubCodeDep.pdf Graphic file (type p
+df)
+ <use ./figures/evalution/captureCodeDepFromSubCodeDep.pdf>
+Package pdftex.def Info: ./figures/evalution/captureCodeDepFromSubCodeDep.pdf u
+sed on input line 44.
+(pdftex.def)             Requested size: 332.3296pt x 198.03787pt.
+ [33]
+[34 <D:/ËÅÇ‰Ω≥ËÆ∫Êñá/thesis_zhang/figures/evalution/code_dependency_capturer.pd
+f>]
+Overfull \hbox (1.60397pt too wide) in paragraph at lines 88--90
+[]\C19/rm/m/n/12.05/43  \C19/rm/m/n/12.05/45 Ô \C19/rm/m/n/12.05/42 Û \C19/rm/
+m/n/12.05/46 ‰\OT1/txr/m/n/12.05 Ant\C19/rm/m/n/12.05/65 Å \C19/rm/m/n/12.05/63
+ @ \C19/rm/m/n/12.05/62 ^ \C19/rm/m/n/12.05/48 5 \C19/rm/m/n/12.05/43  \C19/rm
+/m/n/12.05/45 Ô \C19/rm/m/n/12.05/64 Õ \C19/rm/m/n/12.05/50 ∂ \C19/rm/m/n/12.05
+/40 \OT1/txr/m/n/12.05 Tomcat|\C19/rm/m/n/12.05/26 ß| \C19/rm/m/n/12.05/58 ∑ \
+C19/rm/m/n/12.05/50 Ç \C19/rm/m/n/12.05/47 å \C19/rm/m/n/12.05/61 ± \C19/rm/m/n
+/12.05/45 Ú\OT1/txr/m/n/12.05 Ant\C19/rm/m/n/12.05/47 w \C19/rm/m/n/12.05/38 § 
+\C19/rm/m/n/12.05/55 ¥ \C19/rm/m/n/12.05/61 ò \C19/rm/m/n/12.05/42 á\OT1/txr/m/
+n/12.05 Java\C19/rm/m/n/12.05/36 á
  []
 
+[35 <D:/ËÅÇ‰Ω≥ËÆ∫Êñá/thesis_zhang/figures/evalution/captureCodeDepFromSubCodeDe
+p.pdf>]
 
-<./figures/evalution/code_dependency_capturer.png, id=1170, 1126.2075pt x 682.5
-5pt>
-File: ./figures/evalution/code_dependency_capturer.png Graphic file (type png)
- <use ./figures/evalution/code_dependency_capturer.png>
-Package pdftex.def Info: ./figures/evalution/code_dependency_capturer.png used 
-on input line 17.
-(pdftex.def)             Requested size: 415.41043pt x 251.75844pt.
- [37] [38 <D:/ËÅÇ‰Ω≥ËÆ∫Êñá/thesis_zhang/figures/evalution/code_dependency_captu
-rer.png>]
-<./figures/evalution/issue_pig_4963.pdf, id=1186, 845.0471pt x 597.50804pt>
+pdfTeX warning: pdflatex.exe (file D:/ËÅÇ‰Ω≥ËÆ∫Êñá/thesis_zhang/figures/evaluti
+on/issue_pig_4963.pdf): PDF inclusion: found PDF version <1.7>, but at most ver
+sion <1.5> allowed
+<./figures/evalution/issue_pig_4963.pdf, id=1064, 845.0471pt x 597.50804pt>
 File: ./figures/evalution/issue_pig_4963.pdf Graphic file (type pdf)
 
 <use ./figures/evalution/issue_pig_4963.pdf>
 Package pdftex.def Info: ./figures/evalution/issue_pig_4963.pdf used on input l
-ine 56.
-(pdftex.def)             Requested size: 332.3296pt x 234.97827pt.
+ine 104.
+(pdftex.def)             Requested size: 415.41043pt x 293.72057pt.
 
-<./figures/evalution/issue_pig_4963_commit.pdf, id=1187, 845.0471pt x 597.50804
+
+pdfTeX warning: pdflatex.exe (file D:/ËÅÇ‰Ω≥ËÆ∫Êñá/thesis_zhang/figures/evaluti
+on/issue_pig_4963_commit.pdf): PDF inclusion: found PDF version <1.7>, but at m
+ost version <1.5> allowed
+
+<./figures/evalution/issue_pig_4963_commit.pdf, id=1065, 845.0471pt x 597.50804
 pt>
 File: ./figures/evalution/issue_pig_4963_commit.pdf Graphic file (type pdf)
  <use ./figures/evalution/issue_pig_4963_commit.pdf>
 Package pdftex.def Info: ./figures/evalution/issue_pig_4963_commit.pdf used on 
-input line 63.
+input line 111.
 (pdftex.def)             Requested size: 332.3296pt x 234.97827pt.
 
-
-LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 68.
-
-
-Overfull \hbox (124.4279pt too wide) in paragraph at lines 72--84
+Overfull \hbox (52.12764pt too wide) in paragraph at lines 121--133
  [][] 
  []
 
-[39] <./figures/evalution/build_rtm.pdf, id=1199, 845.07724pt x 597.55246pt>
-File: ./figures/evalution/build_rtm.pdf Graphic file (type pdf)
-
-<use ./figures/evalution/build_rtm.pdf>
-Package pdftex.def Info: ./figures/evalution/build_rtm.pdf used on input line 8
-8.
-(pdftex.def)             Requested size: 415.41043pt x 293.73329pt.
- [40 <D:/ËÅÇ‰Ω≥ËÆ∫Êñá/thesis_zhang/figures/evalution/issue_pig_4963.pdf>] [41 <
-D:/ËÅÇ‰Ω≥ËÆ∫Êñá/thesis_zhang/figures/evalution/issue_pig_4963_commit.pdf>] [42]
- [43 <D:/ËÅÇ‰Ω≥ËÆ∫Êñá/thesis_zhang/figures/evalution/build_rtm.pdf>]
-Overfull \hbox (19.68134pt too wide) in paragraph at lines 136--139
-[]\C19/rm/m/n/12.05/58 ∑ \C19/rm/m/n/12.05/50 Ç \C19/rm/m/n/12.05/60 I \C19/rm/
-m/n/12.05/61 á \C19/rm/m/n/12.05/60  \C19/rm/m/n/12.05/65 O \C19/rm/m/n/12.05/
-56 o \C19/rm/m/n/12.05/42 á \C19/rm/m/n/12.05/74 K \C19/rm/m/n/12.05/64 ä|\C19/
-rm/m/n/12.05/26 ß| $\OML/txmi/m/it/12.05 Threshold[]$|\C19/rm/m/n/12.05/25 !| $
-\OML/txmi/m/it/12.05 Threshold[]$|\C19/rm/m/n/12.05/25 !| $\OML/txmi/m/it/12.05
- Threshold[]$\C19/rm/m/n/12.05/43 ⁄\OT1/txr/m/n/12.05 LSI\C19/rm/m/n/12.05/40 
-\OT1/txr/m/n/12.05 k\C19/rm/m/n/12.05/64 ä|\C19/rm/m/n/12.05/25 "|
+[36 <D:/ËÅÇ‰Ω≥ËÆ∫Êñá/thesis_zhang/figures/evalution/issue_pig_4963.pdf>]
+Overfull \hbox (15.0032pt too wide) in paragraph at lines 135--139
+\OT1/txr/m/n/12.05 change[]set[]link\C19/rm/m/n/12.05/43 ⁄ \OT1/txr/m/n/12.05 c
+ode[]change\C19/rm/m/n/12.05/58 ∑ \C19/rm/m/n/12.05/50 Ç \C19/rm/m/n/12.05/46 “
+ \C19/rm/m/n/12.05/47 å \C19/rm/m/n/12.05/61 ± \C19/rm/m/n/12.05/40   \C19/rm
+/m/n/12.05/39 l \C19/rm/m/n/12.05/60 I \C19/rm/m/n/12.05/53 ¶\OT1/txr/m/n/12.05
+ issue\C19/rm/m/n/12.05/40  \C19/rm/m/n/12.05/39 ì \C19/rm/m/n/12.05/49 Ë \C19
+/rm/m/n/12.05/37 C \C19/rm/m/n/12.05/42 ç \OT1/txr/m/n/12.05 code[]change\C19/r
+m/m/n/12.05/40 
  []
 
-[44]
+[37 <D:/ËÅÇ‰Ω≥ËÆ∫Êñá/thesis_zhang/figures/evalution/issue_pig_4963_commit.pdf>]
 
-LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 162.
+Overfull \hbox (3.43236pt too wide) in paragraph at lines 142--143
+\C19/rm/m/n/12.05/64 ´ \C19/rm/m/n/12.05/60 I \C19/rm/m/n/12.05/53 ¶ \C19/rm/m/
+n/12.05/48 ‚ \C19/rm/m/n/12.05/40 › \C19/rm/m/n/12.05/37 ' \C19/rm/m/n/12.05/46
+  ) ˚ \C19/rm/m/n/12.05/39 D \C19/rm/m/n/12.05/57 ⁄ \C19/rm/m/n/12.05/40  \C1
+9/rm/m/n/12.05/60 I \C19/rm/m/n/12.05/53 ¶ |\C19/rm/m/n/12.05/26 £|\C19/rm/m/n/
+12.05/48 ~ \C19/rm/m/n/12.05/54 X\OT1/txr/m/n/12.05 iTrust\C19/rm/m/n/12.05/40 
+ \C19/rm/m/n/12.05/60 I \C19/rm/m/n/12.05/53 ¶|\C19/rm/m/n/12.05/26 §||ß| \C19
+/rm/m/n/12.05/48 a \C19/rm/m/n/12.05/60 . \C19/rm/m/n/12.05/58 è\OT1/txr/m/n/12
+.05 Bug\C19/rm/m/n/12.05/40 \OT1/txr/m/n/12.05 issue\C19/rm/m/n/12.05/58  
+ []
 
 
-Underfull \vbox (badness 1648) has occurred while \output is active []
 
- [45]
-<./figures/evalution/precisionRecall.pdf, id=1286, 639.89063pt x 440.64626pt>
+pdfTeX warning: pdflatex.exe (file D:/ËÅÇ‰Ω≥ËÆ∫Êñá/thesis_zhang/figures/evaluti
+on/buildRTM.pdf): PDF inclusion: found PDF version <1.7>, but at most version <
+1.5> allowed
+<./figures/evalution/buildRTM.pdf, id=1090, 574.145pt x 481.8pt>
+File: ./figures/evalution/buildRTM.pdf Graphic file (type pdf)
+
+<use ./figures/evalution/buildRTM.pdf>
+Package pdftex.def Info: ./figures/evalution/buildRTM.pdf used on input line 14
+9.
+(pdftex.def)             Requested size: 332.3296pt x 278.88545pt.
+ [38]
+Underfull \vbox (badness 4328) has occurred while \output is active []
+
+ [39 <D:/ËÅÇ‰Ω≥ËÆ∫Êñá/thesis_zhang/figures/evalution/buildRTM.pdf>] [40] [41]
+
+pdfTeX warning: pdflatex.exe (file D:/ËÅÇ‰Ω≥ËÆ∫Êñá/thesis_zhang/figures/evaluti
+on/precisionRecall.pdf): PDF inclusion: found PDF version <1.7>, but at most ve
+rsion <1.5> allowed
+<./figures/evalution/precisionRecall.pdf, id=1169, 639.89063pt x 440.64626pt>
 File: ./figures/evalution/precisionRecall.pdf Graphic file (type pdf)
 
 <use ./figures/evalution/precisionRecall.pdf>
 Package pdftex.def Info: ./figures/evalution/precisionRecall.pdf used on input 
-line 199.
+line 230.
 (pdftex.def)             Requested size: 332.3296pt x 228.85497pt.
- [46]
+LaTeX Font Info:    Try loading font information for OML+txr on input line 247.
 
-LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 206.
-
-LaTeX Font Info:    Try loading font information for OML+txr on input line 214.
 
 (d:\CTEX\MiKTeX\tex\latex\txfonts\omltxr.fd
 File: omltxr.fd 2000/12/15 v3.1
 )
-LaTeX Font Info:    Font shape `OML/txr/m/n' in size <12.05> not available
-(Font)              Font shape `OML/txmi/m/it' tried instead on input line 214.
+LaTeX Font Info:    Font shape `OML/txr/m/n' in size <9.03> not available
+(Font)              Font shape `OML/txmi/m/it' tried instead on input line 247.
 
+ [42]
+Underfull \vbox (badness 5970) has occurred while \output is active []
 
-Overfull \hbox (76.53653pt too wide) in paragraph at lines 210--231
- [][] 
- []
+ [43 <D:/ËÅÇ‰Ω≥ËÆ∫Êñá/thesis_zhang/figures/evalution/precisionRecall.pdf>] [44]
+)
+(D:\ËÅÇ‰Ω≥ËÆ∫Êñá\thesis_zhang\chapter/Tool.tex [45] [46
 
-
-LaTeX Warning: Reference `sec:relatework' on page 47 undefined on input line 23
-2.
-
-[47 <D:/ËÅÇ‰Ω≥ËÆ∫Êñá/thesis_zhang/figures/evalution/precisionRecall.pdf>]
-Underfull \vbox (badness 4954) has occurred while \output is active []
-
- [48]
+]
+µ⁄ŒÂ’¬
 
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 237.
+               Default added (so using `tbp') on input line 16.
 
 
-Overfull \hbox (47.97986pt too wide) in paragraph at lines 241--258
- [][] 
- []
 
-
-LaTeX Warning: Reference `expirement_information' on page 49 undefined on input
- line 263.
-
-[49]) (D:\ËÅÇ‰Ω≥ËÆ∫Êñá\thesis_zhang\chapter/Tool.tex [50]
-µ⁄ŒÂ’¬
-<./figures/tool/tool_use_scene.pdf, id=1326, 473.26813pt x 270.00874pt>
+pdfTeX warning: pdflatex.exe (file D:/ËÅÇ‰Ω≥ËÆ∫Êñá/thesis_zhang/figures/tool/to
+ol_use_scene.pdf): PDF inclusion: found PDF version <1.7>, but at most version 
+<1.5> allowed
+<./figures/tool/tool_use_scene.pdf, id=1206, 472.26437pt x 259.46938pt>
 File: ./figures/tool/tool_use_scene.pdf Graphic file (type pdf)
 
 <use ./figures/tool/tool_use_scene.pdf>
 Package pdftex.def Info: ./figures/tool/tool_use_scene.pdf used on input line 1
-4.
-(pdftex.def)             Requested size: 415.41043pt x 237.0069pt.
- [51
+8.
+(pdftex.def)             Requested size: 332.3296pt x 182.5894pt.
+ [47]
 
-]
-<./figures/tool/tool_architecture.pdf, id=1333, 542.025pt x 315.67938pt>
+LaTeX Warning: No positions in optional float specifier.
+               Default added (so using `tbp') on input line 33.
+
+
+
+pdfTeX warning: pdflatex.exe (file D:/ËÅÇ‰Ω≥ËÆ∫Êñá/thesis_zhang/figures/tool/to
+ol_architecture.pdf): PDF inclusion: found PDF version <1.7>, but at most versi
+on <1.5> allowed
+<./figures/tool/tool_architecture.pdf, id=1221, 489.32813pt x 288.57813pt>
 File: ./figures/tool/tool_architecture.pdf Graphic file (type pdf)
 
 <use ./figures/tool/tool_architecture.pdf>
 Package pdftex.def Info: ./figures/tool/tool_architecture.pdf used on input lin
-e 32.
-(pdftex.def)             Requested size: 415.41043pt x 241.94672pt.
- [52 <D:/ËÅÇ‰Ω≥ËÆ∫Êñá/thesis_zhang/figures/tool/tool_use_scene.pdf>] [53 <D:/ËÅ
+e 35.
+(pdftex.def)             Requested size: 415.41043pt x 244.98872pt.
+ [48 <D:/ËÅÇ‰Ω≥ËÆ∫Êñá/thesis_zhang/figures/tool/tool_use_scene.pdf>] [49 <D:/ËÅ
 Ç‰Ω≥ËÆ∫Êñá/thesis_zhang/figures/tool/tool_architecture.pdf>]
-<./figures/tool/user_interface.png, id=1750, 677.53125pt x 492.84125pt>
+<./figures/tool/user_interface.png, id=1532, 529.98pt x 248.93pt>
 File: ./figures/tool/user_interface.png Graphic file (type png)
 
 <use ./figures/tool/user_interface.png>
 Package pdftex.def Info: ./figures/tool/user_interface.png used on input line 5
-8.
-(pdftex.def)             Requested size: 415.41043pt x 302.18185pt.
+9.
+(pdftex.def)             Requested size: 415.41043pt x 195.118pt.
+ [50 <D:/ËÅÇ‰Ω≥ËÆ∫Êñá/thesis_zhang/figures/tool/user_interface.png>]
+<./figures/tool/help_validate.png, id=1541, 860.21375pt x 532.99126pt>
+File: ./figures/tool/help_validate.png Graphic file (type png)
 
-<./figures/tool/code_dependenct_structure.png, id=1751, 1091.07625pt x 700.6175
-pt>
-File: ./figures/tool/code_dependenct_structure.png Graphic file (type png)
- <use ./figures/tool/code_dependenct_structure.png>
-Package pdftex.def Info: ./figures/tool/code_dependenct_structure.png used on i
-nput line 65.
-(pdftex.def)             Requested size: 415.41043pt x 266.75056pt.
+<use ./figures/tool/help_validate.png>
+Package pdftex.def Info: ./figures/tool/help_validate.png used on input line 71
+.
+(pdftex.def)             Requested size: 415.41043pt x 257.3944pt.
+ [51 <D:/ËÅÇ‰Ω≥ËÆ∫Êñá/thesis_zhang/figures/tool/help_validate.png>]
+<./figures/tool/query_result.png, id=1556, 885.3075pt x 244.41313pt>
+File: ./figures/tool/query_result.png Graphic file (type png)
 
-<./figures/tool/query_result.pdf, id=1752, 607.26875pt x 317.185pt>
-File: ./figures/tool/query_result.pdf Graphic file (type pdf)
+<use ./figures/tool/query_result.png>
+Package pdftex.def Info: ./figures/tool/query_result.png used on input line 81.
 
-<use ./figures/tool/query_result.pdf>
-Package pdftex.def Info: ./figures/tool/query_result.pdf used on input line 72.
+(pdftex.def)             Requested size: 415.41043pt x 114.6877pt.
 
-(pdftex.def)             Requested size: 415.41043pt x 216.98001pt.
- [54]
-Underfull \vbox (badness 10000) has occurred while \output is active []
+Overfull \hbox (29.40244pt too wide) in paragraph at lines 78--87
+[]\C19/rm/m/n/12.05/61 ò \C19/rm/m/n/12.05/41 ê \C19/rm/m/n/12.05/50 °|\C19/rm/
+m/n/12.05/26 ß| \C19/rm/m/n/12.05/39 l \C19/rm/m/n/12.05/57 „ [][]\OT1/txr/m/n/
+12.05 5.4[][]\C19/rm/m/n/12.05/38  \C19/rm/m/n/12.05/47 w \C19/rm/m/n/12.05/62
+ Ü\OT1/txr/m/n/12.05 HospitalsDAO \C19/rm/m/n/12.05/58 † \C19/rm/m/n/12.05/62 u
+ \C19/rm/m/n/12.05/57 ” \C19/rm/m/n/12.05/61 ò \C19/rm/m/n/12.05/39 ì \C19/rm/m
+/n/12.05/49 Ë \C19/rm/m/n/12.05/62 ç \C19/rm/m/n/12.05/40 \OT1/txr/m/n/12.05 U
+pdateHospitalListAction
+ []
 
- [55 <D:/ËÅÇ‰Ω≥ËÆ∫Êñá/thesis_zhang/figures/tool/user_interface.png>])
-(D:\ËÅÇ‰Ω≥ËÆ∫Êñá\thesis_zhang\chapter/Conclusion.tex [56 <D:/ËÅÇ‰Ω≥ËÆ∫Êñá/thesi
-s_zhang/figures/tool/code_dependenct_structure.png>] [57 <D:/ËÅÇ‰Ω≥ËÆ∫Êñá/thesi
-s_zhang/figures/tool/query_result.pdf>] [58
-
-]
+) (D:\ËÅÇ‰Ω≥ËÆ∫Êñá\thesis_zhang\chapter/Conclusion.tex [52 <D:/ËÅÇ‰Ω≥ËÆ∫Êñá/the
+sis_zhang/figures/tool/query_result.png>]
 µ⁄¡˘’¬
-[59]) [60]
+[53
+
+]) [54]
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                \hskip 12.05pt
-(hyperref)                replaced by space on input line 218.
+(hyperref)                replaced by space on input line 219.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                \hskip 12.05pt
-(hyperref)                replaced by space on input line 218.
+(hyperref)                replaced by space on input line 219.
 
-<<c1977.cmap>> [61
+<<c1977.cmap>> [55
 
 
-] [62
+] [56
 
-] (D:\ËÅÇ‰Ω≥ËÆ∫Êñá\thesis_zhang\thesis.bbl [63] [64
+] (D:\ËÅÇ‰Ω≥ËÆ∫Êñá\thesis_zhang\thesis.bbl [57] [58
 
 ]
 LaTeX Font Info:    Try loading font information for OT1+txtt on input line 5.
 
 (d:\CTEX\MiKTeX\tex\latex\txfonts\ot1txtt.fd
 File: ot1txtt.fd 2000/12/15 v3.1
-) [65] [66] [67] [68] [69])
-[70]
+) [59] [60] [61] [62] [63]
+Underfull \hbox (badness 10000) in paragraph at lines 323--325
+[]\OT1/txr/m/n/12.05 surefire:.  [][]$\OT1/txtt/m/n/12.05 https : / / maven . a
+pache . org / surefire /$
+ []
 
-Package natbib Warning: There were undefined citations.
-
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 263.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 263.
-(D:\ËÅÇ‰Ω≥ËÆ∫Êñá\thesis_zhang\thesis.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 263.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 263.
-Package rerunfilecheck Info: File `thesis.out' has not changed.
-(rerunfilecheck)             Checksum: 33856E8C17A6E91D675D7E40D3F4689E;4831.
-
-
-LaTeX Warning: There were undefined references.
+[64]) [65]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 264.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 264.
+ (D:\ËÅÇ‰Ω≥ËÆ∫Êñá\thesis_zhang\thesis.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 264.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 264.
 
 
-LaTeX Warning: There were multiply-defined labels.
+Package rerunfilecheck Warning: File `thesis.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
 
+Package rerunfilecheck Info: Checksums for `thesis.out':
+(rerunfilecheck)             Before: 25452D04DE85EEF13D2462376F7DB5C2;7405
+(rerunfilecheck)             After:  A6CAA6CBB80F6C6B7F4810C659E37B58;3364.
  ) 
 Here is how much of TeX's memory you used:
- 21014 strings out of 495354
- 333423 string characters out of 3183860
- 405809 words of memory out of 3000000
- 22743 multiletter control sequences out of 15000+200000
- 149751 words of font info for 450 fonts, out of 3000000 for 9000
+ 20944 strings out of 495354
+ 332421 string characters out of 3183860
+ 410326 words of memory out of 3000000
+ 22732 multiletter control sequences out of 15000+200000
+ 155225 words of font info for 462 fonts, out of 3000000 for 9000
  14 hyphenation exceptions out of 8191
- 47i,22n,51p,1319b,1228s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 47i,22n,48p,2031b,1276s stack positions out of 5000i,500n,10000p,200000b,50000s
 <C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/s
 imhei.ttf><C:/WINDOWS/Fonts/simhei.ttf><C:/WINDOWS/Fonts/simhei.ttf><C:/WINDOWS
-/Fonts/simkai.ttf>{d:/CTEX/MiKTeX/fonts/enc/dvips/fontname/8r.enc}<C:/WINDOWS/F
-onts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simhei.ttf><C:/W
+/Fonts/simhei.ttf><C:/WINDOWS/Fonts/simkai.ttf>{d:/CTEX/MiKTeX/fonts/enc/dvips/
+fontname/8r.enc}<C:/WINDOWS/Fonts/simsun.ttc><C:/WINDOWS/Fonts/simsun.ttc><C:/W
 INDOWS/Fonts/simhei.ttf><C:/WINDOWS/Fonts/simhei.ttf><C:/WINDOWS/Fonts/simhei.t
 tf><C:/WINDOWS/Fonts/simhei.ttf><C:/WINDOWS/Fonts/simhei.ttf><C:/WINDOWS/Fonts/
 simhei.ttf><C:/WINDOWS/Fonts/simhei.ttf><C:/WINDOWS/Fonts/simhei.ttf><C:/WINDOW
@@ -1771,9 +1766,9 @@ s/type1/public/txfonts/txsya.pfb><d:/CTEX/MiKTeX/fonts/type1/public/txfonts/txt
 t.pfb><d:/CTEX/MiKTeX/fonts/type1/urw/times/utmb8a.pfb><d:/CTEX/MiKTeX/fonts/ty
 pe1/urw/times/utmbi8a.pfb><d:/CTEX/MiKTeX/fonts/type1/urw/times/utmr8a.pfb><d:/
 CTEX/MiKTeX/fonts/type1/urw/times/utmri8a.pfb>
-Output written on thesis.pdf (84 pages, 2802974 bytes).
+Output written on thesis.pdf (79 pages, 2656137 bytes).
 PDF statistics:
- 2277 PDF objects out of 2487 (max. 8388607)
- 393 named destinations out of 1000 (max. 500000)
- 828 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 2055 PDF objects out of 2073 (max. 8388607)
+ 326 named destinations out of 1000 (max. 500000)
+ 668 words of extra memory for PDF output out of 10000 (max. 10000000)
 

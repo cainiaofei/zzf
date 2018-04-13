@@ -1,0 +1,24 @@
+   
+UC15 update standards lists Use Case
+...
+15.2 Main Flow:
+An administrator chooses to update the standards list for immunizations
+[S1], diagnoses [S2], allowable drugs [S3], or allowable physical services [S4].
+15.3 Sub-flows:
+[S1] The administrator will maintain [add/update] a listing of allowable immunizations 
+that an HCP can use. The administrator will store (1) the CPT code (The CPT code set 
+accurately describes medical, surgical, and diagnostic services and is designed to 
+communicate uniform information about medical services and procedures.
+[S2] The administrator will maintain a listing of allowable diagnoses that an LHCP can 
+use. The administrator will store (1) the ICD-9CM code (The International Statistical 
+Classification of Diseases and Related Health 
+[S3] The administrator will maintain [add/update] a listing of allowable drugs that an HCP
+can use. The administrator will store (1) the National Drug Code (The National Drug Code 
+(NDC) is a universal product identifier used in the United States for drugs intended for 
+human use. National Drug Code Directory)
+...
+	
+	
+	
+	
+	

@@ -1,9 +1,5 @@
 %%]dvipdfm
 \documentclass[twoside, master]{NJUthesis}
-
-%%新增 2018.3.7
-\pdfoptionpdfminorversion=7
-
 % \documentclass[pdftex]{NJUthesis}
 
 % 可选参数：
@@ -76,7 +72,6 @@
 }
 
 
-
 \begin{document}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -106,15 +101,15 @@
 \grade{2015}
 \advisor{\kaishu胡昊~~副教授}
 \major{\kaishu计算机技术}
-\researchfield{\kaishu软件维护}
-\footdate{\kaishu2018~年~5~月}
-\submitdate{\kaishu2018~年~5~月~27~日}
-\defenddate{\kaishu2018~年~5~月~27~日}
+\researchfield{\kaishu软件可追踪性}
+\footdate{\kaishu2018~年~4~月}
+\submitdate{\kaishu2018~年~4~月~15~日}
+\defenddate{\kaishu2018~年~4~月~15~日}
 
 
 
 % 英文封面内容字符串
-\englishtitle{An IR-based approach combining with code dependencies for updating requirements}
+\englishtitle{Combining User Feedback with Closeness Analysis on Code to Improve IR-Based Traceability Recovery}
 \englishauthor{Zongfei Zhang}
 \englishadvisor{Associate Professor }
 \englishadvisorname{Hao Hu}
@@ -139,40 +134,51 @@
 
 \begin{abstract}
 
-在软件开发过程中，会产生多种软件制品，例如代码、需求文档、测试集合等。软件制品之间的追踪线索尤其是需求到代码的追踪线索对利益相关者有重要的作用。需求到代码的追踪线索能够描述高层到底层实现之间的关系，对于软件理解、影响分析、软件维护等活动都具有重要意义。但是建立需求到代码之间的追踪线索需要耗费大量时间和精力。软件工程师需要阅读并理解不同的软件制品，才能判断不同软件制品之间是否具有追踪关系。
+在软件开发过程中，会产生包括代码、需求文档、测试集合等在内的多种软件制品。这些软件制品之间的追踪线索尤其是需求到代码的追踪线索对软件利益相关者有重要价值。需求到代码的追踪线索能够描述软件高层抽象到底层实现之间的关系，对于软件理解、影响分析、软件维护等活动都具有重要意义。然而，软件工程师需要阅读并理解不同类型的软件制品，才能判断两者之间是否具有追踪关系。这使得建立需求到代码之间的追踪线索需要耗费大量时间和精力。因此，自动生成需求到代码的可追踪性成为学术界最具代表性与挑战性的工作之一。
 
-当前获取获取需求到代码可追踪性的主流方法是信息检索方法，通过计算需求和代码之间的文本相似度来辅助用户判断两者之间是否存在追踪关系。由于需求和代码可能使用不同的术语表，这就使得两者存在单词失配问题。严重影响生成结果的精度。为了解决这个问题，有些工作提出了一些增求策略，例如考虑代码结构信息，考虑用户反馈等。对于只考虑代码结构信息的工作，其精度严重依赖于信息检索的结果；而对于考虑用户反馈的现有工作，往往需要大量的用户反馈，在实际中可操作性不强。
+当前获取需求到代码可追踪性的主流方法是信息检索方法，该方法通过计算需求和代码之间的文本相似度并按照该值自大到小排序形成候选追踪线索列表。之后，用户自上而下遍历该列表并验证每条候选追踪线索所对应的需求和代码元素在系统功能上是否相互关联。
+然而，需求和代码之间存在的所谓词汇表失配问题使得该方法精度有限，难以支撑日常实践。
+%然而，由于需求和代码往往使用不同的单词来表达同一个概念，这使得两者之间存在词汇表失配问题，导致一些相关候选追踪线索排在列表底部。最终导致此类方法的精度有限，难以支撑日常实践。
+针对该问题，众多研究工作提出了一系列增强策略。其中，基于代码依赖分析以及基于用户反馈的增强策略是当前的研究热点。然而，引入代码依赖分析的增强策略严重依赖于初始候选追踪线索排序表的精度，当初始列表结果精度不高时，该方法容易对之前列表造成污染。引入用户反馈的增强策略则需要用户遍历大部分列表才能取得明显效果，难以应用到日常实践中。
 
-针对上述问题，本文完成了以下工作：
+基于对以上相关工作的分析，我们形成如下重要研究思路：（1）通过代码依赖紧密度分析发掘功能关系紧密的代码元素，
+并将其放到同一个代码域（code region）中。（2）引入用户反馈来防止直接使用代码依赖可能带来的列表污染问题，根据用户对当前代码元素和需求相关性的验证结果调整域内类和域外类对应候选线索的相似度值。（3）针对域内和域外代码元素对应候选追踪线索设置不同的优化策略，从而改善整个候选列表的排序。
+
+为了验证我们方法的有效性和实用性，我们的实验系统由一个被领域内广泛用于软件可追踪方法验证的高质量软件系统数据集和三个被广泛用于日常实践的开源软件系统组成。对于实验系统中由代码托管平台管理的开源软件系统，我们通过分析其在issue-tracking工具中的软件行为信息，整理出了其需求到代码的可追踪数据集。并且，我们通过运行开源软件系统自带的用于验证自身功能的测试用例，动态捕获到了我们方法中需要的高质量代码依赖信息。实验表明，
+我们的方法只需要少量的（约3.5\%）用户反馈信息即可在精度上显著优于基线方法。
+
+为了将我们的方法应用到日常实践中，我们实现了软件可追踪生成工具并集成了结合代码依赖和用户反馈的软件可追踪生成方法。
+一方面，该工具操作简单、用户学习成本低。该工具类似一个搜索引擎，返回与指定需求具有相关性的代码元素列表。另一方面，在用户验证追踪线索相关性阶段，工具提供大量信息辅助用户高效完成验证。通过使用该工具，用户可以快速得到高质量的需求到代码追踪列表。
+
+综上所述，本文工作概括如下：
 \begin{enumerate}
-  \item 基于代码依赖紧密度分析和用户反馈的可追踪性生成方法。我们提出了一种结合了代码紧密度分析和用户反馈的软件可追踪生成方法。一方面通过设置代码紧密度阈值划分代码域，使得功能相似的代码元素位于同一个代码域中；另一方面，将各代码域中有代表性的代码元素交由用户判断与需求相关性，根据用户反馈信息调整相关代码元素对应候选线索在排序表中的位置。
+  \item 基于代码依赖紧密度分析和用户反馈的可追踪性生成方法。我们提出了一种结合了代码紧密度分析和用户反馈的软件可追踪生成方法。一方面通过设置代码紧密度阈值划分代码域，使得功能紧密的代码元素位于同一个代码域中；另一方面，对于给定需求，将各代码域中有代表性的代码元素交由用户判断与该需求相关性，根据用户反馈信息调整相关代码元素对应候选线索的相似度值。
 
-  \item 方法的验证及技术来源分析。我们在四个研究案例下设计实验，验证了上述方法的有效性。并且，介绍了在实验所用不同类型软件系统的代码依赖捕获过程。此外，对于实验中所用开源系统，我们阐述其可追踪数据集的整理过程。
+  \item 实验数据组织及方法验证。我们用一个被领域内广泛用于可追踪方法验证的高质量数据集和三个被广泛应用于日常实践的开源系统验证了我们方法的有效性和实用性。并且，我们通过对开源软件在issue-tracking工具上的行为信息进行分析整理，组织了其需求到代码的追踪关系。此外，我们通过运行开源系统自带的用于验证系统功能的测试用例得到了我们方法所需的代码依赖。
 
-  \item 基于代码依赖和用户反馈的软件可追踪生成工具的设计与实现。目前，领域内并没有相应的结合代码依赖和用户反馈的可追踪生成工具可以应用于实际的软件演化过程。因此，我们设计并实现软件可追踪生成工具，并集成了我们基于代码依赖紧密度分析和用户反馈的软件可追踪生成方法。
-
+  \item 基于代码依赖和用户反馈的软件可追踪生成工具的设计与实现。为了将我们的方法应用到日常实践中，我们设计并实现软件可追踪生成工具，并集成了我们基于代码依赖紧密度分析和用户反馈的软件可追踪生成方法。
 \end{enumerate}
 
-\keywords{需求可追踪性，信息检索，紧密度分析，用户反馈，代码依赖}
+\keywords{需求可追踪性，代码域，信息检索，紧密度分析，用户反馈，代码依赖}
 
 \end{abstract}
 
 % 英文摘要
 \begin{englishabstract}
-There will be variety of software artifacts, such as code artifacts、requirement document artifacts and test case artifacts and so on, during the process of software development. The traceability between software artifacts especially requirement-to-code play an good important role for stakeholders. The traceability between requirement and code make a great significance for software understanding, impact analysis and software maintenance. However, it takes a lot time and effort to establish the traceability between requirement and code.Software engineers need to read and understand different software artifacts to determine whether there is a trace between them.
+A variety of software artifacts including code, requirement documents, test sets, etc. will be produced during the process of software development. The traceability between these artifacts especially the requirement-to-code make a great impact to software stakeholders. The traceability between requirement and code describes the relationship between high-level abstractions of software and the underlying implementation which make a great impact on software understanding, impact analysis, and software maintenance. However, in order to validate whether there is a traceability between the artifacts, software engineers need to understand different types of artifacts, which will consume lots of time.
+Therefore, establish the traceability between requirement and code automatically has become one of the most representative and challenging work in the academic community.
 
+Information Retrieval(IR) is now the most widely accepted and applied technique in the research of traceability recovery . In general, typical IR-based approaches compute the textual similarity between two software artifacts . Then, users can verify candidate traces along the automatically generated candidate lists (sorted by their IR values in descending order). Unfortunately, different artifacts (e.g., requirements and code) often use different terms to denote the same concept, which is known as the vocabulary mismatch problem. This make some relevant traces lie at the bottom of the list. The accuracy of IR approach, i.e., the ranking of relevant traces in the candidate list, is not satisfying . So it is difficult to apply IR approach in practice.To address this issue, researchers have successfully proposed enhancing strategies from different perspectives. The two types of enhancement strategies below are research hotspots in the current field. A growing body of work optimize the candidate list by combining IR techniques with code dependency analysis. In general, this approach will first locate a set of candidate links by using IR techniques, and then give bonus to some specific candidate trace based on analyzing dependencies among code elements, which improves the position of the candidate trace at the bottom of the list due to vocabulary mismatch problems.However, these approaches are sensitive to the correctness of the candidate links because only correct links can help find additional correct links through code dependencies. Otherwise, the code dependency analysis offers no help or even makes the results deteriorate with the incorrect links. Recent work focused on utilizing user feedback to increase the accuracy of IR-based approaches. This approach suggests users to verify candidate links and uses the feedback to optimize the remaining candidate trace list. However, the users need to verify most of candidate list. This is infeasible in practice to improve IR-based approaches.
 
-The information retrieval is mainstream method of obtaining traceability between requirement and code, it assist user to judge whether there exist trace between requirement and code through calculating text similarity between them. It will cause word mismatch for the requirement and the code use different glossaries. In order to solve this problem, some work put forward some enhancing strategies, such as considering code structure information and user feedback.
-Unfortunately, on the one hand, the performance of work which considers the code structure information only depends heavily on the result of information retrieval; on the other hand, the work that only considers the user feedback will need a large amount of user feedback which is infeasible in practice.
 
 For the above problems, we finished several works as following:
 \begin{enumerate}
   \item We proposed an IR-based approach combining user feedback with closeness analysis on code dependencies. On the one hand, we build candidate regions through setting closeness threshold. On the other hand, for a given requirement, we choose the class that has the highest IR value in each region as the representative class. Then
-      we ask user to iteratively verify these representative classes for each region and adjust the position of relevant candidate link base on user feedback.
-  \item We evaluated the above traceability recovery approach on four different case studies. Meanwhile, we introduce the process of code dependency capture about different experiment software system. In addition, we describe the process of mange requirement traceability dataset for open source system used in experiment.
+      we ask user to iteratively verify these representative classes for each region and adjust the similarity of relevant candidate link base on user feedback.
+  \item We evaluated the above traceability recovery approach on four different case studies. Meanwhile, we introduce the process of code dependency capture about software system managed by different build tools. In addition, we describe the process of building requirement traceability matrix(RTM) for system without standard RTM.
   \item We also developed an assistant tool for traceability recovery between requirement and code and integrating the above approach into it.
 \end{enumerate}
-\englishkeywords{traceability recovery, information retrieval, closeness analysis, user feedback, code dependencies}
+\englishkeywords{traceability recovery, code region, information retrieval, closeness analysis, user feedback, code dependencies}
 \end{englishabstract}
 
 % 生成目录命令
@@ -180,7 +186,7 @@ For the above problems, we finished several works as following:
 
 % 以下两个目录可根据具体情况注释掉
 % 生成表格目录命令
-%\listoftables
+\listoftables
 % 生成插图目录命令
 \listoffigures
 
@@ -189,8 +195,6 @@ For the above problems, we finished several works as following:
 %\def\nomname{缩略语对照表}
 %\printnomenclature[5em]
 
-
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% 正文部分
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -198,7 +202,7 @@ For the above problems, we finished several works as following:
 
 \input{chapter/Introduction.tex}
 
-\input{chapter/test.tex}
+%\input{chapter/test.tex}
 
 \input{chapter/RelatedWork.tex}
 
@@ -219,9 +223,9 @@ For the above problems, we finished several works as following:
 
 首先感谢我的导师，胡昊老师。在研究生的三年中，胡老师无论是在学习上，还是在生活上都给予了我悉心的指导与关怀。胡老师在平时既是一个前辈，在人生规划、职场生活方面给了我很多宝贵的建议；又是一位益友，在一起讨论科研问题，探讨项目经验，让我在学术以及项目上面都得到很多的启发。从胡老师那里学得的，不仅是做事，更是做人，让我终身受益。
 
-感谢匡宏宇师兄，在科研和生活上给了我很大的帮助。和匡宏宇师兄合作期间，他严谨的学术风格以及科研素养让我受益颇多，并且我论文的选题也离不开师兄的帮助与教导。祝愿师兄科研顺利，家庭美满。
+感谢匡宏宇老师，在科研和生活上给了我很大的帮助。和匡宏宇老师合作期间，他严谨的学术风格以及科研素养让我受益颇多，并且我论文的选题也离不开师兄的帮助与教导。祝愿师兄科研顺利，家庭美满。
 
-感谢一起奋斗的同门，聂佳、梁阳、戚可生、龚宇豪、单苏苏、朴琪、王勇、蔡欣辰，感谢大家三年的帮助与陪伴，希望大家以后都能有好的发展，科研之余也要多多锻炼和玩耍，科研的效率会更高。
+感谢一起奋斗的同门，聂佳、梁阳、戚可生、龚宇豪、单苏苏、卜琪、王勇、蔡欣辰，感谢大家三年的帮助与陪伴，希望大家以后都能有好的发展，科研之余也要多多锻炼和玩耍，科研的效率会更高。
 
 感谢软件所的各位老师，无论是在硕士讨论班还是课堂，老师们的言传身教能够给我很多的启发与思考。同样感谢同学们在硕士讨论班的分享，让我对除自己研究方向之外的领域有了更多的了解。
 
@@ -251,10 +255,28 @@ For the above problems, we finished several works as following:
 \noindent {\heiti 攻读硕士学位期间申请的专利}
 
 \begin{enumerate}[label=\arabic*., labelindent=0em, leftmargin=*]
-	\item 匡宏宇，胡昊，吕建，\textbf{张宗飞}，``一种结合用户反馈和代码依赖的软件可追踪生成方法''，申请号：201810184034.9，已受理。
+	\item 匡宏宇，胡昊，吕建，\textbf{张宗飞}，``一种结合代码依赖和用户反馈的软件可追踪生成方法''，申请号：201810184034.9，已受理。
 \end{enumerate}
 
 % 参考文献
 \bibliography{reference}
 
 \end{document}
+
+\begin{comment}
+其中以下两类增强策略是当前领域内的研究热点。
+首先，有些研究者提出引入代码依赖对信息检索方法得到的候选追踪线索列表进行优化。具体来说，对与给定需求相似度值比较大的代码元素，增加与该代码元素存在代码依赖的其它代码元素与该需求的相似度值。这使得因词汇表失配问题位于列表底端的候选追踪线索在列表中的位置得到有效提升。
+但是该方法严重依赖信息检索的结果，如果排序靠前的候选追踪线索是无关的，此时可能会提升排在列表底部的无关追踪线索，对之前列表造成污染。另一种主流的增强策略是引入用户反馈信息优化信息检索方法得到的候选追踪线索列表。用户自上而下每判断一个候选追踪线索，利用用户的反馈结果（当前追踪线索是否相关）优化余下的候选追踪线索列表排序。然而，该方法需要用户遍历大部分列表才能取得明显的效果，难以应用到日常实践中。
+
+基于对以上相关工作的分析，我们形成如下重要研究思路：（1）通过代码依赖识别系统中功能紧密的代码元素。
+（2）引入用户反馈来防止直接使用代码依赖可能带来的列表污染问题。
+具体而言，我们综合利用了代码依赖和用户反馈以提升信息检索方法所产生候选追踪线索列表的精度。
+首先，我们通过使用代码依赖信息，将通过代码依赖交互紧密的代码元素放到同一个代码域（code region）中。我们认为同一代码域中的代码元素在系统功能上紧密相关。然后，
+我们使用代码域作为用户反馈的切入点。对于一个给定需求，每个代码域中只需要取出一个有代表性的代码元素交由用户判断与需求的相关性，用这个结果表示该代码域内所有代码元素与需求的相关性，从而有效减少了方法所需要的用户反馈数量。最终，我们针对域内和域外的代码元素设置了不同的优化策略，从而改善整个候选列表的排序。
+为了验证我们方法的有效性和实用性，我们需要高质量的基于日常生活实践的软件可追踪数据集。然而，当前领域内缺乏此类数据集。
+因此，我们整理了一些被广泛应用于日常实践的开源软件系统数据集。
+我们的实验系统由一个被领域内广泛用于软件可追踪方法验证的高质量软件系统数据集和三个被广泛用于日常实践的开源软件系统组成。
+对于实验系统中由代码托管平台管理的开源软件，我们通过分析其在issue-tracking工具中的软件行为信息，整理出了这些开源系统需求到代码的可追踪数据集。
+此外，我们通过运行开源软件系统自带的用于验证自身功能的测试用例，动态捕获到了我们方法中需要的高质量代码依赖信息。实验表明，
+我们的方法只需要少量的（约3.5\%）用户反馈信息即可显著优于基线方法。
+\end{comment}

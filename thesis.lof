@@ -1,26 +1,26 @@
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {2.1}{\ignorespaces 开源软件结构图}}{15}{figure.2.1}
+\contentsline {figure}{\numberline {2.1}{\ignorespaces 需求追踪}}{7}{figure.2.1}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {3.1}{\ignorespaces 软件开发流程}}{19}{figure.3.1}
-\contentsline {figure}{\numberline {3.2}{\ignorespaces 需求文本UC15的内容}}{21}{figure.3.2}
-\contentsline {figure}{\numberline {3.3}{\ignorespaces 代码依赖图}}{21}{figure.3.3}
-\contentsline {figure}{\numberline {3.4}{\ignorespaces 基于用户反馈和代码依赖紧密度分析的软件可追踪生成方法流程}}{23}{figure.3.4}
-\contentsline {figure}{\numberline {3.5}{\ignorespaces 代码依赖紧密度图}}{27}{figure.3.5}
-\contentsline {figure}{\numberline {3.6}{\ignorespaces 候选代码域}}{30}{figure.3.6}
+\contentsline {figure}{\numberline {3.1}{\ignorespaces 需求文本UC15的内容}}{18}{figure.3.1}
+\contentsline {figure}{\numberline {3.2}{\ignorespaces 代码依赖图}}{19}{figure.3.2}
+\contentsline {figure}{\numberline {3.3}{\ignorespaces 基于用户反馈和代码依赖紧密度分析的软件可追踪生成方法流程}}{21}{figure.3.3}
+\contentsline {figure}{\numberline {3.4}{\ignorespaces 代码依赖紧密度图}}{29}{figure.3.4}
+\contentsline {figure}{\numberline {3.5}{\ignorespaces 候选代码域}}{30}{figure.3.5}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {4.1}{\ignorespaces 代码依赖工具捕获结构图}}{38}{figure.4.1}
-\contentsline {figure}{\numberline {4.2}{\ignorespaces pig在jira上的一条issue信息}}{40}{figure.4.2}
-\contentsline {figure}{\numberline {4.3}{\ignorespaces pig在git上针对issue的commit}}{41}{figure.4.3}
-\contentsline {figure}{\numberline {4.4}{\ignorespaces rtm整理过程}}{43}{figure.4.4}
-\contentsline {figure}{\numberline {4.5}{\ignorespaces precision-recall图像}}{47}{figure.4.5}
+\contentsline {figure}{\numberline {4.1}{\ignorespaces 代码依赖捕获工具结构图}}{34}{figure.4.1}
+\contentsline {figure}{\numberline {4.2}{\ignorespaces 运行测试用例捕获代码依赖的过程}}{35}{figure.4.2}
+\contentsline {figure}{\numberline {4.3}{\ignorespaces jira上的一条issue信息}}{36}{figure.4.3}
+\contentsline {figure}{\numberline {4.4}{\ignorespaces git commit信息}}{37}{figure.4.4}
+\contentsline {figure}{\numberline {4.5}{\ignorespaces 需求到代码追踪关系整理过程}}{39}{figure.4.5}
+\contentsline {figure}{\numberline {4.6}{\ignorespaces precision-recall图像}}{43}{figure.4.6}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {5.1}{\ignorespaces 结合用户反馈和代码依赖紧密度分析的软件可追踪生成技术应用场景}}{52}{figure.5.1}
-\contentsline {figure}{\numberline {5.2}{\ignorespaces 软件可追踪生成辅助工具的系统体系结构图}}{53}{figure.5.2}
-\contentsline {figure}{\numberline {5.3}{\ignorespaces 用户交互界面效果图}}{55}{figure.5.3}
-\contentsline {figure}{\numberline {5.4}{\ignorespaces 代码依赖结构展示界面效果图}}{56}{figure.5.4}
-\contentsline {figure}{\numberline {5.5}{\ignorespaces 需求到代码追踪线索列表展示界面效果图}}{57}{figure.5.5}
+\contentsline {figure}{\numberline {5.1}{\ignorespaces 结合用户反馈和代码依赖紧密度分析的软件可追踪生成技术应用场景}}{48}{figure.5.1}
+\contentsline {figure}{\numberline {5.2}{\ignorespaces 软件可追踪生成辅助工具的系统体系结构图}}{49}{figure.5.2}
+\contentsline {figure}{\numberline {5.3}{\ignorespaces 需求可追踪查询}}{50}{figure.5.3}
+\contentsline {figure}{\numberline {5.4}{\ignorespaces 辅助用户验证信息}}{51}{figure.5.4}
+\contentsline {figure}{\numberline {5.5}{\ignorespaces 需求查询结果显示图}}{52}{figure.5.5}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }

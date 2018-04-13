@@ -20,14 +20,20 @@ Giuliano Antoniol, Gerardo Canfora, Gerardo Casazza, Andrea De~Lucia, and
   2002.
 
 \bibitem{Antoniol2000Modelling}
-G.~Casazza G.~Antoniol and A.~Cimitile.
-\newblock Traceability recovery by modelling programmer behaviour.
+G~Antoniol, G~Casazza, and A~Cimitile.
+\newblock Traceability recovery by modeling programmer behavior.
+\newblock In {\em Working Conference on Reverse Engineering}, page 240, 2000.
 
 \bibitem{Rempel2017Defects}
 Patrick~M{\"{a}}der Patrick~Rempel.
 \newblock Preventing defects: The impact of requirements traceability
   completeness on software quality.
 \newblock {\em {IEEE} Trans. Software Eng.}, 43(8):777--797, 2017.
+
+\bibitem{Cleland-Huang2013Requirements}
+Jane Cleland{-}Huang.
+\newblock Are requirements alive and kicking?
+\newblock {\em {IEEE} Software}, 30(3):13--15, 2013.
 
 \bibitem{mader2012assessing}
 Patrick M{\"{a}}der and Alexander Egyed.
@@ -60,6 +66,26 @@ Orlena~CZ Gotel and Anthony~CW Finkelstein.
 \newblock In {\em Proceedings of the First International Conference on
   Requirements Engineering}, pages 94--101. IEEE, 1994.
 
+\bibitem{hayes2006advancing}
+Jane~Huffman Hayes, Alex Dekhtyar, and Senthil~Karthikeyan Sundaram.
+\newblock Advancing candidate link generation for requirements tracing: The
+  study of methods.
+\newblock {\em IEEE Transactions on Software Engineering}, 32(1):4--19, 2006.
+
+\bibitem{marcus2003recovering}
+Andrian Marcus and Jonathan~I Maletic.
+\newblock Recovering documentation-to-source-code traceability links using
+  latent semantic indexing.
+\newblock In {\em Proceedings of the 25th International Conference on Software
+  Engineering}, pages 125--135. IEEE, 2003.
+
+\bibitem{cleland2005utilizing}
+Jane Cleland-Huang, Raffaella Settimi, Chuan Duan, and Xuchang Zou.
+\newblock Utilizing supporting evidence to improve dynamic requirements
+  traceability.
+\newblock In {\em Proceedings of the 13th IEEE International Conference on
+  Requirements Engineering}, pages 135--144. IEEE, 2005.
+
 \bibitem{mcmillan2009combining}
 Collin McMillan, Denys Poshyvanyk, and Meghan Revelle.
 \newblock Combining textual and structural analysis of software artifacts for
@@ -76,20 +102,6 @@ Hao Hu Patrick Rempel Jian Lu Alexander Egyed Patrick~M{\"{a}}der Hongyu~Kuang,
   Evolution and Reengineering, {SANER} 2017, Klagenfurt, Austria, February
   20-24, 2017}, pages 68--78, 2017.
 
-\bibitem{hayes2006advancing}
-Jane~Huffman Hayes, Alex Dekhtyar, and Senthil~Karthikeyan Sundaram.
-\newblock Advancing candidate link generation for requirements tracing: The
-  study of methods.
-\newblock {\em IEEE Transactions on Software Engineering}, 32(1):4--19, 2006.
-
-\bibitem{Lucia2006Incremental}
-Paola~Sgueglia Andrea De~Lucia, Rocco~Oliveto.
-\newblock Incremental approach and user feedbacks: a silver bullet for
-  traceability recovery.
-\newblock In {\em 22nd {IEEE} International Conference on Software Maintenance
-  {(ICSM}2006), 24-27 September 2006, Philadelphia, Pennsylvania, {USA}}, pages
-  299--309, 2006.
-
 \bibitem{panichella2013and}
 Annibale Panichella, Collin McMillan, Evan Moritz, Davide Palmieri, Rocco
   Oliveto, Denys Poshyvanyk, and Andrea De~Lucia.
@@ -98,47 +110,6 @@ Annibale Panichella, Collin McMillan, Evan Moritz, Davide Palmieri, Rocco
 \newblock In {\em 17th European Conference on Software Maintenance and
   Reengineering (CSMR)}, pages 199--208. IEEE, 2013.
 
-\bibitem{cleland2003event}
-Jane Cleland-Huang, Carl~K Chang, and Mark Christensen.
-\newblock Event-based traceability for managing evolutionary change.
-\newblock {\em IEEE Transactions on Software Engineering}, 29(9):796--810,
-  2003.
-
-\bibitem{mader2012towards}
-Patrick M{\"a}der and Orlena Gotel.
-\newblock Towards automated traceability maintenance.
-\newblock {\em Journal of Systems and Software}, 85(10):2205--2227, 2012.
-
-\bibitem{hayes2007requirements}
-Jane~Huffman Hayes, Alex Dekhtyar, Senthil~Karthikeyan Sundaram, E~Ashlee
-  Holbrook, Sravanthi Vadlamudi, and Alain April.
-\newblock Requirements tracing on target (retro): improving software
-  maintenance through traceability recovery.
-\newblock {\em Innovations in Systems and Software Engineering}, 3(3):193--202,
-  2007.
-
-\bibitem{marcus2003recovering}
-Andrian Marcus and Jonathan~I Maletic.
-\newblock Recovering documentation-to-source-code traceability links using
-  latent semantic indexing.
-\newblock In {\em Proceedings of the 25th International Conference on Software
-  Engineering}, pages 125--135. IEEE, 2003.
-
-\bibitem{cleland2005utilizing}
-Jane Cleland-Huang, Raffaella Settimi, Chuan Duan, and Xuchang Zou.
-\newblock Utilizing supporting evidence to improve dynamic requirements
-  traceability.
-\newblock In {\em Proceedings of the 13th IEEE International Conference on
-  Requirements Engineering}, pages 135--144. IEEE, 2005.
-
-\bibitem{Malcom2011orthogonal}
-Denys Poshyvanyk Andrea De~Lucia Malcom~Gethers, Rocco~Oliveto.
-\newblock On integrating orthogonal information retrieval methods to improve
-  traceability recovery.
-\newblock In {\em {IEEE} 27th International Conference on Software Maintenance,
-  {ICSM} 2011, Williamsburg, VA, USA, September 25-30, 2011}, pages 133--142,
-  2011.
-
 \bibitem{cleland2010machine}
 Jane Cleland-Huang, Adam Czauderna, Marek Gibiec, and John Emenecker.
 \newblock A machine learning approach for tracing regulatory codes to product
@@ -146,13 +117,39 @@ Jane Cleland-Huang, Adam Czauderna, Marek Gibiec, and John Emenecker.
 \newblock In {\em Proceedings of the 32nd ACM/IEEE International Conference on
   Software Engineering-Volume 1}, pages 155--164. ACM, 2010.
 
-\bibitem{eaddy2008cerberus}
-Marc Eaddy, Alfred~V Aho, Giuliano Antoniol, and Yann-Ga{\"e}l
-  Gu{\'e}h{\'e}neuc.
-\newblock Cerberus: Tracing requirements to source code using information
-  retrieval, dynamic analysis, and program analysis.
-\newblock In {\em The 16th IEEE International Conference on Program
-  Comprehension (ICPC)}, pages 53--62. IEEE, 2008.
+\bibitem{Guo2017deep}
+Jin Guo, Jinghui Cheng, and Jane Cleland{-}Huang.
+\newblock Semantically enhanced software traceability using deep learning
+  techniques.
+\newblock In {\em Proceedings of the 39th International Conference on Software
+  Engineering, {ICSE} 2017, Buenos Aires, Argentina, May 20-28, 2017}, pages
+  3--14, 2017.
+
+\bibitem{Massey2008iTrust}
+Paul N.~Otto Aaron K.~Massey and Annie~I. Ant{\'{o}}n.
+\newblock Aligning requirements with {HIPAA} in the itrust system.
+\newblock In {\em 16th {IEEE} International Requirements Engineering
+  Conference, {RE} 2008, 8-12 September 2008, Barcelona, Catalunya, Spain},
+  pages 335--336, 2008.
+
+\bibitem{Wohlin2012Industry}
+Lefteris Angelis Laura Phillips Yvonne Dittrich Tony Gorschek H{\aa}kan~Grahn
+  Claes~Wohlin, Ayb{\"{u}}ke~Aurum, Graham Low Per Rovegard Piotr Tomaszewski
+  Christine Van~Toorn Kennet~Henningsson, Simon~K{\aa}gstr{\"{o}}m, and Jeff
+  Winter.
+\newblock The success factors powering industry-academia collaboration.
+\newblock {\em {IEEE} Software}, 29(2):67--73, 2012.
+
+\bibitem{Cleland-Huang2015Industrial}
+Jane Cleland{-}Huang.
+\newblock Toward meaningful industrial-academic partnerships.
+\newblock {\em {IEEE} Software}, 32(1):18--21, 2015.
+
+\bibitem{burgstaller2010understanding}
+Benedikt Burgstaller and Alexander Egyed.
+\newblock Understanding where requirements are implemented.
+\newblock In {\em IEEE International Conference on Software Maintenance
+  (ICSM)}, pages 1--5. IEEE, 2010.
 
 \bibitem{abadi2008traceability}
 Aharon Abadi, Mordechai Nisenson, and Yahalomit Simionovici.
@@ -183,6 +180,28 @@ Thomas K. Landauer George W. Furnas Richard A.~Harshman Scott C.~Deerwester,
   Susan T.~Dumais.
 \newblock Indexing by latent semantic analysis.
 \newblock {\em {JASIS}}, 41(6):391--407, 1990.
+
+\bibitem{Gutman1989Gutman}
+Michael Gutman.
+\newblock Asymptotically optimal classification for multiple tests with
+  empirically observed statistics.
+\newblock {\em {IEEE} Trans. Information Theory}, 35(2):401--408, 1989.
+
+\bibitem{kuang2015can}
+Hongyu Kuang, Patrick M{\"a}der, Hao Hu, Achraf Ghabi, LiGuo Huang, Jian
+  L{\"u}, and Alexander Egyed.
+\newblock Can method data dependencies support the assessment of traceability
+  between requirements and source code?
+\newblock {\em Journal of Software: Evolution and Process}, 27(11):838--866,
+  2015.
+
+\bibitem{Lucia2006Incremental}
+Paola~Sgueglia Andrea De~Lucia, Rocco~Oliveto.
+\newblock Incremental approach and user feedbacks: a silver bullet for
+  traceability recovery.
+\newblock In {\em 22nd {IEEE} International Conference on Software Maintenance
+  {(ICSM}2006), 24-27 September 2006, Philadelphia, Pennsylvania, {USA}}, pages
+  299--309, 2006.
 
 \bibitem{Panichella2015Adaptive}
 Andy~Zaidman Annibale~Panichella, Andrea De~Lucia.
@@ -242,22 +261,6 @@ Giuliano~Antoniol Massimiliano Di~Penta, Sara~Gradara.
 \newblock In {\em 10th International Workshop on Program Comprehension {(IWPC}
   2002), 27-29 June 2002, Paris, France}, pages 207--216, 2002.
 
-\bibitem{Guo2017deep}
-Jin Guo, Jinghui Cheng, and Jane Cleland{-}Huang.
-\newblock Semantically enhanced software traceability using deep learning
-  techniques.
-\newblock In {\em Proceedings of the 39th International Conference on Software
-  Engineering, {ICSE} 2017, Buenos Aires, Argentina, May 20-28, 2017}, pages
-  3--14, 2017.
-
-\bibitem{kuang2015can}
-Hongyu Kuang, Patrick M{\"a}der, Hao Hu, Achraf Ghabi, LiGuo Huang, Jian
-  L{\"u}, and Alexander Egyed.
-\newblock Can method data dependencies support the assessment of traceability
-  between requirements and source code?
-\newblock {\em Journal of Software: Evolution and Process}, 27(11):838--866,
-  2015.
-
 \bibitem{Cleland-Huang2011challenges}
 Alex Dekhtyar Olly Gotel Jane Huffman Hayes Ed Keenan Greg~Leach
   Jane~Cleland{-}Huang, Adam~Czauderna, Yonghee Shin Andrea Zisman Giuliano
@@ -281,6 +284,13 @@ John Grundy Robert~Amor Xiaofan~Chen, John G.~Hosking.
 \newblock In {\em 22nd Australian Conference on Software Engineering {(ASWEC}
   2013), 4-7 June 2013, Melbourne, Victoria, Australia}, pages 145--154, 2013.
 
+\bibitem{Rath2017IlmSeven}
+Patrick~M{\"{a}}der Michael~Rath, Patrick~Rempel.
+\newblock The ilmseven dataset.
+\newblock In {\em 25th {IEEE} International Requirements Engineering
+  Conference, {RE} 2017, Lisbon, Portugal, September 4-8, 2017}, pages
+  516--519, 2017.
+
 \bibitem{Shi2017linguistic}
 Qing Wang Shoubin Li Barry W.~Boehm Lin~Shi, Celia~Chen.
 \newblock Understanding feature requests by leveraging fuzzy method and
@@ -289,28 +299,41 @@ Qing Wang Shoubin Li Barry W.~Boehm Lin~Shi, Celia~Chen.
   on Automated Software Engineering, {ASE} 2017, Urbana, IL, USA, October 30 -
   November 03, 2017}, pages 440--450, 2017.
 
-\bibitem{Cleland-Huang2013Requirements}
-Jane Cleland{-}Huang.
-\newblock Are requirements alive and kicking?
-\newblock {\em {IEEE} Software}, 30(3):13--15, 2013.
+\bibitem{iTrust}
+itrust system:.
+\newblock \url{http://agile.csc.ncsu.edu/iTrust/wiki/doku.php}.
 
-\bibitem{Cleland2012Traceability}
-Andrea~Zisman Jane~Cleland{-}Huang, Olly~Gotel, editor.
-\newblock {\em Software and Systems Traceability}.
-\newblock Springer, 2012.
+\bibitem{Maven}
+Maven system:.
+\newblock \url{http://maven.apache.org/}.
 
-\bibitem{burgstaller2010understanding}
-Benedikt Burgstaller and Alexander Egyed.
-\newblock Understanding where requirements are implemented.
-\newblock In {\em IEEE International Conference on Software Maintenance
-  (ICSM)}, pages 1--5. IEEE, 2010.
+\bibitem{Pig}
+Pig system:.
+\newblock \url{http://pig.apache.org/}.
 
-\bibitem{Rath2017IlmSeven}
-Patrick~M{\"{a}}der Michael~Rath, Patrick~Rempel.
-\newblock The ilmseven dataset.
-\newblock In {\em 25th {IEEE} International Requirements Engineering
-  Conference, {RE} 2017, Lisbon, Portugal, September 4-8, 2017}, pages
-  516--519, 2017.
+\bibitem{Infinispan}
+Infinispan system:.
+\newblock \url{http://infinispan.org/}.
+
+\bibitem{ant}
+ant:.
+\newblock \url{https://ant.apache.org/}.
+
+\bibitem{surefire}
+surefire:.
+\newblock \url{https://maven.apache.org/surefire/maven-surefire-plugin/}.
+
+\bibitem{junit}
+junit:.
+\newblock \url{https://junit.org/junit5/}.
+
+\bibitem{Heck2013trackers}
+Petra Heck and Andy Zaidman.
+\newblock An analysis of requirements evolution in open source projects:
+  recommendations for issue trackers.
+\newblock In {\em 13th International Workshop on Principles of Software
+  Evolution, {IWPSE} 2013, Proceedings, August 19-20, 2013, Saint Petersburg,
+  Russia}, pages 43--52, 2013.
 
 \bibitem{Ali2015entities}
 Nasir Ali, Zohreh Sharafi, Yann{-}Ga{\"{e}}l Gu{\'{e}}h{\'{e}}neuc, and

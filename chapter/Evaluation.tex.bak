@@ -1,73 +1,122 @@
 \chapter{数据组织及方法验证}
 
-在本章中，我们介绍了结合代码依赖紧密度分析和用户反馈软件可追踪生成方法的实验设计与分析。我们在四个实验系统
-（iTrust,Maven,Pig,Infinispan）下设计实验，验证了方法的有效性。同时，我们详细阐述了需求和代码依赖数据收集的过程。
+在本章中，主要介绍本文所述方法的实验数据组织和实验结果分析。我们在四个实验系统
+（iTrust~\cite{iTrust},Maven~\cite{Maven},Pig~\cite{Pig},Infinispan~\cite{Infinispan}）下设计实验，验证了方法的有效性和实用性。同时，我们详细介绍了实验所需数据的收集过程。
 
 \section{数据组织}
-\label{data_arrange}
-本节主要介绍不同实验系统代码依赖的获取过程和对于后两个实验系统（Pig，Maven）数据集的构造过程。
+\label{sec:data_arrange}
+代码依赖关系是本文方法的重要输入数据，实验系统的需求到代码可追踪数据集（Requirement-to-Code Traceability Matrix）用来评估本文方法的有效性，本小节将详细介绍代码依赖关系和可追踪数据集的收集整理过程。
+%本节主要介绍不同实验系统代码依赖的获取过程和对于后两个实验系统（Pig，Maven）数据集的构造过程。
 \subsection{代码依赖捕获}
 \label{code_dependency_capturer}
-本小节首先对我们使用的代码依赖捕获工具进行简要介绍，然后详细介绍不同类型的软件系统代码依赖的捕获方式。
+本小节首先对本文使用的代码依赖捕获工具进行简要介绍，然后详细介绍不同类型实验系统代码依赖的捕获方式。
 
-如前文所述代码依赖捕获工具结构图如图~\ref{F:code_dependency_capturer}，使用标准JDK提供的JVMTI接口，监听Java虚拟机中产生的4 个JVMTI 事件，分别为类成员读取事件、类成员修改事件、函数进入事件以及函数返回事件；注册这4个事件的回调函数，在回调函数中将事件引起的函数进入、返回记录和数据访问记录保存到本地数据库中。我们通过jvm参数-agentpath将该工具插桩到运行目标测试集的虚拟机中。
+本文用到的代码依赖捕获工具结构如图~\ref{F:code_dependency_capturer}，其基本原理是：使用标准JDK 提供的JVMTI接口，监听Java 虚拟机中产生的四个JVMTI 事件：分别为类成员读取事件、类成员修改事件、函数进入事件以及函数返回事件；注册这四个事件的回调函数，在回调函数中将事件引起的函数进入、返回记录和数据访问记录保存到本地数据库中。我们通过jvm参数-agentpath将该工具插桩到运行目标测试集的虚拟机中。
 
-\begin{figure}[thb]
+\begin{figure}[hthb]
     \centering
-    \includegraphics[width=1.0\textwidth]{./figures/evalution/code_dependency_capturer.png}
-    \caption{代码依赖工具捕获结构图}
+    \includegraphics[width=0.9\textwidth]{./figures/evalution/code_dependency_capturer.pdf}
+    \caption{代码依赖捕获工具结构图}
     \label{F:code_dependency_capturer}
 \end{figure}
 
-对于应用软件，如实验中用到的iTrust系统。该系统能独立运行，我们运行该系统同时插桩代码依赖捕获工具，根据用户手册来运行该系统具有的各种功能从而捕获尽可能完整的代码依赖。但是对于一些支撑软件，像我们实验中的Pig，它是一个编译器本身不能独自运行。对于具备如下特点的软件系统：
+本文中的实验系统分为两类：一种是iTrust这样的应用软件，它是一个医疗管理软，能独立运行。我们运行该系统同时插桩代码依赖捕获工具，根据用户手册来运行该系统具有的各种功能从而捕获尽可能完整的代码依赖。另一种是Pig、Maven、Infinispan这样的支撑软件，
+%（见表~\ref{T:SoftwareInfo}）
+与应用软件不同，使用这些终端软件的多种功能并不容易。观察得知，本文实验系统中的开源支撑软件具有如下结构特点：
 \begin{enumerate}
-  \item 本身不能单独运行或者搭建其运行环境工作量比较大。
-  \item 具有丰富的测试集合。
+  \item 具有丰富的测试集合。（图~\ref{F:codeDepFromSubCodeDep}为infinispan的结构图，每个模块都有相应测试集）
+  \item 采用构建工具maven或ant管理
 \end{enumerate}
-我们提出通过运行其测试集合得到系统的代码依赖子集，然后合并代码依赖子集得到代码依赖集，如图~\ref{F:code_dependency_capturer}
-接下来我们将介绍用maven或ant构建工具管理的开源软件通过运行测试集得到代码依赖的过程。
-接下来我们将分别介绍实验系统Infinispan、Maven和Pig代码依赖的捕获过程。
-\subsection{Infinispan}
-Infinispan由构建工具maven管理，Infinispan结构如图{包含源代码和测试集}。
-简要介绍Maven：Maven是一个跨平台的项目管理工具，本身是一个Java开源项目。Maven主要服务于基于Java平台的项目构建、依赖管理和项目信息管理。Maven 帮助我们标准化构建过程，抽象了一个完整的构建生命周期模型，每个生命周期都由相应的插件来负责。本小节提到的测试阶段由surefire 插件负责。
-Maven本身并不是一个单元测试框架，Maven所做的只是在构建执行到特定生命周期阶段的时候，通过插件来执行JUnit或者TestNG测试用例，这一插件是maven-surefire-plugin，可以称之为测试运行器（Test Runner），它能很好的兼容JUnit3、JUnit4以及TestNG。
-我们通过调研发现通过maven管理的软件，其测试集由surefire插件运行。当执行$mvn test$命令时，surefire插件会运行所有以Test 结尾的类，我们将代码依赖捕获工具插桩到运行测试集的虚拟机中即可获得测试集对应的代码依赖捕获数据。需要说明的是：在Maven 的测试周期，默认情况下Maven会开启新的虚拟机进程用来运行测试集，而不是用运行Maven的虚拟机运行测试集。即我们要把工具插桩到运行测试集的虚拟机中。通过阅读maven-surefire-plugin（https://maven.apache.org/surefire/maven-surefire-plugin/）文档，我们通过配置surefire 的$argLine$ 参数来完成工具插桩，xml见下表。这里我们还要着重阐述forkCount
-\begin{enumerate}
-  \item forkCount 用来指定运行测试集的虚拟机进程数目，默认为1。如果该数字以C结尾，运行虚拟机的进程数目为这个数字乘以CPU内核数。如果该数字设置为0，则意味着不在启动新的虚拟机进程运行测试集，由主虚拟机进程（运行Maven的虚拟机）来执行测试集。
-  \item argLine jvm参数设置
-\end{enumerate}
-基于以上内容我们有两者方法通过运行测试集捕获代码依赖：（1）配置pom文件里的maven-surefire-plugin插件，通过$argLine$将工具插桩到运行测试集的虚拟机中。（2）通过设置forkCount参数为0，用运行maven的虚拟机进程来运行测试集，此时在启动Maven时插桩代码依赖捕获工具即可。
-然后我们对代码依赖子图进行合并，例如我们在某两个测试用例分别得到类A调研类B，类B调用类C，由此经过合并处理我们就能得到类A调用类B调用类C这条完整的调用关系，对于数据依赖有类似的做法。本文通过这个方法获得Infinispan的代码依赖，由于同Infinispan一样，实验系统Maven也是由maven来管理，因此我们采取同样的方法获得其代码依赖。
 
-\subsection{Pig}
-Pig由构建工具Ant(Another Neat Tool)管理，最早用来构建著名的Tomcat，我们可以将Ant看成是一个Java版本的Make，Ant使用XML 定义构建脚本，相对于Makefile更加友好。Ant用junit框架来运行Pig的测试集。在运行Pig测试集的过程中为了捕获代码依赖我们需要将代码依赖捕获工具插桩到运行测试集的虚拟机中。这里介绍以下junit的两个重要参数，fork、jvmarg。
-\begin{enumerate}
-  \item fork 当开启此参数（fork="yes"）时，Ant会启动新的java虚拟机来执行测试集
-  \item jvmarg 当开启参数fork时，jvmarg用于向这个新开启的虚拟机传递jvm参数
-\end{enumerate}
-基于以上内容，与被构建工具Maven管理的项目类似，我们有两种方法通过运行用Ant管理的实验系统Pig的测试集得到代码依赖：（1）配置文件build.xml中的junit，开启fork参数并通过jvmarg参数向新开启的虚拟机传递jvm参数 （2）配置文件build.xml中的junit，不开启fork 参数（fork="false"），此时在启动Ant时插桩代码依赖捕获工具即可。
-在我们的实验中，我们都是采用第一种方法插桩代码依赖捕获工具获取代码依赖子集，这是因为我们使用的代码依赖捕获工具是单进程的，如果采用第二个方法会出现几个进程同时向数据库写数据的同步问题。
+\begin{comment}
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.8\textwidth]{./figures/evalution/infinispanStructure.pdf}
+    \caption{Infinispan目录结构}
+    \label{F:infinispanStructure}
+\end{figure}
+\end{comment}
 
-\subsection{RTM组织}
-\label{subsec:requirement_retrieve}
-在\label{expirement_system_information}中已经提到，Pig、Infinispan和Maven均是我们通过对\cite{Rath2017IlmSeven}的整理得出的数据集，\cite{Rath2017IlmSeven}收集了这三个实验系统的Jira数据和git数据，Jira是Atlassian公司出品的项目与事务追踪工具，被广泛用于缺陷定义、客户服务、需求收集、流程审批、任务跟踪和敏捷管理等领域。如图
+本文提出通过运行实验系统中支撑软件的测试集合得到代码依赖子集，然后合并代码依赖子集得到代码依赖集的方法。方法流程如图
+~\ref{F:codeDepFromSubCodeDep}
 \begin{figure}[thb]
     \centering
-    \includegraphics[width=0.8\textwidth]{./figures/evalution/issue_pig_4963.pdf}
+    \includegraphics[width=0.8\textwidth]{./figures/evalution/captureCodeDepFromSubCodeDep.pdf}
+    \caption{运行测试用例捕获代码依赖的过程}
+    \label{F:codeDepFromSubCodeDep}
+\end{figure}
+
+\begin{comment}
+\begin{table}[htbp]
+  \centering
+  \caption{软件功能及所用构建工具}
+  \label{T:SoftwareInfo}
+  \begin{tabular}{@{}lll@{}}
+  \toprule
+  系统        & 功能     & 构建工具     \\ \midrule
+  Infinispan  & 数据库   & Maven        \\
+  Maven       & 构建工具 & Maven        \\
+  Pig         & 编译器   & Ant          \\ \bottomrule
+  \end{tabular}
+\end{table}
+\end{comment}
+
+
+%如表~\ref{T:SoftwareInfo}所示，
+本文中的实验系统用到两种构建工具Maven和Ant~\cite{ant}接下来本文将分别介绍由这两种构建工具管理的开源软件代码依赖的捕获过程。
+\subsubsection{由Maven管理的开源软件代码依赖捕获}
+构建工具Maven是一个跨平台的项目管理工具，本身是一个Java开源项目。Maven主要服务于基于Java平台的项目构建、依赖管理和项目信息管理。Maven 帮助我们标准化构建过程，抽象了一个完整的构建生命周期模型，每个生命周期都由相应的插件来负责。
+本小节提到的测试阶段由surefire 插件负责。
+我们通过调研发现通过maven管理的软件，其测试集由surefire插件运行。当执行$mvn~test$命令时，surefire插件会运行所有以Test 结尾的类，我们将代码依赖捕获工具插桩到运行测试集的虚拟机中即可获得测试集对应的代码依赖捕获数据。需要说明的是：在Maven 的测试周期，默认情况下Maven会开启新的虚拟机进程用来运行测试集，而不是用运行Maven的虚拟机运行测试集。即我们要把工具插桩到运行测试集的虚拟机中。通过阅读maven-surefire-plugin~\cite{surefire}文档，通过对surefire模块两个重要参数的配置完成工具插桩进而完成代码依赖的捕获。
+\begin{enumerate}
+  \item forkCount 用来指定运行测试集的虚拟机进程数目，默认为1。如果该数字以C结尾，运行虚拟机的进程数目为这个数字乘以CPU 内核数。如果该数字设置为0，则意味着不在启动新的虚拟机进程运行测试集，由主虚拟机进程（运行Maven的虚拟机）来执行测试集。
+  \item argLine 设置jvm启动参数
+\end{enumerate}
+
+\begin{comment}
+\begin{figure}[thb]
+    \centering
+    \includegraphics[width=0.8\textwidth]{./figures/evalution/maven_pom.png}
     \caption{pig在jira上的一条issue信息}
+    \label{F:maven_pom}
+\end{figure}
+\end{comment}
+
+基于以上内容我们有两者方法通过运行测试集捕获代码依赖：（1）配置pom文件里的maven-surefire-plugin插件，通过$argLine$将工具插桩到运行测试集的虚拟机中。（2）通过设置forkCount参数为0，用运行maven的虚拟机进程来运行测试集，此时在启动Maven时插桩代码依赖捕获工具即可。
+然后我们对代码依赖子图进行合并，例如我们在某两个测试用例分别得到类A调研类B，类B调用类C，由此经过合并处理我们就能得到类A 调用类B调用类C这条完整的调用关系，对于数据依赖有类似的做法。
+\subsubsection{由Ant管理的开源软件代码依赖捕获}
+构建工具Ant最早用来构建著名的Tomcat，我们可以将Ant看成是一个Java版本的Make，Ant使用XML定义构建脚本，相对于~\emph{Makefile} 更加友好。Ant可以用junit ~\cite{junit}框架来运行软件的测试集。在运行测试集的过程中为了捕获代码依赖我们需要将代码依赖捕获工具插桩到运行测试集的虚拟机中。这里介绍以下junit的两个重要参数：fork、jvmarg。
+\begin{enumerate}
+  \item fork 当开启此参数（fork=“yes”）时，Ant会启动新的java虚拟机来执行测试集
+  \item jvmarg 当开启参数fork时，jvmarg用于向这个新开启的虚拟机传递jvm参数
+\end{enumerate}
+基于以上内容，与被构建工具Maven管理的项目类似，我们有两种方法通过运行用Ant管理的实验系统Pig的测试集得到代码依赖：（1）配置文件build.xml中的junit，开启fork参数并通过jvmarg参数向新开启的虚拟机传递jvm参数 （2）配置文件build.xml中的junit，不开启fork 参数（fork=“false”），此时在启动Ant时插桩代码依赖捕获工具即可。
+在我们的实验中，我们都是采用第一种方法插桩代码依赖捕获工具获取代码依赖子集，这是因为我们使用的代码依赖捕获工具是单进程的，如果采用第二个方法会出现几个进程同时向数据库写数据的同步问题。
+
+\subsection{需求到代码可追踪数据集构造}
+\label{sec:sec:buildRTM}
+在~\ref{expirement_system_information}中已经提到，Pig、Infinispan和Maven均是我们通过对~\cite{Rath2017IlmSeven}提供的数据进行分析整理得出的数据集，~\cite{Rath2017IlmSeven}收集了这三个实验系统的Jira数据和git数据，Jira是Atlassian公司出品的项目与事务追踪工具，被广泛用于缺陷定义、客户服务、需求收集、流程审批、任务跟踪和敏捷管理等领域。图~\ref{F:issue_pig_4963}
+\begin{figure}[thb]
+    \centering
+    %\setlength{\abovecaptionskip}{0pt}
+    %\setlength{\belowcaptionskip}{2pt}
+    %\includegraphics[width=3in]{./figures/evalution/issue_pig_4963.pdf}
+    \includegraphics[width=1.0\textwidth]{./figures/evalution/issue_pig_4963.pdf}
+    \caption{jira上的一条issue信息}
     \label{F:issue_pig_4963}
 \end{figure}
-为实验系统Pig在Jira上的一个issue，从图中可以看出改issue是要求增加新功能并在描述（description）里面说明了增加该新功能的原因。另外该issue还包含很多其他信息，例如该issue的类型、优先级、当前状态等。Git是一个开源的分布式版本控制系统，可以有效、高速的处理从很小到非常大的项目版本管理。git用于实验系统的代码管理和版本控制，记录了大量的代码提交（commit）信息。如图
+为实验系统Pig在Jira上的一个issue，从图中可以看出改issue是要求增加新功能并在description中对新功能进行了描述。另外该issue 还包含很多其他信息，例如该issue的类型、优先级、当前状态等。git是一个开源的分布式版本控制系统，可以有效、高速的处理从很小到非常大的项目版本管理。git用于实验系统的代码管理和版本控制，记录了大量的代码提交（commit）信息。
 \begin{figure}[thb]
     \centering
     \includegraphics[width=0.8\textwidth]{./figures/evalution/issue_pig_4963_commit.pdf}
-    \caption{pig在git上针对issue的commit}
+    \caption{git commit信息}
     \label{F:issue_pig_4963_commit}
 \end{figure}
-为一次实验系统pig的一次commit，从标题可看出该commit是针对Pig-4963即\ref{F:issue_pig_4963}，同时也可以看到该commit引起的代码变更（我们这里只看.java结尾的文件，因为我们的对源代码的研究粒度是java类）。这里变更的文件有PigConfiguration.java、MRCompiler、PigCombiner.java等。我们能很容易的推断出需求issue\_pig\_4963与以上java类存在追踪关系。这也是我们为Pig、Maven和Infinispan建立RTM数据集的思路。以下为~\cite{Rath2017IlmSeven}对每个项目整理的数据，该数据由8张数据表组成，如下表~\ref{dataset_table}所示
-\begin{table}[]
+图~\ref{F:issue_pig_4963_commit}为一次实验系统pig的一次commit，从标题可看出该commit是针对图
+~\ref{F:issue_pig_4963}的一次代码提交，同时也可以看到该commit 引起的代码变更（我们这里只看.java结尾的文件，因为我们的对源代码的研究粒度是java类）。这里变更的文件有~PigConfiguration.java、~MRCompiler.java、~PigCombiner.java 等。我们能很容易的推断出需求PIG-4963 与以上java类存在追踪关系。这也是我们为Pig、Maven和Infinispan建立RTM数据集的思路。以下为~\cite{Rath2017IlmSeven}对每个项目整理的数据，该数据由8张数据表组成，如表~\ref{dataset_table}所示。
+\begin{table}[!htbp]
   \centering
-  \caption{RTM数据集整理}
+  \caption{开源系统数据整理}
   \label{dataset_table}
   \begin{tabular}{@{}ll@{}}
   \toprule
@@ -77,114 +126,96 @@ Pig由构建工具Ant(Another Neat Tool)管理，最早用来构建著名的Tomcat，我们可以将Ant
   issue\_component &  记录改issue所属的模块                                       \\
   issue\_fix\_version & 记录改issue被完成的版本                                    \\
   chang\_set         & 一个代码提交的相关信息，代码提交者、时间戳、描述代码提交的文本   \\
-  chang\_set\_link    & 大部分的代码提交都是为了完成一个issue，该表记录代码提交和issue之间的对应关系 \\
+  chang\_set\_link    & 该表记录代码提交和issue之间的对应关系 \\
   code\_chang        & 一次代码提交引起的代码文本变更，例如增加或减少了哪些代码               \\
   project         & 项目的元数据，包含JIRA和git仓库的信息                                    \\ \bottomrule
   \end{tabular}
 \end{table}
 
-\begin{figure}[thb]
-    \centering
-    \includegraphics[width=1.0\textwidth]{./figures/evalution/build_rtm.pdf}
-    \caption{rtm整理过程}
-    \label{F:build_rtm}  %%关键词不变色有时是因为拼写有问题
-\end{figure}
-
-
-本文主要使用表，issue、issue\_link、change\_set和code\_change来合成RTM数据集，
-如下图所示~\ref{F:build_rtm}。issue表中是各种issue集合，包括bug、任务（task）、需求（New Feature）等信息。我们主要使用New Feature 类型的issue，通过观察知其description字段是对这个issue的描述，我们把它看成是一个需求文本。change\_set表描述的与issue对应的代码提交，而code\_change描述的是一次代码提交引起的代码变更。因此通过issue、change\_set 和code\_change我们就可以得到从需求issue 到代码变更code\_change的追踪关系。此外，issue\_link描述的是需求issue之间的关系，包括重复、从属、依赖等关系。我们对于存在特定关系的issue进行合并，最终得到需求issue到代码变更所在类的追踪关系。issue筛选规则如下：
+图~\ref{F:build_rtm}是需求到代码追踪数据的整理流程图
+%本文主要使用issue、~issue\_link、~change\_set、~code\_change和~chang\_set\_link五张表来合成RTM数据集，
+issue表中是各种issue集合，包括Bug、任务（Task）、需求（New Feature）等信息。我们主要使用New Feature 类型的issue，这种类型的issue是对一个新功能的描述~\cite{Heck2013trackers,Shi2017linguistic}。通过观察知其description字段是对这个issue的描述，我们把它看成是一个需求文本。表~change\_set和~change\_set\_link描述与issue对应的代码提交，而code\_change 描述的是一次代码提交引起的代码变更。因此通过~issue、~change\_set、~change\_set\_link和~code\_change我们就可以得到从需求issue到代码变更~code\_change的追踪关系。此外，~issue\_link 描述的是需求issue之间的关系，包括重复、从属、依赖等关系。我们对于存在特定关系的issue进行合并，最终得到需求issue到代码变更所在类的追踪关系。issue筛选规则如下：
 \begin{enumerate}
   \item 忽略带有关键词testing或者testcase的issue，因为这些issue往往是和测试集有关系，不是软件系统的功能性需求。
   \item issue必须已经被完成并且有与之关联的code\_change，只有这样我们才能生成需求（issue）到代码的追踪关系。
-  \item 我们只选择优先级为“Major”和“Critical”的issue，因为我们认为这种issue是功能性需求的概率更大。
-  \item 我们只选择类型为“New Feature”（或Feature Request）的issue，我们认为这种需求粒度比较解决传统的需求（例如iTrust的需求），类型为bug的issue往往粒度太小，类型为task的issue又往往粒度太大。
+  \item 我们只选择优先级为Major和Critical的issue，因为我们认为这种issue是功能性需求的概率更大。
+  \item 我们只选择类型为New Feature（或Feature Request）的issue，我们认为这种需求粒度比较解决传统的需求（例如iTrust的需求），类型为Bug的issue往往粒度太小，类型为Task的issue又往往粒度太大。
 \end{enumerate}
-此外，当issue之间的关系为从属（part-of）、重复（duplicate）、替代（supersede）时，我们会将几个issue进行合并。按上述方法我们通过整理得到了 Maven、Pig和Infinispan的RTM数据集。需要说明的是，可能会存在这样一种情况：为了完成需求C，源代码里增加了类Func ，在类Func里与用到了Origin类，但是Origin类并未发生代码变更。此时我们的方法只能得出需求C和代码Func存在追踪关系，会把代码Origin漏掉。根据
-~\cite{Charrada2011Benchmark}与其他已有系统实验图像进行对比，发现图像类似。（未完... 证明我们RTM的有效性）
+此外，当issue之间的关系为从属（part-of）、重复（duplicate）、替代（supersede）时，我们会将几个issue进行合并。按上述方法我们通过整理得到了 Maven、Pig和Infinispan的RTM数据集。
+%需要说明的是，可能会存在这样一种情况：为了完成需求C，源代码里增加了类Func ，在类Func里与用到了Origin类，但是Origin 类并未发生代码变更。此时我们的方法只能得出需求C和代码Func存在追踪关系，然而需求C和代码元素Origin也是可能存在代码依赖的。
+实验结果显示我们构造的数据集具有较高的文本质量（参见~\ref{sec:result_and_discussion}实验数据分析），能够有效的评估我们方法的正确性。
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.8\textwidth]{./figures/evalution/buildRTM.pdf}
+    \caption{需求到代码追踪关系整理过程}
+    \label{F:build_rtm}  %%关键词不变色有时是因为拼写有问题
+\end{figure}
+
+%~\cite{Charrada2011Benchmark}与其他已有系统实验图像进行对比，发现图像类似。%（未完... 证明我们RTM的有效性）
 
 
-\section{结合代码依赖紧密度分析和用户反馈的软件可追踪生成方法}
-
-在此小节，我们通过实验以验证结合代码依赖紧密度分析和用户反馈的软件可追踪方法的有效性。接下来，将具体阐述我们的实验设置及实验结果与分析。
-
-\subsection{实验目标与评价指标}
-\label{sec:traceability_recovery_goal_metrics}
-
-我们的实验目的是分析结合用户反馈和代码紧密度分析能否改善自动化可追踪生成场景下的混合方法，为了达到这一目的，我们需要回答如下研究问题。
-RQ: 在需求到代码的可追踪性生成场景下我们的方法能否优于基线方法？
-为了回答这个问题，我们选择了以下三个基线方法：（1）只利用信息检索技术的纯信息检索方法（简称为\emph{IR-ONLY}）；（2）基于信息检索方法，引入代码紧密度分析的方法（简称为\emph{TRICE}\cite{Kuang2017closeness}）；（3）基于信息检索方法，考虑代码结构信息和用户反馈信息的先驱方法（简称为\emph{UD-CSTI}\cite{panichella2013and}）。我们将我们的方法命名为\emph{CLUSTER}，在对比
-\emph{CLUSTER}和三个基线方法时，我们依次使用三种不同的主流模型（VSM、LSI和JS）。
-
-RQ的评价指标：为了验证我们的\emph{CLUSTER}方法的有效性，我们首先引入两个重要的度量，精确度（precision）和查全率（recall）。
-对应公式如下：
-\begin{align}precision=\dfrac {\left| relevant\cap retrieved\right| } {\left| retrieved\right| }\% \end{align}
-\begin{align}recall=\dfrac {\left | relevant \cap retrieved \right |} {\left| relevant\right| }\% \end{align}
-参数解释：其中\emph{relevant}是正确的候选追踪线索（在Golden RTM中）集合。\emph{retrieved}表示软件可追踪生成方法所返回的追踪线索集合。由于自动化可追踪生成方法所返回的是一个排序列表，即按照文本相似度值从高到低排序。所以一种常用的比较IR 方法的方式是在不同的查全率下比较不同方法之间的精确度，可以由一条\emph{Precision-Recall}曲线展示。为了进一步衡量不同自动化软件可追踪生成方法返回结果的整体质量，我们选用了领域内另外两个常用指标：AP（Average Precision）与MAP（Mean Average Precision）。其中
-\emph{AP}用于度量全部查询（需求）所检索相关文档的排序质量，计算公式如下：
-\begin{align}
-AP=\dfrac {\sum _{r=1}^{N}\left( Precision\left( r\right) \times isRelevant\left( r\right) \right) } {\left|
-RelevantDocuments\right| }
-\end{align}
-参数解释：\emph{r}表示被查询实体（类）在排序表中的位置，N表示候选追踪线索的总数。\emph{Precision(r)}表示对于前\emph{r}个候选追踪线索的准确率。\emph{isRelevant()}为一个二值函数，如果这条候选线索有效则返回1，否则返回0。此外，\emph{MAP}用于描述不同查询（需求）所检索的相关文档（类）\emph{AP}的平均值。计算公式如下：
-\begin{align}
-MAP=\dfrac {\sum _{q=1}^{Q}AP\left( q\right)} {q}
-\end{align}
-参数解释：\emph{q}表示一次查询而\emph{Q}表示查询的总数。为了更全面的验证方法有效性，我们同时使用\emph{AP}和\emph{MAP}。
-
-\subsection{阈值设置}
-\label{subsec:calibrate_threshold}
-我们需要校准四个阈值，$Threshold_{idtf}$、$Threshold_{DC}$、$Threshold_{CD}$和LSI的k值。根据之前的
-\cite{Kuang2017closeness,kuang2015can}案例分析，我们设置$Threshold_{idtf}$的值为1.4，用这个阈值来忽略普遍出现的数据类型。   %%%特殊数学符号用$$
-对于$Threshold_{DC}$和$Threshold_{CD}$的设置，我们首先使用3$\sigma$  标准分别去除$Closeness_{DC}$和$Closeness_{CD}$集合中的异常值。我们这里的异常值定义为：比集合标准差 $\sigma$ 高三倍或者低三倍的紧密度值。然后通过min-max标准化我们将剩余的代码依赖紧密度归一化到[0,1]区间。之前被过滤掉的高异常值此时设置为1，类似的之前被过滤的低异常值被设置为0。然后我们根据上节给出的度量指标，在[0,1] 区间选取一组能让所有实验系统在不同IR模型下（共十二种情况）综合表现最好的阈值。本文中设置$Threshold_{DC}$为0.4，$Threshold_{CD}$为0.8。在代码依赖图中，通过暂时移除紧密度小于紧密度阈值的边，剩下的一些联通子图我们称其为代码域。我们各实验系统的代码域个数如下表所示：
-\begin{center}
- \label{number_of_code_region_about_every_project}
- \begin{tabular}{|l|l|}
-   \hline
-   \#             &    the number of code regions \\  %%表格不要忘了换行
-   \hline
-   iTrust         &    36                         \\
-   \hline
-   Maven          &    21                         \\
-   \hline
-   Pig            &    8                          \\
-   \hline
-   Infinispan    &     37                          \\
-   \hline
- \end{tabular}
-\end{center}
-对于代码依赖紧密度，经过min-max标准化处理之后的值，仅用于设定阈值生成代码依赖域。对于算法\ref{alg:reRankCandidate}我们还是用原始的代码依赖紧密度值。对于LSI方法中的K值，我们发现当k为90时iTrust和Maven的Precision/Recall表现最好，而对于Pig和Infinispan，k=200时Precision/Recall表现最好，从表\ref{expirement_system_information}中可以看出iTrust和Maven数据集中需求的个数比较接近（94和138），Pig和Infinispan的需求比较接近（236和237）我们认为这是这两组系统在LSI模型下最优K值出现差异的原因。
-
-
+%\section{结合代码依赖紧密度分析和用户反馈的软件可追踪生成方法}
+\section{方法验证}
+\label{sec:methodValidate}
+本节我们通过实验以验证结合代码依赖紧密度分析和用户反馈的软件可追踪方法的有效性。接下来，将具体阐述我们的实验设置及实验结果与分析。
 \subsection{实验系统}
-我们的实验部分是基于四个现实世界、来自不同领域的软件系统。iTrust（在线医疗档案管理）、Maven（构建管理工具）、Pig（编程语言）、Infinispan（数据库）。iTrust系统是在这个领域内被广泛使用的数据集，其RTM由系统开发与维护人员提供。但是该系统提供的高质量RTM是方法粒度的，即表达的是需求和方法之间的追踪关系。而本文的方法是基于类粒度的，因此在iTrust中，我们将需求和方法之间的追踪关系转化为需求和类之间的追踪关系。我们的转换规则是：若需求和方法之间有追踪关系，则我们认为需求和这个需求所在的类有追踪关系。其它三个实验系统是~\cite{Rath2017IlmSeven}最新公布的数据集，这三个开源系统用Jira作为项目管理工具，记录了整个软件开发过程的相关信息（例如在一个时间点要求新加一个功能）。针对Jira中提出的任务或问题等会有相应的pull request进行解决，这样这两者之间就拥有了追踪关系
-\cite{Rath2017IlmSeven}将jira包含的信息和github上相应的pull request信息进行了爬取。我们对这个信息进行了整理形成了系统对应的RTM数据集。对于数据整理的详细过程将在下面章节介绍。
-代表\ref{expirement_system_information}列举了这四个系统的基本信息。
-\begin{table}[]
+我们的实验部分是基于四个现实世界、来自不同领域的软件系统。iTrust（在线医疗档案管理）、Maven（构建管理工具）、Pig（编译器）、Infinispan（数据库）。iTrust是在这个领域内被广泛使用的数据集，其RTM由系统开发与维护人员提供。但是该系统提供的高质量RTM是方法粒度的，即表达的是需求和方法之间的追踪关系。而本文的方法是基于类粒度的，因此在iTrust中，我们将需求和方法之间的追踪关系转化为需求和类之间的追踪关系。我们的转换规则是：若需求和方法之间有追踪关系，则我们认为需求和这个方法所在的类有追踪关系。其它三个实验系统是如~\ref{sec:sec:buildRTM}所述，获取其RTM。
+的pull request信息进行了爬取。我们对这个信息进行了整理形成了系统对应的RTM数据集。对于数据整理的详细过程将在下面章节介绍。
+表~\ref{expirement_system_information}列举了这四个系统的基本信息。
+\begin{table}[htbp]
 \centering
 \caption{实验系统的相关细节}
 \label{expirement_system_information}
 \begin{tabular}{@{}lcccc@{}}
 \toprule
-                  & iTrust & Maven & Pig     &   Infinispan   \\ \midrule
-  版本            & 13.0   & 3.5.2 & 0.17.0  &     9.2.0          \\
+                  & iTrust & Maven & Pig     &   Infinispan    \\ \midrule
+  版本            & 13.0   & 3.5.2 & 0.17.0  &     9.2.0       \\
   编程语言        & Java   & Java  & Java    &     Java        \\
-  千行代码（KLoC）& 43     & 101   & 365     &     521          \\
-  代码（类）      & 138    & 94    & 236     &     388          \\
-  需求（用例）    & 34     & 36    & 68      &     237          \\
-  调用依赖        & 274    & 182   & 1998    &     1777          \\
-  数据依赖        & 4792   & 1164  & 5405    &     6076          \\
-  追踪关系        & 255    & 155   & 356     &     1515          \\ \bottomrule
+  千行代码（KLoC）& 43     & 101   & 365     &     521         \\
+  代码（类）      & 138    & 94    & 236     &     388         \\
+  需求（用例）    & 34     & 36    & 68      &     237         \\
+  需求对应类的平均数 & 8   &  4    &  5      &     6           \\
+  调用依赖        & 274    & 182   & 1998    &     1777        \\
+  数据依赖        & 4792   & 1164  & 5405    &     6076        \\
+  追踪关系        & 255    & 155   & 356     &     1515        \\ \bottomrule
 \end{tabular}
 \end{table}
 
+\subsection{评价指标}
+\label{sec:sec:traceability_recovery_goal_metrics}
+为了验证我们结合代码依赖和用户反馈方法的有效性，我们首先引入两个重要的度量，精确度（precision）和查全率（recall）。
+对应公式如下：
+\begin{align}precision=\dfrac {\left| relevant\cap retrieved\right| } {\left| retrieved\right| }\% \end{align}
+\begin{align}recall=\dfrac {\left | relevant \cap retrieved \right |} {\left| relevant\right| }\% \end{align}
+参数解释：其中\emph{relevant}是正确的候选追踪线索（RTM中的有效追踪线索）集合。\emph{retrieved}表示软件可追踪生成方法所返回的追踪线索集合。由于自动化可追踪生成方法所返回的是一个排序列表，即按照文本相似度值从高到低排序。所以一种常用的比较IR 方法的方式是在不同的查全率下比较不同方法之间的精确度，可以由一条\emph{Precision-Recall}曲线展示。为了进一步衡量不同自动化软件可追踪生成方法返回结果的整体质量，我们选用了领域内另外两个常用指标：AP（Average Precision）与MAP（Mean Average Precision）。其中
+\emph{AP}用于度量全部查询（需求）所检索相关文档的排序质量，计算公式如下：
+\begin{align}
+AP=\dfrac {\sum _{r=1}^{N}\left( Precision\left( r\right) \times isRelevant\left( r\right) \right) } {\left|
+RelevantDocuments\right| }
+\end{align}
+参数解释：\emph{r}表示被查询实体（类）在排序表中的位置，N表示候选追踪线索的总数。\emph{Precision(r)}表示对于前\emph{r} 个候选追踪线索的准确率。\emph{isRelevant()}为一个二值函数，如果这条候选线索有效则返回1，否则返回0。此外，\emph{MAP}用于描述不同查询（需求）所检索的相关文档（类）\emph{AP}的平均值。计算公式如下：
+\begin{align}
+MAP=\dfrac {\sum _{q=1}^{Q}AP\left( q\right)} {Q}
+\end{align}
+参数解释：\emph{q}表示一次查询而\emph{Q}表示查询的总数。为了更全面的验证方法有效性，我们同时使用\emph{AP}和\emph{MAP}。
+
+\subsection{阈值设置}
+\label{subsec:calibrate_threshold}
+我们需要校准四个阈值，$Threshold_{idtf}$、$Threshold_{DC}$、$Threshold_{CD}$和LSI 的k值。根据之前的
+\cite{Kuang2017closeness,kuang2015can}案例分析，我们设置$Threshold_{idtf}$的值为1.4，用这个阈值来忽略普遍出现的数据类型。   %%%特殊数学符号用$$
+对于$Threshold_{DC}$和$Threshold_{CD}$的设置，我们首先使用3$\sigma$  标准分别去除$Closeness_{DC}$和$Closeness_{CD}$集合中的异常值。我们这里的异常值定义为：比集合标准差 $\sigma$ 高三倍或者低三倍的紧密度值。然后通过min-max标准化我们将剩余的代码依赖紧密度归一化到[0,1]区间。之前被过滤掉的高异常值此时设置为1，类似的之前被过滤的低异常值被设置为0。
+对于$Threshold_{DC}$和$Threshold_{DC}$ 的值的选取，我们根据~\ref{sec:sec:traceability_recovery_goal_metrics}中的度量指标，在[0,1] 区间选取一组能让所有实验系统在不同IR模型下综合表现最好的阈值。本文中设置$Threshold_{DC}$ 为0.4，$Threshold_{CD}$为0.8。
+
+对于代码依赖紧密度，经过min-max标准化处理之后的值，仅用于设定阈值生成代码依赖域。对于算法~\ref{alg:reRankCandidate}我们还是用原始的代码依赖紧密度值。对于LSI方法中的K值，我们发现当k为90时iTrust和Maven的Precision/Recall表现最好，而对于Pig和Infinispan，k值取200时Precision/Recall表现最好，从表\ref{expirement_system_information}中可以看出iTrust和Maven数据集中需求的个数比较接近（94和138），Pig和Infinispan的需求比较接近（236和237）我们认为这是这两组系统在LSI模型下最优K值出现差异的原因。
+
 \subsection{研究问题}
-\label{research_question}
-我们的实验目的是分析结合用户反馈和代码紧密度分析能否改善自动化可追踪生成场景下的混合方法，为了达到这一目的，我们需要回答如下研究问题。
-RQ: 在需求到代码的可追踪性生成场景下我们的方法能否优于基线方法？
-为了回答这个问题，我们选择了以下三个基线方法：（1）只利用信息检索技术的纯信息检索方法（简称为\emph{IR-ONLY}）；（2）基于信息检索方法，引入代码紧密度分析的方法（简称为\emph{TRICE}\cite{Kuang2017closeness}）；（3）基于信息检索方法，考虑代码结构信息和用户反馈信息的先驱方法（简称为\emph{UD-CSTI}\cite{panichella2013and}）。我们将我们的方法命名为\emph{CLUSTER}，在对比
-\emph{CLUSTER}和三个基线方法时，我们依次使用三种不同的主流模型（VSM、LSI和JS）。
-同时本方法的另一个目标是尽量减少用户参与，即使用尽量少的用户反馈。所以，对于基线方法UD-CSTI，用户需要判断所有的追踪线索（我们方法中的用户判断环节通过RTM来模拟，即我们假设用户判断全部都是正确的）。而实验中我们的方法里需要用户判断的追踪线索不超过全部追踪线索的3.5\%。即对于给定需求，iTrust中需要判断四个类，Maven中需要判断三个类，Pig中需要判断8个类，Infinispan中需要判断?个类与给定需求的相关性。基于以上设置，通过比较UD-CSTI和CLUSTER来判断在我们的方法中是否少量的用户反馈就能起到明显的效果。
-除了\ref{sec:traceability_recovery_goal_metrics}中提到的指标，我们还引入了统计显著性测试来判断CLUSTER是否显著比基线方法好。通过调研\cite{Kuang2017closeness,Ali2015entities}中所设计的显著性测试。对于候选追踪列表，我们选择在每个有效追踪线索位置的F-measure作为我们测试的单独依赖变量。选择F-measure的原因是我们想分析相比于基线方法，CLUTSRE方法能否同时提升查全率和准确率。
+\label{sec:sec:research_question}
+我们的实验目的是分析结合我们的方法能否提高生成追踪线索列表的精度，为了达到这一目的，我们需要回答如下研究问题：\\
+RQ: 在需求到代码的可追踪性生成场景下我们的方法能否优于基线方法？\\
+为了回答这个问题，我们选择了以下三个基线方法：（1）只利用信息检索技术的纯信息检索方法（简称为IR-ONLY）；（2）基于信息检索方法，引入代码紧密度分析的方法（简称为TRICE~\cite{Kuang2017closeness}）；（3）基于信息检索方法，考虑代码结构信息和用户反馈信息的先驱方法（简称为UD-CSTI~\cite{panichella2013and}）。我们将我们的方法命名为CLUSTER（CLoseness-and-USer-feedback-based Traceability Recovery），在对比
+CLUSTER和三个基线方法时，我们依次使用三种不同的主流模型（VSM、LSI和JS）。
+同时本方法的另一个目标是尽量减少用户参与，即使用尽量少的用户反馈。所以，对于基线方法UD-CSTI，用户需要判断所有的追踪线索（我们方法中的用户判断环节通过RTM来模拟，即我们假设用户判断全部都是正确的）。而实验中我们的方法里需要用户判断的追踪线索不超过全部追踪线索的3.5\%。即对于给定需求，iTrust中需要判断四个类，Maven中需要判断三个类，Pig和Infinispan中需要判断八个类与给定需求的相关性。基于以上设置，通过比较UD-CSTI和CLUSTER来判断在我们的方法中是否少量的用户反馈就能起到明显的效果。
+除了~\ref{sec:sec:traceability_recovery_goal_metrics}中提到的指标，我们还引入了统计显著性测试来判断CLUSTER是否显著比基线方法好。通过调研~\cite{Kuang2017closeness,Ali2015entities}中所设计的显著性测试。对于候选追踪列表，我们选择在每个有效追踪线索位置的F-measure作为我们测试的单独依赖变量。选择F-measure的原因是我们想分析相比于基线方法，CLUTSRE方法能否同时提升查全率和准确率。
 F-measure计算公式如下：
 \begin{align} F=\dfrac {2} {\dfrac {1} {R}+\dfrac {1} {P}} \end{align}
 参数解释：P表示准确率，R表示查全率，F是P和R的调和平均。从公式中可以看出准确率和查全率越大，F-measure的值越高。由于F-measure 在两个不同系统之间是成对存在的，因此我们使用Wilcoxon rank sum测试\cite{Grogge2000Statistics}验证以下零假设：
@@ -192,9 +223,20 @@ $H_{0}$:CLUSTER和基线方法性能没有区别。
 我们采用$p-value$显著性差异水平0.05作为衡量检验结果的标准。
 \subsection{实验结果与分析}
 \label{sec:result_and_discussion}
-根据~\ref{sec:traceability_recovery_goal_metrics}提出的度量指标，表~\ref{Metrics-Wilcoxon}展示了4个实验系统的实验结果。我们比较了CLUSTER和基线方法在这四个实验系统上的表现（$AP$，$MAP$与显著性检验的p-value值）。【这里后面可能改成四个系统的结果分析】在27个实验结果对比中，有21个实验结果CLUSTER的F-measure值明显优于基线方法（p-value$<$0.05）。这表明在绝大多数情况下，相比基线方法CLUSTER 提高了候选追踪列表的准确率和查全率。此外，对于实验系统iTrust和Maven，CLUSTER方法的AP和MAP几乎全部优于基线方法。只有在Maven-VSM和Maven-LSI上CLUSTER方法的MAP值略逊于TRICE。然而在Pig系统上CLUSTER方法只有在VSM模型下AP值优于UD-CSTI，其他情况下效果均不如基线方法UD-CSTI。但是从表~\ref{Metrics-Wilcoxon}中可以看出两者差距比较小（差异小于0.5）。并且如前文所述CLUSTER
-方法只需要用户判断3.5\%的追踪线索，而UD-CSTI方法需要用户验证所有的跟踪线索。图~\ref{Metrics-Wilcoxon}展示并对比了9种实验组合下的precision-recall曲线。
-\begin{table}[]
+根据~\ref{sec:sec:traceability_recovery_goal_metrics}提出的度量指标，表~\ref{Metrics-Wilcoxon}展示了4个实验系统的实验结果。我们比较了CLUSTER和基线方法在这四个实验系统上的表现（$AP$，$MAP$与显著性检验的p-value值）。在36个实验结果对比中，有30个实验结果CLUSTER 的F-measure值明显优于基线方法（p-value$<$0.05并且AP值大于基线方法）。这表明在绝大多数情况下，相比基线方法CLUSTER 提高了候选追踪列表的准确率和查全率。此外，对于实验系统iTrust 和Maven，CLUSTER方法的AP和MAP几乎全部优于基线方法。只有在Maven-VSM和Maven-LSI 上CLUSTER 方法的MAP 值略逊于TRICE。然而在Pig系统上CLUSTER方法只有在VSM模型下AP值优于UD-CSTI，其他情况下效果均不如基线方法UD-CSTI。但是从表~\ref{Metrics-Wilcoxon} 中可以看出两者差距比较小（差异小于0.5）。并且如前文所述CLUSTER
+方法只需要用户判断3.5\%的追踪线索，而UD-CSTI方法需要用户验证所有的跟踪线索。图~\ref{F:precisionRecall}展示并对比了12种实验组合下的precision-recall曲线。
+\begin{figure}[thb]
+    \centering
+    \includegraphics[width=0.8\textwidth]{./figures/evalution/precisionRecall.pdf}
+    \caption{precision-recall图像}
+    \label{F:precisionRecall}
+\end{figure}
+
+
+
+\begin{table}[htbp]
+%\small   %tiny scriptsize footnotesize small normalsize large ...
+\footnotesize
 \centering
 \caption{实验系统的评价指标及Wilcoxon秩和检验结果}
 \label{Metrics-Wilcoxon}
@@ -206,53 +248,87 @@ iTrust     & IR-Only & 42.55 & 56.55 & \textless 0.01 & 41.21 & 55.73 & \textles
            & UD-CSTI & 45.75 & 59.08 & \textless 0.01 & 45.42 & 59.35 & \textless 0.01 & 43.26 & 62.99 & 0.10 \\
            & TRICE   & 45.80 & 59.05 & \textless 0.01 & 45.18 & 58.76 & \textless 0.01 & 45.29 & 61.25 & 0.16 \\
            & CLUSTER & 52.10 & 63.28 &         -      & 51.60 & 63.21 &       -        & 46.56 & 63.29 &  -   \\
+           \hline
 Maven      & IR-Only & 20.66 & 38.59 & \textless 0.01 & 17.21 & 42.37 & \textless 0.01 & 19.45 & 40.70 & \textless 0.01\\
            & UD-CSTI & 21.68 & 39.42 & \textless 0.01 & 18.52 & 43.28 & \textless 0.01 & 22.12 & 42.10 & \textless 0.01 \\
            & TRICE   & 21.68 & 41.58 & \textless 0.01 & 16.85 & 46.17 & \textless 0.01 & 19.30 & 41.69 & \textless 0.01 \\
            & CLUSTER & 25.44 & 41.38 &         -      & 21.11 & 45.47 &       -        & 22.32 & 43.57 &      -         \\
+           \hline
 Pig        & IR-Only & 21.98 & 42.36 & \textless 0.01 & 19.88 & 42.25 & \textless 0.01 & 15.61 & 35.56 &    0.02  \\
            & UD-CSTI & 24.19 & 43.49 &    0.49        & 22.40 & 43.67 &      0.68      & 18.90 & 37.82 &    0.27 \\
            & TRICE   & 16.88 & 41.91 & \textless 0.01 & 15.85 & 40.72 & \textless 0.01 & 13.83 & 36.79 &    0.18 \\
            & CLUSTER & 24.64 & 43.32 &      -         & 22.30 & 43.19 &        -       & 18.88 & 37.57 &      -  \\
+           \hline
 Infinispan & IR-Only & 14.47 & 22.87 & \textless 0.01 & 14.15 & 22.98 & \textless 0.01 & 14.98 & 22.59 & \textless 0.01\\
            & UD-CSTI & 16.59 & 24.14 & \textless 0.01 & 17.95 & 24.76 & \textless 0.01 & 19.57 & 24.56 & \textless 0.01\\
            & TRICE   & 12.79 & 20.92 & \textless 0.01 & 12.96 & 21.84 & \textless 0.01 & 13.70 & 21.28 & \textless 0.01\\
            & CLUSTER & 18.47 & 23.82 &      -         & 18.61 & 23.91 &        -       & 19.86 & 23.24 & - \\\bottomrule
 \end{tabular}
 \end{table}
-观察表~\ref{Metrics-Wilcoxon}和图~\ref{recall-precision}，我们会发现TRICE方法的性能高度依赖通过纯信息检索方法生成候选追踪列表的质量。即TRICE方法依赖需求文本和代码文本的语料质量。在文本语料质量比较好的iTrust系统上，TRICE和UD-CSTI效果差异不大。但是在信息检索效果的AP和MAP都比较低的Pig和Maven系统，TRICE方法明显不如UD-CSTI。在Pig-VSM和Pig-LSI，TRICE方法的性能甚至不如纯信息检索方法。正如~\ref{sec:relatework}讨论的，没有用户反馈，TRICE方法只能把与给定需求相似度最大的类作为紧密度分析的输入，给与这个类代码依赖紧密度比较大的类对应追踪线索奖励。这种方法比较保守，然而也使得无法进一步提高基于信息检索方法的性能。例如在前面用例中，对于CLUSTER方法，用户需要判断两个域的代表类与需求相关性。如果相关会通过两个类向外扩散给与其依赖关系紧密的类对应候选线索奖励。此外，与给定需求相似度最大的类对应的追踪线索如果是无效的，在TRICE方法中由于没有用户反馈，按照TRICE方法会给与这个类紧密度比较大的类对应的追踪线索奖励。即此时这个错误会被放大最终使得被"优化之后的候选列表"准确率和查全率更低。在CLUSTER和TRICE方法中由于用户反馈的存在就避免了这种情况。实际上，我们观察到在9个实验中CLUSTER和UD-CSTI的效果均明显优于IR-ONLY，即便是在语料质量比较好的iTrust系统，情况也是如此。这表明在建立需求到代码的可追踪性时，用户反馈是一项重要的资源。
+观察表~\ref{Metrics-Wilcoxon}和图~\ref{F:precisionRecall}，我们会发现TRICE方法的性能高度依赖通过纯信息检索方法生成候选追踪列表的质量。即TRICE方法依赖需求文本和代码文本的语料质量。在文本语料质量比较好的iTrust系统上，TRICE和UD-CSTI效果差异不大。但是在信息检索效果的AP和MAP都比较低的Pig和Maven系统，TRICE方法明显不如UD-CSTI。在Pig-VSM和Pig-LSI，TRICE方法的性能甚至不如纯信息检索方法。
+%正如~\ref{sec:relatework}讨论的，
+没有用户反馈，TRICE方法只能把与给定需求相似度最大的类作为紧密度分析的输入，给与这个类代码依赖紧密度比较大的类对应追踪线索奖励。这种方法比较保守，然而也使得无法进一步提高基于信息检索方法的性能。例如在前面用例中，对于CLUSTER方法，用户需要判断两个域的代表类与需求相关性。如果相关会通过两个类向外扩散给与其依赖关系紧密的类对应候选线索奖励。此外，与给定需求相似度最大的类对应的追踪线索如果是无效的，在TRICE方法中由于没有用户反馈，按照TRICE方法会给与这个类紧密度比较大的类对应的追踪线索奖励。即此时这个错误会被放大最终使得被“优化之后的候选列表”准确率和查全率更低。在CLUSTER和TRICE方法中由于用户反馈的存在就避免了这种情况。实际上，我们观察到在12个实验中CLUSTER和UD-CSTI的效果均明显优于IR-ONLY，即便是在语料质量比较好的iTrust系统，情况也是如此。这表明在建立需求到代码的可追踪性时，用户反馈是一项重要的资源。
 
-然而，使用用户反馈意味着用户需要付出额外的努力。正如前文提到的UD-CSTI方法为了达到其最优效果需要用户判断所有的追踪线索，这是不实际的。而我们的方法CLUSTER只需要用户判断3.5\%的追踪线索就能达到与UD-CSTI类似的效果甚至优于UD-CSTI。这在基本不影响候选追踪线索列表效果的前提下大大减少了用户需要付出的努力。为了进一步比较CLUSTER方法的成本效益（成本是指用户做出判断花费的精力，效益是用户判断后候选追踪列表准确率和查全率的提高），我们比较不同查全率对应的精度和遇到的无效追踪线索数量，如表
-~\ref{fp-reduce}
+然而，使用用户反馈意味着用户需要付出额外的努力。正如前文提到的UD-CSTI方法为了达到其最优效果需要用户判断所有的追踪线索，这是不实际的。而我们的方法CLUSTER只需要用户判断3.5\%的追踪线索（即对于给定需求，iTrust中需要判断四个类，Maven中需要判断三个类，Pig中需要判断8个类，Infinispan中需要判断8个类与给定需求的相关性。）就能达到与UD-CSTI类似的效果甚至优于UD-CSTI。这在基本不影响候选追踪线索列表效果的前提下大大减少了用户需要付出的努力。为了进一步比较CLUSTER方法的成本效益（成本是指用户做出判断花费的精力，效益是用户判断后候选追踪列表准确率和查全率的提高），我们比较不同查全率对应的精度和遇到的无效追踪线索数量，如表
+~\ref{T:fp-reduce}
 
-\begin{table}[]
+\begin{table}[htbp]
+%\small
+\footnotesize
 \centering
-\caption{考虑用户判断遇到的不相关追踪线索}
-\label{fp-reduce}
+\caption{不同查全率下的精度对比}
+\label{T:fp-reduce}
 \begin{tabular}{@{}cccccccccc@{}}
 \toprule
-&&\multicolumn{2}{c}{Recall(20\%)}&\multicolumn{2}{c}{Recall(40\%)}&\multicolumn{2}{c}{Recall(60\%)} & \multicolumn{2}{c}{Recall(80\%)} \\ \midrule
-           &     & Precision & FP  & Precision & FP & Precision  & FP  & Precision & FP       \\
-iTrust     & VSM & -46.59\% & +81 & -0.24\% & +1 &  +16.81\%  & -261 & +3.93\%  & -428  \\
-           & LSI & -46.34\% & +80 & +6.40\% & -29 & +21.64\%  & -349 & +3.93\%  & -403  \\
-           & JS  & -46.59\% & +81 & +7.73\% & -41 & +11.48\%  & -381 & +2.52\%  & -441  \\
-Maven      & VSM & -6.79\%  & +24 & +8.57\% & -113 & +6.78\%  & -287 & +0.52\%  & -74    \\
-           & LSI & -0.51\%  & +2  & +7.12\% & -117 & +4.51\%  & -242 & +1.01\%  & -186   \\
-           & JS  & +1.94\%  & -8  & +8.94\% & -127 & +7.39\%  & -351 & +1.68\%  & -231  \\
-Pig        & VSM & -30.50\% & +426 & -4.72\% & +319 & +0.85\% & -434 & +0.38\%  & -856  \\
-           & LSI & -24.04\% & +410 & -1.53\% & +142 & +0.01\% & -4   & +0.21\%  & -511   \\
-           & JS  & -11.70\% & +367 & +0.29\% & -55  & +0.09\% & -93  & +0.23\%  & -777  \\
-Infinispan & VSM & -5.12\%  & +309 & +0.85\% & -185 & +1.06\% & -677 & +0.66\%  & -1369    \\
-           & LSI & -4.85\%  & +309 & +1.76\% & -401 & +0.43\% & -301 & +0.32\%  & -697  \\
-           & JS  & -4.32\%  & +264 & +1.42\% & -301 & +0.34\% & -273 & +0.27\%  & -634 \\ \bottomrule
+&&\multicolumn{2}{c}{Recall(20\%)}&\multicolumn{2}{c}{Recall(40\%)}&\multicolumn{2}{c}{Recall(60\%)} & \multicolumn{2}{c}{Recall(80\%)} % & \multicolumn{2}{c}{Recall(100\%)}
+\\ \midrule
+           &     & Precision & FP  & Precision & FP & Precision  & FP  & Precision & FP  \\ % & Precision & FP \\
+iTrust     & VSM & -46.59\% & +81 & -0.24\% & +1 &  +16.81\%  & -261 & +3.93\%  & -428   \\% & +0.22\% & -160 \\
+           & LSI & -46.34\% & +80 & +6.40\% & -29 & +21.64\%  & -349 & +3.93\%  & -403 \\ % & +0.00\% &	0 \\
+           & JS  & -46.59\% & +81 & +7.73\% & -41 & +11.48\%  & -381 & +2.52\%  & -441 \\ % & +0.28\% &	-209\\
+           \hline
+Maven      & VSM & -6.79\%  & +24 & +8.57\% & -113 & +6.78\%  & -287 & +0.52\%  & -74  \\ % & +0.02\% & -11\\
+           & LSI & -0.51\%  & +2  & +7.12\% & -117 & +4.51\%  & -242 & +1.01\%  & -186  \\ %& +0.03\% & -21\\
+           & JS  & +1.94\%  & -8  & +8.94\% & -127 & +7.39\%  & -351 & +1.68\%  & -231  \\ % & -0.21\% & +141\\
+           \hline
+Pig        & VSM & -30.50\% & +426 & -4.72\% & +319 & +0.85\% & -434 & +0.38\%  & -856 \\ % & -0.03\% & +198\\
+           & LSI & -24.04\% & +410 & -1.53\% & +142 & +0.01\% & -4   & +0.21\%  & -511  \\ %& +0.01\% & -52\\
+           & JS  & -11.70\% & +367 & +0.29\% & -55  & +0.09\% & -93  & +0.23\%  & -777  \\ %& -0.03\% & +217\\
+           \hline
+Infinispan & VSM & -5.12\%  & +309 & +0.85\% & -185 & +1.06\% & -677 & +0.66\%  & -1369 \\ %& +0.00\% & 0 \\
+           & LSI & -4.85\%  & +309 & +1.76\% & -401 & +0.43\% & -301 & +0.32\%  & -697  \\ %& +0.00\% & +3\\
+           & JS  & -4.32\%  & +264 & +1.42\% & -301 & +0.34\% & -273 & +0.27\%  & -634  \\ %& +0.01\% & -53\\
+           \bottomrule
 \end{tabular}
 \end{table}
 
-从表中可以看出当查全率小于20\%时，由于我们的方法是先让用户判断一些具有代表性的候选追踪线索，这些追踪线索未必是最可能有效的。因此刚开始我们相对于IR-ONLY算法会遇到更多的无效追踪线索，此时我们的准确率要比IR-ONLY低。在查全率大于20\%时，我们前期的用户投入开始发挥作用，如表所示在查全率为60\%时，iTrust-LSI方法的准确率提升了21.64\%，这也说明我们的方法检索出的无效追踪线索更少。从表中可以得出用户在建立153个正确追踪线索的过程中，CLUSTER方法检索出的无效追踪线索比UD-CSTI少349个。当查全率在50\%和80\%之间时，CLUSTER方法相对于IR-ONLY的优势尤为明显。值得注意的是我们把用户判断的追踪线索全部排在了候选追踪列表的前面，这也是造成当查全率比较低时CLUSTER方法引入大量无效追踪线索的原因。
+从表中可以看出当查全率小于20\%时，CLUSTER方法的准确率要比IR-ONLY低，这是因为CLUSTER方法是先让用户判断一些具有代表性的候选追踪线索，这些追踪线索未必是最可能有效的。相对于IR-ONLY算法本文方法刚开始会遇到更多的无效追踪线索。在查全率大于20\%时，CLUSTER方法前期的用户投入开始发挥作用，如表~\ref{T:fp-reduce}所示在查全率为60\%时，CLUSTER方法的准确度优于IR-ONLY，在iTrust-LSI下与IR-ONLY相比，CLUSTER方法的准确率提升了21.64\%。从表中可以得出用户在建立153 个正确追踪线索的过程中，CLUSTER 方法检索出的无效追踪线索比UD-CSTI 少349 个。当查全率在50\% 和80\% 之间时，CLUSTER 方法相对于IR-ONLY 的优势尤为明显。
 
-根据实验结果，我们还有一点额外的观察。（1）对于同一个实验系统在不同的IR模型下，CLUSTER方法的表现差异很大。这是因为CLUSTER方法主要是通过给追踪线索奖励来实现重排序，如前所述（公式）奖励值依赖于IR值，不同的IR模型对于IR值的计算有不同的方式。
-（2）我们尝试过要求用户判断所有代码域与给定需求相关性，该做法对pig和Maven两个实验系统的性能提升不大。这可能是因为这两个系统的需求粒度太小。表~\ref{expirement_information}也验证了这一点，iTrust一个需求平均由8个类完成，而Maven和Pig的一个需求分别平均由4，5个类完成。在将来的工作中，我们计划文本聚类的方法~\cite{Palomba2017Recommending}增大需求粒度。
+根据实验结果，我们还有一点额外的观察。（1）对于同一个实验系统在不同的IR模型下，CLUSTER方法的表现差异很大。这是因为CLUSTER 方法主要是通过给追踪线索奖励来实现重排序，如前所述（公式）奖励值依赖于IR值，不同的IR模型对于IR值的计算有不同的方式。
+（2）我们尝试过要求用户判断所有代码域与给定需求相关性，该做法对pig和Maven两个实验系统的性能提升不大。这可能是因为这两个系统的需求粒度太小。表~\ref{expirement_system_information}也验证了这一点，iTrust一个需求平均由8个类完成，而Maven和Pig的一个需求分别平均由4，5个类完成。在将来的工作中，我们计划用文本聚类的方法~\cite{Palomba2017Recommending}增大需求粒度。
 
 \section{本章小结}
 在本章中，我们介绍了结合代码依赖关系紧密度分析和用户反馈的软件可追踪生成方法。我们在四个实验系统（iTrust、Maven、Pig 和Infinispan）下设计实验，验证了方法的有效性。同时，我们介绍了通过实验surefire或junit运行开源系统测试集获得代码依赖的方法和我们根据
 ~\cite{Rath2017IlmSeven}公布的数据整理实验系统对应RTM的过程。
+
+
+
+\begin{comment}我们通过配置surefire 的$argLine$ 参数来完成工具插桩，surefire配置见图~\ref{F:maven_pom}。这里我们还要着重阐述forkCount
+
+在该阈值下我们各实验系统的代码域个数如表~\ref{T:number_of_code_region_about_every_project}所示：
+\begin{table}
+ \label{T:number_of_code_region_about_every_project}
+ \centering
+ \caption{各实验系统代码域个数}
+ \begin{tabular}{@{}ll@{}}
+   \toprule
+   \#             &    代码域 \\  %%表格不要忘了换行
+   \midrule
+   iTrust         &    36                         \\
+   Maven          &    21                         \\
+   Pig            &    8                          \\
+   Infinispan    &     37                          \\
+   \bottomrule
+ \end{tabular}
+\end{table}
+\end{comment}

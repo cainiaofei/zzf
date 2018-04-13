@@ -19,17 +19,14 @@ A bad cross reference---entry "Chen2013Robust"
 refers to entry "DBLP:conf/aswec/2013", which doesn't exist
 A bad cross reference---entry "Shi2017linguistic"
 refers to entry "DBLP:conf/kbse/2017", which doesn't exist
-Warning--I didn't find a database entry for "Huang2005Utilizing"
-Warning--I didn't find a database entry for "19"
+A bad cross reference---entry "Heck2013trackers"
+refers to entry "DBLP:conf/iwpse/2013", which doesn't exist
 Warning--I didn't find a database entry for "DBLP:conf/icsm/2012"
 Warning--I didn't find a database entry for "DBLP:conf/iwpc/2002"
 Warning--I didn't find a database entry for "DBLP:conf/icse/2015sst"
 Warning--I didn't find a database entry for "DBLP:conf/aswec/2013"
+Warning--I didn't find a database entry for "DBLP:conf/iwpse/2013"
 Warning--I didn't find a database entry for "DBLP:conf/kbse/2017"
-Name 1 in "G. Antoniol, G. Casazza, and A. Cimitile" has a comma at the end for entry Antoniol2000Modelling
-while executing---line 944 of file unsrt.bst
-Warning--empty journal in Antoniol2000Modelling
-Warning--empty year in Antoniol2000Modelling
 Too many commas in name 1 of "Giuliano Antoniol,Jane Cleland{-}Huang,Jane Huffman Hayes,Michael Vierhauser" for entry Antoniol2017Ten
 while executing---line 944 of file unsrt.bst
 Too many commas in name 1 of "Hongyu Kuang, Jia Nie,Hao Hu,Patrick Rempel,Jian Lu,Alexander Egyed, Patrick M{\"{a}}der" for entry Kuang2017closeness
@@ -40,7 +37,19 @@ Too many commas in name 1 of "Hongyu Kuang, Jia Nie,Hao Hu,Patrick Rempel,Jian L
 while executing---line 944 of file unsrt.bst
 Too many commas in name 1 of "Hongyu Kuang, Jia Nie,Hao Hu,Patrick Rempel,Jian Lu,Alexander Egyed, Patrick M{\"{a}}der" for entry Kuang2017closeness
 while executing---line 944 of file unsrt.bst
-Too many commas in name 1 of "Malcom Gethers,Rocco Oliveto,Denys Poshyvanyk,Andrea De Lucia" for entry Malcom2011orthogonal
+Too many commas in name 1 of "Claes Wohlin,Ayb{\"{u}}ke Aurum,Lefteris Angelis,Laura Phillips,Yvonne Dittrich,Tony Gorschek,H{\aa}kan Grahn and Kennet Henningsson,Simon K{\aa}gstr{\"{o}}m,Graham Low,Per Rovegard,Piotr Tomaszewski,Christine Van Toorn and Jeff Winter" for entry Wohlin2012Industry
+while executing---line 944 of file unsrt.bst
+Too many commas in name 1 of "Claes Wohlin,Ayb{\"{u}}ke Aurum,Lefteris Angelis,Laura Phillips,Yvonne Dittrich,Tony Gorschek,H{\aa}kan Grahn and Kennet Henningsson,Simon K{\aa}gstr{\"{o}}m,Graham Low,Per Rovegard,Piotr Tomaszewski,Christine Van Toorn and Jeff Winter" for entry Wohlin2012Industry
+while executing---line 944 of file unsrt.bst
+Too many commas in name 1 of "Claes Wohlin,Ayb{\"{u}}ke Aurum,Lefteris Angelis,Laura Phillips,Yvonne Dittrich,Tony Gorschek,H{\aa}kan Grahn and Kennet Henningsson,Simon K{\aa}gstr{\"{o}}m,Graham Low,Per Rovegard,Piotr Tomaszewski,Christine Van Toorn and Jeff Winter" for entry Wohlin2012Industry
+while executing---line 944 of file unsrt.bst
+Too many commas in name 1 of "Claes Wohlin,Ayb{\"{u}}ke Aurum,Lefteris Angelis,Laura Phillips,Yvonne Dittrich,Tony Gorschek,H{\aa}kan Grahn and Kennet Henningsson,Simon K{\aa}gstr{\"{o}}m,Graham Low,Per Rovegard,Piotr Tomaszewski,Christine Van Toorn and Jeff Winter" for entry Wohlin2012Industry
+while executing---line 944 of file unsrt.bst
+Too many commas in name 2 of "Claes Wohlin,Ayb{\"{u}}ke Aurum,Lefteris Angelis,Laura Phillips,Yvonne Dittrich,Tony Gorschek,H{\aa}kan Grahn and Kennet Henningsson,Simon K{\aa}gstr{\"{o}}m,Graham Low,Per Rovegard,Piotr Tomaszewski,Christine Van Toorn and Jeff Winter" for entry Wohlin2012Industry
+while executing---line 944 of file unsrt.bst
+Too many commas in name 2 of "Claes Wohlin,Ayb{\"{u}}ke Aurum,Lefteris Angelis,Laura Phillips,Yvonne Dittrich,Tony Gorschek,H{\aa}kan Grahn and Kennet Henningsson,Simon K{\aa}gstr{\"{o}}m,Graham Low,Per Rovegard,Piotr Tomaszewski,Christine Van Toorn and Jeff Winter" for entry Wohlin2012Industry
+while executing---line 944 of file unsrt.bst
+Too many commas in name 2 of "Claes Wohlin,Ayb{\"{u}}ke Aurum,Lefteris Angelis,Laura Phillips,Yvonne Dittrich,Tony Gorschek,H{\aa}kan Grahn and Kennet Henningsson,Simon K{\aa}gstr{\"{o}}m,Graham Low,Per Rovegard,Piotr Tomaszewski,Christine Van Toorn and Jeff Winter" for entry Wohlin2012Industry
 while executing---line 944 of file unsrt.bst
 Warning--empty journal in salton1986introduction
 Too many commas in name 1 of "Scott C. Deerwester,Susan T. Dumais,Thomas K. Landauer,George W. Furnas,Richard A. Harshman" for entry Scott1990LSI
@@ -88,4 +97,4 @@ Too many commas in name 1 of "Fabio Palomba,Pasquale Salza,Adelina Ciurumelea,Se
 while executing---line 944 of file unsrt.bst
 Too many commas in name 1 of "Fabio Palomba,Pasquale Salza,Adelina Ciurumelea,Sebastiano Panichella,Harald C. Gall,Filomena Ferrucci,Andrea De Lucia" for entry Palomba2017Recommending
 while executing---line 944 of file unsrt.bst
-(There were 36 error messages)
+(There were 42 error messages)

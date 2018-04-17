@@ -1,26 +1,19 @@
 \chapter{½áºÏ´úÂëÒÀÀµºÍÓÃ»§·´À¡µÄÈí¼þ¿É×·×ÙÉú³É·½·¨}
+ÔÚµÚÒ»ÕÂÖÐÎÒÃÇÌÖÂÛÁËÐèÇóµ½´úÂëÈí¼þ¿É×·×ÙÐÔµÄ¶ÔÓÚ¸÷ÖÖÈí¼þ»î¶¯µÄÖØÒªÒâÒå£¬²¢ÔÚµÚ¶þÕÂÏà¹Ø¹¤×÷ÖÐÏµÍ³ÐÔµÄ½éÉÜÁËµ±Ç°ÁìÓòÄÚµÄÑÐ¾¿ÏÖ×´ºÍ²»×ã¡£Òò´Ë£¬±¾ÕÂÖÐÏêÏ¸½éÉÜÁËÎÒÃÇÌá³öµÄ½áºÏÓÃ»§·´À¡ºÍ´úÂëÒÀÀµµÄÈí¼þ¿É×·×ÙÉú³É·½·¨¡£ÔÚ~\ref{sec:problemAndIdea}½Ú¸ø³öÁËÎÒÃÇÑÐ¾¿ÎÊÌâµÄÐÎÊ½»¯¶¨Òå²¢Í¨¹ýÒ»¸öÕæÊµÓÃÀý¸ø³öÁËÎÒÃÇµÄË¼Â·À´Ô´£¬ÔÚ~\ref{sec:approach}½Ú½éÉÜÁËÎÒÃÇËùÊö·½·¨µÄÈý¸ö²½Öè£¬²¢ÇÒ~\ref{sec:caseStudy}½áºÏ¾ßÌåÓÃÀýÏàËÆ½éÉÜÁËÎÒÃÇ·½·¨µÄÕû¸öÁ÷³Ì¡£
 
-\section{ÑÐ¾¿ÎÊÌâ}
+\section{ÎÊÌâ¶¨Òå¼°Ë¼Â·À´Ô´}
+\label{sec:problemAndIdea}
 ÔÚÈí¼þ¿ª·¢¹ý³ÌÖÐ»áÑÜÉú³ö´óÁ¿µÄÈí¼þÖÆÆ·£¬ÀýÈçÐèÇóÎÄµµ¡¢Éè¼ÆÎÄµµ¡¢²âÊÔ¼¯ºÏºÍ´úÂëµÈ¡£²»Í¬Èí¼þÖÆÆ·Ö®¼äµÄ×·×Ù¹ØÏµÓÐÀûÓÚÈí¼þºóÆÚµÄÎ¬»¤ºÍÑÝ»¯¡£ÆäÖÐÐèÇóµ½´úÂëµÄ¿É×·×ÙÐÔÊÇÆäÖÐ×î¾ßÓÐ´ú±íÐÔÒ²×î¾ßÓÐÌôÕ½ÐÔµÄÒ»ÀàÈí¼þ×·×ÙÐÔ¡£ÆäÔ­ÒòÔÚÓÚÒÔÏÂÁ½µã£º£¨1£©ÐèÇóÊÇÈí¼þÏµÍ³ÖÐÎ¨Ò»¼ÇÂ¼ÁËÈË¶ÔÓÚÍêÕûÏµÍ³¹¦ÄÜµÄÀí½âÓëÆÚÍûµÄÈí¼þÖÆÆ·
 ~\cite{Cleland-Huang2013Requirements}£¬¶ø´úÂëÔòÊÇµ±Ç°Èí¼þÏµÍ³ÔËÐÐÊ±ÐÐÎªµÄÎ¨Ò»ÕæÊµ·´Ó³£¬Òò´ËÁ½ÕßÖ®¼äµÄ¹ØÁª¹ØÏµÊÇÈí¼þ¿ª·¢ÓëÎ¬»¤ÈËÔ±×î¹Ø×¢µÄ£»£¨2£©ÐèÇóµ½´úÂëÖ®¼äÐèÒª¾­¹ýÂþ³¤µÄ¿ª·¢Á÷³ÌÒÔÍê³ÉÓïÒåÉÏµÄ×ª»»¡£Òò´ËÏà¶ÔÓÚÈÎÒâÆäËüÁ½ÀàÈí¼þÖÆÆ·Ö®¼äµÄ¹ØÁª¹ØÏµ£¬ÐèÇóºÍ´úÂëÖ®¼ä´æÔÚµÄÓïÒåÆ«²îÊÇ×îÑÏÖØµÄ¡£
-\begin{comment}
-\begin{figure}[thb]
-    \centering
-    \includegraphics[width=0.8\textwidth]{./figures/RequirementTraceability/softwareDevFlow.pdf}
-    \caption{Èí¼þ¿ª·¢Á÷³Ì}
-    \label{F:softwareDevFlow}  %%¹Ø¼ü´Ê²»±äÉ«ÓÐÊ±ÊÇÒòÎªÆ´Ð´ÓÐÎÊÌâ
-\end{figure}
-\end{comment}
 
-ÐèÇóµ½´úÂë¿É×·×ÙÐÔ½¨Á¢µÄ×î´óÀ§ÄÑÔÚÓÚ£¬µ±ÐèÇóºÍ´úÂëÔªËØ±È½Ï¶àÊ±£¬ÈË¹¤µÄ½¨Á¢¿É×·×ÙÐÔ»áºÄ·Ñ´óÁ¿µÄÊ±¼äºÍ¾«Á¦£¬µ±Ç°»ùÓÚÐÅÏ¢¼ìË÷µÄ×Ô¶¯»¯¼¼Êõ´æÔÚ¾«¶ÈµÍµÄÎÊÌâ¡£ÎÒÃÇÐèÒªÑÐ¾¿ÈçÏÂÎÊÌâ£ºÈçºÎÖ»ÀûÓÃÉÙÁ¿µÄÓÃ»§·´À¡µÃµ½Ïà¶Ô¸ß¾«¶ÈµÄºòÑ¡×·×ÙÏßË÷ÁÐ±í¡£µ±Éú³É×·×ÙÏßË÷ÁÐ±í¾«¶È±È½ÏµÍÊ±£¬ÍùÍù»áÊ¹ÓÃ»§¶Ô¹¤¾ßÊ§È¥ÐÅÐÄ£¬Ó°Ïì¹¤¾ß¿ÉÓÃÐÔ¡£\\
+ÐèÇóµ½´úÂë¿É×·×ÙÐÔ½¨Á¢µÄ×î´óÀ§ÄÑÔÚÓÚ£¬µ±ÐèÇóºÍ´úÂëÔªËØ±È½Ï¶àÊ±£¬ÈË¹¤µÄ½¨Á¢¿É×·×ÙÐÔ»áºÄ·Ñ´óÁ¿µÄÊ±¼äºÍ¾«Á¦£¬µ±Ç°»ùÓÚÐÅÏ¢¼ìË÷µÄ×Ô¶¯»¯¼¼Êõ´æÔÚ¾«¶ÈµÍµÄÎÊÌâ¡£ÎÒÃÇÐèÒªÑÐ¾¿ÈçÏÂÎÊÌâ£ºÈçºÎÖ»ÀûÓÃÉÙÁ¿µÄÓÃ»§·´À¡µÃµ½Ïà¶Ô¸ß¾«¶ÈµÄºòÑ¡×·×ÙÏßË÷ÁÐ±í¡£µ±Éú³É×·×ÙÏßË÷ÁÐ±í¾«¶È±È½ÏµÍÊ±£¬ÍùÍù»áÊ¹ÓÃ»§¶Ô¹¤¾ßÊ§È¥ÐÅÐÄ£¬Ó°Ïì¹¤¾ß¿ÉÓÃÐÔ¡£
 \textbf{~\emph{ÎÊÌâ¶¨Òå.}} ~\emph{¸ø¶¨Ò»¸öÐèÇó¼¯ºÏ~\emph{R}~£¬¸ÃÐèÇó¼¯ºÏ°üº¬~d~¸öÐèÇóÎÄ±¾£¬Í¬Ê±¸ø¶¨´úÂë¼¯ºÏ£¨°´Á£¶È¿É·ÖÎª°ü¡¢Àà¡¢º¯Êý£¬ºóÁ½ÕßÎª¿É×·×ÙÐÔÖÐ³£ÓÃµÄ´úÂëÁ£¶È£¬ÎÒÃÇÕâÀïµÄÁ£¶ÈÊÇÀà£©~\emph{C}~£¬ÔòÐèÇóµ½´úÂëµÄ¿É×·×ÙÐÔ¾ÍÊÇÔÚR*CÉÏÅÐ¶¨ÈÎÒâÁ½¸örºÍcÖ®¼äÊÇ·ñ´æÔÚ¹¦ÄÜÉÏÏà»¥¹ØÁª¡£¶ÔÓÚÒ»¸ö¸ø¶¨µÄÐèÇórºÍ¸ø¶¨µÄ´úÂëÔªËØc£¬ÎÒÃÇÓÃ²¼¶ûº¯ÊýisTrace(r,c)À´±íÊ¾Á½ÕßÖ®¼äµÄ¹ØÁª¹ØÏµ£¬ÈôcÔÚ´úÂëÖÐÊµÏÖÁË£¨²¿·Ö£©r µÄ¹¦ÄÜ£¬ÔòisTrace(r,c)='trace'(Ïà¹Ø)¡£·ñÔòisTrace='no-trace'(²»Ïà¹Ø)¡£ÓÉr¡¢c¡¢isTrace(r,c)ÈýÕß×é³ÉµÄÒ»¸öÈýÔª×ét¾Í´ú±íÁËrºÍc Ö®¼äµÄÒ»Ìõ×·×ÙÏßË÷¡£ÔòRµ½CµÄ¿É×·×ÙÐÔ¾ÍÊÇÉú³ÉºÍÎ¬»¤Á½ÕßÖ®¼äµÄ×·×ÙÏßË÷¼¯ºÏ$T=\{t=\{r,c,isTrace(r,c)\}|r\in R
  \land  c \in C\}$¡£ÎÊÌâÊÇ£º
 } \\
 Q£ºÏà¶ÔÓÚ´«Í³·½·¨£¬½áºÏ´úÂëÒÀÀµ½ôÃÜ¶È·ÖÎöºÍÓÃ»§·´À¡Éú³ÉµÄÐèÇóµ½´úÂëµÄ×·×ÙÊý¾Ý¾«¶ÈÊÇ·ñÓÐÃ÷ÏÔÌáÉý£¿
 
-\section{ÑÐ¾¿¶¯»ú}
-
-ÔÚ±¾Ð¡½Ú£¬ÎÒÃÇÒÔÒ½ÁÆ¹ÜÀíÏµÍ³iTrustÖÐµÄÐèÇóUC15£¨UC15ÎÄ±¾ÈçÍ¼~\ref{F:UC15}£©ºÍÀïÃæÑ¡ÔñµÄ11¸öÀàÎªÀý£¬²ûÊöÎÒÃÇµÄÑÐ¾¿¶¯»ú¡£
+~\leftline{~\textbf{ddd}}
+ÎÒÃÇÒÔÒ½ÁÆ¹ÜÀíÏµÍ³iTrustÖÐµÄÐèÇóUC15£¨UC15ÎÄ±¾ÈçÍ¼~\ref{F:UC15}£©ºÍÀïÃæÑ¡ÔñµÄ11¸öÀàÎªÀý£¬²ûÊöÎÒÃÇµÄÑÐ¾¿¶¯»ú¡£
 
 %\subsubsection{½áºÏ´úÂëÒÀÀµºÍÓÃ»§·´À¡µÄÈí¼þ¿É×·×ÙÉú³É·½·¨Ê¾Àý}
 iTrustÊÇÒ»¸öÒ½ÁÆ¹ÜÀíÏµÍ³£¬²ÉÓÃjavaÓïÑÔ¡£¸ÃÏµÍ³°üÀ¨ÐèÇóºÍ´úÂëµÈÖÆÆ·¡£ÏÖÔÚÈí¼þ¹¤³ÌÊ¦ÐèÒªÖªµÀUC15ÊÇÓÉÄÄÐ©´úÂëÔªËØÊµÏÖ¡£
@@ -72,7 +65,7 @@ iTrustÊÇÒ»¸öÒ½ÁÆ¹ÜÀíÏµÍ³£¬²ÉÓÃjavaÓïÑÔ¡£¸ÃÏµÍ³°üÀ¨ÐèÇóºÍ´úÂëµÈÖÆÆ·¡£ÏÖÔÚÈí¼þ¹¤³Ì
 
 \begin{table}
 \centering
-\caption{»ùÓÚÐÅÏ¢¼ìË÷·½·¨ºòÑ¡×·×ÙÏßË÷ÅÅÐò±í}
+\caption{IRºòÑ¡×·×ÙÏßË÷ÅÅÐò±í}
 \label{T:IRCandidateList}
 \begin{tabular}{@{}llll@{}}
 \toprule
@@ -94,18 +87,9 @@ iTrustÊÇÒ»¸öÒ½ÁÆ¹ÜÀíÏµÍ³£¬²ÉÓÃjavaÓïÑÔ¡£¸ÃÏµÍ³°üÀ¨ÐèÇóºÍ´úÂëµÈÖÆÆ·¡£ÏÖÔÚÈí¼þ¹¤³Ì
 \end{table}
 
 
-\begin{comment}
-\subsection{ÎÊÌâ¶¨Òå}
-
-\textbf{~\emph{ÎÊÌâ¶¨Òå.}} ~\emph{¸ø¶¨Ò»¸öÐèÇó¼¯ºÏ~\emph{R}~£¬¸ÃÐèÇó¼¯ºÏ°üº¬~d~¸öÐèÇóÎÄ±¾£¬Í¬Ê±¸ø¶¨´úÂë¼¯ºÏ£¨°´Á£¶È¿É·ÖÎª°ü¡¢Àà¡¢º¯Êý£¬ºóÁ½ÕßÎª¿É×·×ÙÐÔÖÐ³£ÓÃµÄ´úÂëÁ£¶È£©~\emph{C}~£¬ÔòÐèÇóµ½´úÂëµÄ¿É×·×ÙÐÔ¾ÍÊÇÔÚR*CÉÏÅÐ¶¨ÈÎÒâÁ½¸örºÍcÖ®¼äÊÇ·ñ´æÔÚ¹¦ÄÜÉÏÏà»¥¹ØÁª¡£¶ÔÓÚÒ»¸ö¸ø¶¨µÄÐèÇórºÍ¸ø¶¨µÄ´úÂëÔªËØc£¬ÎÒÃÇÓÃ²¼¶ûº¯ÊýisTrace(r,c)À´±íÊ¾Á½ÕßÖ®¼äµÄ¹ØÁª¹ØÏµ£¬ÈôcÔÚ´úÂëÖÐÊµÏÖÁË£¨²¿·Ö£©rµÄ¹¦ÄÜ£¬ÔòisTrace(r,c)='trace'(Ïà¹Ø)¡£·ñÔòisTrace='no-trace'(²»Ïà¹Ø)¡£ÓÉr¡¢c¡¢isTrace(r,c)ÈýÕß×é³ÉµÄÒ»¸öÈýÔª×ét¾Í´ú±íÁËrºÍcÖ®¼äµÄÒ»Ìõ×·×ÙÏßË÷¡£ÔòRµ½CµÄ¿É×·×ÙÐÔ¾ÍÊÇÉú³ÉºÍÎ¬»¤Á½ÕßÖ®¼äµÄ×·×ÙÏßË÷¼¯ºÏ$T=\{t=\{r,c,isTrace(r,c)\}|r\in R
- \land  c \in C\}$¡£ÎÊÌâÊÇ£º
-} \\
-Q£ºÏà¶ÔÓÚ´«Í³·½·¨£¬½áºÏ´úÂëÒÀÀµ½ôÃÜ¶È·ÖÎöºÍÓÃ»§·´À¡Éú³ÉµÄÐèÇóµ½´úÂëµÄ×·×ÙÊý¾Ý¾«¶ÈÊÇ·ñÓÐÃ÷ÏÔÌáÉý£¿
-\end{comment}
-
-
 \section{·½·¨¸ÅÊö}
-ÔÚ±¾½Ú£¬ÎÒÃÇ½«½éÉÜ½áºÏ´úÂëÒÀÀµ½ôÃÜ¶È·ÖÎöºÍÓÃ»§·´À¡µÄÈí¼þ¿É×·×ÙÉú³É·½·¨¡£ÎÒÃÇ°ÑÈí¼þ¿ª·¢¹ý³ÌÖÐ²úÉúµÄÐèÇóÖÆÆ·ºÍ´úÂëÖÆÆ·×÷Îª·½·¨µÄÊäÈë£¬½«ºòÑ¡×·×ÙÏßË÷ÁÐ±í×÷Îª·½·¨µÄÊä³ö¡£·½·¨°üº¬ËÄ¸ö²½Öè£¨1£©»ñµÃÄ¿±êÈí¼þ´æÔÚµÄ´úÂëÒÀÀµ£»£¨2£©¼ÆËã´úÂëÒÀÀµ½ôÃÜ¶È£¬ÉèÖÃ½ôÃÜ¶ÈãÐÖµÉú³ÉºòÑ¡´úÂëÓò£»£¨3£©»ùÓÚÐÅÏ¢¼ìË÷·½·¨£¬²úÉúÐèÇóµ½´úÂëµÄ³õÊ¼ºòÑ¡×·×ÙÏßË÷ÁÐ±í¡££¨4£©¸ù¾ÝÓÃ»§·´À¡ºÍ´úÂëÒÀÀµÓòÓÅ»¯µ÷Õû³õÊ¼ºòÑ¡×·×ÙÏßË÷ÁÐ±í¡£
+\label{sec:approach}
+ÔÚ±¾Ð¡½Ú£¬ÎÒÃÇ½«½éÉÜ½áºÏ´úÂëÒÀÀµ½ôÃÜ¶È·ÖÎöºÍÓÃ»§·´À¡µÄÈí¼þ¿É×·×ÙÉú³É·½·¨¡£ÎÒÃÇ°ÑÈí¼þ¿ª·¢¹ý³ÌÖÐ²úÉúµÄÐèÇóÖÆÆ·ºÍ´úÂëÖÆÆ·×÷Îª·½·¨µÄÊäÈë£¬½«ºòÑ¡×·×ÙÏßË÷ÁÐ±í×÷Îª·½·¨µÄÊä³ö¡£·½·¨°üº¬Èý¸ö²½Öè£¨1£©¼ÆËã´úÂëÒÀÀµ½ôÃÜ¶È£¬ÉèÖÃ½ôÃÜ¶ÈãÐÖµÉú³ÉºòÑ¡´úÂëÓò£»£¨2£©»ùÓÚÐÅÏ¢¼ìË÷·½·¨£¬²úÉúÐèÇóµ½´úÂëµÄ³õÊ¼ºòÑ¡×·×ÙÏßË÷ÁÐ±í¡££¨3£©¸ù¾ÝÓÃ»§·´À¡ºÍ´úÂëÒÀÀµÓòÓÅ»¯µ÷Õû³õÊ¼ºòÑ¡×·×ÙÏßË÷ÁÐ±í¡£
 
 \begin{figure}[htbp]
     \centering
@@ -114,40 +98,25 @@ Q£ºÏà¶ÔÓÚ´«Í³·½·¨£¬½áºÏ´úÂëÒÀÀµ½ôÃÜ¶È·ÖÎöºÍÓÃ»§·´À¡Éú³ÉµÄÐèÇóµ½´úÂëµÄ×·×ÙÊý¾Ý¾«¶
     \label{F:ApproachOverview}
 \end{figure}
 
-Ëã·¨Á÷³ÌÍ¼ÈçÍ¼~\ref{F:ApproachOverview}ËùÊ¾£¬ÔÚ²½ÖèÒ»ÖÐ£¬»ùÓÚjvmti¹¹Ôì´úÂëÒÀÀµ²¶»ñ¹¤¾ß£¬ÔËÐÐÄ¿±êÏµÍ³²¢²å×®´úÂëÒÀÀµ²¶»ñ¹¤¾ß£¬µÃµ½ÔËÐÐÊ±¿ÌÄ¿±êÏµÍ³µÄº¯Êýµ÷ÓÃºÍÊý¾Ý·ÃÎÊµÈÊý¾Ý£¬²¢ÓÉ´Ë½¨Á¢·½·¨Ö®¼äµÄÖ±½Ó´úÂëÒÀÀµºÍÊý¾ÝÒÀÀµ¹ØÏµ¡£½«·½·¨Ö®¼äµÄÖ±½Ó´úÂëÒÀÀµºÍÊý¾ÝÒÀÀµ×ª»»³ÉÀàÖ®¼äµÄÖ±½Ó´úÂëÒÀÀµºÍÊý¾ÝÒÀÀµ£»ÔÚ²½Öè¶þÖÐ£¬¼ÆËãÖ±½Ó´úÂëÒÀÀµºÍÊý¾ÝÒÀÀµ½ôÃÜ¶È£¬ÉèÖÃ½ôÃÜ¶ÈãÐÖµ£¬µ±Á½¸öÀàÖ®¼ä´úÂëÒÀÀµ½ôÃÜ¶È´óÓÚãÐÖµÊ±Á½ÕßÔÚÍ¬Ò»¸ö´úÂëÓòÖÐ£¬Í¬Ò»¸öÓòÖÐµÄÀà¹¦ÄÜ±È½Ï½ôÃÜ£»ÔÚ²½ÖèÈýÖÐ£¬»ùÓÚÐÅÏ¢¼ìË÷·½·¨£¬¼ÆËãÀàºÍÐèÇóÖ®¼äµÄÎÄ±¾ÏàËÆ¶È£¬²¢°´ÕÕÎÄ±¾ÏàËÆ¶È´Ó´óµ½Ð¡µÄË³ÐòÉú³ÉºòÑ¡×·×ÙÏßË÷ÅÅÐò±í£»ÔÚ²½ÖèËÄÖÐ£¬¶ÔÎ´ÅÐ¶ÏµÄ´úÂëÓò£¬¸ù¾Ý¸÷ÓòÄÚÀàÓëÐèÇóÏàËÆ¶È×î´óÖµ£¬¶ÔÎ´ÅÐ¶Ï´úÂëÓò°´ÕÕÏàËÆ¶ÈÖµ×Ô´óµ½Ð¡µÄË³ÐòÖØÅÅÐò¡£¶ÔÓÚÅÅÃûµÚÒ»µÄ´úÂëÓò£¬È¡ÆäÓòÄÚÓòÐèÇóÏàËÆ¶È×î´óµÄÀà½»ÓÉÓÃ»§ÅÐ¶Ï¡£Èç¹û¸ÃÀàÓëÐèÇó¾ß±¸Ïà¹ØÐÔ£¬Ôòµ÷ÕûÓòÄÚÀàºÍÏà¹ØÓòÍâÀàÓëÐèÇóµÄÏàËÆ¶ÈÖµ¡£
 
-\subsection{´úÂëÒÀÀµ}
-\subsubsection{ÀàÖ®¼äµÄ´úÂëÒÀÀµ¹ØÏµ}
-\label{sec:sec:codeDepBetweenClass}
+Ëã·¨Á÷³ÌÍ¼ÈçÍ¼~\ref{F:ApproachOverview}ËùÊ¾£¬ÔÚ²½ÖèÒ»ÖÐ£¬¶Ô²»Í¬µÄ´úÂëÒÀÀµ½øÐÐ·ÖÀàÕûÀí£¬¼ÆËãÖ±½Ó´úÂëÒÀÀµºÍÊý¾ÝÒÀÀµ½ôÃÜ¶È£¬ÉèÖÃ½ôÃÜ¶ÈãÐÖµ£¬µ±Á½¸öÀàÖ®¼ä´úÂëÒÀÀµ½ôÃÜ¶È´óÓÚãÐÖµÊ±Á½ÕßÔÚÍ¬Ò»¸ö´úÂëÓòÖÐ£¬Í¬Ò»¸öÓòÖÐµÄÀà¹¦ÄÜ±È½Ï½ôÃÜ£»ÔÚ²½ÖèÈýÖÐ£¬»ùÓÚÐÅÏ¢¼ìË÷·½·¨£¬¼ÆËãÀàºÍÐèÇóÖ®¼äµÄÎÄ±¾ÏàËÆ¶È£¬²¢°´ÕÕÎÄ±¾ÏàËÆ¶È´Ó´óµ½Ð¡µÄË³ÐòÉú³ÉºòÑ¡×·×ÙÏßË÷ÅÅÐò±í£»ÔÚ²½ÖèËÄÖÐ£¬¶ÔÎ´ÅÐ¶ÏµÄ´úÂëÓò£¬¸ù¾Ý¸÷ÓòÄÚÀàÓëÐèÇóÏàËÆ¶È×î´óÖµ£¬¶ÔÎ´ÅÐ¶Ï´úÂëÓò°´ÕÕÏàËÆ¶ÈÖµ×Ô´óµ½Ð¡µÄË³ÐòÖØÅÅÐò¡£¶ÔÓÚÅÅÃûµÚÒ»µÄ´úÂëÓò£¬È¡ÆäÓòÄÚÓòÐèÇóÏàËÆ¶È×î´óµÄÀà½»ÓÉÓÃ»§ÅÐ¶Ï¡£Èç¹û¸ÃÀàÓëÐèÇó¾ß±¸Ïà¹ØÐÔ£¬Ôòµ÷ÕûÓòÄÚÀàºÍÏà¹ØÓòÍâÀàÓëÐèÇóµÄÏàËÆ¶ÈÖµ¡£
+
+\begin{comment}
+Ëã·¨Á÷³ÌÍ¼ÈçÍ¼~\ref{F:ApproachOverview}ËùÊ¾£¬ÔÚ²½ÖèÒ»ÖÐ£¬»ùÓÚjvmti¹¹Ôì´úÂëÒÀÀµ²¶»ñ¹¤¾ß£¬ÔËÐÐÄ¿±êÏµÍ³²¢²å×®´úÂëÒÀÀµ²¶»ñ¹¤¾ß£¬µÃµ½ÔËÐÐÊ±¿ÌÄ¿±êÏµÍ³µÄº¯Êýµ÷ÓÃºÍÊý¾Ý·ÃÎÊµÈÊý¾Ý£¬²¢ÓÉ´Ë½¨Á¢·½·¨Ö®¼äµÄÖ±½Ó´úÂëÒÀÀµºÍÊý¾ÝÒÀÀµ¹ØÏµ¡£½«·½·¨Ö®¼äµÄÖ±½Ó´úÂëÒÀÀµºÍÊý¾ÝÒÀÀµ×ª»»³ÉÀàÖ®¼äµÄÖ±½Ó´úÂëÒÀÀµºÍÊý¾ÝÒÀÀµ£»¼ÆËãÖ±½Ó´úÂëÒÀÀµºÍÊý¾ÝÒÀÀµ½ôÃÜ¶È£¬ÉèÖÃ½ôÃÜ¶ÈãÐÖµ£¬µ±Á½¸öÀàÖ®¼ä´úÂëÒÀÀµ½ôÃÜ¶È´óÓÚãÐÖµÊ±Á½ÕßÔÚÍ¬Ò»¸ö´úÂëÓòÖÐ£¬Í¬Ò»¸öÓòÖÐµÄÀà¹¦ÄÜ±È½Ï½ôÃÜ£»ÔÚ²½ÖèÈýÖÐ£¬»ùÓÚÐÅÏ¢¼ìË÷·½·¨£¬¼ÆËãÀàºÍÐèÇóÖ®¼äµÄÎÄ±¾ÏàËÆ¶È£¬²¢°´ÕÕÎÄ±¾ÏàËÆ¶È´Ó´óµ½Ð¡µÄË³ÐòÉú³ÉºòÑ¡×·×ÙÏßË÷ÅÅÐò±í£»ÔÚ²½ÖèËÄÖÐ£¬¶ÔÎ´ÅÐ¶ÏµÄ´úÂëÓò£¬¸ù¾Ý¸÷ÓòÄÚÀàÓëÐèÇóÏàËÆ¶È×î´óÖµ£¬¶ÔÎ´ÅÐ¶Ï´úÂëÓò°´ÕÕÏàËÆ¶ÈÖµ×Ô´óµ½Ð¡µÄË³ÐòÖØÅÅÐò¡£¶ÔÓÚÅÅÃûµÚÒ»µÄ´úÂëÓò£¬È¡ÆäÓòÄÚÓòÐèÇóÏàËÆ¶È×î´óµÄÀà½»ÓÉÓÃ»§ÅÐ¶Ï¡£Èç¹û¸ÃÀàÓëÐèÇó¾ß±¸Ïà¹ØÐÔ£¬Ôòµ÷ÕûÓòÄÚÀàºÍÏà¹ØÓòÍâÀàÓëÐèÇóµÄÏàËÆ¶ÈÖµ¡£
+\end{comment}
+
+\subsection{¼ÆËã´úÂëÒÀÀµ½ôÃÜ¶È²¢Éú³É´úÂëÒÀÀµÓò}
+\label{sec:sec:algCalculateCodeDepCloseness}
+´úÂëÒÀÀµµÄ²¶»ñ¹ý³ÌÏê¼û~\ref{sec:sec:code_dependency_capturer}¡£
+                                     
+\subsubsection{×éÖ¯´úÂëÒÀÀµ¹ØÏµ}
 ÎÒÃÇ¿¼ÂÇÀàÖ®¼äµÄËÄÖÖÒÀÀµ¹ØÏµ£¬ÀàÖ®¼äµÄ·½·¨µ÷ÓÃ¡¢Àà¼Ì³Ð¡¢ÀàÊ¹ÓÃºÍÀàµÄÊý¾Ý¹²Ïí¡£${C_{a}}$µ½${C_{b}}$´æÔÚµ÷ÓÃÒÀÀµËµÃ÷ÖÁÉÙ´æÔÚÒ»¸ö
 ${C_{a}}$ µÄ·½·¨µ÷ÓÃÁË${C_{b}}$µÄ·½·¨¡£${C_{a}}$Ê¹ÓÃ${C_{b}}$±íÃ÷${C_{b}}$ÊÇ${C_{a}}$µÄÒ»¸ö³ÉÔ±±äÁ¿¡£Á½¸öÀà´æÔÚÊý¾ÝÒÀÀµ±íÃ÷Á½¸öÀàÖÐ´æÔÚ·ÃÎÊÍ¬Ò»¸öÊý¾ÝµÄ·½·¨£¬±¾ÎÄÖ»¹Ø×¢ÔÚÄÚ´æÖÐµÄÊý¾Ý¡£Ç°ÈýÖÖÒÀÀµ¿ÉÒÔÍ¨¹ý¾²Ì¬´úÂë·ÖÎöµÄ·½·¨µÃµ½£¬ÓëÇ°ÈýÖÖ´úÂëÒÀÀµÏà±ÈÀàÖ®¼äµÄÊý¾ÝÒÀÀµ²¶»ñÄÑ¶È¸ü´ó¡£È»¶øÖ®Ç°¹¤×÷
 ~\cite{Kuang2017closeness,kuang2015can}±íÃ÷¶ÔÓÚ¿É×·×ÙÐÔÊý¾ÝÉú³ÉÈÎÎñ£¬Êý¾ÝÒÀÀµÓëÇ°ÈýÖÖ´úÂëÒÀÀµ»¥²¹£¬Ïà¸¨Ïà³É¹²Í¬Ìá¸ßÈí¼þ¿É×·×ÙÉú³É·½·¨µÄ¾«¶È¡£
-
-\subsubsection{»ñÈ¡´úÂëÒÀÀµ}
-\label{sec:sec:captureCodeDep}
-ÎÒÃÇÊ¹ÓÃÖ®Ç°¹¤×÷~\cite{kuang2015can}¹¹ÔìµÄ´úÂëÒÀÀµ²¶»ñ¹¤¾ßÀ´²¶»ñÉÏÊöÌáµ½µÄ´úÂëÒÀÀµ¡£¸Ã¹¤¾ß»ùÓÚjvmti½Ó¿ÚÔÚÔËÐÐÊ±¿Ì»ñµÃÄ¿±êÏµÍ³ÖÐµÄº¯Êýµ÷ÓÃºÍÊý¾Ý·ÃÎÊÐÅÏ¢¡£ÎÒÃÇ»ùÓÚÈçÏÂÔ­ÒòÑ¡È¡¸Ã¹¤¾ß
-\begin{enumerate}
-  \item ËäÈ»ÄÜ¹»²¶»ñº¯Êýµ÷ÓÃµÄ¶¯Ì¬·ÖÎö¹¤¾ßºÜ¶à£¨ÀýÈçÖøÃûµÄThe Eclipse Test \& Performance Tools Platform£¬TPTP£»»òJava Plug-in Framework£¬JPF£©£¬µ«ÊÇÕâÐ©¹¤¾ß¶¼²»ÄÜ²¶»ñº¯ÊýÖ®¼äµÄÊý¾Ý¹²Ïí¡£
-  \item »ùÓÚjavaÐéÄâ»úµÄÔËÐÐÊ±¼ì²â£¬Õâ¸ö¹¤¾ß¿ÉÒÔ²¶»ñÊµ¼ÊÖ´ÐÐµÄ´úÂëÒÀÀµ¹ØÏµ²¢ÕýÈ·´¦Àí¶àÌ¬¡£ÓÉÓÚ¸Ã¹¤¾ßÊÇÔÚÏµÍ³ÔËÐÐÊ±¿Ì¶ÔÏµÍ³Êµ¼ÊÐÐÎªµÄ¹Û²ìÓë¼ÇÂ¼£¬Òò´Ë²»»á²úÉú·ÇÕýÈ·µÄ´úÂëÒÀÀµ¹ØÏµ¡£
-  \item ¸Ã¹¤¾ß¿ÉÒÔÔÚÒ»´ÎÏµÍ³ÔËÐÐÖÐÍ¬Ê±»ñµÃÒÔÉÏËÄÖÖ´úÂëÒÀÀµ£¬ÓÉÓÚËùÖ´ÐÐ²âÊÔ¼¯ºÏµÄ²»Íê±¸ÐÔ£¬¶¯Ì¬·ÖÎöÎÞ·¨±£Ö¤²¶»ñµÄ´úÂëÒÀÀµ¹ØÏµµÄÍêÕûÐÔ£¬ËäÈ»ÕâÒ»ÎÊÌâÎÞ·¨±ÜÃâ£¬µ«ÊÇÎÒÃÇÈÏÎª²¿·ÖÈ·ÊµµÄ´úÂëÒÀÀµ¹ØÏµÔÚÆäÈ±Ê§³Ì¶È´óÖÂÏàÍ¬µÄÇé¿öÏÂ£¬²¢²»»áÓ°Ïì×îÖÕµÄÊµÑé½á¹û£¬ÆäÔ­ÒòÔÚÓÚÎÒÃÇÓÃÒ»¸öÕûºÏµÄ¹¤¾ßÔÚÔËÐÐÏàÍ¬²âÊÔ¼¯ºÏµÄÊ±ºòÍ¬Ê±²¶»ñº¯Êýµ÷ÓÃºÍÊý¾ÝÒÀÀµ¡£
-\end{enumerate}
-
-¸ù¾Ý²¶»ñµÄ·½·¨¼¶´úÂëÒÀÀµ£¬ÎÒÃÇ¿ÉÒÔµÃ³ö¶ÔÓ¦µÄËÄÖÖÀà¼¶±ð´úÂëÒÀÀµ
-\begin{enumerate}
-  \item ÀàÖ®¼äµ÷ÓÃÒÀÀµ¹ØÏµ´Ó·½·¨µ÷ÓÃÒÀÀµ¹ØÏµÖÐ³éÏó³öÀ´£¬µ÷ÓÃ±ßµÄÈ¨ÖµÎª·¢Éú²»Í¬·½·¨µ÷ÓÃµÄ´ÎÊý¡£
-  \item ÀàÖ®¼äÊý¾ÝÒÀÀµ¹ØÏµ´Ó·½·¨Êý¾ÝÒÀÀµ¹ØÏµÖÐ³éÏó³öÀ´£¬Êý¾ÝÒÀÀµ±ßµÄÈ¨ÖµÎªÁ½¸öÀàÖ®¼ä¹²ÏíÊý¾ÝÀàÐÍµÄ¸öÊý¡£
-  \item ÀàÖ®¼äÊ¹ÓÃ¹ØÏµ´Ó·½·¨Ö®¼äÊý¾ÝÒÀÀµ¹ØÏµÖÐ³éÏó³öÀ´¡£
-  \item ÀàÖ®¼ä¼Ì³Ð¹ØÏµ´Ó·½·¨µ÷ÓÃÖÐµÃµ½£¬×ÓÀàÔÚµ÷ÓÃ×Ô¼ºµÄ¹¹Ôì·½·¨Ö®Ç°»áÈ¥µ÷ÓÃÆä¸¸ÀàµÄ¹¹Ôì·½·¨¡£
-\end{enumerate}
-
-\subsubsection{×éÖ¯´úÂëÒÀÀµ¹ØÏµ}
 ²Î¿¼µäÐÍµÄ»ùÓÚÐÅÏ¢¼ìË÷Ê¹ÓÃ´úÂëÒÀÀµµÄ·½·¨~\cite{Kuang2017closeness,panichella2013and}£¬ÎÒÃÇ°ÑÀàÖ®¼äµÄµ÷ÓÃ¡¢¼Ì³ÐºÍÊ¹ÓÃºÏ²¢ÎªÒ»ÖÖÀàÐÍµÄ´úÂëÒÀÀµ¼´Ö±½Ó´úÂëÒÀÀµ£¬°ÑÀàÖ®¼äµÄÊý¾Ý¹²Ïí¿´×÷ÁíÍâÒ»ÖÖ´úÂëÒÀÀµ¼´Êý¾ÝÒÀÀµ¡£
 ÓÉÓÚÇ°ÈýÖÖ´úÂëÒÀÀµµÄ½á¹¹ÀàËÆ²¢ÇÒ¾ßÓÐÃ÷ÏÔµÄ·½ÏòÐÔ£¬²¢ÇÒÀàÖ®¼äµÄµ÷ÓÃ¡¢¼Ì³ÐºÍÊ¹ÓÃÔÚºÜ´ó³Ì¶ÈÉÏÊÇÖØµþµÄ£¬ËùÒÔ±¾ÎÄ°ÑËüÃÇ¹éÎªÍ¬Ò»ÖÖÀà£¬ÓÃÀ´¶ÔÃèÊöÈí¼þÏµÍ³µÄ¿ØÖÆÁ÷¡£ÀàÖ®¼äµÄÊý¾ÝÒÀÀµÊÇÖ¸Á½¸ö¶ÔÏó·ÃÎÊÍ¬Ò»¸öÊý¾Ý£¬Ã»ÓÐ·½ÏòµÄ¸ÅÄî£¬ÓÃÀ´ÃèÊöÈí¼þÏµÍ³µÄÊý¾ÝÁ÷¡£
 ¶ÔÓÚÒÔÉÏÁ½ÖÖ²»Í¬µÄ´úÂëÒÀÀµ£¬ÎÒÃÇ²ÉÓÃÁ½ÖÖ²»Í¬µÄ·½·¨¼ÆËãËüÃÇµÄ´úÂëÒÀÀµ½ôÃÜ¶È¡£Á½ÖÖ´úÂëÒÀÀµµÄ¾ßÌå¼ÆËã·½Ê½½«ÔÚ~\ref{sec:sec:algCalculateCodeDepCloseness}ÖÐ½éÉÜ¡£
 
-
-\subsection{¼ÆËã´úÂëÒÀÀµ½ôÃÜ¶È²¢Éú³É´úÂëÒÀÀµÓò}
-\label{sec:sec:algCalculateCodeDepCloseness}
 ÔÚ±¾²½ÖèÖÐ£¬ÎÒÃÇ½«°´ÕÕÎÒÃÇÖ®Ç°¹¤×÷~\cite{Kuang2017closeness}ÖÐµÄ·½·¨¼ÆËãÖ±½Ó´úÂëÒÀÀµºÍ¼ä½Ó´úÂëÒÀÀµµÄ½ôÃÜ¶È¡£
 \subsubsection{¼ÆËãÖ±½Ó´úÂëÒÀÀµ½ôÃÜ¶È}
 \label{sec:sec:sec:calculateDirectCodeDepCloseness}
@@ -271,6 +240,8 @@ regions $\leftarrow$ CDCGraph.prune($Threshold_{DC}$,$Threshold_{CD}$);\\
 Ëã·¨~\ref{alg:reRankCandidate}ÃèÊöÁËÎÒÃÇµÄËã·¨¡£
 
 \section{°¸Àý·ÖÎö}
+\label{sec:caseStudy}
+
 ±¾Ð¡½ÚÒÔÊµÑéÏµÍ³iTrustÎªÀý£¬ÏêÏ¸²ûÊö±¾ÎÄ·½·¨µÄÖ´ÐÐ¹ý³Ì¡£
 %\subsection{ÊµÑéÏµÍ³½éÉÜ}
 iTrustÊÇÒ»¸öÒ½ÁÆ¹ÜÀíÈí¼þ£¬²ÉÓÃjavaÓïÑÔ±àÐ´¡£¸ÃÏµÍ³°üÀ¨ucºÍsrcÄ¿Â¼£¬ÆäÖÐucÄ¿Â¼ÀïÃæÊÇÒ»×éÓÃÓÚÃèÊöÐèÇóµÄÎÄ±¾ÎÄ¼þ£¬srcÄ¿Â¼Îª¸ÃÏîÄ¿µÄ´úÂëÎÄ¼þ¡£
@@ -312,7 +283,7 @@ iTrustÊÇÒ»¸öÒ½ÁÆ¹ÜÀíÈí¼þ£¬²ÉÓÃjavaÓïÑÔ±àÐ´¡£¸ÃÏµÍ³°üÀ¨ucºÍsrcÄ¿Â¼£¬ÆäÖÐucÄ¿Â¼ÀïÃ
 ÈçÉÏ~\ref{sec:sec:sec:calculateDataDepCloseness}ËùÊö£¬¼ÆËãÀàÖ®¼äÊý¾ÝÒÀÀµÖ®Ç°ÐèÒªÏÈ¼ÆËã¸÷Êý¾ÝÀàÐÍµÄ~\emph{idtf}Öµ£¬ÓÃÀýÖÐÉæ¼°Êý¾ÝÀàÐÍµÄ~\emph{idtf}Öµ¼û±í~\ref{T:idtfForDataType}£º
 \begin{table}
  \centering
- \caption{¸÷Êý¾ÝÀàÐÍµÄidtfÖµ£¨×ÜÊý¾ÝÒÀÀµ×Ü¸öÊýÎª4844£©}
+ \caption{iTrustÏµÍ³ÖÐ¸÷Êý¾ÝÀàÐÍµÄidtfÖµ}
  \label{T:idtfForDataType}
  \begin{tabular}{@{}llll@{}}
    \toprule
@@ -391,5 +362,13 @@ $min(0.3524,(0.2112+0.1175)*(1+0.73))=0.3524$¡£
 ÓÉ±íÖÐ¿ÉÒÔ¿´³ö£¬±¾ÎÄµÄ·½·¨ÌáÉýÁËÊµÏÖUC15µÄÀàÔÚÅÅÐò±íÖÐµÄÎ»ÖÃ¡£
 
 \section{±¾ÕÂÐ¡½á}
+ÔÚ±¾ÕÂÖÐ£¬ÎÒÃÇÌá³öÁËÒ»ÖÖ½áºÏÁË´úÂë½ôÃÜ¶È·ÖÎöºÍÓÃ»§·´À¡µÄÈí¼þ¿É×·×ÙÉú³É·½·¨¡£Ò»·½ÃæÍ¨¹ýÉèÖÃ´úÂë½ôÃÜ¶ÈãÐÖµ»®·Ö´úÂëÓò£¬Ê¹µÃ¹¦ÄÜ½ôÃÜµÄ´úÂëÔªËØÎ»ÓÚÍ¬Ò»¸ö´úÂëÓòÖÐ£»ÁíÒ»·½Ãæ£¬¶ÔÓÚ¸ø¶¨ÐèÇó£¬½«¸÷´úÂëÓòÖÐÓÐ´ú±íÐÔµÄ´úÂëÔªËØ½»ÓÉÓÃ»§ÅÐ¶ÏÓë¸ÃÐèÇóÏà¹ØÐÔ£¬¸ù¾ÝÓÃ»§·´À¡ÐÅÏ¢µ÷ÕûÏà¹Ø´úÂëÔªËØ¶ÔÓ¦ºòÑ¡ÏßË÷µÄÏàËÆ¶ÈÖµ¡£²¢ÇÒ£¬±¾ÕÂ½áºÏÒ»¸öÕæÊµÈí¼þÏµÍ³Ä³Ò»ÐèÇóµÄ¿É×·×Ù½¨Á¢¹ý³Ì£¬¶Ô·½·¨ÖÐµÄ²½Öè×öÁËÏêÏ¸½éÉÜ¡£
 
-ÔÚ±¾ÕÂÖÐ£¬ÎÒÃÇÌá³öÒ»ÖÖ»ùÓÚ´úÂëÒÀÀµ¹ØÏµµÄ¹ýÊ±ÐèÇó×Ô¶¯¼ì²âÓë¸üÐÂÍÆ¼ö·½·¨£¬Ìá¸ßÁË¹ýÊ±ÐèÇó¼ì²âÊ±µÄ¾«¶È£¬²¢ÍÆ¼öÓë¹ýÊ±ÐèÇó¸üÐÂÏà¹ØµÄ±ä¸ü´úÂëÔªËØ£¬ÒÔ¸¨ÖúÎ¬»¤ÈËÔ±Íê³É¶ÔÐèÇóµÄ¸üÐÂ¡£
+\begin{comment}
+\subsection{ÎÊÌâ¶¨Òå}
+
+\textbf{~\emph{ÎÊÌâ¶¨Òå.}} ~\emph{¸ø¶¨Ò»¸öÐèÇó¼¯ºÏ~\emph{R}~£¬¸ÃÐèÇó¼¯ºÏ°üº¬~d~¸öÐèÇóÎÄ±¾£¬Í¬Ê±¸ø¶¨´úÂë¼¯ºÏ£¨°´Á£¶È¿É·ÖÎª°ü¡¢Àà¡¢º¯Êý£¬ºóÁ½ÕßÎª¿É×·×ÙÐÔÖÐ³£ÓÃµÄ´úÂëÁ£¶È£©~\emph{C}~£¬ÔòÐèÇóµ½´úÂëµÄ¿É×·×ÙÐÔ¾ÍÊÇÔÚR*CÉÏÅÐ¶¨ÈÎÒâÁ½¸örºÍcÖ®¼äÊÇ·ñ´æÔÚ¹¦ÄÜÉÏÏà»¥¹ØÁª¡£¶ÔÓÚÒ»¸ö¸ø¶¨µÄÐèÇórºÍ¸ø¶¨µÄ´úÂëÔªËØc£¬ÎÒÃÇÓÃ²¼¶ûº¯ÊýisTrace(r,c)À´±íÊ¾Á½ÕßÖ®¼äµÄ¹ØÁª¹ØÏµ£¬ÈôcÔÚ´úÂëÖÐÊµÏÖÁË£¨²¿·Ö£©rµÄ¹¦ÄÜ£¬ÔòisTrace(r,c)='trace'(Ïà¹Ø)¡£·ñÔòisTrace='no-trace'(²»Ïà¹Ø)¡£ÓÉr¡¢c¡¢isTrace(r,c)ÈýÕß×é³ÉµÄÒ»¸öÈýÔª×ét¾Í´ú±íÁËrºÍcÖ®¼äµÄÒ»Ìõ×·×ÙÏßË÷¡£ÔòRµ½CµÄ¿É×·×ÙÐÔ¾ÍÊÇÉú³ÉºÍÎ¬»¤Á½ÕßÖ®¼äµÄ×·×ÙÏßË÷¼¯ºÏ$T=\{t=\{r,c,isTrace(r,c)\}|r\in R
+ \land  c \in C\}$¡£ÎÊÌâÊÇ£º
+} \\
+Q£ºÏà¶ÔÓÚ´«Í³·½·¨£¬½áºÏ´úÂëÒÀÀµ½ôÃÜ¶È·ÖÎöºÍÓÃ»§·´À¡Éú³ÉµÄÐèÇóµ½´úÂëµÄ×·×ÙÊý¾Ý¾«¶ÈÊÇ·ñÓÐÃ÷ÏÔÌáÉý£¿
+\end{comment}

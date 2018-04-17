@@ -21,8 +21,8 @@
 \end{figure}
 接下来我们将简要介绍软件可追踪生成工具给用户（项目负责人）带来的益处：
 \begin{enumerate}
-  \item 该工具类似一个搜索引擎（如图~\ref{F:user_interface}左侧窗体所示）根据输入需求返回与需求存在相关性的代码元素列表（如图~\ref{F:query_result}最右侧窗体），工具界面精简，操作简单。
-  \item 在用户对少量有代表性追踪线索相关性进行验证的阶段（如图~\ref{F:user_interface}右侧窗体所示），工具提供了大量的额外信息（如图~\ref{F:help_validate}所示）辅助用户完成判断。此举能够有效减少用户付出的时间成本并有效提升用户判断的正确率。
+  \item 该工具类似一个搜索引擎（如图~\ref{F:user_interface}左侧窗体所示）根据输入需求返回与需求存在相关性的代码元素列表（如图~\ref{F:query_result}最右下角窗体），工具界面精简，操作简单。
+  \item 在用户对少量有代表性追踪线索相关性进行验证的阶段（如图~\ref{F:user_interface}中间窗体所示），工具提供了大量的额外信息（如图~\ref{F:help_validate}所示）辅助用户完成判断。此举能够有效减少用户付出的时间成本并有效提升用户判断的正确率。
 \end{enumerate}
 
 利用软件可追踪生成工具，用户只需判断少量的候选追踪线索相关性。之前~\ref{sec:methodValidate}实验表明，当有3.5\%候选追踪线索相关性交由用户验证时，最终得到的候选追踪列表的精度即可明显优于基线方法。在用户验证阶段，工具通过提供代码依赖图拓扑图、特殊单词高亮等多种手段（详见~\ref{sec:case_introduction}）保证用户能够高效的做出给出正确的判断结果。综上所述，通过该工具用户只需很少的参与即可得到相对高精度的需求到代码的追踪列表。
@@ -56,7 +56,7 @@
 在本小节，我们将结合一个案例说明工具的使用方式。
 \begin{figure}[htbp]
     \centering
-    \includegraphics[width=1.0\textwidth]{./figures/tool/user_interface.png}
+    \includegraphics[width=1.0\textwidth]{./figures/tool/startQuery.pdf}
     \caption{需求可追踪查询}
     \label{F:user_interface}
 \end{figure}
@@ -64,26 +64,28 @@
 
 首先用户需要导入需求和代码等数据。接下来进入图~\ref{F:user_interface}左侧所示界面，
 
-我们的工具类似一个搜索引擎，向用户返回与指定需求相关的代码元素信息。点击搜索后会进入用户交互界面（图~\ref{F:user_interface} 右侧所示界面），工具选择少量有代表性的追踪线索交由用户验证。
-本例HospitalsDAO是其所在代码域与需求UC18相似度最大的类。因此，工具用HospitalsDAO与UC18的相关性来代表代码域中其它类与UC18的相关性。为了使用户能够高效的给出正确的验证结果。工具提供大量信息辅助用户完成验证，用户只需通过~\emph{帮助}按钮即可获得大量辅助信息（如图~\ref{F:help_validate}所示）。
+我们的工具类似一个搜索引擎，向用户返回与指定需求相关的代码元素信息。点击搜索后会进入用户交互界面（图~\ref{F:user_interface} 中间窗体所示界面），工具选择少量有代表性的追踪线索交由用户验证。
+本例HospitalsDAO是其所在代码域与需求UC18相似度最大的类。因此，工具用HospitalsDAO与UC18的相关性来代表代码域中其它类与UC18的相关性，图~\ref{F:user_interface}左侧窗体为需求UC18的文本信息，右侧窗体为代码元素HospitlsDAO的文本信息。为了使用户能够高效的给出正确的验证结果。工具提供大量信息辅助用户完成验证，用户只需通过~\emph{帮助}按钮即可获得大量辅助信息（如图~\ref{F:help_validate}所示）。
 \begin{figure}[htbp]
     \centering
-    \includegraphics[width=1.0\textwidth]{./figures/tool/help_validate.png}
+    \includegraphics[width=1.0\textwidth]{./figures/tool/helpUser.pdf}
     \caption{辅助用户验证信息}
     \label{F:help_validate}
 \end{figure}
 
-图~\ref{F:help_validate}最左侧为代码依赖拓扑图，蓝色矩形代表的代码元素为用户需要判断的类，绿色代码元素为与当前类位于同一个代码域中的类。黄色矩形代表与当前类存在代码依赖关系的域外类。红色矩形代表与当前需求相似度最大的类。白色为与域内其它类存在代码依赖的域外类。用户通过点击这些矩形框可以很方便的查看这些类与需求的相似度值，当前查看的方法的方法名等信息。在需求中出现过的单词会在类文本中高亮显示（如图~\ref{F:help_validate}所示）。工具也会向用户提供已经用户验证的与当前类存在相关性的需求信息（如图~\ref{F:help_validate}右侧的窗体所示，HospitalsDAO和UC25具有相关性），同时用户也能很方便的查看该需求文本内容（如图~\ref{F:help_validate}右侧窗体所示）。用户通过阅读UC18的文本内容（如图~\ref{F:user_interface} 所示）知该需求描述了管理员维护医院列表信息的功能。
-
-一方面，从图~\ref{F:help_validate}查看与HospitalsDAO 位于同一代码域的UpdateHospitalListAction 和与UC18 文本相似度最大的HospitalBeanValidator 的文本内容，里面出现大量~\emph{hospital、administrator} 等在UC18 中出现的单词。因此，用户很容易得出UpdateHospitalListAction 大概率与UC18具有相关。另一方面，根据代码命名规则，HospitalsDAO是负责与数据库交互。根据该类与周边类的代码依赖关系，用户很容易得出该类可能负责添加、查询医院信息等操作。与HospitalsDAO 存在相关性UC25 所描述的功能为，根据用户提供医院编码和医生类型等数据，返回患者对医生的满意度信息。这验证了用户对HospitalDAO 负责与数据库交互读取与与医院相关数据表的猜测。综合与HospitalsDAO 存在代码依赖的类和与其存在相关性的需求信息，用户很容易得出该类与UC18 存在相关性。接下来进入图~\ref{F:query_result} 所示界面，用户给出自己的判定结果。此时工具会更新候选列表排序并可能推荐一条新的候选追踪线索交由用户判断，如图~\ref{F:query_result}中间窗体所示，
+图~\ref{F:help_validate}最中间窗体为代码依赖拓扑图，蓝色矩形代表的代码元素为用户需要判断的类，绿色代码元素为与当前类位于同一个代码域中的类。黄色矩形代表与当前类存在代码依赖关系的域外类。红色矩形代表与当前需求相似度最大的类。白色为与域内其它类存在代码依赖的域外类。用户通过点击这些矩形框可以很方便的查看这些类与需求的相似度值，当前查看的方法的方法名等信息（通过点击相应矩形框，生成图~\ref{F:help_validate} 外侧窗体）。在需求中出现过的单词会在类文本中高亮显示。工具也会向用户提供已经用户验证的与当前类存在相关性的需求信息（如图~\ref{F:help_validate}左上角的窗体所示，HospitalsDAO和UC25具有相关性），同时用户也能很方便的查看该需求文本内容（如图~\ref{F:help_validate} 右上角窗体所示）。用户通过阅读UC18的文本内容知该需求描述了管理员维护医院列表信息的功能。
 \begin{figure}[htbp]
     \centering
-    \includegraphics[width=1.0\textwidth]{./figures/tool/query_result.png}
+    \includegraphics[width=1.0\textwidth]{./figures/tool/startToEnd.pdf}
     \caption{需求查询结果显示图}
     \label{F:query_result}
 \end{figure}
-直到用户终止判断，工具给出图~\ref{F:query_result}右侧所示结果。在排序表中越靠前的类，与需求存在相关性的概率越大。
-通常情况下，软件负责人通过review排在列表顶部的几个类，即可完成对问题代码段的修复任务。
+一方面，从图~\ref{F:help_validate}查看与HospitalsDAO 位于同一代码域的~UpdateHospitalListAction 和与UC18 文本相似度最大的HospitalBeanValidator 的文本内容，里面出现大量~\emph{hospital、administrator} 等在UC18 中出现的单词。因此，用户很容易得出UpdateHospitalListAction 大概率与UC18具有相关。另一方面，根据代码命名规则，HospitalsDAO是负责与数据库交互。根据该类与周边类的代码依赖关系，用户很容易得出该类可能负责添加、查询医院信息等操作。与HospitalsDAO 存在相关性UC25 所描述的功能为，根据用户提供医院编码和医生类型等数据，返回患者对医生的满意度信息。这验证了用户对HospitalDAO 负责与数据库交互读取与与医院相关数据表的猜测。综合与HospitalsDAO 存在代码依赖的类和与其存在相关性的需求信息，用户很容易得出该类与UC18 存在相关性。
+
+经过少量类似的用户验证，最终，工具会向用户提供与需求UC18具有相关性的代码元素排序表。图~\ref{F:query_result} 展示了从初始追踪线索列表经少量用户参与到生成优化后的候选追踪列表的过程。其中绿色和红色背景的候选追踪线索分别代表已经用户验证与UC18相关和不相关的代码元素，黄色代表工具推荐给用户判断但是用户选择跳过即未对进行判断与UC18相关性的代码元素（这和图~\ref{F:user_interface}中间窗台各选项颜色存在对应关系）。
+在排序表中越靠前的类，与需求存在相关性的概率越大。通常情况下，软件负责人通过review排在列表顶部的几个类，即可完成对问题代码段的修复任务。
+
+
 
 \section{本章小结}
 在本章中，我们介绍了需求到代码可追踪生成辅助工具的设计实现与应用场景，并辅以一个具体案例解释了工具的使用流程。需求到代码可追踪生成辅助工具能减少用户参与并且提高追踪列表的准确率和完全率。该工具可以帮助用户快速得到与指定需求存在相关性的代码元素。

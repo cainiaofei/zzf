@@ -29,8 +29,8 @@ $Code_{4}$ &              &              & X            &     & X            \\
 $Code_{n}$ &              & X            &              &     &              \\ \bottomrule
 \end{tabular}
 \end{table}
-ÆäÖÐÐÐÎª´úÂëÏî£¬ÁÐÎªÐèÇóÏî¡£Ã¿Ò»ÐÐ´ú±í¸Ã´úÂëÏîÓëÄÄÐ©ÐèÇóÓÐ¹Ø£¬Ã¿Ò»ÁÐ±íÊ¾¸ÃÐèÇóÓÉÄÄÐ©´úÂëÏîÀ´Íê³É¡£¡®X¡¯±íÊ¾´úÂëÏîºÍÐèÇóÏîÖ®¼ä´æÔÚÊµÏÖ¹ØÏµ£¨×·×Ù¹ØÏµ£©¡£ÔÚÊµ¼ÊµÄÈí¼þÉú³É¹ý³ÌÖÐ£¬´úÂëµÄÁ£¶ÈÍ¨³£ÊÇÀà»òÕßº¯Êý£¬ÐèÇóµÄÁ£¶È¿ÉÒÔÊÇÓÃÀý£¨Use Case£©»ò
-ÉùÃ÷£¨Requirement Statement£©¡£
+ÆäÖÐÐÐÎª´úÂëÏî£¬ÁÐÎªÐèÇóÏî¡£Ã¿Ò»ÐÐ´ú±í¸Ã´úÂëÏîÓëÄÄÐ©ÐèÇóÓÐ¹Ø£¬Ã¿Ò»ÁÐ±íÊ¾¸ÃÐèÇóÓÉÄÄÐ©´úÂëÏîÀ´Íê³É¡£¡®X¡¯±íÊ¾´úÂëÏîºÍÐèÇóÏîÖ®¼ä´æÔÚÊµÏÖ¹ØÏµ£¨×·×Ù¹ØÏµ£©¡£ÔÚÊµ¼ÊµÄÈí¼þÉú³É¹ý³ÌÖÐ£¬´úÂëµÄÁ£¶ÈÍ¨³£ÊÇÀà»òÕßº¯Êý£¬ÐèÇóµÄÁ£¶È¿ÉÒÔÊÇÓÃÀý£¨~Use ~Case£©»ò
+ÉùÃ÷£¨~Requirement ~Statement£©¡£
 
 
 \section{ÐÅÏ¢¼ìË÷¼¼Êõ}
@@ -69,7 +69,7 @@ TF-IDFÖµÓÉ´ÊÏîµÄ¾Ö²¿È¨ÖØÖµºÍÈ«¾ÖÈ¨ÖØÖµ×ÛºÏ¾ö¶¨£¬Æä¼ÆËã¹«Ê½ÈçÏÂ£º
 ÆäÖÐ£¬$w$±íÊ¾¶ÔÓ¦ÎÄµµÖÐÓÉTF-IDF¼ÆËã¶øÀ´µÄ´ÊÏîÈ¨ÖØ¡£
 
 LSI£¨Latent semantic indexing£¬Ç±ÔÚÓïÒåË÷Òý£©~\cite{deerwester1990indexing,dumais1991improving} VSMÄ£ÐÍÖÐ²¢Ã»ÓÐ¿¼ÂÇ´ÊÏîÖ®¼äµÄ¹ØÁªÐÔ¡£ÀýÈç£¬¶ÔÓÚ·Ö±ð³öÏÖÁË¡°automobile¡± ºÍ¡°car¡± ´ÊÏîµÄÁ½¸öÎÄµµ£¬ËäÈ»ÕâÁ½¸ö´ÊÏîÊÇÍ¬Òå´Ê¾ù±íÊ¾¡°Æû³µ¡±¡£µ«ÊÇÔÚVSM Ä£ÐÍÏÂ£¬Á½¸öÎÄ±¾Ö®¼äµÄÏàËÆ¶È²»»áÒòÎªÓÐ´óÁ¿Í¬Òå´Ê¶ø±ä´ó¡£LSIÄ£ÐÍÄÜ¹»²¶»ñ´ÊÏîÖ®¼äµÄÏà¹ØÐÔ£¬Èç¹ûÁ½¸ö´ÊÏîÖ®¼ä¾ßÓÐºÜÇ¿µÄÏà¹ØÐÔ£¬ÄÇÃ´µ±Ò»¸ö´ÊÏî³öÏÖÊ±£¬ÍùÍùÒâÎ¶×ÅÁíÒ»¸ö´ÊÏîÒ²»á³öÏÖ£¨Í¬Òå´Ê£©£»·´Ö®£¬Èç¹û²éÑ¯ÎÄµµ»òÕßÄ¿±êÎÄµµÖÐµÄÄ³¸ö´ÊÏîºÍÆäËü´ÊÏîµÄÏà¹ØÐÔ¶¼²»´ó£¬ÄÇÃ´Õâ¸ö´ÊÏîºÜ¿ÉÄÜ±íÊ¾µÄÊÇÁíÒ»¸öÒâË¼£¨Ò»´Ê¶àÒå£¬±ÈÈçApple ÔÚ²»Í¬Óï¾³ÏÂ¿ÉÄÜÊÇË®¹ûÒ²¿ÉÄÜÊÇÖ¸ÊÖ»ú£©¡£LSI²ÉÓÃÆæÒìÖµ¾ØÕó·Ö½â£¨SVD£©
-~\cite{salton1986introduction}¶ÔVSMÄ£ÐÍÏÂµÄ´ÊÏî-ÎÄµµ¾ØÕó£¨Term-by-Document£©½øÐÐ·Ö½â¡£ÆæÒìÖµ¾ØÕó·Ö½â¿ÉÒÔ¿´×÷ÊÇ´Óµ¥´Ê- ÎÄµµ¾ØÕóÖÐ·¢ÏÖ²»Ïà¹ØµÄË÷Òý±äÁ¿£¨Òò×Ó£©£¬½«Ô­À´µÄÊý¾ÝÓ³Éäµ½ÓïÒå¿Õ¼äÄÚ¡£ÔÚ´ÊÏî-ÎÄµµ¾ØÕóÖÐ²»ÏàËÆµÄÁ½¸öÎÄµµ£¬¿ÉÄÜÔÚÓïÒå¿Õ¼äÄÚ±È½ÏÏàËÆ¡£
+~\cite{salton1986introduction}¶ÔVSMÄ£ÐÍÏÂµÄ´ÊÏî-ÎÄµµ¾ØÕó£¨Term-by-Document£©½øÐÐ·Ö½â¡£ÆæÒìÖµ¾ØÕó·Ö½â¿ÉÒÔ¿´×÷ÊÇ´Óµ¥´Ê-ÎÄµµ¾ØÕóÖÐ·¢ÏÖ²»Ïà¹ØµÄË÷Òý±äÁ¿£¨Òò×Ó£©£¬½«Ô­À´µÄÊý¾ÝÓ³Éäµ½ÓïÒå¿Õ¼äÄÚ¡£ÔÚ´ÊÏî-ÎÄµµ¾ØÕóÖÐ²»ÏàËÆµÄÁ½¸öÎÄµµ£¬¿ÉÄÜÔÚÓïÒå¿Õ¼äÄÚ±È½ÏÏàËÆ¡£
 SVD±³ºóµÄÐÎÊ½»¯±È½Ï¸´ÔÓ£¬ÏêÏ¸ÄÚÈÝ¿É²Î¿¼ÎÄÏ× ~\cite{salton1986introduction}¡£¼òµ¥À´Ëµ£¬ÆæÒìÖµ·Ö½âÊÇ¶Ô¾ØÕó½øÐÐ·Ö½âµÄÒ»ÖÖ·½·¨¡£ËüÄÜ¹»½«Ò»¸ö´ó¾ØÕó±íÊ¾ÎªÈý¸öÐ¡¾ØÕóµÄ³Ë»ý£¬²¢ÇÒÓëÌØÕ÷·Ö½â²»Í¬£¬ÆæÒìÖµ·Ö½â²»ÒªÇó±»·Ö½â¾ØÕóÎª·½Õó¡£¼ÙÉèÎÒÃÇµÄ¾ØÕóA ÊÇÒ»¸ö$m$ $\times$ $m$µÄ¾ØÕó£¬ÆäÖÐµÄÔªËØÈ«²¿ÊôÓÚÓòK£¬Ò²¾ÍÊÇÊµÊýÓò»ò¸´ÊýÓò¡£Èç´ËÔò´æÔÚÒ»¸ö·Ö½âÊ¹µÃ£º
 \begin{align}
     A = U \Sigma V^T
@@ -79,7 +79,7 @@ SVD±³ºóµÄÐÎÊ½»¯±È½Ï¸´ÔÓ£¬ÏêÏ¸ÄÚÈÝ¿É²Î¿¼ÎÄÏ× ~\cite{salton1986introduction}¡£¼òµ¥
 ¶ÔÆæÒìÖµ×Ô´óµ½Ð¡ÅÅÐò£¬È¡Ç°k¸ö$A$µÄÆæÒìÖµÀûÓÃ$X_{k}$ $=$ $U_{k}$$\Sigma_{k}$$V_{k}^T$¹¹Ôì$X$µÄÖÈ£­k½üËÆ¾ØÕó£¬ÖØ½¨µÄ¾ØÕóÊÇÒ»¸ö×îÐ¡¶þ³Ë·¨ÄâºÏ¡£ÆäÖÐ$U$ºÍ$V$ µÄÁÐÏòÁ¿Õý½»£¬¼´$U^TU$ $=$ $V^TV$ $=$ $I_{r}$£¬ÆäÖÐ$r$ÊÇÔ­¾ØÕó$X$µÄÖÈ¡£
 $X_{k}$ÎªÔ­¾ØÕó$X$µÄkÎ¬×î¼Ñ½üËÆ¾ØÕó£¬ÓÉk¸ö×î´óµÄÆæÒìÈýÔª×é¹¹Ôì¶ø³É¡£
 
-LSIÍ¨¹ýÆæÒìÖµ¾ØÕó·Ö½â½«Ô­Ê¼´ÊÏîÎÄµµ¾ØÕó½µÎ¬£¬Í¶Ó°µ½Ò»¸öËõÐ¡µÄ¿Õ¼äÖÐ£¬ÒÔÏû³ý´ÊÓïÊ¹ÓÃÖÐµÄ¡°ÔëÉù¡±¡£ÔÚLSIÄ£ÐÍÖÐ£¬¼ìË÷ÊÇ»ùÓÚÎÄµµµÄÓïÒåÄÚÈÝ¶ø²»ÊÇÆä´Ê»ãÄÚÈÝ¡£ÎªÁËÈ¡µÃ½ÏºÃµÄ¼ìË÷½á¹û£¬Ñ¡ÔñºÏÊÊµÄKÖµºÜÖØÒª¡£ÀíÏëÇé¿öÏÂ£¬ÎÒÃÇÑ¡ÔñÒ»¸öKÖµÄÜ°üº¬Êý¾ÝÖÐËùÓÐµÄÖ÷ÌâÄ£ÐÍ£¬Í¬Ê±ÄÜ¹ýÂËµôËùÓÐÔëÒô¡£Êµ¼ÊÖÐ£¬Ñ¡Ôñ×îÓÅKÖµµÄ·½·¨»¹ÊÇÒ»¸ö¹«¿ªÎÊÌâ\cite{Scott1990LSI}¡£µ±Ç°K ÖµµÄÑ¡ÔñÍ¨³£ÓÉÊµÑé¾ö¶¨¡£½µÎ¬Ö®ºóµÄ²éÑ¯¡¢ÎÄµµÏòÁ¿Í¨¹ý½«VSM ¿Õ¼äµÄÏà¹ØÏòÁ¿Í¶Ó°ÖÁLSI ×Ó¿Õ¼äÉú³É£¬ÀàËÆVSMÄ£ÐÍ£¬²éÑ¯Óï¾äÓëÄ¿±êÎÄµµÖ®¼äµÄÏàËÆ¶È¼´Îª¶ÔÓ¦ÏòÁ¿µÄÓàÏÒ¾àÀë¡£
+LSIÍ¨¹ýÆæÒìÖµ¾ØÕó·Ö½â½«Ô­Ê¼´ÊÏîÎÄµµ¾ØÕó½µÎ¬£¬Í¶Ó°µ½Ò»¸öËõÐ¡µÄ¿Õ¼äÖÐ£¬ÒÔÏû³ý´ÊÓïÊ¹ÓÃÖÐµÄ¡°ÔëÉù¡±¡£ÔÚLSIÄ£ÐÍÖÐ£¬¼ìË÷ÊÇ»ùÓÚÎÄµµµÄÓïÒåÄÚÈÝ¶ø²»ÊÇÆä´Ê»ãÄÚÈÝ¡£ÎªÁËÈ¡µÃ½ÏºÃµÄ¼ìË÷½á¹û£¬Ñ¡ÔñºÏÊÊµÄKÖµºÜÖØÒª¡£ÀíÏëÇé¿öÏÂ£¬ÎÒÃÇÑ¡ÔñÒ»¸öKÖµÄÜ°üº¬Êý¾ÝÖÐËùÓÐµÄÖ÷ÌâÄ£ÐÍ£¬Í¬Ê±ÄÜ¹ýÂËµôËùÓÐÔëÒô¡£Êµ¼ÊÖÐ£¬Ñ¡Ôñ×îÓÅKÖµµÄ·½·¨»¹ÊÇÒ»¸ö¹«¿ªÎÊÌâ~\cite{Scott1990LSI}¡£µ±Ç°KÖµµÄÑ¡ÔñÍ¨³£ÓÉÊµÑé¾ö¶¨¡£½µÎ¬Ö®ºóµÄ²éÑ¯¡¢ÎÄµµÏòÁ¿Í¨¹ý½«VSM¿Õ¼äµÄÏà¹ØÏòÁ¿Í¶Ó°ÖÁLSI×Ó¿Õ¼äÉú³É£¬ÀàËÆVSMÄ£ÐÍ£¬²éÑ¯Óï¾äÓëÄ¿±êÎÄµµÖ®¼äµÄÏàËÆ¶È¼´Îª¶ÔÓ¦ÏòÁ¿µÄÓàÏÒ¾àÀë¡£
 
 %\subsection{JS}
 JSÄ£ÐÍ£¨Jensen-Shannon similarity model£©ÊÇÒ»ÖÖÓÉ¸ÅÂÊ·½·¨ºÍ¼ÙÉè¼ìÑé¼¼ÊõÇý¶¯µÄÐÂÐÍÐÅÏ¢¼ìË÷¼¼Êõ¡£ÔÚ¸ÅÂÊÄ£ÐÍÖÐ£¬²éÑ¯Óï¾äºÍÄ¿±êÎÄµµ¶¼±»¼Ù¶¨¾ßÓÐÇ±ÔÚµÄ¸ÅÂÊ·Ö²¼¡£Í¨¹ý¶Ô²éÑ¯ºÍÄ¿±êÎÄµµ¶ÔÓ¦¸ÅÂÊ·Ö²¼µÄ¾àÀë½øÐÐÅÅÐòµÄ·½·¨£¬´ïµ½¼ìË÷µÄÄ¿µÄ¡£¸ù¾Ý¼ÙÉè¼ìÑé
@@ -91,7 +91,7 @@ JSÄ£ÐÍ£¨Jensen-Shannon similarity model£©ÊÇÒ»ÖÖÓÉ¸ÅÂÊ·½·¨ºÍ¼ÙÉè¼ìÑé¼¼ÊõÇý¶¯µÄÐÂÐ
     H(p) \triangleq \sum _{w\in W}h(p(w)),\ h(x) \triangleq -x\log x
 \end{align}
 
-ÆäÖÐ$H(p)$´ú±í¸ÅÂÊ·Ö²¼$p$µÄìØ£¬$\hat{p}_{q}$ºÍ$\hat{p}_{d}$ ·Ö±ðÎª²éÑ¯Óï¾äºÍÄ¿±êÎÄµµµÄ¸ÅÂÊ·Ö²¼¡£ÎÒÃÇ×¢Òâµ½£¬¸ù¾Ý¶¨Òåµ±x Îª0 Ê±£¬h(0) ºãµÈÓÚ0¡£Òò´ËÎÒÃÇ¶¨Òå²éÑ¯Óï¾äºÍÄ¿±êÎÄµµÖ®¼äµÄÏàËÆ¶ÈÎª1-JS(q,d)¡£
+ÆäÖÐ$H(p)$´ú±í¸ÅÂÊ·Ö²¼$p$µÄìØ£¬$\hat{p}_{q}$ºÍ$\hat{p}_{d}$ ·Ö±ðÎª²éÑ¯Óï¾äºÍÄ¿±êÎÄµµµÄ¸ÅÂÊ·Ö²¼¡£ÎÒÃÇ×¢Òâµ½£¬¸ù¾Ý¶¨Òåµ±x Îª0Ê±£¬h(0)ºãµÈÓÚ0¡£Òò´ËÎÒÃÇ¶¨Òå²éÑ¯Óï¾äºÍÄ¿±êÎÄµµÖ®¼äµÄÏàËÆ¶ÈÎª1-JS(q,d)¡£
 
 \section{ÔöÇ¿²ßÂÔ}
 Õë¶ÔÐÅÏ¢¼ìË÷·½·¨µÄµ¥´ÊÊ§ÅäÎÊÌâ£¬ÁìÓòÄÚÌá³öÁËÒ»Ð©ÔöÇ¿²ßÂÔ¡£µ±Ç°Ö÷Á÷µÄÁ½ÖÖÔöÇ¿²ßÂÔÎª£º½áºÏ´úÂëÒÀÀµÐÅÏ¢ºÍ½áºÏÓÃ»§·´À¡ÐÅÏ¢£¨user feedback£©¡£
@@ -101,95 +101,22 @@ JSÄ£ÐÍ£¨Jensen-Shannon similarity model£©ÊÇÒ»ÖÖÓÉ¸ÅÂÊ·½·¨ºÍ¼ÙÉè¼ìÑé¼¼ÊõÇý¶¯µÄÐÂÐ
 
 ¶ÔÓÚ»ùÓÚÐÅÏ¢¼ìË÷·½·¨Éú³ÉµÄºòÑ¡×·×ÙÏßË÷ÁÐ±í£¬~\cite{mcmillan2009combining}ÀûÓÃ´úÂëÒÀÀµ¹ØÏµ¶ÔÁÐ±íÖØÅÅÐò¡£ÎÒÃÇµÄÖ®Ç°¹¤×÷
 ~\cite{kuang2015can}
-¶Ô´úÂëÒÀÀµÏ¸·ÖÎªÖ±½Ó´úÂëÒÀÀµ£¨ÀàÖ®¼äµÄ¼Ì³Ð¡¢Ê¹ÓÃºÍ·½·¨Ö®¼äµÄµ÷ÓÃ£©¡¢Êý¾ÝÒÀÀµ£¨ÀàÖ®¼äµÄÊý¾Ý¹²Ïí£©£¬Ö±½ÓÒÀÀµ±í´ïµÄÊÇÈí¼þµÄ¿ØÖÆÁ÷£¬Êý¾ÝÒÀÀµ±í´ïµÄÊÇÈí¼þµÄÊý¾ÝÁ÷¡£¸Ã¹¤×÷±íÃ÷¶ÔÓÚÐèÇóµ½´úÂëµÄ¿É×·×ÙÐÔÉú³É£¬´úÂëÔªËØÖ±½ÓµÄÖ±½ÓÒÀÀµºÍÊý¾ÝÒÀÀµÆðµ½»¥²¹µÄ×÷ÓÃ£¬Á½ÕßÏà½áºÏÒª±ÈÖ»Ê¹ÓÃÆäÖÐÒ»ÖÖÈ¡µÃ¸üºÃµÄÐ§¹û¡£ºóÐø¹¤×÷~\cite{Kuang2017closeness} ¶Ô´úÂëÒÀÀµÖ®¼äµÄ½ôÃÜ¶È½øÐÐÁËÁ¿»¯¡£¶ÔÓÚ´úÂëÖ®¼äµÄÖ±½ÓÒÀÀµ£¬¸Ã¹¤×÷ÈÏÎªÁ½¸öÀà½»»¥Ô½¶à²¢ÇÒºÍÁ½¸öÀàºÍÆäËüÀà½»»¥µÄÔ½ÉÙ£¬ÔòÕâÁ½¸öÀàÖ®¼äµÄ´úÂëÒÀÀµ½ôÃÜ¶ÈÔ½¸ß¡£
-\begin{comment}¹«Ê½ÈçÏÂ£º
-\begin{align}
-    Closeness_{DC} = \dfrac {2N}{WeightInDegree_{Sink}+WeightOutDegree_{Source}}
-\end{align}
-ÆäÖÐ$N$±íÊ¾Àà$Sink$ºÍ$Source$Ö®¼ä·½·¨µ÷ÓÃºÍÀàÊ¹ÓÃµÄ´ÎÊý£¬$WeightInDegree_{Sink}$±íÊ¾Àà$Sink$±»µ÷ÓÃ»òÊ¹ÓÃµÄ´ÎÊý£¬
-$WeightOutDegree_{Source}$±íÊ¾Àà$Source$µ÷ÓÃ»òÊ¹ÓÃÆäËüÀàµÄ´ÎÊý¡£$Closeness_{DC}$Î»ÓÚÇø¼ä[0,1]£¬¸ÃÖµÔ½´ó±íÃ÷Á½Õß¹ØÏµÔ½½ôÃÜ¡£~\cite{Kuang2017closeness}»ùÓÚÐÅÏ¢¼ìË÷¼¼Êõ²¢½áºÏ´úÂëÒÀÀµ½ôÃÜ¶È·ÖÎö×öÐèÇóºÍ´úÂëÖ®¼äµÄ¿É×·×ÙÐÔ²¢È·µÄÒ»¶¨³É¹û¡£
-%~\cite{·ÖÊý¸ßµÄ»ù±¾ÊÇÕýÈ·µÄºòÑ¡×·×ÙÏßË÷}
-\end{comment}£¬
-Æä·½·¨ÊÇ¶ÔÓÚ¸ø¶¨²éÑ¯Óï¾ä£¬¶Ô¼ìË÷½á¹û½øÐÐÅÅÐò¡£ÅÅÔÚµÚÒ»Î»µÄÎÄµµÍùÍùÊÇÓÐÐ§µÄ
-~\cite{cleland2005utilizing}
-¡£¸ù¾ÝÆäËüÎÄµµÓëÅÅÔÚµÚÒ»Î»ÎÄµµµÄ´úÂëÒÀÀµ½ôÃÜ¶È£¬µ÷ÕûËüÃÇÔÚÅÅÐò±íµÄÎ»ÖÃ¡£¸Ã¹¤×÷°üº¬Á½¸ö²½Öè£¬Ê×ÏÈÉè¶¨´úÂëÒÀÀµ½ôÃÜ¶ÈãÐÖµ£¬²¢ÓÉÓëÅÅÃûµÚÒ»µÄÎÄµµ½ôÃÜ¶È´óÓÚãÐÖµµÄÎÄµµ×é³ÉÒ»¸ö³õÊ¼µØÓò£¬
-%Ïê¼ûËã·¨~\ref{alg:initRegion}£¬
-ÐÞ¸ÄÓòÄÚÎÄµµ£¨ÕâÀïÊÇÀà£©Óë²éÑ¯Óï¾ä£¨ÐèÇó£©µÄ½ôÃÜ¶È¡£
-\begin{comment}
-\begin{algorithm}[htbp]
-\caption{Establishing Initial Region}
-\label{alg:initRegion}
-initialRegion $\leftarrow \emptyset$; \\
-prunedGraph $\leftarrow$ CDCGraph.setPruning$(Threshold_{DC},Threshold_{CD})$; \\
-topLink $\leftarrow$ candidateList.next();  \\
-\While {$prunedGraph.hasNoNeighbors(topLink.class)$}
-{
-    initialRegion.add(topLink.class); \\
-    topLink $\leftarrow$ candidateList.next(); \\
-}
-initialRegion.add(topLink.class); \\
-initialRegion.topIRValue $\leftarrow$ topLink.IRValue; \\
-reachedClasses $\leftarrow   \emptyset$; \\
-reachedClasses.add(prunedGraph.getTransitiveCallers(topLink.class)); \\
-reachedClasses.add(prunedGraph.getTransitiveCallees(topLink.class)); \\
-reachedClasses.add(prunedGraph.getNeighborsByData(topLink.class)); \\
-\ForEach {$link in candidateList$}
-{
-    \If {$reachedClasses.contained(link.class)$}
-    {
-        link.IRValue $\leftarrow$ initialRegion.topIRValue; \\
-        initialRegion.add(link.class); \\
-    }
-}
-candidateList.reorderByIRValue();
-\end{algorithm}
-\end{comment}
-´ËÍâ¶ÔÓÚÓòÍâÀà£¬¿ÉÄÜ´æÔÚÓòÄÚÀàµ½ÓòÍâÀàµÄµ÷ÓÃ»òÕß±»µ÷ÓÃ¹ØÏµ£¬»òÕßÓòÍâÀàºÍÓòÄÚÄ³Ð©Àà´æÔÚ¹²ÏíÊý¾Ý¡£¸ù¾ÝÓòÍâÀàµ½ÓòÄÚÀàµÄ¾àÀëÒÔ¼°´úÂë½ôÃÜ³Ì¶È¸Ä±äÓòÍâÏà¹ØÀàÓëÐèÇóµÄÏàËÆ¶È¡£Ïê¼ûËã·¨~\ref{alg:reRankOutSideRegion}
-\begin{algorithm}[htbp]  %%%ÕâÀïÃæµÄ·ÖÊýÃ²ËÆÒªÈ«²¿ÓÃ$$°üÆðÀ´ ²¢ÇÒÖ»ÓÃÒ»¶Ñ$$¾Í¹»ÁË
-\caption{Re-rank Links outside Initial Region} %ÌØÊâ·ûºÅ $\times$
-\label{alg:reRankOutSideRegion}
-topIRValue $\leftarrow$ initialRegion.topIRValue; \\
-\ForEach {($link in candidateList$)}
-{
-    \If {$!initialRegion.contains(link.class)$}
-    {
-        \ForEach {$c in initialRegion$}
-        {
-            pathList $\leftarrow$ findValidPaths(link.class,c); \\
-            $gMean$ $\leftarrow$ 0; \\
-            \ForEach {$path in pathList$}
-            {
-                $gMean$ $\leftarrow$ max(GeometricMean($Closeness_{DC}$(path)),$gMean$); \\
-            }
-            link.IRValue $\leftarrow$ link.IRValue + $gMean$ $\times$ ($topIRValue-link.IRValue$); \\
-            \If {$hasDataDependencies(c,link.IRValue)$}
-            {
-                link.IRValue $\leftarrow$ link.IRValue + (topIRValue-link.IRValue) $\times$ $Closeness_{CD}(c,link.class)$ ;\\
-            }
-            \If {$link.IRValue>topIRValue$}
-            {
-                link.IRValue $\leftarrow$ topIRValue; \\
-            }
-        }
-    }
-}
-candidateList.reorderByIRValue(); \\
-\end{algorithm}
+¶Ô´úÂëÒÀÀµÏ¸·ÖÎªÖ±½Ó´úÂëÒÀÀµ£¨ÀàÖ®¼äµÄ¼Ì³Ð¡¢Ê¹ÓÃºÍ·½·¨Ö®¼äµÄµ÷ÓÃ£©¡¢Êý¾ÝÒÀÀµ£¨ÀàÖ®¼äµÄÊý¾Ý¹²Ïí£©£¬Ö±½ÓÒÀÀµ±í´ïµÄÊÇÈí¼þµÄ¿ØÖÆÁ÷£¬Êý¾ÝÒÀÀµ±í´ïµÄÊÇÈí¼þµÄÊý¾ÝÁ÷¡£¸Ã¹¤×÷±íÃ÷¶ÔÓÚÐèÇóµ½´úÂëµÄ¿É×·×ÙÐÔÉú³É£¬´úÂëÔªËØµÄÖ±½ÓÒÀÀµºÍÊý¾ÝÒÀÀµÆðµ½»¥²¹µÄ×÷ÓÃ£¬Á½ÕßÏà½áºÏÒª±Èµ¥¶ÀÊ¹ÓÃÆäÖÐÒ»ÖÖÈ¡µÃ¸üºÃµÄÐ§¹û¡£ºóÐø¹¤×÷~\cite{Kuang2017closeness} ¶Ô´úÂëÒÀÀµÖ®¼äµÄ½ôÃÜ¶È½øÐÐÁËÁ¿»¯¡£¶ÔÓÚ´úÂëÖ®¼äµÄ´úÂëÒÀÀµ£¬¸Ã¹¤×÷ÈÏÎªÁ½¸öÀà½»»¥Ô½¶à²¢ÇÒÆäËüÀà½»»¥µÄÔ½ÉÙ£¬ÔòÕâÁ½¸öÀàÖ®¼äµÄ´úÂëÒÀÀµ½ôÃÜ¶ÈÔ½¸ß¡£
+¸Ã¹¤×÷Í¨¹ýÒýÈë´úÂë½ôÃÜ¶È·ÖÎö£¬¶Ô»ùÓÚÐÅÏ¢¼ìË÷·½·¨Éú³ÉµÄºòÑ¡×·×ÙÁÐ±í½øÐÐÁËÓÅ»¯¡£¾ßÌåÀ´Ëµ£¬¸Ã·½·¨Ê×ÏÈÀûÓÃÐÅÏ¢¼ìË÷·½·¨Éú³ÉºòÑ¡×·×ÙÏßË÷ÅÅÐò±í£¨~\cite{cleland2005utilizing}Î»ÓÚÁÐ±í¶¥²¿µÄºòÑ¡ÏßË÷´ó¸ÅÂÊÊÇ¾ß±¸Ïà¹ØÐÔµÄ£©¡£½ÓÏÂÀ´£¬¸ù¾ÝÆäËü´úÂëÔªËØÓëÁÐ±í¶¥²¿¶ÔÓ¦´úÂëÔªËØÖ®¼äµÄ´úÂëÒÀÀµ½ôÃÜ¶ÈÖµ£¬µ÷ÕûËüÃÇ¶ÔÓ¦ºòÑ¡×·×ÙÏßË÷µÄÏàËÆ¶ÈÖµ£¬½ø¶øÓÅ»¯ËüÃÇÔÚÅÅÐò±íµÄÎ»ÖÃ¡£
+
 
 \subsection{ÓÃ»§·´À¡}
-ÈçÇ°ÎÄ~\ref{sec:information_retrieve_technique}ËùÊö£¬ÐÅÏ¢¼ìË÷·½·¨ÑÏÖØÒÀÀµ¼ìË÷Óï¾äºÍÄ¿±êÎÄµµµÄÖÊÁ¿²¢ÇÒÐÅÏ¢¼ìË÷Éú³ÉµÄÄ¿±êÎÄµµÅÅÐòÁÐ±íÐèÒªÓÃ»§ÑéÖ¤Ã¿¸öÎÄµµºÍ²éÑ¯Óï¾äµÄÏà¹ØÐÔ¡£
-ÑÐ¾¿Õß¿¼ÂÇ¸ù¾ÝÓÃ»§¶Ôµ±Ç°ºòÑ¡ÏßË÷ÓÐÐ§ÐÔµÄÅÐ¶Ï½á¹û¶ÔÓàÏÂµÄºòÑ¡ÏßË÷×·×ÙÁÐ±í½øÐÐÓÅ»¯~\cite{hayes2006advancing,Lucia2006Incremental,Panichella2015Adaptive,Zhang2012The} ¡£
+ÈçÇ°ÎÄ~\ref{sec:information_retrieve_technique}ËùÊö£¬ÐÅÏ¢¼ìË÷·½·¨ÑÏÖØÒÀÀµÈí¼þÖÆÆ·µÄÓïÁÏÖÊÁ¿£¬ÓÃ»§ÐèÒª×ÔÉÏ¶øÏÂÉ¨ÃèÐÅÏ¢¼ìË÷Éú³ÉµÄºòÑ¡×·×ÙÏßË÷ÁÐ±í£¬²¢ÑéÖ¤×·×ÙÏßË÷µÄÏà¹ØÐÔ¡£
+½üÆÚ´óÁ¿¹¤×÷Ìá³ö¸ù¾ÝÓÃ»§¶Ôµ±Ç°ºòÑ¡ÏßË÷Ïà¹ØÐÔµÄÑéÖ¤½á¹ûÀ´ÓÅ»¯ÓàÏÂµÄºòÑ¡ÏßË÷×·×ÙÁÐ±íÅÅÐò~\cite{hayes2006advancing,Lucia2006Incremental,Panichella2015Adaptive,Zhang2012The} ¡£
 hayesµÈÈËµÄ¹¤×÷ÖÐ£¬¼ÙÉè$q$ÊÇÒ»¸ö²éÑ¯ÏòÁ¿£¬¼¯ºÏ$D_{q}$ ÊÇÓÃÐÅÏ¢¼ìË÷·½·¨Í¨¹ý²éÑ¯$q$ µÃµ½µÄÎÄµµ¼¯ºÏ¡£¼ÙÉèÎÄµµ¼¯ºÏ$D$ ÓÉÁ½¸ö×Ó¼¯ºÏ$D_{r}$Óë$D_{irr}$×é³É£¬ÆäÖÐ$D_{r}$¼¯ºÏÖÐµÄÎÄµµÊÇÓÃ»§ÅÐ¶Ï½á¹ûÎªÓë²éÑ¯Óï¾äÏà¹ØµÄÎÄµµ£¬$D_{irr}$ ÎªÓë²éÑ¯Óï¾äÎÞ¹ØµÄÎÄµµ£¬ËüÃÇËù°üº¬µÄÎÄµµ¸öÊý·Ö±ðÎª$R$ ºÍ$S$¡£ºÜÃ÷ÏÔ$D_{r}$¼¯ºÏºÍ$D_{irr}$¼¯ºÏÃ»ÓÐ½»¼¯£¬²¢ÇÒ
 ÓÉÓÚÕâÁ½¸ö¼¯ºÏÀïÃæ¶¼ÊÇÓÃ»§ÅÐ¶Ï¹ýµÄÎÄµµ£¬ËùÒÔËüÃÇµÄ²¢¼¯Ò²Î´±ØÊÇ$D_{q}$£¬ÒòÎª¿ÉÄÜÓÐÐ©ÎÄµµÓÃ»§»¹Ã»ÅÐ¶Ï¡£
 Ê¹ÓÃ±ê×¼Rochio~\cite{Yates1999IR} ·´À¡´¦ÀíËã·¨£¬ÔÚÏÂÒ»ÂÖµü´úÖÐÐÞ¸Ä²éÑ¯ÏòÁ¿¸÷´ÊÏîµÄÈ¨ÖØ~\cite{hayes2006advancing}£¬¹«Ê½ÈçÏÂ£º
 \begin{align}
     q_{new} = \alpha \cdot q +(\dfrac {\beta}{R} \sum_{d_{j} \in D_{r}}d_{j}) - (\dfrac{\gamma}{S}\sum_{d_{k}\in D_{irr}}d_{k} )
 \end{align}
-
-Ö±¾õÉÏ£¬Í¨¹ý½«Ïà¹ØÎÄµµÖÐ³öÏÖµÄ´ÊÏî¼Óµ½²éÑ¯Óï¾äÖÐ¿ÉÒÔÊ¹µÃ²éÑ¯Óï¾äÓëÆäËüÏà¹ØÎÄµµ¹²Ïí¸ü¶àµÄ´ÊÏî£¬´Ó¶øÌá¸ßÍêÈ«ÂÊ£»Ï÷Èõ²éÑ¯Óï¾äÖÐÔÚ²»Ïà¹ØÎÄµµÖÐ³öÏÖ´ÊÏîµÄÈ¨ÖØ£¬¿ÉÒÔÊ¹µÃ²éÑ¯Óï¾äÔ¶Àë²»Ïà¹ØÎÄµµ£¬½ø¶ø¼õÐ¡·¸´íµÄ¸ÅÂÊ£¬Ôö¼Ó×¼È·ÂÊ¡£ÉÏÊ½×ÓÖÐ£¬¿ÉÒÔÍ¨¹ýµ÷Õû²ÎÊý $\alpha$ ¡¢ $\beta$ ¡¢ $\gamma$ À´¸Ä±äÔ­Ê¼²éÑ¯Óï¾ä¡¢Ïà¹ØÎÄµµºÍ²»Ïà¹ØÎÄµµ¶ÔÉú³ÉÐÂ²éÑ¯Óï¾äµÄÖØÒªÐÔ¡£ÐÂ²éÑ¯Óï¾äÉú³ÉÖ®ºó£¬ÖØÐÂÊ¹ÓÃÐÅÏ¢¼ìË÷·½·¨²¢¶Ô¼ìË÷µÃµ½µÄÏà¹ØÎÄµµ°´ÏàËÆ¶ÈÅÅÐò£¬ÖØ¸´ÒÔÉÏ¹ý³Ì£¬Ö±µ½ÓÃ»§È¡µÃÂúÒâµÄ½á¹û¡£È»¶øºóÐø¹¤×÷
+Ö±¾õÉÏ£¬Í¨¹ý½«Ïà¹ØÎÄµµÖÐ³öÏÖµÄ´ÊÏî¼Óµ½²éÑ¯Óï¾äÖÐ¿ÉÒÔÊ¹µÃ²éÑ¯Óï¾äÓëÆäËüÏà¹ØÎÄµµ¹²Ïí¸ü¶àµÄ´ÊÏî£¬´Ó¶øÌá¸ßÍêÈ«ÂÊ£»Ï÷Èõ²éÑ¯Óï¾äÖÐÔÚ²»Ïà¹ØÎÄµµÖÐ³öÏÖ´ÊÏîµÄÈ¨ÖØ£¬¿ÉÒÔÊ¹µÃ²éÑ¯Óï¾äÔ¶Àë²»Ïà¹ØÎÄµµ£¬½ø¶ø¼õÐ¡·¸´íµÄ¸ÅÂÊ£¬Ôö¼Ó×¼È·ÂÊ¡£ÉÏÊ½×ÓÖÐ£¬¿ÉÒÔÍ¨¹ýµ÷Õû²ÎÊý $\alpha$ ¡¢ $\beta$ ¡¢ $\gamma$ À´¸Ä±äÔ­Ê¼²éÑ¯Óï¾ä¡¢Ïà¹ØÎÄµµºÍ²»Ïà¹ØÎÄµµÖÐ¶ÔÉú³ÉÐÂ²éÑ¯Óï¾äµÄ¹±Ï×³Ì¶È¡£ÐÂ²éÑ¯Óï¾äÉú³ÉÖ®ºó£¬ÖØÐÂÊ¹ÓÃÐÅÏ¢¼ìË÷·½·¨²¢¶Ô¼ìË÷µÃµ½µÄÏà¹ØÎÄµµ°´ÏàËÆ¶ÈÅÅÐò£¬ÖØ¸´ÒÔÉÏ¹ý³Ì£¬Ö±µ½ÓÃ»§È¡µÃÂúÒâµÄ½á¹û¡£È»¶øºóÐø¹¤×÷
 ·¢ÏÖÔÚ×öÐèÇó×·×ÙÊ±ÓÃRochio·´À¡´¦Àí·½·¨Ö»ÓÐÔÚÇ°¼¸´Îµü´úÖÐ»áÌá¸ß×¼È·ÂÊºÍÍêÈ«ÂÊ~\cite{Lingjun2009Refinement}¡£
-
-LuciaµÈÈËµÄ¹¤×÷±íÃ÷±ê×¼Rochio·´À¡´¦Àí·½·¨¶ÔÐÅÏ¢¼ìË÷·½·¨Éú³ÉÅÅÐò±íµÄÓÅ»¯²¢²»Ã÷ÏÔ£¬ÓÈÆäÊÇµ±²éÑ¯Óï¾äºÍÎÄµµÓïÁÏÖÊÁ¿±È½ÏºÃ£¬Ê¹µÃÐÅÏ¢¼ìË÷½á¹ûµÄÖÊÁ¿±È½Ï¸ßÊ±£¬Rochio ·´À¡´¦Àí·½·¨¶ÔÐÅÏ¢¼ìË÷µÄ½á¹û¼¸ºõÆð²»µ½ÈÎºÎÓÅ»¯×÷ÓÃ£¬¶ÔÓÚÆäËüÈí¼þÖÆÆ·Ö®¼ä×ö¿É×·×ÙÐÔ£¨ÀýÈçÓÃÀýºÍUMLÍ¼Ö®¼ä£©Ê¹ÓÃRochio ·½·¨²»½ö²»ÄÜÌáÉýÅÅÐò±íµÄÐ§¹û·´¶ø¿ÉÄÜ»áÈÃÐ§¹û²¢µÃ¸ü²î~\cite{Lucia2006Incremental}¡£
+LuciaµÈÈËµÄ¹¤×÷±íÃ÷±ê×¼Rochio·´À¡´¦Àí·½·¨¶ÔÐÅÏ¢¼ìË÷·½·¨Éú³ÉÅÅÐò±íµÄÓÅ»¯²¢²»Ã÷ÏÔ£¬ÓÈÆäÊÇµ±²éÑ¯Óï¾äºÍÎÄµµÓïÁÏÖÊÁ¿±È½ÏºÃ£¬Ê¹µÃÐÅÏ¢¼ìË÷½á¹ûµÄÖÊÁ¿±È½Ï¸ßÊ±£¬Rochio·´À¡´¦Àí·½·¨¶ÔÐÅÏ¢¼ìË÷µÄ½á¹û¼¸ºõÆð²»µ½ÈÎºÎÓÅ»¯×÷ÓÃ£¬¶ÔÓÚÆäËüÈí¼þÖÆÆ·Ö®¼ä×ö¿É×·×ÙÐÔ£¨ÀýÈçÓÃÀýºÍUMLÍ¼Ö®¼ä£©Ê¹ÓÃRochio ·½·¨²»½ö²»ÄÜÌáÉýÅÅÐò±íµÄÐ§¹û·´¶ø¿ÉÄÜ»áÈÃÐ§¹û²¢µÃ¸ü²î~\cite{Lucia2006Incremental}¡£
 ZhangµÈÈË¶Ô²»Í¬²éÑ¯Óï¾ä½øÐÐÁË·ÖÀà£¬Óë~\cite{hayes2006advancing} Ê¹ÓÃ¹Ì¶¨µÄ²ÎÊý $\alpha$ ¡¢ $\beta$ ¡¢ $\gamma$ ²»Í¬£¬ ¸ù¾Ý²éÑ¯Óï¾äËùÊôÀà±ð²ÉÓÃ²»Í¬µÄ²ÎÊý²¢È¡µÃÒ»¶¨µÄÐ§¹û~\cite{Zhang2012The}¡£Ê¹ÓÃRocchioËã·¨ÀûÓÃÓÃ»§·´À¡£¨user feedback£©ÐÅÏ¢Ìá¸ß¶Ô²éÑ¯Óï¾äµÄ¼ìË÷Ð§¹ûÒª»ùÓÚÁ½¸öÇ°ÌáÌõ¼þ~\cite{Manning2008Introduction}£º
 \begin{enumerate}
    \item RocchioËã·¨»ùÓÚµÄ¼ÙÉèÊÇ£º²éÑ¯Óï¾äÓëÄ¿±êÎÄµµÏà±È£¬´ÊÏî±È½ÏÉÙ¡£
@@ -198,56 +125,12 @@ ZhangµÈÈË¶Ô²»Í¬²éÑ¯Óï¾ä½øÐÐÁË·ÖÀà£¬Óë~\cite{hayes2006advancing} Ê¹ÓÃ¹Ì¶¨µÄ²ÎÊý $
 PanichellaµÈÈËÈÏÎªÔÚÐèÇó×·×Ù»·¾³ÏÂÒÔÉÏÁ½¸öÇ°Ìá¼ÙÉè¾ù²»³ÉÁ¢£¬ÓÐÐ©²éÑ¯Óï¾ä£¨ÐèÇóµÄÎÄ±¾ÎÄµµ£©´ÊÏî±ÈÄ¿±êÎÄµµ£¨´úÂëÎÄµµ£©Òª¶à~\cite{Panichella2015Adaptive}¡£
 %Òò´ËÏñÖ®Ç°¹¤×÷~\cite{hayes2006advancing,Lingjun2009Refinement,Lucia2006Incremental} ÄÇÑù²»¿¼ÂÇÇ°ÌáÌõ¼þÊÇ·ñÂú×ãÖ±½ÓÊ¹ÓÃÓÃ»§·´À¡¡£
 ²¢ÇÒ£¬¾ÛÀà¼ÙÉèÒ²²»³ÉÁ¢£¬¸ù¾ÝÏà¹ØÎÄÏ×~\cite{Lawrie2010Normalizing,Lawrie2011identifiers}£¬ÐèÇóÊµÌåºÍ´úÂëÊµÌåÍùÍùÊ¹ÓÃ²»Í¬µÄ´Êµä£¬ÐèÇóÊµÌåÍùÍùÊ¹ÓÃÎÊÌâÁìÓò´ÊÏî£¬´úÂëÊµÌåÔòÊ¹ÓÃ¼¼ÊõÁìÓò´ÊÏîºÍÒ»Ð©ËõÐ´Í¬Òå´ÊµÈ¡£×ÛÉÏ
-~\cite{Panichella2015Adaptive}Ìá³öÒ»ÖÖ·½·¨£¬Ö»ÓÐ²éÑ¯Óï¾äµÄ´ÊÏîÐ¡ÓÚµÈÓÚÏà¹ØÎÄµµ£¬²¢ÇÒÓÃ»§ÅÐ¶ÏµÄÎÄµµÖÐÓë²éÑ¯Óï¾äÏà¹ØµÄÎÄµµ±È²»Ïà¹ØµÄÎÄµµ¶àÊ±²Å¶ÔÓÃ»§·´À¡Ê¹ÓÃRocchioËã·¨¡£
+~\cite{Panichella2015Adaptive}Ìá³öÒ»ÖÖ·½·¨£¬Ö»ÓÐ²éÑ¯Óï¾äµÄ´ÊÏîÐ¡ÓÚµÈÓÚÏà¹ØÎÄµµ£¬²¢ÇÒÓÃ»§ÅÐ¶ÏµÄÎÄµµÖÐÓë²éÑ¯Óï¾äÏà¹ØµÄÎÄµµ±È²»Ïà¹ØµÄÎÄµµ¶àÊ±²Å¶ÔÓÃ»§·´À¡Ê¹ÓÃRocchioËã·¨£¬¸Ã·½·¨È¡µÃÒ»¶¨Ð§¹û¡£
 %Ïê¼ûËã·¨~\ref{alg:ARF}~£º
-\begin{comment}
-\begin{algorithm}[!htbp]
-\caption{Adaptive Relevance Feedback (ARF)}
-\label{alg:ARF}
-List $\leftarrow$  initial~ranked~list~of~candidate~links \\
-Classified $\leftarrow \emptyset$;  \\
-\ForAll {artefact $i$}
-{
-    $TP_{i}$ $\leftarrow$ $\emptyset$;  \\ %´øÏÂ±êµÄÒÔ¼°ÌØÊâÊýÑ§·ûºÅÒªÓÃ $$È¦ÆðÀ´
-    $FP_{i}$ $\leftarrow$ $\emptyset$;  \\
-}
-\While {not ($stopping criterion$)}
-{
-    Get the link (s,t) on top of List \\
-    The user classifies (s,t)           \\
-    Classified $\leftarrow$ Classified $\cup$ \{(s,t)\}  \\
-    \If {(s,t) is~correct}
-    {
-        $TP_{s}$ $\leftarrow$ $TP_{s}$ $\cup$ \{t\}  \\
-        $TP_{t}$ $\leftarrow$ $TP_{t}$ $\cup$ \{s\}  \\
-    }
-    \Else
-    {
-        $FP_{s}$ $\leftarrow$ $FP_{s}$ $\cup$ \{t\} \\
-        $FP_{t}$ $\leftarrow$ $FP_{t}$ $\cup$ \{s\} \\
-    }
-    Let $V_{s}$ be the set of terms in s \\
-    Let $V_{t}$ be the set of terms in t \\
-    \If {$\left|V_{s}\right|$ $\leq$ $\left|V_{t}\right|$ and $\left|TP_{s}\right|$ $\ge$ $\left|FP_{s}\right|$}
-    {
-        apply the standard Rocchio to s \\    %%¾ø¶ÔÖµÕâÖÖ£¬ÊÇ¿´³ÉÒ»¸öÕûÌåÔÚÍâÃæ¼Ó$$
-    }
-    \Else
-    {
-        \If {$\left|V_{t}\right|$ $\le$ $\left|V_{s}\right|$ and $\left|TP_{t}\right|$ $\ge$ $\left|FP_{t}\right|$ }
-        {
-            apply the standard Rocchio to t \\
-        }
-    }
-    Recompute the ranked List of links \\
-    List $\leftarrow$ List $-$ Classified \\
-}
-\end{algorithm}
-\end{comment}
 
 ÓëÉÏÊö¹¤×÷´ÓÍ¨¹ýÓÃ»§¶ÔºòÑ¡ÏßË÷µÄ·´À¡½á¹ûÓÅ»¯ÅÅÐò²»Í¬£¬~\cite{Wang2018Term}»ùÓÚn-gramÄ£ÐÍ¶Ô²éÑ¯Óï¾ä½øÐÐ·ÖÎö£¬¶Ô²»Í¬µÄ´ÊÏî²ÉÈ¡²»Í¬µÄÈ¨ÖØµ÷Õû²ßÂÔ£¨Ôö´ó£¬¼õÐ¡£¬²»±ä£©¡£~\cite{Antoniol2000Modelling,Penta2002RAD}ÏÈÈÃÓÃ»§ÅÐ¶ÏÒ»²¿·ÖºòÑ¡×·×ÙÏßË÷£¬×÷Îª·½·¨µÄÑµÁ·¼¯¡£¾ßÌåÀ´~ Ëµ£¬~\cite{Antoniol2000Modelling}Ê¹ÓÃÒ»×é±»ÅÐ¶Ï¹ýµÄ×·×ÙÏßË÷£¨ÑµÁ·¼¯£©×÷Îª±´Ò¶Ë¹·ÖÀàÆ÷µÄÊäÈë£¬Í¨¹ý¶Ô²âÊÔ¼¯½øÐÐÑ§Ï°À´Ìá¸ß»ùÓÚ¸ÅÂÊÄ£ÐÍµÄÐÅÏ¢¼ìË÷·½·¨µÄ×¼È·ÂÊ¡£~\cite{Guo2017deep}Ìá³öÁËÒ»ÖÖÊ¹ÓÃÇ¶Èë´ÊÏîºÍRNN¼¼ÊõµÄÉñ¾­ÍøÂç½á¹¹À´Éú³ÉÈí¼þÖÆÆ·Ö®¼äÏà¹ØÐÔµÄ·½·¨¡£Óë»ùÓÚÐÅÏ¢¼ìË÷µÄ·½·¨ÀàËÆ£¬¸Ã·½·¨Ò²»á·ÖÎö²éÑ¯Óï¾äºÍÄ¿±êÎÄµµµÄÎÄ±¾ÏàËÆ¶È£¬½«ÓÃ»§ÒÑ¾­ÅÐ¶Ï¹ýµÄ×·×ÙÏßË÷×÷ÎªÑµÁ·¼¯×÷Îª·½·¨µÄÊäÈë¡£Ïà¶ÔÓÚ´«Í³µÄ»ùÓÚVSM ºÍLSIÄ£ÐÍµÄÐÅÏ¢¼ìË÷·½·¨£¬~\cite{Guo2017deep} ·½·¨µÃµ½µÄ½á¹û·Ö±ðÌá¸ßÁË41\%ºÍ32\%¡£µ«ÊÇ¸Ã·½·¨ÐèÒª45\%µÄ²âÊÔ¼¯ºÍ10\%µÄÓÃ»§ÒÑ¾­ÅÐ¶ÏµÄ×·×ÙÏßË÷¶ÔÍ¨¹ýÑµÁ·¼¯µÃµ½µÄ·ÖÀàÄ£ÐÍ½øÐÐÓÅ»¯¡£¼´ÓÃ»§ÐèÒªÅÐ¶ÏËùÒÔºòÑ¡×·×ÙÏßË÷µÄ55\%¡£ ÕâÔÚÊµ¼ùÖÐ»áºÄ·Ñ´óÁ¿µÄÓÃ»§¾«Á¦¡£
 
-~\cite{panichella2013and} ÈÏÎª¶ÔÓÚÊ¹ÓÃ´úÂë½á¹¹ÐÅÏ¢À´µ÷ÕûºòÑ¡×·×ÙÁÐ±íµÄ·½·¨~\cite{mcmillan2009combining}£¬Æä×îºÃµÄÐ§¹ûºÍÐÅÏ¢¼ìË÷·½·¨µÃµ½µÄºòÑ¡×·×ÙÏßË÷ÅÅÐò±íÓÐºÜ´ó¹ØÏµ¡£~\cite{mcmillan2009combining}µ±Ä³¸öÎÄµµºÍ²éÑ¯Óï¾äÏàËÆ¶È±È½Ï´óÊ±£¬´ËÊ±Ôö´óÓëÎÄµµ´æÔÚ½á¹¹ÒÀÀµµÄÆäËûÎÄµµÓë²éÑ¯Óï¾äµÄÏàËÆ¶È¡£µ«ÊÇÔÚÎÄµµÎÄ±¾ÖÊÁ¿±È½Ï²îµÄÇé¿öÏÂ¡£Èç¹ûÓë²éÑ¯Óï¾äÏàËÆ¶È±È½Ï´óµÄÎÄµµ±¾ÉíºÍ²éÑ¯Óï¾ä¾ÍÃ»ÓÐÏà¹ØÐÔ£¬´ËÊ±ÀûÓÃ´úÂëÒÀÀµ¾Í»á½«´íÎóÀ©´ó£¬¶ÔÐÅÏ¢¼ìË÷·½·¨µÃµ½µÄºòÑ¡×·×ÙÏßË÷ÅÅÐò±íÔì³ÉÎÛÈ¾¡£~\cite{panichella2013and}Ìá³ö£¬Ã¿´Î½«ÅÅÐò±í¶¥¶ËµÄ×·×ÙÏßË÷½»ÓÉÓÃ»§£¨Èí¼þ¹¤³ÌÊ¦£©ÅÐ¶Ï£¬Ö»ÒªÓÃ»§ÅÐ¶Ï¸ø×·×ÙÏßË÷ÓÐÐ§µÄÊ±ºò²ÅÌá¸ßÓë¸Ã×·×ÙÏßË÷¾ßÓÐ´úÂëÒÀÀµµÄÆäËü×·×ÙÏßË÷µÄÏàËÆ¶ÈÖµ¡£Óë~\cite{hayes2006advancing,Lucia2006Incremental,Panichella2015Adaptive} ²»Í¬£¬~\cite{panichella2013and}²»»á¸Ä±ä´ÊÏîµÄÈ¨ÖØ£¬Òò´Ë²»ÐèÒªÃ¿´ÎÖØÐÂ¼ÆËãÏàËÆ¶È¡£¸Ã·½·¨ÏàËÆ²½Öè¼ûËã·¨~\ref{alg:UD_CSTI}
+~\cite{panichella2013and} ÈÏÎª¶ÔÓÚÊ¹ÓÃ´úÂë½á¹¹ÐÅÏ¢À´µ÷ÕûºòÑ¡×·×ÙÁÐ±íµÄ·½·¨~\cite{mcmillan2009combining}£¬Æä×îºÃµÄÐ§¹ûºÍÐÅÏ¢¼ìË÷·½·¨µÃµ½µÄºòÑ¡×·×ÙÏßË÷ÅÅÐò±íÓÐºÜ´ó¹ØÏµ¡£~\cite{mcmillan2009combining}µ±Ä³¸öÎÄµµºÍ²éÑ¯Óï¾äÏàËÆ¶È±È½Ï´óÊ±£¬´ËÊ±Ôö´óÓëÎÄµµ´æÔÚ½á¹¹ÒÀÀµµÄÆäËûÎÄµµÓë²éÑ¯Óï¾äµÄÏàËÆ¶È¡£µ«ÊÇÔÚÎÄµµÎÄ±¾ÖÊÁ¿±È½Ï²îµÄÇé¿öÏÂ¡£Èç¹ûÓë²éÑ¯Óï¾äÏàËÆ¶È±È½Ï´óµÄÎÄµµ±¾ÉíºÍ²éÑ¯Óï¾ä¾ÍÃ»ÓÐÏà¹ØÐÔ£¬´ËÊ±ÀûÓÃ´úÂëÒÀÀµ¾Í»á½«´íÎóÀ©´ó£¬¶ÔÐÅÏ¢¼ìË÷·½·¨µÃµ½µÄºòÑ¡×·×ÙÏßË÷ÅÅÐò±íÔì³ÉÎÛÈ¾¡£~\cite{panichella2013and}Ìá³ö£¬Ã¿´Î½«ÅÅÐò±í¶¥¶ËµÄ×·×ÙÏßË÷½»ÓÉÓÃ»§ÑéÖ¤£¬Ö»ÓÐÓÃ»§ÅÐ¶Ï¸Ã×·×ÙÏßË÷Ïà¹ØÊ±²ÅÌá¸ßÓë¸Ã×·×ÙÏßË÷¾ßÓÐ´úÂëÒÀÀµµÄÆäËü×·×ÙÏßË÷µÄÏàËÆ¶ÈÖµ¡£Óë~\cite{hayes2006advancing,Lucia2006Incremental,Panichella2015Adaptive} ²»Í¬£¬~\cite{panichella2013and}²»»á¸Ä±ä´ÊÏîµÄÈ¨ÖØ£¬Òò´Ë²»ÐèÒªÃ¿´ÎÖØÐÂ¼ÆËãÏàËÆ¶È¡£¸Ã·½·¨ÏàËÆ²½Öè¼ûËã·¨~\ref{alg:UD_CSTI}
 \begin{algorithm}[!htbp]
 \caption{User-Driven Combination of Structural and Textual Information ¡ª UD-CSTI}
 \label{alg:UD_CSTI}
@@ -276,51 +159,14 @@ Classified $\leftarrow \emptyset$;  \\
 
 
 \section{Èí¼þ¿É×·×ÙÊý¾Ý¼¯¹¹Ôì}
-Cleland-HuangµÈÈËÌá³öÐèÇó×·×ÙÁìÓòÃæÁÙµÄÒ»¸öÌôÕ½ÊÇ£¬µ±ÑÐ¾¿ÕßÏëÑéÖ¤×Ô¼º·½·¨ÓÐÐ§ÐÔÊ±£¬ÐèÒª´î½¨»ùÏß·½·¨µÄÊµÑéÔËÐÐ»·¾³£¬Õâ¸ö¹ý³Ì»áºÄ·Ñ´óÁ¿¾«Á¦£¬²¢ÇÒÓÐÐ©ÊµÑéÓÃµ½µÄRTMÍùÍù²»¹«¿ª~\cite{Cleland-Huang2011challenges}¡£
-CharradaµÈÈËÈÏÎªÓÃÓÚ·½·¨ÑéÖ¤µÄ¿É×·×ÙÐÔÊý¾Ý¼¯±È½ÏÉÙ£¬ÑÐ¾¿ÕßÎªÁËÑéÖ¤×Ô¼º·½·¨ÓÐÐ§ÐÔÍùÍùÐèÒª×Ô¼º×öÊý¾Ý¼¯£¬Õâ¸ö¹ý³ÌºÜºÄÊ±¼ä¡£CharradaµÈÈË¹«²¼ÁËÒ»¸öÕë¶ÔÒ»¸ö¹à¸ÈÏµÍ³µÄÊý¾Ý¼¯£¬°üÀ¨ÁË¸ÄÏµÍ³¸÷ÖÖÈí¼þÖÆÆ·Ö®¼äµÄ×·×Ù¹ØÏµ¡£Í¬Ê±Í¨¹ýÓÃÍ¬ÑùµÄ·½·¨¶Ô¸ÃÊý¾Ý¼¯ºÍÁìÓòÄÚ³£ÓÃµÄÊý¾Ý¼¯½øÐÐ´¦Àí£¬±È½ÏËüÃÇprecision/recallÍ¼ÏñµÄÏàËÆÐÔ£¬ÑéÖ¤¸ÃÊý¾Ý¼¯µÄÓÐÐ§ÐÔ~\cite{Charrada2011Benchmark}¡£ChenµÈÈËÌá³öÒ»¸ö¸ÅÂÊÄ£ÐÍ£¬ÒÔ°ïÖúÓÃ»§½¨Á¢¿É¿¿µÄÊý¾Ý¼¯²¢¹«¿ªÁËËûÃÇ²ÉÓÃÕâÖÖ·½·¨¹¹ÔìµÄJDK1.5 µÄÊý¾Ý¼¯~\cite{Chen2013Robust}¡£
+Cleland-HuangµÈÈËÌá³öÐèÇó×·×ÙÁìÓòÃæÁÙµÄÒ»¸öÌôÕ½ÊÇ£¬µ±ÑÐ¾¿ÕßÏëÑéÖ¤×Ô¼º·½·¨ÓÐÐ§ÐÔÊ±£¬ÐèÒª´î½¨»ùÏß·½·¨µÄÊµÑéÔËÐÐ»·¾³£¬Õâ¸ö¹ý³Ì»áºÄ·Ñ´óÁ¿¾«Á¦£¬²¢ÇÒÓÐÐ©ÊµÑéÓÃµ½µÄ±ê×¼¿É×·×ÙÊý¾Ý¼¯ÍùÍù²»¹«¿ª~\cite{Cleland-Huang2011challenges}¡£
+CharradaµÈÈËÈÏÎªÓÃÓÚ·½·¨ÑéÖ¤µÄ¿É×·×ÙÐÔÊý¾Ý¼¯±È½ÏÉÙ£¬ÑÐ¾¿ÕßÎªÁËÑéÖ¤×Ô¼º·½·¨ÓÐÐ§ÐÔÍùÍùÐèÒª×Ô¼º×öÊý¾Ý¼¯£¬Õâ¸ö¹ý³Ì»áÏûºÄÓÃ»§´óÁ¿Ê±¼ä¡£Charrada µÈÈË¹«²¼ÁËÒ»¸öÕë¶ÔÒ»¸ö¹à¸ÈÏµÍ³µÄÊý¾Ý¼¯£¬°üÀ¨ÁË¸ÄÏµÍ³¸÷ÖÖÈí¼þÖÆÆ·Ö®¼äµÄ×·×Ù¹ØÏµ¡£Í¬Ê±Í¨¹ýÓÃÍ¬ÑùµÄ·½·¨¶Ô¸ÃÊý¾Ý¼¯ºÍÁìÓòÄÚ³£ÓÃµÄÊý¾Ý¼¯½øÐÐ´¦Àí£¬±È½ÏËüÃÇprecision/recallÍ¼ÏñµÄÏàËÆÐÔ£¬ÑéÖ¤¸ÃÊý¾Ý¼¯µÄÓÐÐ§ÐÔ~\cite{Charrada2011Benchmark}¡£ChenµÈÈËÌá³öÒ»¸ö¸ÅÂÊÄ£ÐÍ£¬ÒÔ°ïÖúÓÃ»§½¨Á¢¿É¿¿µÄÊý¾Ý¼¯²¢¹«¿ªÁËËûÃÇ²ÉÓÃÕâÖÖ·½·¨¹¹ÔìµÄJDK1.5 µÄÊý¾Ý¼¯~\cite{Chen2013Robust}¡£
 
-ÉÏÊö·½·¨¾ùÎª´¿ÈË¹¤¹¹ÔìÊý¾Ý¼¯µÄ·½·¨£¬Ãô½Ý¿ª·¢ÁìÓò£¬ÏîÄ¿ÍùÍù²ÉÓÃÒ»Ð©ÈÎÎñ¹ÜÀí¹¤¾ß£¨issue tracker£©À´¹ÜÀíÐèÇó¡£ÓÃ´úÂë°æ±¾¿ØÖÆ¹¤¾ß£¨ÀýÈçCVS¡¢SVN¡¢GIT£©À´¹ÜÀí´úÂë£¬
-
-\begin{comment}Í¼~\ref{F:openSourceStructure}
-\begin{figure}[htbp]
-    \centering
-    \includegraphics[width=0.6\textwidth]{./figures/related_work/Open_Source_Structure.pdf}
-    \caption{¿ªÔ´Èí¼þ½á¹¹Í¼}
-    \label{F:openSourceStructure}
-\end{figure}
-\end{comment}
-Ö÷ÒªÓÉÁ½²¿·Ö×é³É£ºÐèÇó¹ÜÀíÏµÍ³£¨ÕâÀïÒÔjiraÎªÀý£©£¬´úÂë°æ±¾¿ØÖÆÏµÍ³£¨ÕâÀïÒÔgithubÎªÀý£©¡£ÓÃ»§ÔÚÐèÇó¹ÜÀíÏµÍ³Ìá½»Èí¼þÏà¹ØµÄbug»òÕßÐÂµÄÐèÇó£¨new feature£©¡£ÑÐ·¢ÈËÔ±»á¶ÔÓÃ»§ËùÌá½»µÄissue½øÐÐÆÀÉóÒÔ¾ö¶¨ÊÇ¾Ü¾ø½ÓÊÜ¸Ãissue»¹ÊÇÍê³É¸Ãissue¡£Èç¹ûÊÇºóÕß£¬½ÓÏÂÀ´ÓÃ»§»áÍê³ÉÓëissueÏà¹ØµÄ´úÂë£¨¿ÉÄÜÊÇÍê³ÉÄ³¸öÐèÇóÒ²¿ÉÄÜÊÇÐÞ¸´Ä³¸öbug£©¡£È»ºóÓÃ»§»á½«¸ü¸ÄµÄ´úÂëÌá½»µ½github£¬²¢ÔÚcommit ÐÅÏ¢ÖÐ±íÊö¸ÃÐÂÔö»òÐÞ¸Ä´úÂëµÄ¹¦ÄÜ¡£ºÜ×ÔÈ»µÄÕâÀïissue ºÍÌá½»µÄ´úÂë¾ÍÐÎ³ÉÁËÐèÇóµ½´úÂëµÄ×·×Ù¹ØÏµ¡£~\cite{Shi2017linguistic}¶ÔÐèÇó¹ÜÀíÏµÍ³ÖÐµÄnew featureÎÄ±¾½ø×öÁË½øÒ»²½·ÖÀà£¬Ê¹µÃÎÒÃÇ¶Ônew featureÄÜÓÐ¸üºÃµÄÀûÓÃ¡£
+ÉÏÊö·½·¨¾ùÎª´¿ÈË¹¤¹¹ÔìÊý¾Ý¼¯µÄ·½·¨£¬ÓÉ´úÂëÍÐ¹ÜµÄ¿ªÔ´Èí¼þÍ¨³£²ÉÓÃÒ»Ð©ÈÎÎñ¹ÜÀí¹¤¾ß£¨ÀýÈçissue-tracking£©À´Î¬»¤Èí¼þµÄÐÐÎªÐÅÏ¢
+~\cite{Rath2017IlmSeven}¡£
+ÓÃ»§»áÔÚÐèÇó¹ÜÀíÏµÍ³Ìá½»Èí¼þÐÐÎª±ä¸üÉêÇë£¨issue£©£¬¸Ãissue¿ÉÄÜÈí¼þÏà¹ØµÄbug»òÕßÐÂµÄÐèÇó£¨new feature£©µÈÀàÐÍ¡£ÑÐ·¢ÈËÔ±»á¶ÔÓÃ»§ËùÌá½»µÄissue ½øÐÐÆÀÉóÒÔ¾ö¶¨ÊÇ¾Ü¾ø¸Ãissue»¹ÊÇ½ÓÊÜ¸Ãissue¡£ Èç¹ûÊÇºóÕß£¬½ÓÏÂÀ´»áÍê³ÉÓëissueÏà¹ØµÄ´úÂë
+£¨¿ÉÄÜÊÇÍê³ÉÄ³¸öÐèÇóÒ²¿ÉÄÜÊÇÐÞ¸´Ä³¸öbug£©¡£È»ºóÓÃ»§»á½«¸ü¸ÄµÄ´úÂëÌá½»µ½´úÂëÍÐ¹ÜÆ½Ì¨¡£
+ºÜ×ÔÈ»µÄÕâÀïissue ºÍÌá½»µÄ´úÂë¾ÍÐÎ³ÉÁËÐèÇóµ½´úÂëµÄ×·×Ù¹ØÏµ¡£~\cite{Shi2017linguistic} ¶ÔÐèÇó¹ÜÀíÏµÍ³ÖÐµÄnew featureÎÄ±¾½ø×öÁË½øÒ»²½·ÖÀà£¬Ê¹µÃÎÒÃÇ¶Ônew feature ÄÜÓÐ¸üºÃµÄÀûÓÃ¡£
 
 \section{±¾ÕÂÐ¡½á}
-±¾ÕÂ½éÉÜÁËÐèÇóµ½´úÂë¿É×·×ÙÉú³ÉµÄÏà¹Ø¼¼Êõ£¬²¢·ÖÎöÁËÏÖÓÐ·½·¨µÄ²»×ã¡£Í¬Ê±±¾ÕÂ½éÉÜÁËÔÚÐèÇó¿É×·×ÙÐÔ¡¢Êý¾Ý¼¯£¨RTM£©¹¹ÔìµÈÏà¹ØÁìÓò£¬ÒÑÓÐ¹¤×÷ÈçºÎ½áºÏ´úÂë½á¹¹ÐÅÏ¢ºÍÓÃ»§·´À¡ÐÅÏ¢ÒÔÌá¸ßÔ­ÓÐ·½·¨µÄ¾«¶È¡£
-
-
-\begin{comment}
-\section{½áºÏÓÃ»§·´À¡ºÍ´úÂë½á¹¹ÐÅÏ¢}
-~\cite{panichella2013and} ÈÏÎª¶ÔÓÚÊ¹ÓÃ´úÂë½á¹¹ÐÅÏ¢À´µ÷ÕûºòÑ¡×·×ÙÁÐ±íµÄ·½·¨~\cite{mcmillan2009combining}£¬Æä×îºÃµÄÐ§¹ûºÍÐÅÏ¢¼ìË÷·½·¨µÃµ½µÄºòÑ¡×·×ÙÏßË÷ÅÅÐò±íÓÐºÜ´ó¹ØÏµ¡£~\cite{mcmillan2009combining}µ±Ä³¸öÎÄµµºÍ²éÑ¯Óï¾äÏàËÆ¶È±È½Ï´óÊ±£¬´ËÊ±Ôö´óÓëÎÄµµ´æÔÚ½á¹¹ÒÀÀµµÄÆäËûÎÄµµÓë²éÑ¯Óï¾äµÄÏàËÆ¶È¡£µ«ÊÇÔÚÎÄµµÎÄ±¾ÖÊÁ¿±È½Ï²îµÄÇé¿öÏÂ¡£Èç¹ûÓë²éÑ¯Óï¾äÏàËÆ¶È±È½Ï´óµÄÎÄµµ±¾ÉíºÍ²éÑ¯Óï¾ä¾ÍÃ»ÓÐÏà¹ØÐÔ£¬´ËÊ±ÀûÓÃ´úÂëÒÀÀµ¾Í»á½«´íÎóÀ©´ó£¬¶ÔÐÅÏ¢¼ìË÷·½·¨µÃµ½µÄºòÑ¡×·×ÙÏßË÷ÅÅÐò±íÔì³ÉÎÛÈ¾¡£~\cite{panichella2013and}Ìá³ö£¬Ã¿´Î½«ÅÅÐò±í¶¥¶ËµÄ×·×ÙÏßË÷½»ÓÉÓÃ»§£¨Èí¼þ¹¤³ÌÊ¦£©ÅÐ¶Ï£¬Ö»ÒªÓÃ»§ÅÐ¶Ï¸ø×·×ÙÏßË÷ÓÐÐ§µÄÊ±ºò²ÅÌá¸ßÓë¸Ã×·×ÙÏßË÷¾ßÓÐ´úÂëÒÀÀµµÄÆäËü×·×ÙÏßË÷µÄÏàËÆ¶ÈÖµ¡£Óë~\cite{hayes2006advancing,Lucia2006Incremental,Panichella2015Adaptive} ²»Í¬£¬~\cite{panichella2013and}²»»á¸Ä±ä´ÊÏîµÄÈ¨ÖØ£¬Òò´Ë²»ÐèÒªÃ¿´ÎÖØÐÂ¼ÆËãÏàËÆ¶È¡£¸Ã·½·¨ÏàËÆ²½Öè¼ûËã·¨~\ref{alg:UD_CSTI}
-\begin{algorithm}[!htbp]
-\caption{User-Driven Combination of Structural and Textual Information ¡ª UD-CSTI}
-\label{alg:UD_CSTI}
-    \While {not (stopping criterion)}
-    {
-      Get the link ($s$, $c_{j}$) on top of List\\
-      The user classifies ($s$, $c_{j}$)\\
-       \If {$s$, $c_{j}$ is correct}
-       {
-          \ForAll {$c_{t} \in C$} {
-            \If {$(c_{j}, c_{t}) \in E$} {
-              Sim($s$, $c_{t}$) $\leftarrow$ Sim($s$, $c_{t}$) + $\delta$ $\times$ Sim($s$, $c_{t}$)
-            }
-          }
-       }
-      Reorder List\\
-      Hide links already classified
-    }
-\end{algorithm}
-
-ÆäÖÐ$\delta$ÎªÏàËÆ¶È½±ÀøÏµÊý£¬ÓÃÀ´µ÷½ÚÏà¹Ø×·×ÙÏßË÷ÏàËÆ¶ÈµÄ±ä»¯³Ì¶È¡£¶ÔÓÚ²»Í¬µÄ×·×ÙÁÐ±í£¬¸Ã±äÁ¿Ó¦¸ÃÈ¡²»Í¬µÄÖµ£¬¿¼ÂÇµ½µ±ºòÑ¡ÁÐ±íµÄÖµ·Ö²¼±È½Ï¼¯ÖÐÊ±£¬¸ÃÖµÉÔÎ¢´óÒ»µã¾Í»áÊ¹µÃÏà¹ØºòÑ¡×·×ÙÏßË÷ÏàËÆ¶ÈÖµµ÷ÕûÖ®ºóµÄÅÅÐò»á·¢ÉúºÜ´óµÄ±ä»¯£»µ±ºòÑ¡ÁÐ±íµÄÖµ·Ö²¼±È½Ï·¢É¢ÊÇ£¬¸ÃÖµ¹ýÐ¡¿ÉÄÜÊ¹µÃÏà¹ØÏßË÷ËäÈ»Ð¡ÏàËÆ¶ÈÖµÔö´ó£¬µ«ÊÇ¶ÔÆäÔÙÅÅÐò±íµÄÎ»ÖÃÈ·Ó°Ïì²»´ó¡£¸Ã·½·¨Ìá³ö×ÔÊÊÓ¦µÄ$\delta$¡£
-\begin{align}
-    \delta = median\{v_{i},...,v_{n}\}
-\end{align}
-ÆäÖÐ$v_{i}=(max_{i}-min_{i})/2$£¬$v_{i}$ÓëµÚ$i$¸ö²éÑ¯ÎÄµµ¶ÔÓ¦Ä¿±êÎÄµµµÄÏàËÆ¶È×î´óÖµºÍ×îÐ¡Öµ¡£
-\end{comment}
+±¾ÕÂ½éÉÜÁËÐèÇóµ½´úÂë¿É×·×ÙÉú³ÉµÄÏà¹Ø¼¼Êõ£¬²¢·ÖÎöÁËÏÖÓÐ·½·¨µÄ²»×ã¡£Í¬Ê±±¾ÕÂ½éÉÜÁËÔÚÐèÇó¿É×·×ÙÐÔ¡¢×·×Ù¾ØÕó¹¹ÔìµÈÏà¹ØÁìÓò£¬ÒÑÓÐ¹¤×÷ÈçºÎ½áºÏ´úÂë½á¹¹ÐÅÏ¢ºÍÓÃ»§·´À¡ÐÅÏ¢ÒÔÌá¸ßÔ­ÓÐ·½·¨µÄ¾«¶È¡£
